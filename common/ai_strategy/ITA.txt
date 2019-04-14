@@ -1,0 +1,144 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+ITA_template_design = {
+	enable = {
+	
+		original_tag = ITA
+		date < 1940.1.1				
+	}
+	abort = { 
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+}
+
+
+ITA_template_design = {
+	enable = {
+	
+		original_tag = ITA
+		date > 1940.1.1				
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = -20
+	}
+}
+
+befriend_gb = {		# if france is communist
+	enable = {
+		tag = ITA
+		FRA = {
+			NOT = {
+				has_completed_focus = support_the_fascists_fra
+				has_government = fascism
+			}
+		}
+	}
+	abort = {
+		FRA = {
+			OR = {
+				has_government = fascism
+				has_completed_focus = support_the_fascists_fra
+			}
+		}
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ENG"			
+		value = 50
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 50
+	}
+}

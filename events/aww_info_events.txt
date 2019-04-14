@@ -1,0 +1,148 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_info
+
+
+###################Information######################
+
+
+######### Trigger Event ##########
+country_event = {
+	id = aw_info.100
+	title = aw_info.100.t
+	desc = aw_info.100.d
+	picture = GFX_report_event_start_info
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				country_event = { id = aw_info.1 hours = 1 } 
+			}
+		}
+	}
+
+	#
+	option = {
+		name = aw_info.100.a
+	}
+	
+}
+
+######### Start Info ##########
+country_event = {
+	id = aw_info.1
+	title = aw_info.1.t
+	desc = aw_info.1.d
+	picture = GFX_report_event_start_info
+	
+	is_triggered_only = yes
+	
+	#info please
+	option = {
+		name = aw_info.1.a
+		country_event = { id = aw_info.2 }
+	}
+  #about W36: LotWW
+	option = {
+		name = aw_info.1.e
+		country_event = { id = aw_info.5 }
+	}
+	#about submods
+	option = {
+		name = aw_info.1.b
+		country_event = { id = aw_info.3 }
+	}
+	#continue
+	option = {
+		name = aw_info.1.c
+    ai_chance = {
+      factor = 1000
+    }
+	}
+}
+
+### Mod Info
+country_event = {
+	id = aw_info.2
+	title = aw_info.2.t
+	desc = aw_info.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	#KK
+	option = {
+		name = aw_info.2.a
+	}
+  #W36
+	option = {
+		name = aw_info.2.b
+		country_event = { id = aw_info.5 }
+	}
+	#submods
+	option = {
+		name = aw_info.2.c
+		country_event = { id = aw_info.3 }
+	}
+	
+}
+
+### W36 info
+country_event = {
+	id = aw_info.5
+	title = aw_info.5.t
+	desc = aw_info.5.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	#KK
+	option = {
+		name = aw_info.5.a
+	}
+  #w: rotk
+  option = {
+		name = aw_info.5.b
+    country_event = { id = aw_info.2 }
+	}
+  #submods
+  option = {
+		name = aw_info.5.c
+    country_event = { id = aw_info.3 }
+	}
+	
+}
+
+### Submods info
+country_event = {
+	id = aw_info.3
+	title = aw_info.3.t
+	desc = aw_info.3.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	#
+	option = {
+		name = aw_info.3.a
+	}
+  #w: rotk
+  option = {
+		name = aw_info.3.b
+    country_event = { id = aw_info.2 }
+	}
+  #w36 info
+  option = {
+		name = aw_info.3.c
+    country_event = { id = aw_info.5 }
+	}
+	
+}
+

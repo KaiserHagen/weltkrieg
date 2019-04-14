@@ -1,0 +1,28 @@
+state=
+{
+	id=163
+	name="STATE_163" # Southern Dalmatia
+	manpower = 341300
+	
+	state_category = rural
+	
+	
+	history={
+		owner = USG
+		victory_points = {
+			3924 1 
+		}
+		buildings = {
+			infrastructure = 4
+			3924 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = CRO
+		add_core_of = USG
+	}
+
+	provinces={
+		3868 3924 6889 11816 
+	}
+}

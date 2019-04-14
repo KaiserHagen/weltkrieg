@@ -1,0 +1,68 @@
+﻿############# Weltkrieg Events ##############
+
+### 
+
+add_namespace = aw_random
+
+
+###################Random and Other Events######################
+
+# Press law (censored Press or propaganda?) (fascism & communism)
+country_event = {
+	id = aw_random.1
+	title = aw_random.1.t
+	desc = aw_random.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # censored_press
+		name = aw_random.1.a
+		ai_chance = {
+			factor = 90
+      modifier = {
+        factor = 50
+        surrender_progress > 0.10
+      }
+		}
+		add_ideas = { censored_press }
+	}
+	option = { # propaganda
+		name = aw_random.1.b
+		ai_chance = {
+			factor = 10
+      modifier = {
+        factor = 50
+        surrender_progress > 0.10
+      }
+		}
+		add_ideas = { propaganda }
+	}
+}
+
+### Soviet Coup successful
+country_event = {
+	id = aw_random.2
+	title = aw_random.2.t
+	desc = aw_random.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+  
+	trigger = {
+    has_country_flag = soviet_coup
+    has_civil_war = no
+    has_government = communism
+    NOT = { is_puppet_of = SOV }
+  }
+	
+	option = { # 
+		name = aw_random.2.a
+		ai_chance = {
+			factor = 90
+      
+		}
+    clr_country_flag = soviet_coup
+		SOV = { puppet = ROOT }
+	}
+	
+}

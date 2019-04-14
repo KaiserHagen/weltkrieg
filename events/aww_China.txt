@@ -1,0 +1,1102 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_chi
+
+
+################### China ######################
+
+# Germany declares war on Japan // China could join
+country_event = {
+	id = aw_chi.1
+	title = aw_chi.1.t
+	desc = aw_chi.1.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		days=14
+	}
+	trigger = {
+		tag = CHI 
+		JAP = {
+			OR = {
+				has_completed_focus = remilitarization_of_korea_jap
+				has_completed_focus = negotiations_with_germany_jap
+			}
+			has_defensive_war_with = GER
+			
+			NOT = { has_war_with = CHI }
+		}
+		has_global_flag = germany_attacks_japan
+	}
+	
+	option = {
+		name = aw_chi.1.a 	# Join War
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0 
+				CHI = { has_war = yes }
+			}
+		}
+		JAP = {
+			add_opinion_modifier = { 
+				target = CHI
+				modifier = chinese_support_against_germany
+			}
+		}
+		CHI = {
+			add_opinion_modifier = { 
+				target = JAP
+				modifier = chinese_support_against_germany
+			}
+		}
+		declare_war_on = {
+			target = GER
+			type = take_state_focus
+			generator = { 745 524 591 } 
+		}
+	}
+	option = {
+		name = aw_chi.1.b 	# don't join
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 100 
+				CHI = { has_war = yes }
+			}
+		}
+	}
+}
+### Ultimatum Tibet ###
+country_event = {
+	id = aw_chi.2
+	title = aw_chi.2.t
+	desc = aw_chi.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_chi.2.a
+		ai_chance = {
+			factor = 70
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.3 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_chi.2.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.4 }
+		}
+	}
+}
+#### Tibet accepts
+country_event = {
+	id = aw_chi.3
+	title = aw_chi.3.t
+	desc = aw_chi.3.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.3.a
+		add_named_threat = { threat = 2 name = china_advances }
+		CHI = {
+			annex_country = { target = TIB transfer_troops = yes }
+		}
+	}
+}
+#### Tibet refuses
+country_event = {
+	id = aw_chi.4
+	title = aw_chi.4.t
+	desc = aw_chi.4.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_chi.4.a
+		CHI = {
+			declare_war_on = {
+				type = annex_everything
+				target = TIB
+			}
+		}
+	}
+}
+
+### Ultimatum Mongolia ###
+country_event = {
+	id = aw_chi.5
+	title = aw_chi.5.t
+	desc = aw_chi.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_chi.5.a
+		ai_chance = {
+			factor = 70
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.6 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_chi.5.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.7 }
+		}
+	}
+}
+#### Mongolia accepts
+country_event = {
+	id = aw_chi.6
+	title = aw_chi.6.t
+	desc = aw_chi.6.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.6.a
+		add_named_threat = { threat = 2 name = china_advances }
+		CHI = {
+			annex_country = { target = MON transfer_troops = yes }
+		}
+	}
+}
+#### Mongolia refuses
+country_event = {
+	id = aw_chi.7
+	title = aw_chi.7.t
+	desc = aw_chi.7.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_chi.7.a
+		CHI = {
+			declare_war_on = {
+				type = annex_everything
+				target = MON
+			}
+		}
+	}
+}
+
+### Ultimatum Sinkiang ###
+country_event = {
+	id = aw_chi.8
+	title = aw_chi.8.t
+	desc = aw_chi.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_chi.8.a
+		ai_chance = {
+			factor = 70
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.9 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_chi.8.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.10 }
+		}
+	}
+}
+#### Sinkiang accepts
+country_event = {
+	id = aw_chi.9
+	title = aw_chi.9.t
+	desc = aw_chi.9.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.9.a
+		add_named_threat = { threat = 2 name = china_advances }
+		CHI = {
+			annex_country = { target = SIK transfer_troops = yes }
+		}
+	}
+}
+#### Sinkiang refuses
+country_event = {
+	id = aw_chi.10
+	title = aw_chi.10.t
+	desc = aw_chi.10.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_chi.10.a
+		CHI = {
+			declare_war_on = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+	}
+}
+
+### Ultimatum Manchuria ###
+country_event = {
+	id = aw_chi.11
+	title = aw_chi.11.t
+	desc = aw_chi.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_chi.11.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.12 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_chi.11.b
+		ai_chance = {
+			factor = 70
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.13 }
+		}
+	}
+}
+#### Manchuria accepts
+country_event = {
+	id = aw_chi.12
+	title = aw_chi.12.t
+	desc = aw_chi.12.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.12.a
+		add_named_threat = { threat = 2 name = china_advances }
+		CHI = {
+			annex_country = { target = MAN transfer_troops = yes }
+		}
+	}
+}
+#### Manchuria refuses
+country_event = {
+	id = aw_chi.13
+	title = aw_chi.13.t
+	desc = aw_chi.13.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_chi.13.a
+		CHI = {
+			declare_war_on = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+}
+
+### Demand Hongkong ###
+country_event = {
+	id = aw_chi.14
+	title = aw_chi.14.t
+	desc = aw_chi.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #hand it over 
+		name = aw_chi.14.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ENG = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 70
+				ENG = { has_government = democratic }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.15 }
+		}
+	}
+	
+	option = { #defend it
+		name = aw_chi.14.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				ENG = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 30
+				ENG = { has_government = democratic }
+				is_historical_focus_on = no
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.16 }
+		}
+	}
+}
+#### Hongkong China again
+country_event = {
+	id = aw_chi.15
+	title = aw_chi.15.t
+	desc = aw_chi.15.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.15.a
+		CHI = {
+			transfer_state = 326
+		}
+	}
+}
+#### Hongkong not China again
+country_event = {
+	id = aw_chi.16
+	title = aw_chi.16.t
+	desc = aw_chi.16.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.16.a
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				generator = { 326 }
+			}
+		}
+	}
+}
+
+### Demand Macau ###
+country_event = {
+	id = aw_chi.17
+	title = aw_chi.17.t
+	desc = aw_chi.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #hand it over 
+		name = aw_chi.17.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				POR = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 100
+				POR = { has_government = democratic }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.18 }
+		}
+	}
+	
+	option = { #defend it
+		name = aw_chi.17.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				POR = { has_government = fascism }
+			}
+			modifier = {
+				factor = 0
+				POR = { has_government = democratic }
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.19 }
+		}
+	}
+}
+#### Macau China again
+country_event = {
+	id = aw_chi.18
+	title = aw_chi.18.t
+	desc = aw_chi.18.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.18.a
+		CHI = {
+			transfer_state = 729
+		}
+	}
+}
+#### Macau not China again
+country_event = {
+	id = aw_chi.19
+	title = aw_chi.19.t
+	desc = aw_chi.19.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.19.a
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = POR
+				generator = { 729 }
+			}
+		}
+	}
+}
+### Portugal ###
+#Surrender when China conquers Macau
+country_event = {
+	id = aw_chi.35
+	title = aw_chi.35.t
+	desc = aw_chi.35.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = POR
+		has_war_with = CHI
+		CHI = { controls_state = 729 }
+		POR = { owns_state = 729 }
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+#Accept Macau as chinese territory
+	option = {
+		name = aw_chi.35.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 20
+				POR = { has_government = fascism }
+			}
+		}
+		CHI = {
+			country_event = { id = aw_chi.36 }
+		}
+		effect_tooltip = {
+			CHI = { white_peace = POR }
+			transfer_state = 729
+		}
+	}
+
+	#Never give up!
+	option = {
+		name = aw_chi.35.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 80
+				POR = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Chinas response
+country_event = {
+	id = aw_chi.36
+	title = aw_chi.36.t
+	desc = aw_chi.36.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = aw_chi.36.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				CHI = {
+					is_in_faction = yes
+				}
+				POR = { is_in_faction = yes }
+			}
+		}
+		white_peace = POR
+		CHI = { transfer_state = 729 }
+	}
+
+	#keep the fight going
+	option = {
+		name = aw_chi.36.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				CHI = {
+					is_in_faction = yes
+				}
+				POR = { is_in_faction = yes }
+			}
+		}
+		POR = { country_event = { id = aw_chi.37 } }
+	}
+}
+
+#### China rejects offer
+country_event = {
+	id = aw_chi.37
+	title = aw_chi.37.t
+	desc = aw_chi.37.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.37.a
+		
+	}
+}
+#############################################################
+
+### Demand German Colonies ###
+country_event = {
+	id = aw_chi.20
+	title = aw_chi.20.t
+	desc = aw_chi.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #hand it over 
+		name = aw_chi.20.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				GER = { NOT = { has_idea = german_supremacy } }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 50
+				GER = { has_government = democratic }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.21 }
+		}
+	}
+	
+	option = { #defend it
+		name = aw_chi.20.b
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 80
+				GER = { NOT = { has_idea = german_supremacy } }
+			}
+			modifier = {
+				factor = 50
+				GER = { has_government = democratic }
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.22 }
+		}
+	}
+}
+#### ger accepts
+country_event = {
+	id = aw_chi.21
+	title = aw_chi.21.t
+	desc = aw_chi.21.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.21.a
+		CHI = {
+			transfer_state = 745
+			transfer_state = 524
+			transfer_state = 591
+		}
+	}
+}
+#### ger refuses
+country_event = {
+	id = aw_chi.22
+	title = aw_chi.22.t
+	desc = aw_chi.22.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.22.a
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GER
+				generator = { 745 524 591 }
+			}
+		}
+	}
+}
+
+### Befriend India ###
+country_event = {
+	id = aw_chi.23
+	title = aw_chi.23.t
+	desc = aw_chi.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #accept nap
+		name = aw_chi.23.a
+		ai_chance = {
+			factor = 99
+			
+		}
+		RAJ = {
+			diplomatic_relation = { country = CHI relation = non_aggression_pact }
+			add_opinion_modifier = { target = CHI modifier = befriend }
+		}
+		
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.24 }
+		}
+	}
+	
+	option = { #refuse
+		name = aw_chi.23.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.25 }
+		}
+	}
+}
+#### India accepts
+country_event = {
+	id = aw_chi.24
+	title = aw_chi.24.t
+	desc = aw_chi.24.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.24.a
+		add_opinion_modifier = { target = RAJ modifier = befriend }
+	}
+}
+#### India refuses
+country_event = {
+	id = aw_chi.25
+	title = aw_chi.25.t
+	desc = aw_chi.25.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.25.a
+		add_opinion_modifier = { target = RAJ modifier = refuses }
+	}
+}
+
+### Befriend Japan ###
+country_event = {
+	id = aw_chi.26
+	title = aw_chi.26.t
+	desc = aw_chi.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #accept nap
+		name = aw_chi.26.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 20
+				JAP = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 90
+				JAP = { has_completed_focus = soft_power_and_influence_jap }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 90
+				JAP = { has_government = democratic }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		JAP = {
+			diplomatic_relation = { country = CHI relation = non_aggression_pact }
+			add_opinion_modifier = { target = CHI modifier = befriend }
+		}
+		
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.27 }
+		}
+	}
+	
+	option = { #refuse
+		name = aw_chi.26.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 80
+				JAP = { has_government = fascism }
+			}
+			modifier = {
+				factor = 10
+				JAP = { has_completed_focus = soft_power_and_influence_jap }
+			}
+			modifier = {
+				factor = 10
+				JAP = { has_government = democratic }
+			}
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.28 }
+		}
+	}
+}
+#### Japan accepts
+country_event = {
+	id = aw_chi.27
+	title = aw_chi.27.t
+	desc = aw_chi.27.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.27.a
+		add_opinion_modifier = { target = JAP modifier = befriend }
+	}
+}
+#### Japan refuses
+country_event = {
+	id = aw_chi.28
+	title = aw_chi.28.t
+	desc = aw_chi.28.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.28.a
+		add_opinion_modifier = { target = JAP modifier = refuses }
+	}
+}
+
+### China wants to join Comintern ###
+country_event = {
+	id = aw_chi.29
+	title = aw_chi.29.t
+	desc = aw_chi.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = aw_chi.29.a
+		ai_chance = {
+			factor = 100
+		}
+		SOV = { add_to_faction = CHI }
+		
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.30 }
+		}
+	}
+	
+	option = { #refuse
+		name = aw_chi.29.b
+		ai_chance = {
+			factor = 0
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.31 }
+		}
+	}
+}
+#### Soviet accepts
+country_event = {
+	id = aw_chi.30
+	title = aw_chi.30.t
+	desc = aw_chi.30.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.30.a
+	}
+}
+#### Soviet refuses
+country_event = {
+	id = aw_chi.31
+	title = aw_chi.31.t
+	desc = aw_chi.31.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.31.a
+		add_opinion_modifier = { target = SOV modifier = refuses }
+	}
+}
+
+### China wants to join League of Nations ###
+country_event = {
+	id = aw_chi.32
+	title = aw_chi.32.t
+	desc = aw_chi.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = aw_chi.32.a
+		ai_chance = {
+			factor = 100
+		}
+		USG = { add_to_faction = CHI }
+		
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.33 }
+		}
+	}
+	
+	option = { #refuse
+		name = aw_chi.32.b
+		ai_chance = {
+			factor = 0
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_chi.34 }
+		}
+	}
+}
+#### USG accepts
+country_event = {
+	id = aw_chi.33
+	title = aw_chi.33.t
+	desc = aw_chi.33.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.33.a
+	}
+}
+#### USG refuses
+country_event = {
+	id = aw_chi.34
+	title = aw_chi.34.t
+	desc = aw_chi.34.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_chi.34.a
+		add_opinion_modifier = { target = USG modifier = refuses }
+	}
+}
+
+##### Communist militia overthrow government
+country_event = {
+	id = aw_chi.38
+	title = aw_chi.38.t
+	desc = aw_chi.38.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = CHI
+		CHI = {
+			has_completed_focus = communist_militia_chi
+			has_civil_war = no
+			communism > 0.29
+		}
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	fire_only_once = yes
+
+	#communists gain power
+	option = {
+		name = aw_chi.38.a
+		ai_chance = {
+			factor = 100
+		}
+		CHI = {
+			set_cosmetic_tag = CHI_PRC
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+		}
+	}
+}
+
+##### Capital to Peking
+country_event = {
+	id = aw_chi.39
+	title = aw_chi.39.t
+	desc = aw_chi.39.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	trigger = {
+		tag = CHI
+		CHI = {
+			owns_state = 609
+			controls_state = 609
+			owns_state = 611
+			controls_state = 611
+			owns_state = 610
+			controls_state = 610
+			OR = {
+				has_government = monarchism
+				has_government = fascism
+				has_government = communism
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#
+	option = {
+		name = aw_chi.39.a
+		ai_chance = {
+			factor = 100
+		}
+		CHI = {
+			set_capital = 608
+		}
+	}
+}
+

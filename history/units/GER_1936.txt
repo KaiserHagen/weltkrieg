@@ -1,0 +1,1194 @@
+﻿division_template = {
+	name = "Infanterie-Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Kolonialtruppen"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Panzer-Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Schwere Panzer-Division" 
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        heavy_armor = { x = 1 y = 0 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Motorisierte Division" 			# Motorisierte division
+	# Note: actually a grouping of 3 independent Motorisierte-mot regiments
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+	    motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Gebirgsjäger-Brigade"		# Gebirgsbrigade
+	#Note: precursor to Gebirgs-Divisions
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Kavallerie-Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	    artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+
+	division= {	
+		name = "1. Kolonialtruppeneinheit"
+		location = 5139
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Kolonialtruppeneinheit"
+		location = 6020
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Kolonialtruppeneinheit"
+		location = 6020
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4. Kolonialtruppeneinheit"
+		location = 8223
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5. Kolonialtruppeneinheit"
+		location = 1389
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6. Kolonialtruppeneinheit"
+		location = 1389
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7. Kolonialtruppeneinheit"
+		location = 7069
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "8. Kolonialtruppeneinheit"
+		location = 7186
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "9. Kolonialtruppeneinheit"
+		location = 7186
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "10. Kolonialtruppeneinheit"
+		location = 10000
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "11. Kolonialtruppeneinheit"
+		location = 12068
+		division_template = "Kolonialtruppen"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1. Kavallerie-Division"
+		location = 10978
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Kavallerie-Division"
+		location = 7872
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Kavallerie-Division"
+		location = 7872
+		division_template = "Kavallerie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1. Infanterie-Division"
+		location = 12049
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Infanterie-Division"
+		location = 4073
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Infanterie-Division"
+		location = 9398
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4. Infanterie-Division"
+		location = 9398
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5. Infanterie-Division"
+		location = 9398
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6. Infanterie-Division"
+		location = 9508
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7. Infanterie-Division"
+		location = 9508
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "8. Infanterie-Division"
+		location = 11467
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "9. Infanterie-Division"
+		location = 11467
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "10. Infanterie-Division"
+		location = 9570
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "11. Infanterie-Division"
+		location = 9570
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "12. Infanterie-Division"
+		location = 3514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "13. Infanterie-Division"
+		location = 6559
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "14. Infanterie-Division"
+		location = 3535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "15. Infanterie-Division"
+		location = 3535
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "16. Infanterie-Division"
+		location = 586
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "17. Infanterie-Division"
+		location = 3541
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "18. Infanterie-Division"
+		location = 3541
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "19. Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "20. Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "21. Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "22. Infanterie-Division"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "23. Infanterie-Division"
+		location = 9517
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "24. Infanterie-Division"
+		location = 9517
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "25. Infanterie-Division"
+		location = 9517
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "26. Infanterie-Division"
+		location = 11502
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "27. Infanterie-Division"
+		location = 11502
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "28. Infanterie-Division"
+		location = 9503
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "29. Infanterie-Division"
+		location = 9503
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "30. Infanterie-Division"
+		location = 6529
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "31. Infanterie-Division"
+		location = 6529
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "32. Infanterie-Division"
+		location = 3629
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "33. Infanterie-Division"
+		location = 3629
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "34. Infanterie-Division"
+		location = 678
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "35. Infanterie-Division"
+		location = 678
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "36. Infanterie-Division"
+		location = 9418
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "37. Infanterie-Division"
+		location = 9418
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "38. Infanterie-Division"
+		location = 9444
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "39. Infanterie-Division"
+		location = 9444
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "40. Infanterie-Division"
+		location = 9444
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "41. Infanterie-Division"
+		location = 6469
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "42. Infanterie-Division"
+		location = 6537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "43. Infanterie-Division"
+		location = 6537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "44. Infanterie-Division"
+		location = 9522
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "45. Infanterie-Division"
+		location = 336
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "46. Infanterie-Division"
+		location = 336
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "47. Infanterie-Division"
+		location = 6389
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "48. Infanterie-Division"
+		location = 6389
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1. Gebirgsjäger-Brigade"
+		location = 9666
+		division_template = "Gebirgsjäger-Brigade"
+		start_experience_factor = 0.3
+	}
+	
+	
+	
+	# Panzertruppenkommando
+	division= {	
+		name = "1. Panzer-Division"
+		location = 6488
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		name = "2. Panzer-Division"
+		location = 6488
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		name = "3. Panzer-Division"
+		location = 11544
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		name = "4. Panzer-Division"
+		location = 11544
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		name = "1. Schwere Panzer-Division"
+		location = 6558
+		division_template = "Schwere Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Schwere Panzer-Division"
+		location = 6558
+		division_template = "Schwere Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Schwere Panzer-Division"
+		location = 6377
+		division_template = "Schwere Panzer-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1. Motorisierte-Verfügungstruppe" 
+		location = 6332
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Motorisierte-Verfügungstruppe" 
+		location = 6332
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Motorisierte-Verfügungstruppe" 
+		location = 6521
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4. Motorisierte-Verfügungstruppe" 
+		location = 6521
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5. Motorisierte-Verfügungstruppe" 
+		location = 7203
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6. Motorisierte-Verfügungstruppe" 
+		location = 587
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7. Motorisierte-Verfügungstruppe" 
+		location = 587
+		division_template = "Motorisierte Division"
+		start_experience_factor = 0.3
+	}
+	
+	##### NAVAL UNITS #####
+	navy = {
+		name = "Nordseeflotte"
+		base = 241
+		location = 241  # Wilhemshaven
+		
+		ship = { name = "Graf Zeppelin" definition = carrier equipment = { carrier_1 = { amount = 1 owner = GER } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 20 }
+				cv_nav_bomber_equipment_1 =  { owner = "GER" amount = 20 }
+			}
+		}
+		ship = { name = "Hannover" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } } 
+		ship = { name = "Scharnhorst" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } } 
+		ship = { name = "Gneisenau" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } } 
+		ship = { name = "Deutschland" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }	
+		ship = { name = "Admiral Scheer" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }
+		ship = { name = "Nürnberg" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Leipzig" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }		
+		ship = { name = "Königsberg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }			
+		ship = { name = "Karlsruhe" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }	
+		ship = { name = "Köln" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }			
+		ship = { name = "Emden" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		# 1. Torpedobootflottille
+		ship = { name = "Jaguar" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Leopard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Luchs" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Tiger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 1 Leberecht Maass" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 2 Georg Thiele" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 10 Hans Lody" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 17" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 18" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 22" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 23" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 24" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 25" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 26" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 27" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Z 28" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+	}
+
+	navy = {
+		name = "Flugzeugträgerflotte"
+		base = 6332
+		location = 6332  # Konigsberg
+		
+		ship = { name = "Kaiser Wilhelm II." definition = carrier equipment = { carrier_1 = { amount = 1 owner = GER } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "GER" amount = 22 }
+				cv_nav_bomber_equipment_1 =  { owner = "GER" amount = 22 }
+			}
+		}
+		ship = { name = "Sperber" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }			
+		ship = { name = "Schwalbe" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		
+		# 2. Torpedobootflottille
+		ship = { name = "Möwe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+	}
+	
+	navy = {
+		name = "Ostseeflotte"
+		base = 6332
+		location = 6332  # Konigsberg
+		ship = { name = "Schleswig-Holstein" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schlesien" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Yorck" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }	
+		ship = { name = "Goeben" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }
+		ship = { name = "Wiesbaden" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }			
+		ship = { name = "Frankfurt" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Taku" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kühn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Tapfer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Vorwärts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+	}
+	
+	navy = {
+		name = "Unterseebootsflotte Weddigen"
+		base = 6389
+		location = 6389  # Kiel
+		# 1. Unterseebootsflottille
+		ship = { name = "U-7" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-8" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-9" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-10" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		# 4. Unterseebootsflottille
+		ship = { name = "U-11" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-12" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-13" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-17" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-18" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-19" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-20" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-21" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-22" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-23" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-24" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-25" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+	}
+
+	navy = {
+		name = "Unterseeboots-Schule"
+		base = 241
+		location = 241  # Wilhemshaven
+		# 2. Unterseebootsflottille
+		ship = { name = "U-1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		# 3. Unterseebootsflottille
+		ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Schwarzmeerflotte"
+		base = 6704
+		location = 6704  # Alutscha Exklave
+		
+		ship = { name = "Kaiser Friedrich III" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Preußen" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kaiser Wilhelm der Große" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Fürst Bismarck" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }	
+		ship = { name = "Blücher" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Von der Tann" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }	
+		ship = { name = "Moltke" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Prinz Adalbert" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }	
+		ship = { name = "Nürnberg" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Leipzig" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Berlin" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Hamburg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Danzig" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Bremen" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Lübeck" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Condor" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		ship = { name = "Möwe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Taku" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kühn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Tapfer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Vorwärts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+	
+	}
+	navy = {
+		name = "Marokkoflotte"
+		base = 7069
+		location = 7069
+		
+		ship = { name = "Brandenburg" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Elsass" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Freya" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Hertha" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }	
+		ship = { name = "Baden" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Roon" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Vineta" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }		
+		ship = { name = "Seeadler" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Rostock" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Emden" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Magdeburg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Geier" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } } 
+
+		ship = { name = "Möwe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Taku" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kühn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Tapfer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Vorwärts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		
+	}
+	navy = {
+		name = "U-Bootflotte Agadir"
+		base = 7203
+		location = 7203
+		
+		ship = { name = "U-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Afrikaflotte"
+		base = 2196
+		location = 2196
+		
+		ship = { name = "Brandenburg" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Elsass" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Hindenburg" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kaiserin Augusta" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Lützow" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }	
+		ship = { name = "Prinz Heinrich" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seydlitz" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Derfflinger" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }		
+		ship = { name = "Cormoran" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Brummer" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		ship = { name = "Möwe" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Taku" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Kühn" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Tapfer" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Vorwärts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Ulan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schneewittchen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Sicher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schütze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		
+	}
+	navy = {
+		name = "U-Bootflotte Afrika"
+		base = 5210
+		location = 5210
+		
+		ship = { name = "U-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-21" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-22" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-23" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-24" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-25" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+	}
+	navy = {
+		name = "Westafrikaflotte"
+		base = 10978
+		location = 10978
+		
+		ship = { name = "Worms" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Breslau" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Stettin" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Frauenlob" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } } 		
+		ship = { name = "Köln" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		ship = { name = "Möwe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		
+	}
+	navy = {
+		name = "Pazifikflotte"
+		base = 4329
+		location = 4329
+		
+		ship = { name = "Straßburg" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Augsburg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		
+	
+	}
+	navy = {
+		name = "U-Bootflotte Pazifik"
+		base = 12154
+		location = 12154
+		
+		ship = { name = "U-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+	}
+	#East Asia
+	navy = {
+		name = "Taiwanflotte"
+		base = 12068
+		location = 12068
+		
+		ship = { name = "Straßburg" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Augsburg" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Tsingtao" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+		
+		ship = { name = "Albatros" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Seeadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Greif" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		
+	
+	}
+	navy = {
+		name = "U-Bootflotte Taiwan"
+		base = 12068
+		location = 12068
+		
+		ship = { name = "U-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+		ship = { name = "U-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }
+	}
+}
+
+### Air oob
+air_wings = {
+	### I. Luftkreiskommando -- Konigsberg ###
+	5 = { 
+		# Jagdgeschwader 232 	
+		fighter_equipment_0 =  {		# He 51
+			owner = "GER" 
+			amount = 40
+		}
+	}
+
+	### II. Luftkreiskommando -- Berlin ###
+	64 = { 
+		# Jagdgeschwader 132 'Richtofen'		
+		fighter_equipment_0 =  {		# Ar 68
+			owner = "GER" 
+			amount = 100
+		}
+		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+			modifier="fighter_genius"
+			name="Erich"
+			surname="Hartmann"
+			callsign="Bubi"
+			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
+		}
+		# Kampfgeschwader 153		
+		tac_bomber_equipment_0 = {		# Do 23
+			owner = "GER" 
+			amount = 40
+		}
+		tac_bomber_equipment_1 = {		# Ju 86
+			owner = "GER" 
+			amount = 40
+		}
+	}
+
+	### III. Luftkreiskommando -- Breslau ###
+	66 = { 
+		# Kampfgeschwader 253 'General Wever'		
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
+			owner = "GER" 
+			amount = 120
+		}
+		# Sturzkampfgeschwader 162		
+		CAS_equipment_1 =  {			# Hs 123
+			owner = "GER" 
+			amount = 80
+		}	
+	}
+
+	### IV. Luftkreiskommando -- Kassel ###
+	57 = { 
+		# Jagdgeschwader 134 'Horst Wessel'		
+		fighter_equipment_0 =  {		# He 51 # Ar 68
+			owner = "GER" 
+			amount = 120
+		}
+		# Kampfgeschwader 152 'Hindenburg'	
+		tac_bomber_equipment_1 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+		}
+		# Kampfgeschwader 155	
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ? (light bomber)
+			owner = "GER" 
+			amount = 80
+		}
+	}
+
+	### V. Luftkreiskommando -- Munich ###
+	52 = { 
+		# Jagdgeschwader 136		
+		fighter_equipment_1 =  {		# He 51
+			owner = "GER" 
+			amount = 100
+		}
+		# Kampfgeschwader 154	
+		tac_bomber_equipment_0 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+		}
+	}
+
+	### VI. Luftkreiskommando -- Kiel ###
+	58 = { 
+		# Küstenfliegergruppe 106		
+		nav_bomber_equipment_1 =  {		# He 59, Do 18
+			owner = "GER" 
+			amount = 80
+		}
+		# Küstenfliegergruppe 206
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	### Ships Under Contruction ###
+	# SS: Type IIA (x2) ("U-25" "U-26"), Type IIB (x6) ("U-14" "U-16" "U-18" "U-15" "U-20" "U-19")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 3
+		progress = 0.75
+		amount = 8
+	}
+	# DD: 1934 class (x4) ("Z1" "Z2" "Z3" "Z4")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "GER"
+		}
+		requested_factories = 2
+		progress = 0.75
+		amount = 4
+	}
+	# CA: "Graf Spee"
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "GER"
+			version_name = "Deutschland Class"
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+	# Carrier: "Kaiser Wilhelm III."
+	add_equipment_production = {
+		equipment = {
+			type = carrier_1
+			creator = "GER"
+		}
+		requested_factories = 5
+		progress = 0.68
+		amount = 1
+	}
+}
+
+#####################

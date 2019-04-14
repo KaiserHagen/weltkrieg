@@ -1,0 +1,1009 @@
+﻿###########################
+# Political / Election Events
+###########################
+
+add_namespace = election
+add_namespace = political_w
+
+#Monarchists in Government
+country_event = {
+	id = election.18
+	title = election.18.t
+	desc = election.18.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { tag = USA }
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
+		has_government = democratic
+		monarchism > 0.15
+	}
+	
+	option = {
+		name = election.18.a
+		add_popularity = {
+			ideology = monarchism
+			popularity = 0.1
+		}
+		set_country_flag = coalition_with_monarchists
+	}
+
+	option = {
+		name = election.18.b
+		add_stability = -0.05
+		set_country_flag = government_declined_monarchists
+	}
+}
+#Monarchists influence foreign policy
+country_event = {
+	id = election.19
+	title = election.19.t
+	desc = election.19.d
+	picture = GFX_report_event_fascist_gathering
+	
+	mean_time_to_happen = {
+		days = 730
+	}
+
+	trigger = {
+		NOT = { tag = USA }
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
+		has_government = democratic
+		has_country_flag = coalition_with_monarchists
+		any_country = {
+			has_government = monarchism
+			is_faction_leader = yes
+		}
+	}
+	
+	option = {
+		name = election.19.a
+		random_country = {
+			limit = {
+				has_government = monarchism
+				is_faction_leader = yes
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = monarchists_in_government
+			}
+		}
+	}
+
+	option = {
+		name = election.19.b
+		add_stability = -0.05
+	}
+}
+
+# Monarchist Majority
+country_event = {
+	id = election.20
+	title = election.20.t
+	desc = election.20.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = democratic
+		monarchism > 0.5
+		is_puppet = no
+	}
+	
+	option = {	
+		name = election.20.a
+		set_politics = {
+			ruling_party = monarchism
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = election.20.b
+		start_civil_war = {
+			ideology = monarchism
+			size = 0.5
+		}
+	}
+}
+
+# Monarchism on the rise
+country_event = {
+	id = political_w.1
+	title = political_w.1.t
+	desc = political_w.1.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_government = monarchism }
+	}
+	
+	# Seek government support
+	option = {
+		name = political_w.1.a
+		custom_effect_tooltip = political_w.1.a.tt
+		clr_country_flag = monarchism_popular_movement
+		set_country_flag = monarchism_political_movement
+	}
+
+	# Seek popular support
+	option = {
+		name = political_w.1.b
+		custom_effect_tooltip = political_w.1.b.tt
+		clr_country_flag = monarchism_political_movement
+		clr_country_flag = monarchism_government_support
+		set_country_flag = monarchism_popular_movement
+	}
+}
+
+# Monarchist Sympathies in the Military
+country_event = {
+	id = political_w.2
+	title = political_w.2.t
+	desc = political_w.2.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = monarchist_demagogue
+		NOT = { has_government = monarchism }
+		NOT = { has_country_flag = monarchism_government_support }
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+			has_country_flag = monarchism_political_movement
+		}
+	}
+	
+	option = {
+		name = political_w.2.a
+		clr_country_flag = monarchism_political_movement
+		set_country_flag = monarchism_government_support
+	}
+}
+
+# Monarchist Coup d'état
+country_event = {
+	id = political_w.3
+	title = political_w.3.t
+	desc = political_w.3.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = monarchist_demagogue
+		NOT = { has_government = monarchism }
+		has_country_flag = monarchism_government_support
+		monarchism > 0.3
+		is_major = no
+		is_puppet = no
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		modifier = {
+			factor = 0.5
+			monarchism > 0.4
+		}
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = monarchist_revolutionaries }
+	}
+	
+	option = {
+		name = political_w.3.a
+		set_politics = {
+			ruling_party = monarchism
+			elections_allowed = no
+		}
+		add_timed_idea = { idea = reign_of_terror days = 730 }
+	}
+}
+
+# Civil War for Monarchism
+country_event = {
+	id = political_w.4
+	title = political_w.4.t
+	desc = political_w.4.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = monarchist_demagogue
+		NOT = { has_government = monarchism }
+		monarchism > 0.25
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.75
+			has_country_flag = monarchism_popular_movement
+		}
+	}
+	
+	option = {
+		name = political_w.4.a
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			if = {
+				limit = { monarchism > 0.4 }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = democratic
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { monarchism > 0.4 } }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = democratic
+					size = 0.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			if = {
+				limit = { monarchism > 0.4 }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = communism
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { monarchism > 0.4 } }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = communism
+					size = 0.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			if = {
+				limit = { monarchism > 0.4 }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = neutrality
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { monarchism > 0.4 } }
+				start_civil_war = {
+					ruling_party = monarchism
+					ideology = neutrality
+					size = 0.7
+				}
+			}
+		}
+		remove_ideas = monarchist_revolutionaries
+		add_timed_idea = { idea = reign_of_terror days = 730 }
+	}
+	option = {
+		name = political_w.4.b
+	}
+}
+
+# Monarchist Assault Divisions Form
+country_event = {
+	id = political_w.5
+	title = political_w.5.t
+	desc = political_w.5.d
+	picture = GFX_report_event_fascist_militia
+	
+	trigger = {
+		has_idea_with_trait = monarchist_demagogue
+		NOT = { has_government = monarchism }
+		monarchism > 0.3
+		NOT = { has_idea = monarchist_assault_divisions }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = monarchism_popular_movement
+		}
+	}
+	
+	option = {
+		name = political_w.5.a
+		add_popularity = {
+			ideology = monarchism
+			popularity = 0.05
+		}
+		add_ideas = monarchist_assault_divisions
+	}
+}
+
+# The Threat of Communism
+country_event = {
+	id = political_w.6
+	title = political_w.6.t
+	desc = political_w.6.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_idea_with_trait = monarchist_demagogue
+		NOT = { has_government = monarchism }
+		monarchism > 0.25
+		any_neighbor_country = {
+			has_government = communism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = monarchism_popular_movement
+		}
+	}
+	
+	option = {
+		name = political.12.a
+		add_popularity = {
+			ideology = monarchism
+			popularity = 0.2
+		}
+	}
+}
+
+### > 50% support
+# political_w.7 Monarchist
+
+country_event = {
+	id = political_w.7
+	title = political_w.7.t
+	desc = political_w.7.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		monarchism > 0.5
+		NOT = { has_government = monarchism }
+		NOT = { has_idea = monarchist_revolutionaries }
+		NOT = { has_idea = reign_of_terror }
+		is_puppet = no
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = political_w.7.a
+		add_political_power = -100
+		add_popularity = {
+			ideology = monarchism
+			popularity = -0.10
+		}
+		add_timed_idea = {
+			idea = monarchist_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = political_w.7.b
+		add_timed_idea = {
+			idea = monarchist_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = political_w.7.c
+		set_politics = {
+			ruling_party = monarchism
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+### Revolution
+# political_w.8 Monarchist
+country_event = {
+	id = political_w.8
+	title = political_w.8.t
+	desc = political_w.8.d
+	picture = GFX_report_event_fascist_militia
+
+	trigger = {
+		monarchism > 0.7
+		has_idea = monarchist_revolutionaries
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = monarchist_revolutionaries }
+	}
+
+	option = {
+		name = political_w.8.a
+		start_civil_war = {
+			ideology = monarchism
+			size = 0.5
+		}
+	}
+
+	option = {
+		name = political_w.8.b
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			start_civil_war = {
+				ruling_party = monarchism
+				ideology = democratic
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = monarchism
+				ideology = communism
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = monarchism
+				ideology = neutrality
+				size = 0.5
+			}
+		}
+	}
+}
+
+### Suppressed
+# political_w.9 Monarchist
+country_event = {
+	id = political_w.9
+	title = political_w.9.t
+	desc = political_w.9.d
+	picture = GFX_report_event_fascists_posing
+
+	trigger = {
+		monarchism < 0.3
+		has_idea = monarchist_revolutionaries
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = political_w.9.a
+		remove_ideas = monarchist_revolutionaries
+	}
+}
+
+##########################################################################################################
+##########################################################################################################
+
+#Neutrals in Government
+country_event = {
+	id = election.21
+	title = election.21.t
+	desc = election.21.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { tag = USA }
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
+		has_government = democratic
+		neutrality > 0.15
+	}
+	
+	option = {
+		name = election.21.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		set_country_flag = coalition_with_neutrals
+	}
+
+	option = {
+		name = election.21.b
+		add_stability = -0.05
+		set_country_flag = government_declined_neutrals
+	}
+}
+#Neutrals influence foreign policy
+country_event = {
+	id = election.22
+	title = election.22.t
+	desc = election.22.d
+	picture = GFX_report_event_fascist_gathering
+	
+	mean_time_to_happen = {
+		days = 730
+	}
+
+	trigger = {
+		NOT = { tag = USA }
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
+		has_government = democratic
+		has_country_flag = coalition_with_neutrals
+		any_country = {
+			has_government = neutrality
+			is_faction_leader = yes
+		}
+	}
+	
+	option = {
+		name = election.22.a
+		random_country = {
+			limit = {
+				has_government = neutrality
+				is_faction_leader = yes
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = neutrals_in_government
+			}
+		}
+	}
+
+	option = {
+		name = election.22.b
+		add_stability = -0.05
+	}
+}
+
+# Neutral Majority
+country_event = {
+	id = election.23
+	title = election.23.t
+	desc = election.23.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = democratic
+		neutrality > 0.5
+		is_puppet = no
+	}
+	
+	option = {	
+		name = election.23.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = election.23.b
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.5
+		}
+	}
+}
+
+# Neutrality on the rise
+country_event = {
+	id = political_w.10
+	title = political_w.10.t
+	desc = political_w.10.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_government = neutrality }
+	}
+	
+	# Seek government support
+	option = {
+		name = political_w.10.a
+		custom_effect_tooltip = political_w.1.a.tt
+		clr_country_flag = neutrality_popular_movement
+		set_country_flag = neutrality_political_movement
+	}
+
+	# Seek popular support
+	option = {
+		name = political_w.10.b
+		custom_effect_tooltip = political_w.1.b.tt
+		clr_country_flag = neutrality_political_movement
+		clr_country_flag = neutrality_government_support
+		set_country_flag = neutrality_popular_movement
+	}
+}
+
+# Neutral Sympathies in the Military
+country_event = {
+	id = political_w.11
+	title = political_w.11.t
+	desc = political_w.11.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = neutral_demagogue
+		NOT = { has_government = neutrality }
+		NOT = { has_country_flag = neutrality_government_support }
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+			has_country_flag = neutrality_political_movement
+		}
+	}
+	
+	option = {
+		name = political_w.11.a
+		clr_country_flag = neutrality_political_movement
+		set_country_flag = neutrality_government_support
+	}
+}
+
+# Neutral Coup d'état
+country_event = {
+	id = political_w.12
+	title = political_w.12.t
+	desc = political_w.12.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = neutral_demagogue
+		NOT = { has_government = neutrality }
+		has_country_flag = neutrality_government_support
+		neutrality > 0.3
+		is_major = no
+		is_puppet = no
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		modifier = {
+			factor = 0.5
+			neutrality > 0.4
+		}
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = neutral_revolutionaries }
+	}
+	
+	option = {
+		name = political_w.12.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_timed_idea = { idea = reign_of_terror days = 730 }
+	}
+}
+
+# Civil War for Neutrality
+country_event = {
+	id = political_w.13
+	title = political_w.13.t
+	desc = political_w.13.d
+	picture = GFX_report_event_fascist_gathering
+	
+	trigger = {
+		has_idea_with_trait = neutral_demagogue
+		NOT = { has_government = neutrality }
+		neutrality > 0.25
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.75
+			has_country_flag = neutrality_popular_movement
+		}
+	}
+	
+	option = {
+		name = political_w.13.a
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			if = {
+				limit = { neutrality > 0.4 }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = democratic
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { neutrality > 0.4 } }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = democratic
+					size = 0.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			if = {
+				limit = { neutrality > 0.4 }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = communism
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { neutrality > 0.4 } }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = communism
+					size = 0.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			if = {
+				limit = { neutrality > 0.4 }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = neutrality
+					size = 0.6
+				}
+			}
+			if = {
+				limit = { NOT = { neutrality > 0.4 } }
+				start_civil_war = {
+					ruling_party = neutrality
+					ideology = neutrality
+					size = 0.7
+				}
+			}
+		}
+		remove_ideas = neutral_revolutionaries
+		add_timed_idea = { idea = reign_of_terror days = 730 }
+	}
+	option = {
+		name = political_w.13.b
+	}
+}
+
+# Neutral Assault Divisions Form
+country_event = {
+	id = political_w.14
+	title = political_w.14.t
+	desc = political_w.14.d
+	picture = GFX_report_event_fascist_militia
+	
+	trigger = {
+		has_idea_with_trait = neutral_demagogue
+		NOT = { has_government = neutrality }
+		neutrality > 0.3
+		NOT = { has_idea = neutral_assault_divisions }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = neutrality_popular_movement
+		}
+	}
+	
+	option = {
+		name = political_w.14.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_ideas = neutral_assault_divisions
+	}
+}
+
+# The Threat of Communism
+country_event = {
+	id = political_w.15
+	title = political_w.15.t
+	desc = political_w.15.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_idea_with_trait = neutral_demagogue
+		NOT = { has_government = neutrality }
+		neutrality > 0.25
+		any_neighbor_country = {
+			has_government = communism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = neutrality_popular_movement
+		}
+	}
+	
+	option = {
+		name = political.15.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.2
+		}
+	}
+}
+
+### > 50% support
+# political_w.16 Neutral
+
+country_event = {
+	id = political_w.16
+	title = political_w.16.t
+	desc = political_w.16.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		neutrality > 0.5
+		NOT = { has_government = neutrality }
+		NOT = { has_idea = neutral_revolutionaries }
+		NOT = { has_idea = reign_of_terror }
+		is_puppet = no
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = political_w.16.a
+		add_political_power = -100
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.10
+		}
+		add_timed_idea = {
+			idea = neutral_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = political_w.16.b
+		add_timed_idea = {
+			idea = neutral_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = political_w.16.c
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+### Revolution
+# political_w.16 Neutral
+country_event = {
+	id = political_w.17
+	title = political_w.17.t
+	desc = political_w.17.d
+	picture = GFX_report_event_fascist_militia
+
+	trigger = {
+		neutrality > 0.7
+		has_idea = neutral_revolutionaries
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = neutral_revolutionaries }
+	}
+
+	option = {
+		name = political_w.17.a
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.5
+		}
+	}
+
+	option = {
+		name = political_w.17.b
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = democratic
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = communism
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = neutrality
+				size = 0.5
+			}
+		}
+	}
+}
+
+### Suppressed
+# political_w.18 Neutral
+country_event = {
+	id = political_w.18
+	title = political_w.18.t
+	desc = political_w.18.d
+	picture = GFX_report_event_fascists_posing
+
+	trigger = {
+		neutrality < 0.3
+		has_idea = neutral_revolutionaries
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = political_w.18.a
+		remove_ideas = neutral_revolutionaries
+	}
+}

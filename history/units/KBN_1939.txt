@@ -1,0 +1,140 @@
+﻿division_template = {
+	name = "Infantry Division"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Mountain Division"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }	
+	}
+}
+division_template = {
+	name = "Cavalry Division" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	######## Sztab Generalny Wojska Polskiego ########
+	### Armia Pomorze ###	
+	
+	division= {	
+		name = "1. Infantry Division"
+		location = 3734
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "2. Infantry Division"
+		location = 3734
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "3. Infantry Division"
+		location = 3734
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "4. Infantry Division"
+		location = 9707
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "5. Infantry Division"
+		location = 9707
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "6. Infantry Division"
+		location = 11690
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "1. Mountain Division"
+		location = 9628
+		division_template = "Mountain Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "2. Mountain Division"
+		location = 11617
+		division_template = "Mountain Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "3. Mountain Division"
+		location = 6674
+		division_template = "Mountain Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "1. Cavalry Division"
+		location = 3682
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+
+	}
+	division= {	
+		name = "2. Cavalry Division"
+		location = 3682
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+
+	}
+}
+
+air_wings = {
+	235 = { 
+		fighter_equipment_0 =  {
+			owner = "KBN" 
+			amount = 35
+		}
+	}
+}

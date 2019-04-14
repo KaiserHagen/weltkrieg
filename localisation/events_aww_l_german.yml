@@ -1,0 +1,2557 @@
+﻿l_german:
+
+ #UGA events
+ 
+ uga.1.t:0 "Aufforderung zum Anschluss"
+ uga.1.d:0 "Der Kaiser erwartet von uns, dass wir uns dem Kaisertum Österreich anschließen. Bei einer Verweigerung könnten uns "ungewollte Maßnahmen" drohen. Was sollen wir ihnen antworten?"
+ uga.1.a:0 "Es wäre die schlaueste Option zuzustimmen."
+ uga.1.b:0 "Niemals werden wir unsere Souveränität aufgeben!"
+ 
+ uga.2.t:0 "[SER.GetNameDef] lehnt Forderung ab"
+ uga.2.d:0 "[SER.GetNameDef] hat unsere Forderung eines Anschlusses abgelehnt. Der serbische Staat lehne es ab seine Souveränität zugunsten einer Gebietserweiterung Österreichs aufzugeben."
+ uga.2.a:0 "Sie werden sehen, was sie davon haben."
+ 
+ uga.3.t:0 "[SER.GetNameDef] akzeptiert Forderung"
+ uga.3.d:0 "[SER.GetNameDef] ist unserer Aufforderung nachgekommen und schließt sich dem Kaisertum Österreich an. Es ist nun gemeinsam mit Nordserbien ein eigenständiges Kronland."
+ uga.3.a:0 "Endlich ist auch der Rest Serbiens beseitigt"
+ 
+ uga.4.t:0 "Aufforderung zum Anschluss"
+ uga.4.d:0 "Der Kaiser erwartet von uns, dass wir uns dem Kaisertum Österreich anschließen. Bei einer Verweigerung könnten uns "ungewollte Maßnahmen" drohen. Was sollen wir ihnen antworten?"
+ uga.4.a:0 "Uns bleibt keine andere Wahl"
+ uga.4.b:0 "Niemals werden wir uns unterwerfen!"
+ 
+ uga.5.t:0 "[MNT.GetNameDef] lehnt Forderungen ab"
+ uga.5.d:0 "[MNT.GetNameDef] hat unsere Aufforderung abgelehnt. Eine sehr unkluge Entscheidung!"
+ uga.5.a:0 "Zeigen wir ihnen wie unklug sie war..."
+ 
+ uga.6.t:0 "[MNT.GetNameDef] akzeptiert Forderungen"
+ uga.6.d:0 "[MNT.GetNameDef] hat unsere Aufforderung akzeptiert und schließt sich dem Kaisertum Österreich an. Es ist nun ein Teil des Kronlandes Serbien."
+ uga.6.a:0 "Schön zu hören"
+ 
+ uga.7.t:0 "Berlin stimmt Beitritt zu"
+ uga.7.d:0 "Der deutsche Kaiser hat unserem Ersuchen wieder den Mittelmächten beizutreten zugestimmt. Man seie sehr erfreut über die Entscheidung Österreichs wieder den Kontakt zum Deutschen Kaiserreich zu suchen."
+ uga.7.a:0 "Sehr erfreulich!"
+ 
+ uga.8.t:0 "Berlin lehnt Beitritt ab" 
+ uga.8.d:0 "[GER.GetNameDef] hat unser Ersuchen abgelehnt. Laut dem deutschen Kaiser müsse Österreich sich erstmal "würdig" erweisen."
+ uga.8.a:0 "Wir sollten auf das Schlimmste vorbereiten."
+ 
+ uga.9.t:0 "[SOV.GetNameDef] akzeptiert unser Ansuchen!"
+ uga.9.d:0 "[SOV.GetNameDef] hat unserem Ansuchen zugestimmt. Nun stehen wir Seite an Seite!"
+ uga.9.a:0 "Großartige Neuigkeiten!"
+ 
+ uga.10.t:0 "[SOV.GetNameDef] lehnt Ansuchen ab" 
+ uga.10.d:0 "[SOV.GetNameDef] hat unser Ansuchen abgelehnt. Das kann nichts Gutes bedeuten..."
+ uga.10.a:0 "Vielleicht sollten wir die Komintern lieber bekämpfen"
+ 
+ uga.11.t:0 "[UGA.GetNameDef] fordert mehr Einfluss"
+ uga.11.d:0 "[UGA.GetNameDef] fordert uns dazu auf, ihnen mehr Einfluss auf unsere Politik zu geben. Sollen wir ihnen das gewähren?"
+ uga.11.a:0 "Sie wissen was gut für uns ist"
+ uga.11.b:0 "Sicherlich nicht, zum Teufel mit ihnen!"
+ 
+ uga.12.t:0 "[SER.GetNameDef] akzeptiert Forderung"
+ uga.12.d:0 "[SER.GetNameDef] hat unsere Forderung angenommen. Ihre Politiker agieren nun in unserem Interesse."
+ uga.12.a:0 "Sie haben richtig entschieden"
+ 
+ uga.13.t:0 "[SER.GetNameDef] lehnt Forderung ab"
+ uga.13.d:0 "[SER.GetNameDef] hat es abgelehnt uns mehr Einfluss auf ihre Politik zu gewähren. Wie sollen wir mit ihnen weiter verfahren?"
+ uga.13.a:0 "Falsche Entscheidung"
+ 
+ uga.14.t:0 "[UGA.GetNameDef] fordert mehr Einfluss"
+ uga.14.d:0 "[UGA.GetNameDef] fordert uns dazu auf, ihnen mehr Einfluss auf unsere Politik zu geben. Sollen wir ihnen das gewähren?"
+ uga.14.a:0 "Sie wissen was gut für uns ist"
+ uga.14.b:0 "Sicherlich nicht, zum Teufel mit ihnen!"
+ 
+ uga.15.t:0 "[MNT.GetNameDef] akzeptiert Forderung"
+ uga.15.d:0 "[MNT.GetNameDef] hat unsere Forderung angenommen. Ihre Politiker agieren nun in unserem Interesse."
+ uga.15.a:0 "Sie haben richtig entschieden"
+ 
+ uga.16.t:0 "[MNT.GetNameDef] lehnt Forderung ab"
+ uga.16.d:0 "[MNT.GetNameDef] hat es abgelehnt uns mehr Einfluss auf ihre Politik zu gewähren. Wie sollen wir mit ihnen weiter verfahren?"
+ uga.16.a:0 "Falsche Entscheidung"
+ 
+ uga.17.t:0 "[UGA.GetNameDef] lädt uns ein"
+ uga.17.d:0 "[UGA.GetNameDef] möchte uns dazu einladen, der Wiener Allianz beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.17.a:0 "Treten wir ihnen bei"
+ uga.17.b:0 "Nicht daran interessiert"
+ 
+ uga.18.t:0 "[ROM.GetNameDef] akzeptiert unser Angebot"
+ uga.18.d:0 "[ROM.GetNameDef] ist unserem Bündnis beigetreten. Das ist der Beginn unseres Aufstieges!"
+ uga.18.a:0 "So ist es"
+ 
+ uga.19.t:0 "[ROM.GetNameDef] lehnt unser Angebot ab"
+ uga.19.d:0 "[ROM.GetNameDef] hat es abgelehnt unserer Allianz beizutreten. Wir wissen was das bedeutet."
+ uga.19.a:0 "Sie werden für ihre Ignoranz bezahlen!"
+ 
+ uga.20.t:0 "[UGA.GetNameDef] lädt uns ein"
+ uga.20.d:0 "[UGA.GetNameDef] möchte uns dazu einladen, der Wiener Allianz beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.20.a:0 "Treten wir ihnen bei"
+ uga.20.b:0 "Nicht daran interessiert"
+ 
+ uga.21.t:0 "[GRE.GetNameDef] akzeptiert unser Angebot"
+ uga.21.d:0 "[GRE.GetNameDef] ist unserem Bündnis beigetreten. Das ist der Beginn unseres Aufstieges!"
+ uga.21.a:0 "Alle Macht dem Kaiser!"
+ 
+ uga.22.t:0 "[GRE.GetNameDef] lehnt unser Angebot ab"
+ uga.22.d:0 "[GRE.GetNameDef] hat es abgelehnt unserer Allianz beizutreten. Wir wissen was das bedeutet."
+ uga.22.a:0 "Sie werden für ihre Ignoranz bezahlen!"
+ 
+ uga.23.t:0 "[UGA.GetNameDef] lädt uns ein"
+ uga.23.d:0 "[UGA.GetNameDef] möchte uns dazu einladen, der Wiener Allianz beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.23.a:0 "Treten wir ihnen bei"
+ uga.23.b:0 "Nicht daran interessiert"
+ 
+ uga.24.t:0 "[UKR.GetNameDef] akzeptiert unser Angebot"
+ uga.24.d:0 "[UKR.GetNameDef] ist unserem Bündnis beigetreten. Das ist der Beginn unseres Aufstieges!"
+ uga.24.a:0 "Alle Macht dem Kaiser!"
+ 
+ uga.25.t:0 "[UKR.GetNameDef] lehnt unser Angebot ab"
+ uga.25.d:0 "[UKR.GetNameDef] hat es abgelehnt unserer Allianz beizutreten. Wir wissen was das bedeutet."
+ uga.25.a:0 "Sie werden für ihre Ignoranz bezahlen!"
+ 
+ uga.26.t:0 "Wien lädt uns ein"
+ uga.26.d:0 "Die österreichische Regierung möchte uns dazu einladen dem Völkerbund beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.26.a:0 "Ein notwendiger Schritt Richtung Frieden"
+ uga.26.b:0 "Dieser Bund ist sowieso nutzlos"
+ 
+ uga.27.t:0 "[OSM.GetNameDef] akzeptiert unser Angebot"
+ uga.27.d:0 "[OSM.GetNameDef] ist dem Völkerbund beigetreten. Eine erster Schritt Richtung Frieden"
+ uga.27.a:0 "Gute Neuigkeiten!"
+ 
+ uga.28.t:0 "[OSM.GetNameDef] lehnt unser Angebot ab"
+ uga.28.d:0 "[OSM.GetNameDef] hat es abgelehnt dem Völkerbund beizutreten. Anscheinend ist die Regierung der Osmanischen Republik nicht daran interessiert den Frieden zu bewahren."
+ uga.28.a:0 "Dann müssen wir ohne sie auskommen"
+ 
+ uga.29.t:0 "Wien lädt uns ein"
+ uga.29.d:0 "Die österreichische Regierung möchte uns dazu einladen dem Völkerbund beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.29.a:0 "Ein notwendiger Schritt Richtung Frieden"
+ uga.29.b:0 "Dieser Bund ist sowieso nutzlos"
+ 
+ uga.30.t:0 "[NOR.GetNameDef] akzeptiert unser Angebot"
+ uga.30.d:0 "[NOR.GetNameDef] ist dem Völkerbund beigetreten. Eine erster Schritt Richtung Frieden"
+ uga.30.a:0 "Gute Neuigkeiten!"
+ 
+ uga.31.t:0 "[NOR.GetNameDef] lehnt unser Angebot ab"
+ uga.31.d:0 "[NOR.GetNameDef] hat es abgelehnt dem Völkerbund beizutreten. Anscheinend ist die Regierung Norwegens nicht daran interessiert den Frieden zu bewahren."
+ uga.31.a:0 "Dann müssen wir ohne sie auskommen"
+ 
+ uga.32.t:0 "Wien lädt uns ein"
+ uga.32.d:0 "Die österreichische Regierung möchte uns dazu einladen dem Völkerbund beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.32.a:0 "Ein notwendiger Schritt Richtung Frieden"
+ uga.32.b:0 "Dieser Bund ist sowieso nutzlos"
+ 
+ uga.33.t:0 "[SWE.GetNameDef] akzeptiert unser Angebot"
+ uga.33.d:0 "[SWE.GetNameDef] ist dem Völkerbund beigetreten. Eine erster Schritt Richtung Frieden"
+ uga.33.a:0 "Gute Neuigkeiten!"
+ 
+ uga.34.t:0 "[SWE.GetNameDef] lehnt unser Angebot ab"
+ uga.34.d:0 "[SWE.GetNameDef] hat es abgelehnt dem Völkerbund beizutreten. Anscheinend ist die Regierung Schwedens nicht daran interessiert den Frieden zu bewahren."
+ uga.34.a:0 "Dann müssen wir ohne sie auskommen"
+ 
+ uga.35.t:0 "Wien lädt uns ein"
+ uga.35.d:0 "Die österreichische Regierung möchte uns dazu einladen dem Völkerbund beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.35.a:0 "Ein notwendiger Schritt Richtung Frieden"
+ uga.35.b:0 "Dieser Bund ist sowieso nutzlos"
+ 
+ uga.36.t:0 "[ENG.GetNameDef] akzeptiert unser Angebot"
+ uga.36.d:0 "[ENG.GetNameDef] ist dem Völkerbund beigetreten. Eine erster Schritt Richtung Frieden"
+ uga.36.a:0 "Gute Neuigkeiten!"
+ 
+ uga.37.t:0 "[ENG.GetNameDef] lehnt unser Angebot ab"
+ uga.37.d:0 "[ENG.GetNameDef] hat es abgelehnt dem Völkerbund beizutreten. Anscheinend ist die Regierung Großbritanniens nicht daran interessiert den Frieden zu bewahren."
+ uga.37.a:0 "Dann müssen wir ohne sie auskommen"
+ 
+ uga.38.t:0 "Beitrittsanfrage aus Wien"
+ uga.38.d:0 "[UGA.GetNameDef] möchte der Union Internationale beitreten. Sollen wir sie aufnehmen?"
+ uga.38.a:0 "Ja, auf jeden Fall!"
+ uga.38.b:0 "Nein, wir brauchen sie nicht"
+ 
+ uga.39.t:0 "Paris akzeptiert unsere Anfrage"
+ uga.39.d:0 "[FRA.GetNameDef] hat unsere Anfrage angenommen. Wir stehen nun vereint."
+ uga.39.a:0 "Tolle Neuigkeiten"
+ 
+ uga.40.t:0 "Paris lehnt Anfrage ab"
+ uga.40.d:0 "[FRA.GetNameDef] hat unsere Anfrage abgelehnt. Wir müssen wohl alleine weiterkämpfen."
+ uga.40.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ uga.41.t:0 "Anschluss Serbiens?"
+ uga.41.d:0 "Wir haben einen Vorschlag der serbischen Regierung erhalten, welcher den Anschluss Serbiens an die Vereinigten Staaten von Groß-Österreich vorschlägt. Begründet haben sie diesen Schritt unter anderem damit, dass bereits ein Großteil der serbischen Bevölkerung im Kronland Nord-Serbien unter teils besseren Bedingungen und mit weitgehender Autonomie lebt. Wir sollten uns diesen Vorschlag gut überlegen, solch ein Schritt kann für beide Seiten profitabel sein."
+ uga.41.a:0 "Das könnte die serbische Frage entgültig lösen"
+ uga.41.b:0 "Womöglich geht das nicht gut, also lieber nicht"
+ 
+ uga.42.t:0 "Wien lädt uns ein"
+ uga.42.d:0 "[UGA.GetNameDef] möchte uns dazu einladen, der Wiener Allianz beizutreten. Sollen wir uns ihnen anschließen?"
+ uga.42.a:0 "Treten wir ihnen bei"
+ uga.42.b:0 "Nicht daran interessiert"
+ 
+ uga.43.t:0 "Sofia nimmt Einladung an"
+ uga.43.d:0 "[BUL.GetNameDef] ist unserem Bündnis beigetreten. Das ist der Beginn unseres Aufstieges!"
+ uga.43.a:0 "Alle Macht dem Kaiser!"
+ 
+ uga.44.t:0 "Sofia weist Einladung zurück"
+ uga.44.d:0 "[BUL.GetNameDef] hat es abgelehnt unserer Allianz beizutreten. Wir wissen was das bedeutet."
+ uga.44.a:0 "Sie werden für ihre Ignoranz bezahlen!"
+ 
+ #Serbien
+ aw_ser.1.t:0 "Die Zukunft Serbiens"
+ aw_ser.1.d:0 "Fast 21 Jahre ist es her als Serbien den Friedensvertrag von Lemberg unterzeichnete, welcher den Verlust Nord-Serbiens und Mazedoniens festlegte. Seit 15 Jahren leben unsere serbischen Brüder und Schwestern in Nord-Serbien mit einer relativ weitgehenden Autonomie unter teilweise besseren Bedingungen als wir. Es liegt also der Gedanke nahe, dass sich auch der Rest Serbiens den Vereinigten Staaten von Groß-Österreich anschließt, damit das serbische Volk endlich vereint ist..."
+ aw_ser.1.a:0 "Wir sollten die groß-österreichische Regierung fragen"
+ aw_ser.1.b:0 "Auf lange Sicht ist das keine Lösung"
+ 
+ aw_ser.2.t:0 "Wien lehnt Anschluss ab"
+ aw_ser.2.d:0 "Die groß-österreichische Regierung hat die Idee eines Anschlusses Serbiens zurückgewiesen. Begründet haben sie dies damit, dass die Gründung der Vereinigten Staaten von Groß-Österreich erst ein paar Jahre her ist und man noch ein paar Jahre warten möchte bevor an eine Erweiterung der Union gedacht wird."
+ aw_ser.2.a:0 "Vielleicht zu einem späteren Zeitpunkt"
+ 
+ #Germany events
+ germany.1.t: "Ersuchen aus Wien"
+ germany.1.d: "Wir haben heute eine Nachricht vom österreichischen Außenministerium in Wien bekommen. Das Kaisertum Österreich sucht den Kontakt zum Deutschen Reich und möchte den Mittelmächten wieder beitreten."
+ germany.1.a: "Sie sind immer willkommen!"
+ germany.1.b: "Zu spät, zu wenig..."
+ 
+ #Soviet events
+ soviet.55.t:0 "Wien möchte Komintern beitreten"
+ soviet.55.d:0 "Wir haben heute eine Nachricht aus Wien erhalten. [UGA.GetNameDef] wollen dem Komintern Pakt beitreten. Was sollen wir antworten?"
+ soviet.55.a:0 "Weitere Verbündete sind immer willkommen"
+ soviet.55.b:0 "Sie wären nur ein weiteres Problem für uns"
+ 
+ #France events 
+ aw_fra.1.t:0 "[FRA.GetNameDef] lädt uns ein"
+ aw_fra.1.d:0 "[FRA.GetNameDef] möchte uns dazu einladen, die Ligue des Fasciste zu gründen. Sollen wir uns ihrem Vorhaben anschließen?"
+ aw_fra.1.a:0 "Treten wir ihnen bei!"
+ aw_fra.1.b:0 "Nicht daran interessiert"
+ 
+ aw_fra.2.t:0 "[ITA.GetNameDef] akzeptiert unser Angebot"
+ aw_fra.2.d:0 "[ITA.GetNameDef] ist unserem Bündnis beigetreten. Das ist der Beginn unseres Aufstieges!"
+ aw_fra.2.a:0 "So ist es"
+ 
+ aw_fra.3.t:0 "[ITA.GetNameDef] lehnt unser Angebot ab"
+ aw_fra.3.d:0 "[ITA.GetNameDef] hat es abgelehnt unserer Allianz beizutreten. Wir wissen was das bedeutet."
+ aw_fra.3.a:0 "Sie werden für ihre Ignoranz bezahlen!"
+ 
+ aw_fra.4.t:0 "Französisches Ultimatum"
+ aw_fra.4.d:0 "[FRA.GetNameDef] hat angekündigt, dass sie die Schutzherrschaft über Belgien übernehmen werden. Sollte Belgien sich weigern, so müsse man notwendig Maßnahmen einleiten, um sich gegen Deutschland zu verteidigen."
+ aw_fra.4.a:0 "Uns bleibt keine Wahl"
+ aw_fra.4.b:0 "Wir wehren uns gegen die franz. Invasoren!"
+ 
+ aw_fra.5.t:0 "[BEL.GetNameDef] erkennt Schutzherrschaft an"
+ aw_fra.5.d:0 "[BEL.GetNameDef] hat die französische Schutzherrschaft anerkannt. Belgien ist nun sicher vor deutschen Aggressionen."
+ aw_fra.5.a:0 "Gute Neuigkeiten"
+ 
+ aw_fra.6.t:0 "[BEL.GetNameDef] weigert sich"
+ aw_fra.6.d:0 "[BEL.GetNameDef] hat es abgelehnt die französische Schutzherrschaft anzuerkennen. Offensichtlich sind sie bereits Deutschlands Marionette..."
+ aw_fra.6.a:0 "Dann sind sie wohl unser Feind!"
+ 
+ aw_fra.7.t:0 "Paris lädt uns ein"
+ aw_fra.7.d:0 "[FRA.GetNameDef] hat uns zu ihrem Bündnis eingeladen. Sollen wir ihnen beitreten?"
+ aw_fra.7.a:0 "In Zeiten wie diesen unvermeidbar!"
+ aw_fra.7.b:0 "Nein, wir können auch ohne sie"
+ 
+ aw_fra.8.t:0 "[UKR.GetNameDef] stimmt Beitritt zu"
+ aw_fra.8.d:0 "[UKR.GetNameDef] hat einem Beitritt zugestimmt. Unser Bündnis wird immer stärker!"
+ aw_fra.8.a:0 "Das sollte Deutschlands Macht einschränken"
+ 
+ aw_fra.9.t:0 "[UKR.GetNameDef] lehnt ab"
+ aw_fra.9.d:0 "[UKR.GetNameDef] möchte unserer Allianz nicht beitreten. Dann bleiben sind eben auf sich gestellt."
+ aw_fra.9.a:0 "Ruhe in Frieden Ukraine"
+ 
+ aw_fra.10.t:0 "[FRA.GetNameDef] möchte Komintern beitreten"
+ aw_fra.10.d:0 "[FRA.GetNameDef] hat den Wunsch geäußert dem Komintern Pakt beizutreten. Was sollen wir antworten?"
+ aw_fra.10.a:0 "Nehmen wir sie auf"
+ aw_fra.10.b:0 "Wir können auf sie verzichten"
+ 
+ aw_fra.11.t:0 "[SOV.GetNameDef] akzeptiert Anfrage"
+ aw_fra.11.d:0 "[SOV.GetNameDef] hat unserer Anfrage zugestimmt. Wir sind jetzt Verbündete!"
+ aw_fra.11.a:0 "Tolle Neuigkeiten!"
+ 
+ aw_fra.12.t:0 "[SOV.GetNameDef] lehnt Anfrage ab"
+ aw_fra.12.d:0 "[SOV.GetNameDef] hat unsere Anfrage abgelehnt. Wir sind auf uns alleine gestellt..."
+ aw_fra.12.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ aw_fra.13.t:0 "[FRA.GetNameDef] verlangt militärischen Zugang"
+ aw_fra.13.d:0 "[FRA.GetNameDef] verlangt von uns militärischen Zugang für ihre Truppen. Zusätzlich bestehen sie darauf, dass wir einem Nichtangriffspakt mit ihnen zustimmen. Wir sollten uns unsere Antwort gut überlegen..."
+ aw_fra.13.a:0 "Wir haben keine andere Wahl als zuzustimmen"
+ aw_fra.13.b:0 "Wir geben unsere Neutralität nicht auf!"
+ 
+ aw_fra.14.t:0 "[SWI.GetNameDef] akzeptiert"
+ aw_fra.14.d:0 "[SWI.GetNameDef] hat unserer Forderung zugestimmt. Wir haben nun militärischen Zugang zu ihrem Territorium und einen Nichtangriffspakt."
+ aw_fra.14.a:0 "Glücklicherweise haben sie richtig entschieden"
+ 
+ aw_fra.15.t:0 "[SWI.GetNameDef] lehnt ab"
+ aw_fra.15.d:0 "[SWI.GetNameDef] hat unsere Forderung abgelehnt mit dem Verweis auf ihre Neutralität. Sie haben wohl nicht lange genug nachgedacht..."
+ aw_fra.15.a:0 "Wir helfen ihnen beim Denken auf die Sprünge"
+ 
+ aw_fra.16.t:0 "Einladung zur L'Union Internationale"
+ aw_fra.16.d:0 "[FRA.GetNameDef] hat uns zu ihrem Bündnis eingeladen. Sollen wir ihnen beitreten?"
+ aw_fra.16.a:0 "In Zeiten wie diesen unvermeidbar!"
+ aw_fra.16.b:0 "Nein, wir können auch ohne sie"
+ 
+ aw_fra.17.t:0 "[UKR.GetNameDef] stimmt Beitritt zu"
+ aw_fra.17.d:0 "[UKR.GetNameDef] hat einem Beitritt zugestimmt. Unser Bündnis wird immer stärker!"
+ aw_fra.17.a:0 "Das sollte Deutschlands Macht einschränken"
+ 
+ aw_fra.18.t:0 "[UKR.GetNameDef] lehnt ab"
+ aw_fra.18.d:0 "[UKR.GetNameDef] möchte unserer Allianz nicht beitreten. Dann bleiben sind eben auf sich gestellt."
+ aw_fra.18.a:0 "Ruhe in Frieden Ukraine"
+ 
+ aw_fra.19.t:0 "Einladung zur L'Union Internationale"
+ aw_fra.19.d:0 "[FRA.GetNameDef] hat uns zu ihrem Bündnis eingeladen. Sollen wir ihnen beitreten?"
+ aw_fra.19.a:0 "In Zeiten wie diesen unvermeidbar!"
+ aw_fra.19.b:0 "Nein, wir können auch ohne sie"
+ 
+ aw_fra.20.t:0 "[UGA.GetNameDef] stimmt Beitritt zu"
+ aw_fra.20.d:0 "[UGA.GetNameDef] hat einem Beitritt zugestimmt. Unser Bündnis wird immer stärker!"
+ aw_fra.20.a:0 "Das sollte Deutschlands Macht einschränken"
+ 
+ aw_fra.21.t:0 "[UGA.GetNameDef] lehnt ab"
+ aw_fra.21.d:0 "[UGA.GetNameDef] möchte unserer Allianz nicht beitreten. Dann bleiben sind eben auf sich gestellt."
+ aw_fra.21.a:0 "Verdammte Österreicher"
+ 
+ aw_fra.22.t:0 "Einladung zu der Ligue des Fasciste"
+ aw_fra.22.d:0 "[FRA.GetNameDef] hat uns zu ihrem Bündnis eingeladen. Sollen wir ihnen beitreten?"
+ aw_fra.22.a:0 "In Zeiten wie diesen unvermeidbar!"
+ aw_fra.22.b:0 "Nein, wir können auch ohne sie"
+ 
+ aw_fra.23.t:0 "[JAP.GetNameDef] stimmt Beitritt zu"
+ aw_fra.23.d:0 "[JAP.GetNameDef] hat einem Beitritt zugestimmt. Unser Bündnis wird immer stärker!"
+ aw_fra.23.a:0 "Gute Neuigkeiten"
+ 
+ aw_fra.24.t:0 "[JAP.GetNameDef] lehnt ab"
+ aw_fra.24.d:0 "[JAP.GetNameDef] möchte unserer Allianz nicht beitreten. Dann bleiben sind eben auf sich gestellt."
+ aw_fra.24.a:0 "Bastarde!"
+ 
+ aw_fra.25.t:0 "Paris lädt uns ein"
+ aw_fra.25.d:0 "[FRA.GetNameDef] hat uns zu ihrem Bündnis eingeladen. Sollen wir ihnen beitreten?"
+ aw_fra.25.a:0 "In Zeiten wie diesen unvermeidbar!"
+ aw_fra.25.b:0 "Nein, wir können auch ohne sie"
+ 
+ aw_fra.26.t:0 "[From.GetNameDef] stimmt Beitritt zu"
+ aw_fra.26.d:0 "[From.GetNameDef] hat einem Beitritt zugestimmt. Unser Bündnis wird immer stärker!"
+ aw_fra.26.a:0 "Gute Neuigkeiten"
+ 
+ aw_fra.27.t:0 "[From.GetNameDef] lehnt ab"
+ aw_fra.27.d:0 "[From.GetNameDef] möchte unserer Allianz nicht beitreten. Dann bleiben sind eben auf sich gestellt."
+ aw_fra.27.a:0 "Bastarde!"
+ 
+ aw_fra.28.t:0 "Gründung Französisch Westafrikas"
+ aw_fra.28.d:0 "Indem wir einen scheinbar unabhängigen Staat in Westafrika mit einer Marionettenregierung in Algiers etablieren, wird uns die Kontrolle über diese Region erleichtert."
+ aw_fra.28.a:0 "Gründe und spiele als Frankreich"
+ aw_fra.28.b:0 "Gründe und spiele als Französisch Westafrika"
+ 
+ aw_fra.29.t:0 "Anschluss Belgiens"
+ aw_fra.29.d:0 "[FRA.GetNameDef] hat angekündigt Belgien zu annektieren und unter die Verwaltung von Paris zu stellen. Das ist unsere letzte Chance uns zu wehren."
+ aw_fra.29.a:0 "Verzichten wir auf unnötiges Blutvergießen"
+ aw_fra.29.b:0 "Wir wehren uns gegen die französischen Invasoren!"
+ 
+ aw_fra.30.t:0 "Anschluss Belgiens"
+ aw_fra.30.d:0 "Die belgische Regierung hat unser Vorhaben zur Kenntnis genommen und ist zurückgetreten. Der Anschluss wurde erfolgreich durchgeführt."
+ aw_fra.30.a:0 "Gute Neuigkeiten"
+ 
+ aw_fra.31.t:0 "[BEL.GetNameDef] weigert sich"
+ aw_fra.31.d:0 "[BEL.GetNameDef] weigert sich dem Französischem Imperium anzuschließen. Wir werden unser Vorhaben mit Waffengewalt durchführen müssen."
+ aw_fra.31.a:0 "Sie werden sehen was sie davon haben"
+ 
+ aw_fra.32.t:0 "Besetzung der Schweiz"
+ aw_fra.32.d:0 "Paris hat eine gemeinsame Besetzung der Schweiz vorgeschlagen. [FRA.GetNameDef] würde den westlichen und wir den östlichen Teil besetzen. Sollen wir bei ihrem Plan mitmachen?"
+ aw_fra.32.a:0 "Das hört sich nach einem guten Plan an"
+ aw_fra.32.b:0 "Lieber nicht"
+ 
+ aw_fra.33.t:0 "Italien sagt zu"
+ aw_fra.33.d:0 "Rom hat uns mitgeteilt, dass sie bei unserem Plan dabei sind. Wir können den Schweizern nun unsere Forderungen unterbreiten."
+ aw_fra.33.a:0 "Dann mal los"
+ 
+ aw_fra.34.t:0 "Italien lehnt ab"
+ aw_fra.34.d:0 "Die italienische Regierung hat unseren Plan abgewiesen und sei nicht daran interessiert. Wir werden unser Vorhaben alleine durchziehen müssen."
+ aw_fra.34.a:0 "Gut dann ohne sie"
+ 
+ aw_fra.35.t:0 "Französisch-Italienische Besatzung"
+ aw_fra.35.d:0 "[FRA.GetNameDef] und [ITA.GetNameDef] haben beschlossen die Schweiz zu besetzen. Sollen wir uns dagegen wehren oder nicht?"
+ aw_fra.35.a:0 "Verzichten wir auf unnötiges Blutvergießen"
+ aw_fra.35.b:0 "Wir kämpfen bis zum letzten Mann!"
+ 
+ aw_fra.36.t:0 "Schweiz kapituliert"
+ aw_fra.36.d:0 "[SWI.GetNameDef] hat sich nicht gegen unser Vorhaben gewehrt und den französischen und italienischen Truppen den Einmarsch gewährt."
+ aw_fra.36.a:0 "Großartig!"
+ 
+ aw_fra.37.t:0 "Schweizer wehren sich"
+ aw_fra.37.d:0 "Die Schweizer haben sich gegen unser Vorhaben ausgesprochen und bekämpfen unsere Truppen."
+ aw_fra.37.a:0 "Dafür werden sie noch bitter büßen!"
+ 
+ aw_fra.38.t:0 "Französische Besatzung"
+ aw_fra.38.d:0 "[FRA.GetNameDef] hat beschlossen die Schweiz zu besetzen. Sollen wir uns dagegen wehren oder nicht?"
+ aw_fra.38.a:0 "Verzichten wir auf unnötiges Blutvergießen"
+ aw_fra.38.b:0 "Wir kämpfen bis zum letzten Mann!"
+ 
+ aw_fra.39.t:0 "Schweiz kapituliert"
+ aw_fra.39.d:0 "[SWI.GetNameDef] hat sich nicht gegen unser Vorhaben gewehrt und den französischen Truppen den Einmarsch gewährt."
+ aw_fra.39.a:0 "Großartig!"
+ 
+ aw_fra.40.t:0 "Schweizer wehren sich"
+ aw_fra.40.d:0 "Die Schweizer haben sich gegen unser Vorhaben ausgesprochen und bekämpfen unsere Truppen."
+ aw_fra.40.a:0 "Dafür werden sie noch bitter büßen!"
+ 
+ aw_fra.41.t:0 "[GER.GetName] verlangt Rückzug aus Belgien"
+ aw_fra.41.d:0 "[GER.GetNameDef] hat uns dazu aufgefordert die Annektion Belgiens rückgängig zu machen und verlangt einen vollständigen Rückzug aller französischen Truppen aus Belgien."
+ aw_fra.41.a:0 "Wir sind nicht bereit für eine Konfrontation mit den Deutschen"
+ aw_fra.41.b:0 "Zum Teufel sollen sich die Deutschen scheren!"
+ 
+ #German Events
+ aw_ger.4.t:0 "Deutsches Angebot"
+ aw_ger.4.d:0 "[GER.GetNameDef] möchte seine Beziehungen zu uns verbessern und schlägt einen Nichtangriffspakt vor. Was hält ihr davon?"
+ aw_ger.4.a:0 "Das wäre gut!"
+ aw_ger.4.b:0 "Zum Teufel sollen sie gehen!"
+ 
+ aw_ger.5.t:0 "[KBN.GetNameDef] akzeptiert Angebot"
+ aw_ger.5.d:0 "[KBN.GetNameDef] hat unser Angebot angenommen, wir haben jetzt einen Nichtangriffspakt mit ihnen."
+ aw_ger.5.a:0 "Sie haben richtig entschieden"
+ 
+ aw_ger.6.t:0 "[KBN.GetNameDef] lehnt Angebot ab"
+ aw_ger.6.d:0 "[KBN.GetNameDef] hat unser Angebot abgelehnt, womöglich führen sie etwas im Schilde..."
+ aw_ger.6.a:0 "Hoffentlich nicht"
+ 
+ aw_ger.7.t:0 "Deutsches Ultimatum"
+ aw_ger.7.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.7.a:0 "Die Deutschen wissen was gut für uns ist"
+ aw_ger.7.b:0 "Soetwas kann man nur ablehnen!"
+ 
+ aw_ger.8.t:0 "[LIT.GetNameDef] akzeptiert Forderungen"
+ aw_ger.8.d:0 "[LIT.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.8.a:0 "Sie haben richtig entschieden"
+ 
+ aw_ger.9.t:0 "[LIT.GetNameDef] lehnt Forderungen ab"
+ aw_ger.9.d:0 "[LIT.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität. Wie sollen wir weiter mit ihnen verfahren?"
+ aw_ger.9.a:0 "Dann werden wir unseren Willen erzwingen müssen"
+ 
+ aw_ger.10.t:0 "Deutsches Ultimatum"
+ aw_ger.10.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.10.a:0 "Die Deutschen wissen was gut für uns ist"
+ aw_ger.10.b:0 "Das geht zu weit!"
+ 
+ aw_ger.11.t:0 "[KUR.GetNameDef] akzeptiert Forderungen"
+ aw_ger.11.d:0 "[KUR.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.11.a:0 "Gute Neuigkeiten"
+ 
+ aw_ger.12.t:0 "[KUR.GetNameDef] lehnt Forderungen ab"
+ aw_ger.12.d:0 "[KUR.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.12.a:0 "Nicht sehr klug von ihnen"
+ 
+ aw_ger.13.t:0 "Deutsches Ultimatum"
+ aw_ger.13.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.13.a:0 "Uns bleibt keine Wahl"
+ aw_ger.13.b:0 "Das geht einfach zu weit!"
+ 
+ aw_ger.14.t:0 "[EST.GetNameDef] akzeptiert Forderungen"
+ aw_ger.14.d:0 "[EST.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.14.a:0 "Kluge Entscheidung von ihnen"
+ 
+ aw_ger.15.t:0 "[EST.GetNameDef] lehnt Forderungen ab"
+ aw_ger.15.d:0 "[EST.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.15.a:0 "Macht die Panzer bereit!"
+ 
+ aw_ger.16.t:0 "Deutsches Ultimatum"
+ aw_ger.16.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.16.a:0 "Uns bleibt keine Wahl"
+ aw_ger.16.b:0 "Das geht einfach zu weit!"
+ 
+ aw_ger.17.t:0 "[LAT.GetNameDef] akzeptiert Forderungen"
+ aw_ger.17.d:0 "[LAT.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.17.a:0 "Wir werden gut für sie sorgen"
+ 
+ aw_ger.18.t:0 "[LAT.GetNameDef] lehnt Forderungen ab"
+ aw_ger.18.d:0 "[LAT.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.18.a:0 "Dann müssen wir Gewalt anwenden"
+ 
+ aw_ger.19.t:0 "Deutsches Ultimatum"
+ aw_ger.19.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.19.a:0 "Sie sind zu mächtig, wir müssen akzeptieren"
+ aw_ger.19.b:0 "Sollen sie uns doch holen kommen!"
+ 
+ aw_ger.20.t:0 "[HOL.GetNameDef] akzeptiert Forderungen"
+ aw_ger.20.d:0 "[HOL.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.20.a:0 "Sie hatten keine Wahl"
+ 
+ aw_ger.21.t:0 "[HOL.GetNameDef] lehnt Forderungen ab"
+ aw_ger.21.d:0 "[HOL.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.21.a:0 "Niemand widersetzt sich den Deutschen!"
+ 
+ aw_ger.22.t:0 "Deutsches Ultimatum"
+ aw_ger.22.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.22.a:0 "Sie sind zu mächtig, wir müssen akzeptieren"
+ aw_ger.22.b:0 "Sollen sie uns doch holen kommen!"
+ 
+ aw_ger.23.t:0 "[DEN.GetNameDef] akzeptiert Forderungen"
+ aw_ger.23.d:0 "[DEN.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.23.a:0 "Unser Einfluss steigt weiterhin an"
+ 
+ aw_ger.24.t:0 "[DEN.GetNameDef] lehnt Forderungen ab"
+ aw_ger.24.d:0 "[DEN.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.24.a:0 "Haben die überhaupt ein Militär?"
+ 
+ aw_ger.25.t:0 "Deutsches Ultimatum"
+ aw_ger.25.d:0 "[GER.GetNameDef] hat uns ein Ultimatum mit folgenden Forderungen gestellt: Sie möchten einen Nichtangriffspakt, militärischen Zugang zu unserem Gebiet und unsere Außenpolitik kontrollieren. Das würde bedeuten, dass wir ihre Marionette wären."
+ aw_ger.25.a:0 "Sie sind zu mächtig, wir müssen akzeptieren"
+ aw_ger.25.b:0 "Zum Teufel sollen sie gehen!"
+ 
+ aw_ger.26.t:0 "[BEL.GetNameDef] akzeptiert Forderungen"
+ aw_ger.26.d:0 "[BEL.GetNameDef] hat die Forderungen akzeptiert, sie sind jetzt unsere Marionette."
+ aw_ger.26.a:0 "Wurde auch Zeit"
+ 
+ aw_ger.27.t:0 "[BEL.GetNameDef] lehnt Forderungen ab"
+ aw_ger.27.d:0 "[BEL.GetNameDef] hat die Forderungen abgelehnt mit dem Verweis auf ihre Souveränität."
+ aw_ger.27.a:0 "Dann holen wir uns eben den Rest Belgiens"
+ 
+ aw_ger.28.t:0 "Berlin lädt uns ein"
+ aw_ger.28.d:0 "Berlin hat uns heute das Angebot gemacht der deutschen Allianz beizutreten. Sollen wir ihnen beitreten?"
+ aw_ger.28.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_ger.28.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_ger.29.t:0 "[UKR.GetNameDef] nimmt Einladung an"
+ aw_ger.29.d:0 "[UKR.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_ger.29.a:0 "Tolle Neuigkeiten"
+ 
+ aw_ger.30.t:0 "[UKR.GetNameDef] lehnt Einladung ab"
+ aw_ger.30.d:0 "[UKR.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_ger.30.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_ger.31.t:0 "Berlin wünscht Nichtangriffspakt"
+ aw_ger.31.d:0 "Wir haben heute ein Angebot aus Berlin erhalten. [GER.GetNameDef] bietet einen Nichtangriffspakt zwischen unseren Ländern an."
+ aw_ger.31.a:0 "Wir sollten zustimmen"
+ aw_ger.31.b:0 "Solch ein Pakt wird nicht notwendig sein"
+ 
+ aw_ger.32.t:0 "Wien stimmt zu"
+ aw_ger.32.d:0 "[UGA.GetNameDef] haben unser Angebot angenommen. Wir haben den Frieden zwischen unseren Ländern gesichert."
+ aw_ger.32.a:0 "Großartig"
+ 
+ aw_ger.33.t:0 "Wien lehnt ab"
+ aw_ger.33.d:0 "[UGA.GetNameDef] haben das Angebot abgelehnt. Wir sollten uns auf das schlimmste vorbereiten."
+ aw_ger.33.a:0 "Traurig wie weit wir uns entfernt haben"
+ 
+ aw_ger.34.t:0 "Staatsbesuch aus Deutschland"
+ aw_ger.34.d:0 "Im Zuge des Staatsbesuchs aus Deutschland bietet uns [GER.GetNameDef] einen Nichtangriffspakt an. Sollen wir ihr Angebot annehmen?"
+ aw_ger.34.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_ger.34.b:0 "Nein das ist nicht notwendig"
+ 
+ aw_ger.35.t:0 "Nichtangriffspakt mit [OSM.GetNameDef]"
+ aw_ger.35.d:0 "[OSM.GetNameDef] hat unser Angebot angenommen. Wir haben nun einen Nichtangriffspakt mit ihnen."
+ aw_ger.35.a:0 "Großartig"
+ 
+ aw_ger.36.t:0 "[OSM.GetNameDef] lehnt ab"
+ aw_ger.36.d:0 "[OSM.GetNameDef] hat das Angebot abgelehnt. Wir sollten uns auf das Schlimmste vorbereiten."
+ aw_ger.36.a:0 "Narren!"
+ 
+ aw_ger.37.t:0 "Berlin bietet Kooperation an"
+ aw_ger.37.d:0 "Berlin hat uns eine engere Zusammenarbeit angeboten und lädt uns zur Wirtschaftsunion ein. Sollen wir ihnen entgegen kommen?"
+ aw_ger.37.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_ger.37.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_ger.38.t:0 "China nimmt Angebot an"
+ aw_ger.38.d:0 "[CHI.GetNameDef] hat einer Kooperation mit uns zugestimmt und haben beschlossen der Wirtschaftsunion beizutreten."
+ aw_ger.38.a:0 "Gute Neuigkeiten"
+ 
+ aw_ger.39.t:0 "China lehnt ab"
+ aw_ger.39.d:0 "[CHI.GetNameDef] hat eine engere Zusammenarbeit mit uns abgelehnt. Sie haben beschlossen "neutral" zu bleiben."
+ aw_ger.39.a:0 "Verrückte Chinesen"
+ 
+ aw_ger.40.t:0 "Berlin fordert Shanghai"
+ aw_ger.40.d:0 "[GER.GetNameDef] hat die Kontrolle über die Stadt Shanghai und deren Außenbezirke gefordert. Sollten wir ablehnen könnte dies zu Sanktionen gegen uns führen."
+ aw_ger.40.a:0 "Überlassen wir es ihnen"
+ aw_ger.40.b:0 "Welch verrückte Forderung!"
+ 
+ aw_ger.41.t:0 "China gibt nach"
+ aw_ger.41.d:0 "[CHI.GetNameDef] hat nachgegeben und überlässt uns die Kontrolle über Shanghai."
+ aw_ger.41.a:0 "Sie haben richtig entschieden"
+ 
+ aw_ger.42.t:0 "China weigert sich"
+ aw_ger.42.d:0 "[CHI.GetNameDef] hat sich geweigert uns die Kontrolle über Shanghai zu überlassen. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_ger.42.a:0 "Das bleibt nicht ohne Konsequenzen"
+ 
+ aw_ger.43.t:0 "Paris stellt Friedensvertrag infrage"
+ aw_ger.43.d:0 "Die französische Regierung hat es in einer öffentlichen Regierungsverlautbarung tatsächlich gewagt den Vertrag von Nürnberg zu hinterfragen. Wie sollen wir darauf reagieren?"
+ aw_ger.43.a:0 "Die Franzosen sollen mit den Konsequenzen des Krieges leben!"
+ aw_ger.43.b:0 "Das ist keine Beachtung wert"
+ 
+ aw_ger.44.t:0 "Frankreich annektiert Belgien"
+ aw_ger.44.d:0 "[FRA.GetNameDef] hat ohne Absprache mit dem Deutschen Reich Belgien annektiert. Das aggressive Vorgehen der französischen Regierung stellt für das Kaiserreich eine Gefahr dar. Die Franzosen haben eindeutig das Belgien-Abkommen von 1920 gebrochen, in welchem sich die französische und deutsche Regierung darauf geeinigt haben, Belgien als neutralen Pufferstaat zu akzeptieren und dessen Souveränität nicht infrage zu stellen."
+ aw_ger.44.a:0 "Fordere Rückzug aus Belgien"
+ aw_ger.44.b:0 "Verhänge ein Embargo"
+ 
+ aw_ger.45.t:0 "Franzosen bleiben in Belgien"
+ aw_ger.45.d:0 "Die französische Regierung hat unser Ultimatum zurückgewiesen und beharrt auf die Annektion Belgiens."
+ aw_ger.45.a:0 "Erkläre Frankreich den Krieg"
+ aw_ger.45.b:0 "Verhänge ein Embargo"
+ 
+ aw_ger.46.t:0 "Franzosen ziehen sich aus Belgien zurück"
+ aw_ger.46.d:0 "Die Französische Regierung hat sich dazu entschlossen, die Annektion Belgiens rückgängig zu machen und alle Truppen abzuziehen, um einen Krieg mit dem Deutschen Reich zu verhindern."
+ aw_ger.46.a:0 "Weise Entscheidung"
+ 
+ 
+ 
+ aw_ger.50.t:0 "[SOV.GetName] beansprucht Baltikum"
+ aw_ger.50.d:0 "[SOV.GetLeader] hat verlautbart, dass das Baltikum rechtmäßig der [SOV.GetName] zusteht. Das ist eine offene Provokation von den Sowjets!"
+ aw_ger.50.a:0 "Wir sollten uns auf einen Angriff vorbereiten"
+ aw_ger.50.b:0 "Die Sowjets sollen gewarnt sein! Wir lassen uns nicht einschüchtern"
+ aw_ger.50.c:0 "Sollen sie doch, wir haben besseres zu tun"
+ 
+ aw_ger.51.t:0 "[SOV.GetName] beansprucht Baltikum"
+ aw_ger.51.d:0 "[SOV.GetLeader] hat verlautbart, dass das Baltikum rechtmäßig der [SOV.GetName] zusteht. Die Sowjets könnten also ziemlich bald Annektionskriege im Baltikum führen."
+ aw_ger.51.a:0 "Wir müssen die Unabhängigkeit dieser Staaten garantieren"
+ aw_ger.51.b:0 "Das geht uns nichts an"
+ 
+ aw_ger.52.t:0 "[SOV.GetName] beansprucht Polen"
+ aw_ger.52.d:0 "[SOV.GetNameDef] hat das Gebiet unseres Vasallen Polen beansprucht. Damit gehen die Sowjets eindeutig zu weit, trotz unserer Warnung haben sie es gewagt weitere Ansprüche an unseren Einflussbereich zu stellen!"
+ aw_ger.52.a:0 "Es wird Zeit die Ordnung im Osten wiederherzustellen"
+ 
+ aw_ger.53.t:0 "[SOV.GetName] beansprucht Polen"
+ aw_ger.53.d:0 "[SOV.GetNameDef] hat das Gebiet unseres Vasallen Polen beansprucht. Das ist eine direkte Provokation seitens der Sowjets!"
+ aw_ger.53.a:0 "Sie sollen ihre Ansprüche zurückschrauben"
+ aw_ger.53.b:0 "Wir haben andere Dinge um die wir uns kümmern müssen"
+ 
+ aw_ger.54.t:0 "Sowjets halten ihre Ansprüche"
+ aw_ger.54.d:0 "[SOV.GetLeader] ließ verlautbaren, dass die Sowjetunion weiterhin die Gebietsansprüche halten wird. Das kommt einer Kriegserklärung gleich."
+ aw_ger.54.a:0 "Dann sollten wir die Sowjets entgültig aus dem Weg räumen"
+ 
+ aw_ger.55.t:0 "Sowjets lassen Ansprüche fallen"
+ aw_ger.55.d:0 "Die Sowjets haben die Gebietsansprüche an Polen fallen lassen und werden in Zukunft davon ablassen."
+ aw_ger.55.a:0 "Das ist auch besser so"
+ 
+ aw_ger.56.t:0 "[UKR.GetName] beansprucht Polen"
+ aw_ger.56.d:0 "[UKR.GetNameDef] hat Gebiet unseres Vasallen Polen beansprucht. Womöglich führen sie noch weitaus mehr im Schilde."
+ aw_ger.56.a:0 "Embargo aussprechen"
+ aw_ger.56.b:0 "Wir haben andere Dinge um die wir uns kümmern müssen"
+ 
+ #British Events
+ aw_eng.1.t:0 "[ENG.GetNameDef] fordert mehr Einfluss"
+ aw_eng.1.d:0 "[ENG.GetNameDef] fordert uns dazu auf, ihnen mehr Einfluss auf unsere Politik zu geben. Sollen wir ihnen das gewähren?"
+ aw_eng.1.a:0 "Sie wissen was gut für uns ist"
+ aw_eng.1.b:0 "Sicherlich nicht! Zu lange haben sie über uns regiert"
+ 
+ aw_eng.2.t:0 "[AST.GetNameDef] akzeptiert Forderung"
+ aw_eng.2.d:0 "[AST.GetNameDef] hat unsere Forderung angenommen. Ihre Politiker agieren nun in unserem Interesse."
+ aw_eng.2.a:0 "Das wurde auch Zeit"
+ 
+ aw_eng.3.t:0 "[AST.GetNameDef] lehnt Forderung ab"
+ aw_eng.3.d:0 "[AST.GetNameDef] hat es abgelehnt uns mehr Einfluss auf ihre Politik zu gewähren. Wie sollen wir mit ihnen weiter verfahren?"
+ aw_eng.3.a:0 "Das kommt einem Bündnisbruch gleich"
+ 
+ aw_eng.4.t:0 "[ENG.GetNameDef] fordert Anschluss"
+ aw_eng.4.d:0 "[ENG.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihrem Empire anschließen. Was sollen wir antworten?"
+ aw_eng.4.a:0 "Wir sollten dem zustimmen"
+ aw_eng.4.b:0 "Sind die verrückt?"
+ 
+ aw_eng.5.t:0 "[CAN.GetNameDef] schließt sich dem Empire an"
+ aw_eng.5.d:0 "[CAN.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_eng.5.a:0 "Gute Neuigkeiten"
+ 
+ aw_eng.6.t:0 "[CAN.GetNameDef] lehnt Anschluss ab"
+ aw_eng.6.d:0 "[CAN.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind dem Empire beizutreten."
+ aw_eng.6.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_eng.7.t:0 "Ultimatum von [ENG.GetNameDef]"
+ aw_eng.7.d:0 "[ENG.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihrem Empire anschließen. Was sollen wir antworten?"
+ aw_eng.7.a:0 "Wir sollten dem zustimmen"
+ aw_eng.7.b:0 "Sind die verrückt?"
+ 
+ aw_eng.8.t:0 "[IRE.GetNameDef] schließt sich dem Empire an"
+ aw_eng.8.d:0 "[IRE.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_eng.8.a:0 "Gute Neuigkeiten"
+ 
+ aw_eng.9.t:0 "[IRE.GetNameDef] lehnt Ultimatum ab"
+ aw_eng.9.d:0 "[IRE.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind dem Empire beizutreten."
+ aw_eng.9.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_eng.10.t:0 "[ENG.GetNameDef] verkündet Annektion"
+ aw_eng.10.d:0 "[ENG.GetNameDef] hat uns heute mitgeteilt, dass Britisch Indien wieder dem Britischen Empire angegliedert wird."
+ aw_eng.10.a:0 "Möge Gott Indien beschützen"
+
+ 
+ aw_eng.11.t:0 "[RAJ.GetNameDef] ist nun Teil des Empires"
+ aw_eng.11.d:0 "[RAJ.GetNameDef] wurde erfolgreich dem Britischen Empire angegliedert. Die Annektion verlief reibungslos und ohne Probleme."
+ aw_eng.11.a:0 "Gute Neuigkeiten!"
+ 
+ aw_eng.13.t:0 "[ENG.GetNameDef] fordert mehr Einfluss"
+ aw_eng.13.d:0 "[ENG.GetNameDef] fordert uns dazu auf, ihnen mehr Einfluss auf unsere Politik zu geben. Sollen wir ihnen das gewähren?"
+ aw_eng.13.a:0 "Sie wissen was gut für uns ist"
+ aw_eng.13.b:0 "Sicherlich nicht! Zu lange haben sie über uns regiert"
+ 
+ aw_eng.14.t:0 "[SAF.GetNameDef] akzeptiert Forderung"
+ aw_eng.14.d:0 "[SAF.GetNameDef] hat unsere Forderung angenommen. Ihre Politiker agieren nun in unserem Interesse."
+ aw_eng.14.a:0 "Das wurde auch Zeit"
+ 
+ aw_eng.15.t:0 "[SAF.GetNameDef] lehnt Forderung ab"
+ aw_eng.15.d:0 "[SAF.GetNameDef] hat es abgelehnt uns mehr Einfluss auf ihre Politik zu gewähren. Wie sollen wir mit ihnen weiter verfahren?"
+ aw_eng.15.a:0 "Das kommt einem Verrat gleich!"
+ 
+ aw_eng.16.t:0 "[ENG.GetNameDef] fordert mehr Einfluss"
+ aw_eng.16.d:0 "[ENG.GetNameDef] fordert uns dazu auf, ihnen mehr Einfluss auf unsere Politik zu geben. Sollen wir ihnen das gewähren?"
+ aw_eng.16.a:0 "Sie wissen was gut für uns ist"
+ aw_eng.16.b:0 "Sicherlich nicht! Zu lange haben sie über uns regiert"
+ 
+ aw_eng.17.t:0 "[NZL.GetNameDef] akzeptiert Forderung"
+ aw_eng.17.d:0 "[NZL.GetNameDef] hat unsere Forderung angenommen. Ihre Politiker agieren nun in unserem Interesse."
+ aw_eng.17.a:0 "Das wurde auch Zeit"
+ 
+ aw_eng.18.t:0 "[NZL.GetNameDef] lehnt Forderung ab"
+ aw_eng.18.d:0 "[NZL.GetNameDef] hat es abgelehnt uns mehr Einfluss auf ihre Politik zu gewähren. Wie sollen wir mit ihnen weiter verfahren?"
+ aw_eng.18.a:0 "Das kommt einem Verrat gleich!"
+ 
+ aw_eng.19.t:0 "[ENG.GetNameDef] möchte Ligue des Fasciste beitreten"
+ aw_eng.19.d:0 "[ENG.GetNameDef] hat den Wunsch geäußert der Ligue des Fasciste beizutreten. Was sollen wir antworten?"
+ aw_eng.19.a:0 "Nehmen wir sie auf!"
+ aw_eng.19.b:0 "Wir brauchen sie nicht"
+ 
+ aw_eng.20.t:0 "[FRA.GetNameDef] akzeptiert Anfrage"
+ aw_eng.20.d:0 "[FRA.GetNameDef] hat unserer Anfrage zugestimmt. Wir sind jetzt Verbündete!"
+ aw_eng.20.a:0 "Gute Neuigkeiten"
+ 
+ aw_eng.21.t:0 "[FRA.GetNameDef] lehnt Anfrage ab"
+ aw_eng.21.d:0 "[FRA.GetNameDef] hat unsere Anfrage abgelehnt. Wir sind auf uns alleine gestellt..."
+ aw_eng.21.a:0 "Das sieht nicht gut für uns aus"
+ 
+ aw_eng.22.t:0 "[ENG.GetNameDef] lädt uns ein"
+ aw_eng.22.d:0 "London hat uns heute das Angebot gemacht ihrer Allianz beizutreten. Sollen wir dem zustimmen?"
+ aw_eng.22.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_eng.22.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_eng.23.t:0 "[ITA.GetNameDef] nimmt Einladung an"
+ aw_eng.23.d:0 "[ITA.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_eng.23.a:0 "Willkommen Freunde"
+ 
+ aw_eng.24.t:0 "[ITA.GetNameDef] lehnt Einladung ab"
+ aw_eng.24.d:0 "[ITA.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_eng.24.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_eng.25.t:0 "Faschistischer Putsch"
+ aw_eng.25.d:0 "Heute haben die Faschisten mit der gewaltvollen Machtübernahme begonnen. Die Immediate Action Force hat wichtige Institutionen und Verwaltungsgebäude übernommen und das Militär infiltriert. Uns bleiben nur zwei Möglichkeiten:"
+ aw_eng.25.a:0 "Flucht ins Exil"
+ aw_eng.25.b:0 "Bekämpfung der Faschisten"
+ 
+ aw_eng.26.t:0 "London wünscht Nichtangriffspakt"
+ aw_eng.26.d:0 "London hat uns heute das Angebot gemacht einen Nichtangriffspakt abzuschließen. Sollen wir dem zustimmen?"
+ aw_eng.26.a:0 "Ja natürlich"
+ aw_eng.26.b:0 "Nein kommt nicht in Frage"
+ 
+ aw_eng.27.t:0 "Wien nimmt Angebot an"
+ aw_eng.27.d:0 "[UGA.GetNameDef] hat unser Angebot angenommen. Es besteht nun ein Nichtangriffspakt zwischen unseren Staaten."
+ aw_eng.27.a:0 "Gut"
+ 
+ aw_eng.28.t:0 "Wien lehnt Angebot ab"
+ aw_eng.28.d:0 "[UGA.GetNameDef] hat das Angebot abgelehnt. Wir werden nichts Gutes von ihnen erwarten können."
+ aw_eng.28.a:0 "Mal sehen was sie im Schilde führen"
+ 
+ aw_eng.29.t:0 "London wünscht Beitritt"
+ aw_eng.29.d:0 "[ENG.GetNameDef] hat uns gegenüber den Wunsch geäußert dem Völkerbund beizutreten. Sollen wir sie aufnehmen?"
+ aw_eng.29.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_eng.29.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_eng.30.t:0 "Wien stimmt Beitritt zu"
+ aw_eng.30.d:0 "[UGA.GetNameDef] haben dem Beitritt Großbritanniens zugestimmt! Wir sind nun Mitglied im Völkerbund."
+ aw_eng.30.a:0 "Großartig"
+ 
+ aw_eng.31.t:0 "Wien lehnt Beitritt ab"
+ aw_eng.31.d:0 "[UGA.GetNameDef] haben es abgelehnt, dass Großbritannien dem Völkerbund beitritt. Wir werden auf uns selbst gestellt bleiben."
+ aw_eng.31.a:0 "Traurig"
+ 
+ aw_eng.32.t:0 "Hongkong ist gefallen"
+ aw_eng.32.d:0 "[CHI.GetNameDef] hat Hongkong besetzt und unsere Besatzung gefangen genommen. Sollen wir ihnen ein Friedensangebot machen und Hongkong als chinesisches Territorium anerkennen?"
+ aw_eng.32.a:0 "Wir sollten diesen Krieg beenden"
+ aw_eng.32.b:0 "Wir werden uns Hongkong zurückholen"
+ 
+ aw_eng.33.t:0 "Friedensangebot der Briten"
+ aw_eng.33.d:0 "[ENG.GetNameDef] hat uns ein Friedensangebot gemacht in welchem sie uns Hongkong zugestehen. Sollen wir akzeptieren?"
+ aw_eng.33.a:0 "Wir haben was wir wollten"
+ aw_eng.33.b:0 "Sie wollten Krieg, sie bekommen Krieg"
+ 
+ aw_eng.34.t:0 "China lehnt ab"
+ aw_eng.34.d:0 "[CHI.GetNameDef] hat unser Friedensangebot abgelehnt. Sie wollen diesen Krieg weiterführen."
+ aw_eng.34.a:0 "Mutig von ihnen"
+ 
+ aw_eng.35.t:0 "Paris stellt Vertrag von Nürnberg infrage"
+ aw_eng.35.d:0 "Eine Regierungsverlautbarung der französischen Regierung hat den Vertrag von Nürnberg infrage gestellt."
+ aw_eng.35.a:0 "Sie haben unsere volle Zustimmung"
+ aw_eng.35.b:0 "Wir halten uns lieber aus dieser Sache raus"
+ 
+ aw_eng.36.t:0 "London verlangt Sonderrechte"
+ aw_eng.36.d:0 "Aufgrund der angespannten Lage in Europa verlangt die britische Regierung von uns Sonderrechte, um im Ernstfall unter anderem Truppen stationieren zu können. Dadurch könnten wir jedoch zu einer Marionette von ihnen werden."
+ aw_eng.36.a:0 "Manchmal muss man eben Souveränität abgeben"
+ aw_eng.36.b:0 "Das kommt nicht in Frage"
+ 
+ aw_eng.37.t:0 "Norwegen akzeptiert"
+ aw_eng.37.d:0 "[NOR.GetNameDef] hat unsere Forderung angenommen. Wir haben nun Sonderrechte in ihrem Land."
+ aw_eng.37.a:0 "Es war notwendig"
+ 
+ aw_eng.38.t:0 "Norwegen lehnt ab"
+ aw_eng.38.d:0 "[NOR.GetNameDef] hat unsere Forderung abgelehnt."
+ aw_eng.38.a:0 "Hoffentlich müssen wir nicht zu unschönen Mitteln greifen"
+ 
+ aw_eng.39.t:0 "London verlangt Sonderrechte"
+ aw_eng.39.d:0 "Aufgrund der angespannten Lage in Europa verlangt die britische Regierung von uns Sonderrechte, um im Ernstfall unter anderem Truppen stationieren zu können. Dadurch könnten wir jedoch zu einer Marionette von ihnen werden."
+ aw_eng.39.a:0 "Manchmal muss man eben Souveränität abgeben"
+ aw_eng.39.b:0 "Das kommt nicht in Frage"
+ 
+ aw_eng.40.t:0 "Die Niederlande akzeptieren"
+ aw_eng.40.d:0 "[HOL.GetNameDef] hat unsere Forderung angenommen. Wir haben nun Sonderrechte in ihrem Land."
+ aw_eng.40.a:0 "Es war notwendig"
+ 
+ aw_eng.41.t:0 "Die Niederlande lehnen ab"
+ aw_eng.41.d:0 "[HOL.GetNameDef] hat unsere Forderung abgelehnt."
+ aw_eng.41.a:0 "Hoffentlich müssen wir nicht zu unschönen Mitteln greifen"
+ 
+ #Soviet Events
+ aw_sov.1.t:0 "Ultimatum von der [SOV.GetName]"
+ aw_sov.1.d:0 "[SOV.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihnen anschließen. Was sollen wir antworten?"
+ aw_sov.1.a:0 "Wir sollten dem zustimmen"
+ aw_sov.1.b:0 "Sind die verrückt?"
+ 
+ aw_sov.2.t:0 "[TUK.GetName] schließt sich Sowjetunion an"
+ aw_sov.2.d:0 "[TUK.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_sov.2.a:0 "Gute Neuigkeiten"
+ 
+ aw_sov.3.t:0 "[TUK.GetName] lehnt Ultimatum ab"
+ aw_sov.3.d:0 "[TUK.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind sich der Sowjetunion anzuschließen."
+ aw_sov.3.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_sov.4.t:0 "Ultimatum von der [SOV.GetName]"
+ aw_sov.4.d:0 "[SOV.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihnen anschließen. Was sollen wir antworten?"
+ aw_sov.4.a:0 "Wir sollten dem zustimmen"
+ aw_sov.4.b:0 "Sind die verrückt?"
+ 
+ aw_sov.5.t:0 "[FIN.GetName] schließt sich Sowjetunion an"
+ aw_sov.5.d:0 "[FIN.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_sov.5.a:0 "Gute Neuigkeiten"
+ 
+ aw_sov.6.t:0 "[FIN.GetName] lehnt Ultimatum ab"
+ aw_sov.6.d:0 "[FIN.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind sich der Sowjetunion anzuschließen."
+ aw_sov.6.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_sov.7.t:0 "Ultimatum von [SOV.GetNameDef]"
+ aw_sov.7.d:0 "[SOV.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihnen anschließen. Was sollen wir antworten?"
+ aw_sov.7.a:0 "Wir sollten dem zustimmen"
+ aw_sov.7.b:0 "Sind die verrückt?"
+ 
+ aw_sov.8.t:0 "[KBN.GetName] schließt sich Sowjetunion an"
+ aw_sov.8.d:0 "[KBN.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_sov.8.a:0 "Gute Neuigkeiten"
+ 
+ aw_sov.9.t:0 "[KBN.GetName] lehnt Ultimatum ab"
+ aw_sov.9.d:0 "[KBN.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind sich der Sowjetunion anzuschließen."
+ aw_sov.9.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_sov.10.t:0 "Moskau lädt uns ein"
+ aw_sov.10.d:0 "Moskau hat uns heute das Angebot gemacht dem Komintern Pakt beizutreten. Sollen wir dem zustimmen?"
+ aw_sov.10.a:0 "Ja sie wären ein wichtiger Partner!"
+ aw_sov.10.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_sov.11.t:0 "[UKR.GetName] nimmt Einladung an"
+ aw_sov.11.d:0 "[UKR.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_sov.11.a:0 "Willkommen Freunde"
+ 
+ aw_sov.12.t:0 "[UKR.GetName] lehnt Einladung ab"
+ aw_sov.12.d:0 "[UKR.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_sov.12.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_sov.13.t:0 "Ultimatum von der [SOV.GetName]"
+ aw_sov.13.d:0 "[SOV.GetNameDef] hat uns dazu aufgefordert, dass wir uns ihnen anschließen. Was sollen wir antworten?"
+ aw_sov.13.a:0 "Wir haben keine Chance gegen sie"
+ aw_sov.13.b:0 "Sind die verrückt?"
+ 
+ aw_sov.14.t:0 "[TCR.GetName] schließt sich Sowjetunion an"
+ aw_sov.14.d:0 "[TCR.GetNameDef] hat uns heute mitgeteilt, dass sie dem Anschluss zustimmen."
+ aw_sov.14.a:0 "Gute Neuigkeiten"
+ 
+ aw_sov.15.t:0 "[TCR.GetName] lehnt Ultimatum ab"
+ aw_sov.15.d:0 "[TCR.GetNameDef] hat uns mitgeteilt, dass sie nicht dazu bereit sind sich der Sowjetunion anzuschließen."
+ aw_sov.15.a:0 "Dafür werden sie bezahlen!"
+ 
+ aw_sov.16.t:0 "Paris stellt Vertrag von Nürnberg infrage"
+ aw_sov.16.d:0 "Eine Regierungsverlautbarung der französischen Regierung hat den Vertrag von Nürnberg infrage gestellt."
+ aw_sov.16.a:0 "Sie haben unsere volle Zustimmung"
+ aw_sov.16.b:0 "Wir halten uns lieber aus dieser Sache raus"
+ 
+ aw_sov.17.t:0 "[GER.GetName] spricht Warnung aus"
+ aw_sov.17.d:0 "[GER.GetNameDef] hat uns mitgeteilt, dass sie unsere Gebietsansprüche im Baltikum nicht anerkennen werden. [GER.GetLeader] gab an, dass das Deutsche Reich jederzeit dazu bereit seie den sowjetischen Expansionsdrang zu unterbinden."
+ aw_sov.17.a:0 "Soll uns das beeindrucken?"
+ 
+ aw_sov.18.t:0 "[GER.GetName] droht mit Konsequenzen"
+ aw_sov.18.d:0 "[GER.GetNameDef] hat eine indirekte Kriegsdrohung an uns ausgesprochen und fordert uns dazu auf, unsere kürzlich verlautbarten Gebietsansprüche an [POL.GetName] fallen zu lassen."
+ aw_sov.18.a:0 "Wir lassen es auf einen Krieg ankommen"
+ aw_sov.18.b:0 "Wir können jetzt keinen Krieg riskieren"
+ aw_sov.18.c:0 "Die Macht der Deutschen muss endlich gebrochen werden!"
+ 
+ #OSM events 
+ aw_osm.1.t:0 "Osmanisches Ultimatum"
+ aw_osm.1.d:0 "Konstantinopel hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss Arabiens an das Osmanische Reich fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_osm.1.a:0 "Uns bleibt nichts anderes übrig"
+ aw_osm.1.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_osm.2.t:0 "Arabien akzeptiert"
+ aw_osm.2.d:0 "[SAU.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt Teil des Osmanischen Reiches."
+ aw_osm.2.a:0 "Großartig"
+ 
+ aw_osm.3.t:0 "Arabien lehnt ab"
+ aw_osm.3.d:0 "[SAU.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_osm.3.a:0 "Sie haben falsch entschieden"
+ 
+ aw_osm.4.t:0 "Nichtangriffspakt mit [OSM.GetNameDef]"
+ aw_osm.4.d:0 "[OSM.GetNameDef] möchte einen Nichtangriffspakt mit [TCR.GetNameDef]. Dies soll dem Frieden in der Region dienen."
+ aw_osm.4.a:0 "Eine gute Idee"
+ aw_osm.4.b:0 "Nicht interessiert"
+ 
+ aw_osm.5.t:0 "Nichtangriffspakt mit Baku"
+ aw_osm.5.d:0 "[TCR.GetNameDef] hat dem Nichtangriffspakt zwischen ihnen und [OSM.GetNameDef] zugestimmt."
+ aw_osm.5.a:0 "Großartig"
+ 
+ aw_osm.6.t:0 "Baku lehnt ab"
+ aw_osm.6.d:0 "[TCR.GetNameDef] hat es abgelehnt einen Nichtangriffspakt zwischen unseren Staaten abzuschließen."
+ aw_osm.6.a:0 "Das bedeutet nichts Gutes"
+ 
+ aw_osm.7.t:0 "Beiruter Konferenz"
+ aw_osm.7.d:0 "Die Beiruter Konferenz neigt sich dem Ende zu. [OSM.GetNameDef] hat die Gründung einer nah-östlichen Koalition vorgeschlagen, um sich gegen die anderen großen Bündnissysteme abzusichern. Wir müssen nun entscheiden ob wir Teil dieser Koalition werden wollen oder nicht."
+ aw_osm.7.a:0 "In solchen Zeiten ist es notwendig"
+ aw_osm.7.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.8.t:0 "Beiruter Konferenz"
+ aw_osm.8.d:0 "Die Beiruter Konferenz neigt sich dem Ende zu. [OSM.GetNameDef] hat die Gründung einer nah-östlichen Koalition vorgeschlagen, um sich gegen die anderen großen Bündnissysteme abzusichern. Wir müssen nun entscheiden ob wir Teil dieser Koalition werden wollen oder nicht."
+ aw_osm.8.a:0 "In solchen Zeiten ist es notwendig"
+ aw_osm.8.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.9.t:0 "Beiruter Konferenz"
+ aw_osm.9.d:0 "Die Beiruter Konferenz neigt sich dem Ende zu. [OSM.GetNameDef] hat die Gründung einer nah-östlichen Koalition vorgeschlagen, um sich gegen die anderen großen Bündnissysteme abzusichern. Wir müssen nun entscheiden ob wir Teil dieser Koalition werden wollen oder nicht."
+ aw_osm.9.a:0 "In solchen Zeiten ist es notwendig"
+ aw_osm.9.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.10.t:0 "Beiruter Konferenz"
+ aw_osm.10.d:0 "Die Beiruter Konferenz neigt sich dem Ende zu. [OSM.GetNameDef] hat die Gründung einer nah-östlichen Koalition vorgeschlagen, um sich gegen die anderen großen Bündnissysteme abzusichern. Wir müssen nun entscheiden ob wir Teil dieser Koalition werden wollen oder nicht."
+ aw_osm.10.a:0 "In solchen Zeiten ist es notwendig"
+ aw_osm.10.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.11.t:0 "Konstantinopel lädt uns ein"
+ aw_osm.11.d:0 "Konstantinopel hat uns heute das Angebot gemacht der Beiruter Koalition beizutreten. Sollen wir ihnen beitreten?"
+ aw_osm.11.a:0 "Es wäre vorteilhaft für uns"
+ aw_osm.11.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.12.t:0 "[PER.GetNameDef] nimmt Einladung an"
+ aw_osm.12.d:0 "[PER.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_osm.12.a:0 "Willkommen Freunde"
+ 
+ aw_osm.13.t:0 "[PER.GetNameDef] lehnt Einladung ab"
+ aw_osm.13.d:0 "[PER.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_osm.13.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_osm.14.t:0 "Konstantinopel lädt uns ein"
+ aw_osm.14.d:0 "Konstantinopel hat uns heute das Angebot gemacht der Beiruter Koalition beizutreten. Sollen wir ihnen beitreten?"
+ aw_osm.14.a:0 "Es wäre vorteilhaft für uns"
+ aw_osm.14.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.15.t:0 "[SAU.GetNameDef] nimmt Einladung an"
+ aw_osm.15.d:0 "[SAU.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_osm.15.a:0 "Willkommen Freunde"
+ 
+ aw_osm.16.t:0 "[SAU.GetNameDef] lehnt Einladung ab"
+ aw_osm.16.d:0 "[SAU.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_osm.16.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_osm.17.t:0 "Konstantinopel lädt uns ein"
+ aw_osm.17.d:0 "Konstantinopel hat uns heute das Angebot gemacht der Beiruter Koalition beizutreten. Sollen wir ihnen beitreten?"
+ aw_osm.17.a:0 "Es wäre vorteilhaft für uns"
+ aw_osm.17.b:0 "Nein wir kommen ohne sie zurecht"
+ 
+ aw_osm.18.t:0 "[OMA.GetNameDef] nimmt Einladung an"
+ aw_osm.18.d:0 "[OMA.GetNameDef] hat unser Angebot angenommen. Sie sind jetzt unsere Verbündeten!"
+ aw_osm.18.a:0 "Willkommen Freunde"
+ 
+ aw_osm.19.t:0 "[OMA.GetNameDef] lehnt Einladung ab"
+ aw_osm.19.d:0 "[OMA.GetNameDef] hat das Angebot abgelehnt. Wie sollen wir mit dieser Respektlosigkeit umgehen?"
+ aw_osm.19.a:0 "Die sind sowieso keine Bedrohung für uns"
+ 
+ aw_osm.20.t:0 "Verhältnis mit [GER.GetName]"
+ aw_osm.20.d:0 "Die Befreiung der nah-östlichen Völker ist abgeschlossen. Nun müssen wir uns entscheiden ob wir weiterhin mit dem [GER.GetName] verbündet sein wollen. Aufgrund der Reformation unseres Landes hat auch unsere Politik eine andere Richtung als die der Deutschen eingeschlagen."
+ aw_osm.20.a:0 "Wir sollten das Bündnis aufkündigen"
+ aw_osm.20.b:0 "Wir sollten bei ihnen bleiben"
+ 
+ aw_osm.21.t:0 "Delegation aus Konstantinopel"
+ aw_osm.21.d:0 "[OSM.GetNameDef] möchte einen Nichtangriffspakt mit [PER.GetNameDef]. Dies soll dem Frieden in der Region dienen."
+ aw_osm.21.a:0 "Eine gute Idee"
+ aw_osm.21.b:0 "Nicht interessiert"
+ 
+ aw_osm.22.t:0 "Teheran stimmt zu"
+ aw_osm.22.d:0 "[PER.GetNameDef] hat dem Nichtangriffspakt zwischen ihnen und [OSM.GetNameDef] zugestimmt."
+ aw_osm.22.a:0 "Großartig"
+ 
+ aw_osm.23.t:0 "Teheran lehnt ab"
+ aw_osm.23.d:0 "[PER.GetNameDef] hat es abgelehnt einen Nichtangriffspakt zwischen unseren Staaten abzuschließen."
+ aw_osm.23.a:0 "Das bedeutet nichts Gutes"
+ 
+ aw_osm.24.t:0 "Osmanisches Ultimatum"
+ aw_osm.24.d:0 "Konstantinopel hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss Omans an das Osmanische Reich fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_osm.24.a:0 "Uns bleibt nichts anderes übrig"
+ aw_osm.24.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_osm.25.t:0 "Oman akzeptiert"
+ aw_osm.25.d:0 "[OMA.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt Teil des Osmanischen Reiches."
+ aw_osm.25.a:0 "Großartig"
+ 
+ aw_osm.26.t:0 "Oman lehnt ab"
+ aw_osm.26.d:0 "[OMA.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_osm.26.a:0 "Sie haben falsch entschieden"
+ 
+ aw_osm.27.t:0 "Osmanisches Ultimatum"
+ aw_osm.27.d:0 "Konstantinopel hat ein Ultimatum an uns gerichtet. Sie fordern die Abtretung Ägyptens an [OSM.GetNameDef]."
+ aw_osm.27.a:0 "Wir sollten keinen Krieg riskieren"
+ aw_osm.27.b:0 "Welch' lächerliche Forderung"
+ 
+ aw_osm.28.t:0 "London akzeptiert"
+ aw_osm.28.d:0 "[ENG.GetNameDef] haben dem Ultimatum zugestimmt. Sie werden Ägypten an [OSM.GetNameDef] abtreten."
+ aw_osm.28.a:0 "Großartig"
+ 
+ aw_osm.29.t:0 "London lehnt ab"
+ aw_osm.29.d:0 "[ENG.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie halten die Forderung für lächerlich."
+ aw_osm.29.a:0 "Sie haben falsch entschieden"
+ 
+ aw_osm.30.t:0 "Verhältnis mit [GER.GetName]"
+ aw_osm.30.d:0 "Da wir jetzt unsere Macht gefestigt haben, sollten wir uns überlegen ob wir weiterhin mit dem [GER.GetName] verbündet sein wollen."
+ aw_osm.30.a:0 "Verlassen wir das Bündnis"
+ aw_osm.30.b:0 "Wir sollten bei ihnen bleiben"
+ 
+ aw_osm.31.t:0 "Naht der Bürgerkrieg?"
+ aw_osm.31.d:0 "In unserem Reich wächst die Unzufriedenheit, die Menschen fordern weitgehende Reformen und ein Ende des Stillstandes. Besonders die Völker im Nahen Osten wünschen sich eine größere Veränderung und mehr Mitsprache. Wenn wir weiterhin tatenlos bleiben und uns nicht um diese Probleme kümmmern, so könnte es ziemlich bald zu einem großen Bürgerkrieg kommen."
+ aw_osm.31.a:0 "Wir müssen mit der Zeit gehen und große Veränderungen in Kauf nehmen"
+ aw_osm.31.b:0 "Unsere Macht muss auf jeden Fall erhalten bleiben"
+ 
+ aw_osm.32.t:0 "Eine neue Hoffnung?"
+ aw_osm.32.d:0 "Die Bürger haben in zahlreichen Protesten ihren Wunsch zur Veränderung geäußert und erwarten von der Regierung eine Stellungnahme. Celâl Bayar und Mustafa Kemal Pascha sind zwei sehr bekannte Politiker die es sich zur Aufgabe gemacht haben, das Osmanische Reich weitgehend zu reformieren. Während Celâl Bayar eine umfassende Staatsreform befürwortet, sieht Mustafa Kemal Pascha die "Spaltung" des Reiches in mehrere Staaten als Notwendigkeit an."
+ aw_osm.32.a:0 "Eine umfassende Staatsreform scheint das Richtige zu sein"
+ aw_osm.32.b:0 "Eine Spaltung des Reiches ist die einzige Lösung"
+ 
+ aw_osm.33.t:0 "Aufstände gefährden die Sicherheit"
+ aw_osm.33.d:0 "In mehreren Regionen haben Aufständische Unruhe gestiftet und gegen die osmanische Regierung protestiert. Größere Unruhen konnten bisher verhindert werden, jedoch bereiten uns die Unruhestifter nichtsdestotrotz Probleme."
+ aw_osm.33.a:0 "Solange wir sie im Zaum halten können..."
+ 
+ aw_osm.34.t:0 "Aufstände breiten sich aus"
+ aw_osm.34.d:0 "In zahlreichen Orten gab es schwere Auseinandersetzungen zwischen den Regierungstruppen und den Aufständischen. Der Widerstand gegen unsere Regierung breitet sich wie ein Lauffeuer aus. Sollten wir nicht schnell handeln, so könnte dieser Konflikt in einen großen Bürgerkrieg ausufern."
+ aw_osm.34.a:0 "Uns fehlen Mittel um gegen sie vorzugehen"
+ aw_osm.34.b:0 "Alles Mögliche muss unternommen werden um diesen Aufstand zu beenden!"
+ 
+ aw_osm.35.t:0 "Das Ende ist nahe"
+ aw_osm.35.d:0 "Unsere Truppen können die Aufstände kaum noch kontrollieren, wir haben bereits über einige Regionen die Kontrolle verloren. Es wird nicht mehr lange dauern bis das komplette Chaos ausbrechen wird. Wir sollten unsere Truppen um Konstantinopel sammeln, um unseren Sultan zu beschützen."
+ aw_osm.35.a:0 "Möge Allah uns beschützen"
+ 
+ aw_osm.36.t:0 "Staatsreform-Vorschlag veröffentlicht"
+ aw_osm.36.d:0 "Celâl Bayar hat einen ersten Vorschlag zu einer weitgehenden Staatsreform veröffentlicht. Dieser sieht den Wandel zu einer Demokratie und weitgehende Autonomie für zahlreiche Regionen vor. Es wird zwar einiges an Arbeit und Aufwand kosten, jedoch wird das unserem Reich eine großartige Zukunft ermöglichen."
+ aw_osm.36.a:0 "Ein interessanter Vorschlag"
+ 
+ aw_osm.37.t:0 "Mustafa Kemal Pascha veröffentlicht ersten Vorschlag"
+ aw_osm.37.d:0 "Mustafa Kemal Pascha hat einen ersten Vorschlag zur Zukunft des Reiches veröffentlicht. Dieser sieht die Abspaltung und Gründung mehrere Staaten vor. Unter anderem sollen ein palästinensischer und kurdischer Staat gegründet werden. Desweiteren soll ein demokratisches Wahlsystem eingeführt werden und unzählige Wirtschaftsreformen stattfinden. Um eine gute Zusammenarbeit mit den neu gegründeten Staaten zu gewährleisten, soll auch eine große Konferenz mit allen Staatsführern abgehalten werden."
+ aw_osm.37.a:0 "Ein interessanter Vorschlag"
+ 
+ aw_osm.38.t:0 "Staatsreform-Plan vorgelegt"
+ aw_osm.38.d:0 "Celâl Bayar hat uns einen vollständigen Plan zur Staatsreform vorgelegt. Viele Punkte wurden darin konkretisiert und genau ausgearbeitet. Es liegt nun an Euch der Veränderung grünes Licht zu geben."
+ aw_osm.38.a:0 "Es wird Zeit die Dinge anzugehen"
+ 
+ aw_osm.39.t:0 "Vollständiger Plan vorgelegt"
+ aw_osm.39.d:0 "Mustafa Kemal Pascha hat den vollständigen Plan zur Lösung der inneren Probleme des Osmanischen Reiches vorgelegt. Viele Punkte wurden darin nochmals überarbeitet und genauer erklärt. Ihr seit nun dafür verantwortlich dem Plan grünes Licht zu geben."
+ aw_osm.39.a:0 "Auf eine bessere Zukunft"
+ 
+ aw_osm.40.t:0 "Nichtangriffspakt mit [OSM.GetNameDef]"
+ aw_osm.40.d:0 "[OSM.GetNameDef] möchte einen Nichtangriffspakt mit [KBN.GetNameDef]. Dies soll dem Frieden in der Region dienen."
+ aw_osm.40.a:0 "Eine gute Idee"
+ aw_osm.40.b:0 "Nicht interessiert"
+ 
+ aw_osm.41.t:0 "Nichtangriffspakt mit [KBN.GetName]"
+ aw_osm.41.d:0 "[KBN.GetNameDef] hat dem Nichtangriffspakt zwischen ihnen und [OSM.GetNameDef] zugestimmt."
+ aw_osm.41.a:0 "Großartig"
+ 
+ aw_osm.42.t:0 "[KBN.GetName] lehnt ab"
+ aw_osm.42.d:0 "[KBN.GetNameDef] hat es abgelehnt einen Nichtangriffspakt zwischen unseren Staaten abzuschließen."
+ aw_osm.42.a:0 "Das bedeutet nichts Gutes"
+ 
+ aw_osm.43.t:0 "Nichtangriffspakt mit [OSM.GetNameDef]"
+ aw_osm.43.d:0 "[OSM.GetNameDef] möchte einen Nichtangriffspakt mit [GRE.GetNameDef]. Dies soll dem Frieden in der Region dienen."
+ aw_osm.43.a:0 "Eine gute Idee"
+ aw_osm.43.b:0 "Nicht interessiert"
+ 
+ aw_osm.44.t:0 "Nichtangriffspakt mit [GRE.GetName]"
+ aw_osm.44.d:0 "[GRE.GetNameDef] hat dem Nichtangriffspakt zwischen ihnen und [OSM.GetNameDef] zugestimmt."
+ aw_osm.44.a:0 "Großartig"
+ 
+ aw_osm.45.t:0 "[GRE.GetName] lehnt ab"
+ aw_osm.45.d:0 "[GRE.GetNameDef] hat es abgelehnt einen Nichtangriffspakt zwischen unseren Staaten abzuschließen."
+ aw_osm.45.a:0 "Das bedeutet nichts Gutes"
+ 
+ aw_osm.46.t:0 "Nichtangriffspakt mit [OSM.GetNameDef]"
+ aw_osm.46.d:0 "[OSM.GetNameDef] möchte einen Nichtangriffspakt mit [BUL.GetNameDef]. Dies soll dem Frieden in der Region dienen."
+ aw_osm.46.a:0 "Eine gute Idee"
+ aw_osm.46.b:0 "Nicht interessiert"
+ 
+ aw_osm.47.t:0 "Nichtangriffspakt mit [BUL.GetName]"
+ aw_osm.47.d:0 "[BUL.GetNameDef] hat dem Nichtangriffspakt zwischen ihnen und [OSM.GetNameDef] zugestimmt."
+ aw_osm.47.a:0 "Großartig"
+ 
+ aw_osm.48.t:0 "[BUL.GetName] lehnt ab"
+ aw_osm.48.d:0 "[BUL.GetNameDef] hat es abgelehnt einen Nichtangriffspakt zwischen unseren Staaten abzuschließen."
+ aw_osm.48.a:0 "Das bedeutet nichts Gutes"
+ 
+ aw_osm.49.t:0 "[GEO.GetNameDef] erklärt Unabhängigkeit"
+ aw_osm.49.d:0 "Georgische Aufständische haben in Tiflis die Republik Georgien ausgerufen und sich unabhängig erklärt. Wie sollen wir damit umgehen?"
+ aw_osm.49.a:0 "Ignorieren wir sie, wir haben andere Probleme"
+ aw_osm.49.b:0 "Wir werden auch sie wieder unter unsere Herrschaft bringen"
+ 
+ aw_osm.50.t:0 "Osmanisches Ultimatum"
+ aw_osm.50.d:0 "Konstantinopel hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss der [TCR.GetName] an [OSM.GetNameDef] fordern. Sollten wir uns weigern könnten sie uns den Krieg erklären."
+ aw_osm.50.a:0 "Uns bleibt nichts anderes übrig"
+ aw_osm.50.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_osm.51.t:0 "[TCR.GetName] akzeptiert"
+ aw_osm.51.d:0 "[TCR.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt ein Teil unseres Reiches."
+ aw_osm.51.a:0 "Großartig"
+ 
+ aw_osm.52.t:0 "[TCR.GetName] lehnt ab"
+ aw_osm.52.d:0 "[TCR.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben."
+ aw_osm.52.a:0 "Sie haben falsch entschieden"
+ 
+ aw_osm.53.t:0 "Osmanen marschieren ein"
+ aw_osm.53.d:0 "Die Osmanen sind dabei in unser Land einzumarschieren und unsere Regierung zu stürzen. Sollen wir uns wehren oder nicht?"
+ aw_osm.53.a:0 "Verhindern wir ein Blutvergießen"
+ aw_osm.53.b:0 "Wir werden sie aus unserem Land jagen!"
+ 
+ aw_osm.54.t:0 "Persien widerstandslos besetzt"
+ aw_osm.54.d:0 "Wir haben erfolgreich und ohne Widerstand seitens der Perser das Land besetzt und eine Marionettenregierung errichtet. Außerdem haben wir die den Turkvölkern zugehörigen Gebiete in unser Reich eingegliedert."
+ aw_osm.54.a:0 "Großartig"
+ 
+ aw_osm.55.t:0 "Persien leistet Widerstand"
+ aw_osm.55.d:0 "[PER.GetNameDef] hat sich gegen unseren Einmarsch gewehrt und unsere Truppen attackiert. Wir werden zu härteren Mittel greifen müssen."
+ aw_osm.55.a:0 "Dann greifen wir zu härteren Mitteln!"
+ 
+ aw_osm.56.t:0 "Turkestanische Frage"
+ aw_osm.56.d:0 "Wir müssen uns entscheiden wie wir mit Turkestan umgehen. Es bleiben nur zwei Möglichkeiten übrig: Entweder wir annektieren die ganze Region oder wir richten ein Marionettenregierung ein um die Kontrolle über diese Region zu erhalten. Wofür auch immer wir uns entscheiden, das Ziel ist es die Turkvölker zu einen."
+ aw_osm.56.a:0 "Wir müssen Turkestan in das Reich eingliedern"
+ aw_osm.56.b:0 "Es genügt eine Marionettenregierung einzurichten"
+ 
+ aw_osm.57.t:0 "Osmanisches Ultimatum"
+ aw_osm.57.d:0 "Die Osmanische Regierung forderte den vollständigen Anschluss Turkestans an [OSM.GetNameDef]. Sollen wir dem zustimmen?"
+ aw_osm.57.a:0 "Alle Turkvölker sollten vereint sein"
+ aw_osm.57.b:0 "Des geht definitiv zu weit!"
+ 
+ aw_osm.59.t:0 "[TUK.GetName] akzeptiert Ultimatum"
+ aw_osm.59.d:0 "[TUK.GetNameDef] hat unser Ultimatum akzeptiert. Wir haben Turkestan erfolgreich in das Reich eingegliedert."
+ aw_osm.59.a:0 "Wir haben es geschafft!"
+ 
+ aw_osm.60.t:0 "Ultimatum zurückgewiesen"
+ aw_osm.60.d:0 "[TUK.GetNameDef] hat unser Ultimatum zurückgewiesen, sie möchten weiterhin unabhängig bleiben."
+ aw_osm.60.a:0 "Wie unerwartet"
+ 
+ aw_osm.58.t:0 "Osmanische Regierung übt Druck aus"
+ aw_osm.58.d:0 "Die Osmanische Regierung hat verlautbart, dass sie die Kontrolle über die turkestanische Regierung fordert. Wie sollen wir darauf reagieren?"
+ aw_osm.58.a:0 "Wir geben lieber nach"
+ aw_osm.58.b:0 "Das werden wir nicht zulassen!"
+ 
+ aw_osm.61.t:0 "Ultimatum angenommen"
+ aw_osm.61.d:0 "[TUK.GetNameDef] hat unser Ultimatum angenommen, wir haben erfolgreich eine Marionettenregierung in Turkestan einrichten können."
+ aw_osm.61.a:0 "Großartig"
+ 
+ aw_osm.62.t:0 "Ultimatum zurückgewiesen"
+ aw_osm.62.d:0 "[TUK.GetNameDef] hat unser Ultimatum zurückgewiesen mit dem Hinweis, dass sie niemals ihre Unabhängigkeit aufgeben werden."
+ aw_osm.62.a:0 "Dann weden wir sie dazu zwingen müssen"
+ 
+ aw_osm.63.t:0 "Osmanische Besatzung"
+ aw_osm.63.d:0 "[OSM.GetNameDef] hat mit dem Einmarsch in unser Land begonnen. Die osmanische Regierung plant eine weitgehende Besetzung unseres Landes und die Kontrolle über unsere Regierung. Sollen wir uns wehren?"
+ aw_osm.63.a:0 "Wir riskieren lieber keine Toten"
+ aw_osm.63.b:0 "Wir müssen uns wehren!"
+ 
+ aw_osm.64.t:0 "[KBN.GetName] widerstandslos besetzt"
+ aw_osm.64.d:0 "Unsere Truppen haben [KBN.GetName] widerstandslos besetzt und die Regierung in Krasnodar abgesetzt. Die Regionen Südkaukasus, Kaukasus und Grosny wurden in unser Reich eingegliedert und in Krasnodar eine Marionettenregierung eingerichtet."
+ aw_osm.64.a:0 "Tolle Neuigkeiten"
+ 
+ aw_osm.65.t:0 "Widerstand bei Einmarsch"
+ aw_osm.65.d:0 "Kubanische Truppen haben beim Einmarsch unserer Truppen das Feuer eröffnet. Offensichtlich wehren sich die Kubaner gegen die Besetzung ihres Landes. Wir werden sie bekämpfen müssen."
+ aw_osm.65.a:0 "Beseitigt jeden Widerstand"
+ 
+ aw_osm.66.t:0 "[YEM.GetNameDef] erklärt Unabhängigkeit"
+ aw_osm.66.d:0 "Jemetische Aufständische haben in Sanaa das unabhängige Emirat Jemen ausgerufen. Wie sollen wir damit umgehen?"
+ aw_osm.66.a:0 "Momentan können wir nichts dagegen unternehmen"
+ aw_osm.66.b:0 "Das werden wir nicht zulassen"
+ 
+ aw_osm.68.t:0 "Konstantinopel möchte VÖlkerbund beitreten"
+ aw_osm.68.d:0 "[OSM.GetNameDef] hat einen Antrag auf Mitgliedschaft im Völkerbund gestellt."
+ aw_osm.68.a:0 "Sie wären ein wichtiges Mitglied"
+ aw_osm.68.b:0 "Wir brauchen sie nicht"
+ 
+ aw_osm.69.t:0 "Wien akzeptiert Antrag"
+ aw_osm.69.d:0 "[UGA.GetNameDef] haben unseren Antrag auf Mitgliedschaft im Völkerbund akzeptiert. Wir sind nun vollwertiges Mitglied."
+ aw_osm.69.a:0 "Großartig"
+ 
+ aw_osm.70.t:0 "Wien lehnt Antrag ab"
+ aw_osm.70.d:0 "[UGA.GetNameDef] haben unseren Antrag auf Mitgliedschaft im Völkerbund abgelehnt. Wir werden uns andere Verbündete suchen müssen."
+ aw_osm.70.a:0 "Wir sollten sie im Auge behalten"
+ 
+ aw_osm.71.t:0 "Konstantinopel schlägt Abkommen vor"
+ aw_osm.71.d:0 "[OSM.GetNameDef] hat uns angeboten die Regionen Hedschas und Al-Rashid an uns abzutreten. Im Gegenzug wären wir eine Marionette von ihnen."
+ aw_osm.71.a:0 "Annehmen"
+ aw_osm.71.b:0 "Ablehnen"
+ 
+ aw_osm.72.t:0 "Arabien ist einverstanden"
+ aw_osm.72.d:0 "[SAU.GetNameDef] ist mit dem Abkommen einverstanden."
+ aw_osm.72.a:0 "Großartig"
+ 
+ aw_osm.73.t:0 "Arabien lehnt ab"
+ aw_osm.73.d:0 "[SAU.GetNameDef] ist mit unserem Vorschlag nicht einverstanden. Wir müssen eine andere Lösung für die entsprechenden Regionen finden."
+ aw_osm.73.a:0 "Wir errichten einfach einen neuen Marionettenstaat"
+ 
+ #Transcaucasian Republic
+ aw_tcr.1.t:0 "Intervention im Osmanischen Bürgerkrieg?"
+ aw_tcr.1.d:0 "Im Osmanischen Reich tobt ein brutaler Bürgerkrieg. Wir könnten die Initiative ergreifen und die Region Georgien zum Schutze der dortigen Bevölkerung besetzen. Zwar würde keine der Bürgerkriegsparteien sofort dagegen einschreiten, jedoch müssen wir uns im Klaren darüber sein, dass das später zu Konflikten führen könnte."
+ aw_tcr.1.a:0 "Die ansässige Bevölkerung braucht unsere Hilfe!"
+ aw_tcr.1.b:0 "Halten wir uns lieber raus"
+ 
+ #Ottoman Civil War
+ osman.1.t:0 "Ausbruch des Bürgerkrieges"
+ osman.1.d:0 "Die osmanische Regierung hat nichts gegen die Zustände im Reich getan. Nun haben sich im Nahen Osten die Arabische Liga und in Ankara Unterstützer der faschistischen Bewegung erhoben um gegen die osmanische Regierung zu kämpfen."
+ osman.1.a:0 "Bleibe dem Osmanischen Reich treu"
+ osman.1.b:0 "Desertiere zu einer anderen Bürgerkriegsfraktion"
+ 
+ osman.2.t:0 "Bürgerkrieg im Osmanischen Reich"
+ osman.2.d:0 "Im Osmanischen Reich ist ein Bürgerkrieg ausgebrochen und die Regionen Hedschas und Al-Rashid haben sich Arabien angeschlossen. Wir haben nun die Möglichkeit unseren restlichen arabischen Brüdern im Kampf gegen die Osmanen zu unterstützen!"
+ osman.2.a:0 "Selbstverständlich helfen wir unseren Brüdern!"
+ osman.2.b:0 "Wir halten uns lieber raus"
+ 
+ osman.3.t:0 "Libyen erklärt Unabhängigkeit"
+ osman.3.d:0 "Aufständische in Libyen haben sich gegen unsere Besatzung erhoben und die Unabhängigkeit erklärt. Wie sollen wir mit den libyschen Aufständischen umgehen?"
+ osman.3.a:0 "Ignoriert sie, wir können momentan nichts tun"
+ osman.3.b:0 "Wir werden auch diesen Aufstand niederschlagen"
+ 
+ 
+ osman.4.t:0 "Ausbruch des Bürgerkrieges"
+ osman.4.d:0 "Im Mittleren Osten haben sich Unterstützer der demokratischen und sozialistischen Parteien gegen die Regierung erhoben und haben sich als unabhängig erklärt."
+ osman.4.a:0 "Gehe mit der Regierung"
+ osman.4.b:0 "Gehe mit den Demokraten und Sozialisten"
+ 
+ osman.5.t:0 "Ausbruch des Bürgerkrieges"
+ osman.5.d:0 "Im Mittleren Osten haben sich Unterstützer der demokratischen und sozialistischen Parteien gegen die Regierung erhoben und haben sich als unabhängig erklärt."
+ osman.5.a:0 "Gehe mit der Regierung"
+ osman.5.b:0 "Gehe mit den Demokraten und Sozialisten"
+ 
+ 
+ osman.6.t:0 "Aufständische besiegt"
+ osman.6.d:0 "Nach langen und ermüdenden Kämpfen haben die Arabische Liga und die faschistischen Verräter endlich kapituliert und sich dem Osmanischen Reich ergeben. Nun müssen wir entscheiden, was wir mit unserem Sieg anfangen. Entweder wir vereinigen das Reich wieder oder aber wir gewähren den nah-östlichen Völker etwas Autonomie und setzen eine Marionettenregierung ein."
+ osman.6.a:0 "Das Reich muss wieder vereinigt werden"
+ osman.6.b:0 "Errichten wir Marionettenstaaten, hoffentlich bereiten die uns weniger Probleme"
+ 
+ osman.7.t:0 "Arabische Liga triumphiert // Vertrag von Aleppo"
+ osman.7.d:0 "Die Arabische Liga hat sich erfolgreich gegen die imperialistischen Machtgelüste Konstantinopels durchgesetzt und sich die Unabhängigkeit erkämpft. In Aleppo wurde die Nachkriegsordnung des Osmanischen Reiches festgelegt:\n - Der Syrische, Kurdische und Bagdadische Staat werden unabhängig \n - Hedschas und Al Rashid werden an Arabien abgetreten\n - Der Sultan muss abdanken und die Demokratie wird eingeführt\n - Auf dem Gebiet des verbliebenen Osmanischen Reiches wird ein Türkischer Nationalstaat errichtet\n"
+ osman.7.a:0 "Wir haben uns die Freiheit erkämpft"
+ 
+ osman.8.t:0 "Arabische Liga triumphiert"
+ osman.8.d:0 "Wir haben gemeinsam mit unseren Verbündeten die Osmanischen Besatzer besiegt. Sollen wir weiterhin Mitglied in der Arabischen Liga sein?"
+ osman.8.a:0 "Wir werden besser neutral"
+ osman.8.b:0 "Wir sollten weiterhin Mitglied sein"
+ 
+ osman.9.t:0 "Arabische Liga triumphiert"
+ osman.9.d:0 "Wir haben gemeinsam mit unseren Verbündeten die Osmanischen Besatzer besiegt. Sollen wir weiterhin Mitglied in der Arabischen Liga sein?"
+ osman.9.a:0 "Wir werden besser neutral"
+ osman.9.b:0 "Wir sollten weiterhin Mitglied sein"
+ 
+ osman.10.t:0 "Arabische Liga triumphiert"
+ osman.10.d:0 "Wir haben gemeinsam mit unseren Verbündeten die Osmanischen Besatzer besiegt. Sollen wir weiterhin Mitglied in der Arabischen Liga sein?"
+ osman.10.a:0 "Wir werden besser neutral"
+ osman.10.b:0 "Wir sollten weiterhin Mitglied sein"
+ 
+ osman.11.t:0 "Fahnenflucht"
+ osman.11.d:0 "Schließe dich einer Bürgerkriegsfraktion an"
+ osman.11.a:0 "Großtürkisches Reich"
+ osman.11.b:0 "Bagdad"
+ osman.11.c:0 "Arabische Republik Syrien"
+ osman.11.e:0 "Kurdistan"
+ 
+ osman.12.t:0 "Feinde besiegt // Begründung des Großtürkischen Reiches"
+ osman.12.d:0 "Wir haben erfolgreich sowohl die Osmanischen Regierung, als auch die Arabische Liga besiegt. Das wird der Beginn unseres Aufstiegs sein, dem Großtürkischen Reich stehen noch glorreiche Zeiten bevor!"
+ osman.12.a:0 "Niemand wird uns aufhalten!"
+ 
+ #Italy events 
+ aw_ita.1.t:0 "Italien will Annäherung"
+ aw_ita.1.d:0 "[ITA.GetNameDef] möchte eine Verbesserung der Beziehung zwischen Rom und Wien und schlägt deswegen einen Nichtangriffspakt vor. Dieser soll den Frieden zwischen unseren Ländern langfristig sichern."
+ aw_ita.1.a:0 "Wir sind auf dem richtigen Weg"
+ aw_ita.1.b:0 "Nicht mit diesen Faschisten"
+ 
+ aw_ita.2.t:0 "Wien akzeptiert Angebot"
+ aw_ita.2.d:0 "Die Regierung in Wien hat unser Angebot angenommen. Wir haben nun einen Nichtangriffspakt mit [UGA.GetNameDef]."
+ aw_ita.2.a:0 "Gut"
+ 
+ aw_ita.3.t:0 "Wien lehnt Angebot ab"
+ aw_ita.3.d:0 "Die Regierung in Wien hat unser Angebot abgelehnt. Eine Begründung dafür gab es nicht."
+ aw_ita.3.a:0 "Wir sollten vorbereitet sein"
+ 
+ aw_ita.4.t:0 "Italien verlangt Referendum"
+ aw_ita.4.d:0 "[ITA.GetNameDef] verlangt in der Region Tessin die Abhaltung eines Referendums in welchem darüber abgestimmt wird, ob die Bevölkerung weiterhin bei der Schweiz bleiben oder sich Italien anschließen möchte."
+ aw_ita.4.a:0 "Wir sollten die Bevölkerung fragen"
+ aw_ita.4.b:0 "Wir beugen uns nicht ital. Machtbestrebungen"
+ 
+ aw_ita.5.t:0 "Schweiz stimmt zu"
+ aw_ita.5.d:0 "[SWI.GetNameDef] hat einer Abhaltung eines Referendums in der Region Tessin zugestimmt. Die Abhaltung wird jedoch ein paar Wochen dauern."
+ aw_ita.5.a:0 "Großartig"
+ 
+ aw_ita.6.t:0 "Schweiz lehnt ab"
+ aw_ita.6.d:0 "Die schweizerische Regierung hat es abgelehnt ein Referendum abzuhalten. Sie halten es für "unnötig" da sich die meisten Einwohner in dieser Region der Schweiz angehörig fühlen sollen."
+ aw_ita.6.a:0 "Unser Volk muss befreit werden!"
+ 
+ aw_ita.7.t:0 "Bewohner für Anschluss an Italien"
+ aw_ita.7.d:0 "Die Bewohner Tessins haben abgestimmt und sich für einen Anschluss an Italien entschieden."
+ aw_ita.7.a:0 "Das Volk hat gesprochen"
+ 
+ aw_ita.8.t:0 "Bewohner für Verbleib bei der Schweiz"
+ aw_ita.8.d:0 "Die Bewohner Tessins haben abgestimmt und sich dafür entschieden bei der Schweiz zu bleiben. "
+ aw_ita.8.a:0 "Das Volk hat gesprochen"
+ 
+ aw_ita.9.t:0 "Tessin wird Teil Italiens"
+ aw_ita.9.d:0 "Die Mehrheit der Bewohner Tessins haben sich für einen Anschluss an Italien entschieden. Wir heißen unsere italienischen Brüder und Schwestern willkommen."
+ aw_ita.9.a:0 "Das war zu erwarten"
+ 
+ aw_ita.10.t:0 "Tessin bleibt bei der Schweiz"
+ aw_ita.10.d:0 "Die Mehrheit der Bewohner Tessins haben sich dafür entschieden bei der Schweiz zu bleiben. "
+ aw_ita.10.a:0 "Wahlmanipulation!"
+ 
+ aw_ita.11.t:0 "Italien verlangt Referendum"
+ aw_ita.11.d:0 "[ITA.GetNameDef] verlangt in den Regionen Trentino und Triest die Abhaltung eines Referendums in welchem darüber abgestimmt wird, ob die Bevölkerung weiterhin bei Österreich bleiben oder sich Italien anschließen möchte."
+ aw_ita.11.a:0 "Wir sollten die Bevölkerung fragen"
+ aw_ita.11.b:0 "Was denken sich diese Italiener?"
+ 
+ aw_ita.12.t:0 "Wien stimmt zu"
+ aw_ita.12.d:0 "[UGA.GetNameDef] hat einer Abhaltung eines Referendums in der Region Tessin zugestimmt. Die Abhaltung wird jedoch ein paar Wochen dauern."
+ aw_ita.12.a:0 "Großartig"
+ 
+ aw_ita.13.t:0 "Wien lehnt ab"
+ aw_ita.13.d:0 "Die österreichische Regierung hat es abgelehnt ein Referendum abzuhalten. Sie halten es für "unnötig" da sich die meisten Einwohner in dieser Region der österreichischen Regierung verpflichtet fühlen sollen."
+ aw_ita.13.a:0 "Unser Volk muss befreit werden!"
+ 
+ aw_ita.14.t:0 "Bewohner für Anschluss an Italien"
+ aw_ita.14.d:0 "Die Mehrheit der Bewohner Trentinos und Triests haben sich für einen Anschluss an Italien entschieden."
+ aw_ita.14.a:0 "Das Volk hat gesprochen"
+ 
+ aw_ita.15.t:0 "Bewohner für Verbleib bei VSGÖ"
+ aw_ita.15.d:0 "Die Mehrheit der Bewohner Trentinos und Triests haben abgestimmt und sich dafür entschieden bei Österreich zu bleiben. "
+ aw_ita.15.a:0 "Das Volk hat gesprochen"
+ 
+ aw_ita.16.t:0 "Trentino & Triest werden Teil Italiens"
+ aw_ita.16.d:0 "Die Mehrheit der Bewohner Trentinos und Triests haben sich für einen Anschluss an Italien entschieden. Wir heißen unsere italienischen Brüder und Schwestern willkommen."
+ aw_ita.16.a:0 "Das war zu erwarten"
+ 
+ aw_ita.17.t:0 "Trentino & Triest bleiben bei Österreich"
+ aw_ita.17.d:0 "Die Mehrheit der Bewohner Trentinos und Triests haben sich dafür entschieden bei der Schweiz zu bleiben. "
+ aw_ita.17.a:0 "Wahlmanipulation!"
+ 
+ aw_ita.18.t:0 "Aufforderung zum Anschluss"
+ aw_ita.18.d:0 "[ITA.GetNameDef] hat uns dazu aufgefordert, dass wir uns dem italienischen Königreich anschließen. Sollten wir der Aufforderung nicht nachkommen, so könnte dies einen Krieg auslösen."
+ aw_ita.18.a:0 "Uns bleibt nichts anderes übrig als nachzugeben"
+ aw_ita.18.b:0 "Niemals werden wir uns unterjochen lassen!"
+ 
+ aw_ita.19.t:0 "Griechen nehmen Ultimatum an"
+ aw_ita.19.d:0 "Die griechische Regierung hat unserem Ultimatum zugestimmt. [GRE.GetNameDef] wird sich Italien anschließen."
+ aw_ita.19.a:0 "Gut"
+ 
+ aw_ita.20.t:0 "Griechen lehnen ab"
+ aw_ita.20.d:0 "Die griechische Regierung hat unser Ultimatum zurückgewiesen."
+ aw_ita.20.a:0 "Falsche Entscheidung"
+ 
+ aw_ita.21.t:0 "Italien will Annäherung"
+ aw_ita.21.d:0 "[ITA.GetNameDef] möchte eine Verbesserung der Beziehung zwischen Rom und Konstantinopel und schlägt deswegen einen Nichtangriffspakt vor. Dieser soll den Frieden zwischen unseren Ländern langfristig sichern."
+ aw_ita.21.a:0 "Wir sind auf dem richtigen Weg"
+ aw_ita.21.b:0 "Nicht mit diesen Faschisten"
+ 
+ aw_ita.22.t:0 "Osmanen akzeptieren Angebot"
+ aw_ita.22.d:0 "Die Regierung in Konstantinopel hat unser Angebot angenommen. Wir haben nun einen Nichtangriffspakt mit [OSM.GetNameDef]."
+ aw_ita.22.a:0 "Gut"
+ 
+ aw_ita.23.t:0 "Osmanen lehnen Angebot ab"
+ aw_ita.23.d:0 "Die Regierung in Konstantinopel hat unser Angebot abgelehnt. Eine Begründung dafür gab es nicht."
+ aw_ita.23.a:0 "Wir sollten vorbereitet sein"
+ 
+ aw_ita.24.t:0 "Paris stellt Vertrag von Nürnberg infrage"
+ aw_ita.24.d:0 "Eine Regierungsverlautbarung der französischen Regierung hat den Vertrag von Nürnberg infrage gestellt."
+ aw_ita.24.a:0 "Sie haben unsere volle Zustimmung"
+ aw_ita.24.b:0 "Wir halten uns lieber aus dieser Sache raus"
+ 
+ aw_ita.26.t:0 "Eroberung Libyens"
+ aw_ita.26.d:0 "Es wird Zeit, dass wir unseren rechtmäßigen Anspruch auf Libyen wahr machen."
+ aw_ita.26.a:0 "Libyen gehört uns"
+ 
+ #USA events
+ aw_usa.1.t:0 "[USA.GetNameDef] rät uns zum Verlassen des COM"
+ aw_usa.1.d:0 "[USA.GetNameDef] hat uns dazu geraten den Commonwealth aufgrund des steigenden Faschismus in [ENG.GetNameDef] zu verlassen. Wie sollen wir fortfahren?"
+ aw_usa.1.a:0 "Sie haben recht, wir sollten uns absetzen"
+ aw_usa.1.b:0 "Das sollte kein Grund zur Sorge sein"
+ 
+ aw_usa.2.t:0 "[CAN.GetNameDef] verlässt Commonwealth"
+ aw_usa.2.d:0 "[CAN.GetNameDef] hat unseren Rat befolgt und die Commonwealth Union verlassen"
+ aw_usa.2.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.3.t:0 "[CAN.GetNameDef] bleibt im Commonwealth"
+ aw_usa.3.d:0 "[CAN.GetNameDef] hat unseren Rat zurückgewiesen und sich dazu entschieden bei [ENG.GetNameDef] zu bleiben."
+ aw_usa.3.a:0 "Wir sollten sie dann im Auge behalten"
+ 
+ aw_usa.4.t:0 "Einladung der [USA.GetNameDef]"
+ aw_usa.4.d:0 "[USA.GetNameDef] laden uns zur American Defense Alliance (ADA) ein. Der Sinn dieser Allianz ist es ein Verteidigungsbündnis gegen die imperialistischen europäischen Großmächte aufzubauen."
+ aw_usa.4.a:0 "Wir sollten ihnen beitreten"
+ aw_usa.4.b:0 "Wir bleiben besser neutral"
+ 
+ aw_usa.5.t:0 "[CAN.GetNameDef] tritt der ADA bei"
+ aw_usa.5.d:0 "[CAN.GetNameDef] hat sich dazu entschieden der ADA beizutreten und sich gegen die europäischen Mächte zu wehren."
+ aw_usa.5.a:0 "Sie haben richtig entschieden"
+ 
+ aw_usa.6.t:0 "[CAN.GetNameDef] weist Einladung zurück"
+ aw_usa.6.d:0 "[CAN.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.6.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.7.t:0 "Einladung der Vereinigten Staaten"
+ aw_usa.7.d:0 "[USA.GetNameDef] laden uns zur American Defense Alliance (ADA) ein. Der Sinn dieser Allianz ist es ein Verteidigungsbündnis gegen die imperialistischen europäischen Großmächte aufzubauen."
+ aw_usa.7.a:0 "Wir sollten ihnen beitreten"
+ aw_usa.7.b:0 "Wir bleiben besser neutral"
+ 
+ aw_usa.8.t:0 "[From.GetNameDef] tritt der ADA bei"
+ aw_usa.8.d:0 "[From.GetNameDef] hat sich dazu entschieden der ADA beizutreten und sich gegen die europäischen Mächte zu wehren."
+ aw_usa.8.a:0 "Sie haben richtig entschieden"
+ 
+ aw_usa.9.t:0 "[From.GetNameDef] weist Einladung zurück"
+ aw_usa.9.d:0 "[From.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.9.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.10.t:0 "Einladung der Vereinigten Staaten"
+ aw_usa.10.d:0 "[USA.GetNameDef] laden uns zur American Defense Alliance (ADA) ein. Der Sinn dieser Allianz ist es ein Verteidigungsbündnis gegen die imperialistischen europäischen Großmächte aufzubauen."
+ aw_usa.10.a:0 "Wir sollten ihnen beitreten"
+ aw_usa.10.b:0 "Wir bleiben besser neutral"
+ 
+ aw_usa.11.t:0 "[MEX.GetNameDef] tritt der ADA bei"
+ aw_usa.11.d:0 "[MEX.GetNameDef] hat sich dazu entschieden der ADA beizutreten und sich gegen die europäischen Mächte zu wehren."
+ aw_usa.11.a:0 "Sie haben richtig entschieden"
+ 
+ aw_usa.12.t:0 "[MEX.GetNameDef] weist Einladung zurück"
+ aw_usa.12.d:0 "[MEX.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.12.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.13.t:0 "Einladung der Vereinigten Staaten"
+ aw_usa.13.d:0 "[USA.GetNameDef] laden uns zur American Defense Alliance (ADA) ein. Der Sinn dieser Allianz ist es ein Verteidigungsbündnis gegen die imperialistischen europäischen Großmächte aufzubauen."
+ aw_usa.13.a:0 "Wir sollten ihnen beitreten"
+ aw_usa.13.b:0 "Wir bleiben besser neutral"
+ 
+ aw_usa.14.t:0 "[BRA.GetNameDef] tritt der ADA bei"
+ aw_usa.14.d:0 "[BRA.GetNameDef] hat sich dazu entschieden der ADA beizutreten und sich gegen die europäischen Mächte zu wehren."
+ aw_usa.14.a:0 "Sie haben richtig entschieden"
+ 
+ aw_usa.15.t:0 "[BRA.GetNameDef] weist Einladung zurück"
+ aw_usa.15.d:0 "[BRA.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.15.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.16.t:0 "[USA.GetNameDef] wollen unserer Allianz beitreten"
+ aw_usa.16.d:0 "[USA.GetNameDef] möchte dem Komintern Pakt beitreten. Sollen wir sie aufnehmen?"
+ aw_usa.16.a:0 "Ja, auf jeden Fall!"
+ aw_usa.16.b:0 "Nein, wir brauchen sie nicht"
+ 
+ aw_usa.17.t:0 "[SOV.GetNameDef] akzeptiert unsere Anfrage"
+ aw_usa.17.d:0 "[SOV.GetNameDef] hat unsere Anfrage angenommen. Wir stehen nun vereint."
+ aw_usa.17.a:0 "Tolle Neuigkeiten!"
+ 
+ aw_usa.18.t:0 "[SOV.GetNameDef] lehnt Anfrage ab"
+ aw_usa.18.d:0 "[SOV.GetNameDef] hat unsere Anfrage abgelehnt. Wir müssen wohl alleine weiterkämpfen."
+ aw_usa.18.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ aw_usa.19.t:0 "[USA.GetNameDef] wollen unserer Allianz beitreten"
+ aw_usa.19.d:0 "[USA.GetNameDef] möchte der Union Internationale beitreten. Sollen wir sie aufnehmen?"
+ aw_usa.19.a:0 "Ja, auf jeden Fall!"
+ aw_usa.19.b:0 "Nein, wir brauchen sie nicht"
+ 
+ aw_usa.20.t:0 "[FRA.GetNameDef] akzeptiert unsere Anfrage"
+ aw_usa.20.d:0 "[FRA.GetNameDef] hat unsere Anfrage angenommen. Wir stehen nun vereint."
+ aw_usa.20.a:0 "Tolle Neuigkeiten"
+ 
+ aw_usa.21.t:0 "[FRA.GetNameDef] lehnt Anfrage ab"
+ aw_usa.21.d:0 "[FRA.GetNameDef] hat unsere Anfrage abgelehnt. Wir müssen wohl alleine weiterkämpfen."
+ aw_usa.21.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ aw_usa.22.t:0 "Einladung von [USA.GetNameDef]"
+ aw_usa.22.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.22.a:0 "Ja, es wäre besser für uns"
+ aw_usa.22.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.23.t:0 "[MEX.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.23.d:0 "[MEX.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.23.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.24.t:0 "[MEX.GetNameDef] weist Einladung zurück"
+ aw_usa.24.d:0 "[MEX.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.24.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.25.t:0 "Einladung zur Amerikanischen Union"
+ aw_usa.25.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.25.a:0 "Ja, es wäre besser für uns"
+ aw_usa.25.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.26.t:0 "[BRA.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.26.d:0 "[BRA.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.26.a:0 "Great news!"
+ 
+ aw_usa.27.t:0 "[BRA.GetNameDef] weist Einladung zurück"
+ aw_usa.27.d:0 "[BRA.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.27.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.28.t:0 "Einladung zur Amerikanischen Union"
+ aw_usa.28.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.28.a:0 "Ja, es wäre besser für uns"
+ aw_usa.28.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.29.t:0 "[CUB.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.29.d:0 "[CUB.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.29.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.30.t:0 "[CUB.GetNameDef] weist Einladung zurück"
+ aw_usa.30.d:0 "[CUB.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.30.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.31.t:0 "Einladung zur Amerikanischen Union"
+ aw_usa.31.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.31.a:0 "Ja, es wäre besser für uns"
+ aw_usa.31.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.32.t:0 "[COL.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.32.d:0 "[COL.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.32.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.33.t:0 "[COL.GetNameDef] weist Einladung zurück"
+ aw_usa.33.d:0 "[COL.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.33.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.34.t:0 "Einladung zur Amerikanischen Union"
+ aw_usa.34.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.34.a:0 "Ja, es wäre besser für uns"
+ aw_usa.34.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.35.t:0 "[VEN.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.35.d:0 "[VEN.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.35.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.36.t:0 "[VEN.GetNameDef] weist Einladung zurück"
+ aw_usa.36.d:0 "[VEN.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.36.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.37.t:0 "Einladung zur Amerikanischen Union"
+ aw_usa.37.d:0 "[USA.GetNameDef] laden uns zur Amerikanischen Union ein. Sollen wir ihnen beitreten?"
+ aw_usa.37.a:0 "Ja, es wäre besser für uns"
+ aw_usa.37.b:0 "Wir bleiben lieber neutral"
+ 
+ aw_usa.38.t:0 "[CAN.GetNameDef] tritt der Amerikanischen Union bei"
+ aw_usa.38.d:0 "[CAN.GetNameDef] hat sich dazu entschieden der Amerikanischen Union beizutreten."
+ aw_usa.38.a:0 "Gute Neuigkeiten"
+ 
+ aw_usa.39.t:0 "[CAN.GetNameDef] weist Einladung zurück"
+ aw_usa.39.d:0 "[CAN.GetNameDef] hat unsere Einladung zurückgewiesen mit der Begründung neutral bleiben zu wollen."
+ aw_usa.39.a:0 "Mal sehen wie lange sie das können"
+ 
+ aw_usa.40.t:0 "Ultimatum von [USA.GetNameDef]"
+ aw_usa.40.d:0 "[USA.GetNameDef] will mehr Einfluss auf unsere Politik. Was sollen wir machen?"
+ aw_usa.40.a:0 "Wir müssen zusagen"
+ aw_usa.40.b:0 "Auf keinen Fall lassen wir das zu"
+ 
+ aw_usa.41.t:0 "[MEX.GetNameDef] stimmt dem Ultimatum zu"
+ aw_usa.41.d:0 "[MEX.GetNameDef] hat dem Ultimatum zugestimmt. Wir haben nun freie Hand."
+ aw_usa.41.a:0 "Großartig"
+ 
+ aw_usa.42.t:0 "[MEX.GetNameDef] weigert sich"
+ aw_usa.42.d:0 "[MEX.GetNameDef] hat das Ultimatum komplett abgelehnt."
+ aw_usa.42.a:0 "Dann werden wir sie zwingen müssen"
+ 
+ aw_usa.43.t:0 "[USA.GetNameDef] wollen unserer Allianz beitreten"
+ aw_usa.43.d:0 "[USA.GetNameDef] möchte der Ligue des Fasciste beitreten. Sollen wir sie aufnehmen?"
+ aw_usa.43.a:0 "Ja, auf jeden Fall"
+ aw_usa.43.b:0 "Nein, wir brauchen sie nicht"
+ 
+ aw_usa.44.t:0 "[FRA.GetNameDef] akzeptiert unsere Anfrage"
+ aw_usa.44.d:0 "[FRA.GetNameDef] hat unserer Anfrage zugestimmt. Wir sind nun Mitglied der Ligue des Fasciste."
+ aw_usa.44.a:0 "Großartig"
+ 
+ aw_usa.45.t:0 "[FRA.GetNameDef] lehnt unsere Anfrage ab"
+ aw_usa.45.d:0 "[FRA.GetNameDef] hat unsere Anfrage abgelehnt. Wir werden wohl alleine weiterkämpfen müssen."
+ aw_usa.45.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ aw_usa.46.t:0 "[USA.GetNameDef] wollen unserer Allianz beitreten"
+ aw_usa.46.d:0 "[USA.GetNameDef] möchte unserer Allianz beitreten. Sollen wir sie aufnehmen?"
+ aw_usa.46.a:0 "Ja, auf jeden Fall"
+ aw_usa.46.b:0 "Nein, wir brauchen sie nicht"
+ 
+ aw_usa.47.t:0 "[FRA.GetNameDef] akzeptiert unsere Anfrage"
+ aw_usa.47.d:0 "[FRA.GetNameDef] hat unserer Anfrage zugestimmt. Wir sind nun Mitglied ihrer Allianz."
+ aw_usa.47.a:0 "Großartig"
+ 
+ aw_usa.48.t:0 "[FRA.GetNameDef] lehnt unsere Anfrage ab"
+ aw_usa.48.d:0 "[FRA.GetNameDef] hat unsere Anfrage abgelehnt. Wir werden wohl alleine weiterkämpfen müssen."
+ aw_usa.48.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ aw_usa.49.t:0 "Beitrittsanfrage der USA"
+ aw_usa.49.d:0 "[USA.GetNameDef] möchten dem Völkerbund beitreten. Sollen wir sie aufnehmen?"
+ aw_usa.49.a:0 "Ja, auf jeden Fall"
+ aw_usa.49.b:0 "Nein, wir brauchen sie nicht"
+ 
+ aw_usa.50.t:0 "[UGA.GetNameDef] akzeptiert unsere Anfrage"
+ aw_usa.50.d:0 "[UGA.GetNameDef] hat unserer Anfrage zugestimmt. Wir sind nun Mitglied im Völkerbund."
+ aw_usa.50.a:0 "Großartig"
+ 
+ aw_usa.51.t:0 "[UGA.GetNameDef] lehnt unsere Anfrage ab"
+ aw_usa.51.d:0 "[UGA.GetNameDef] hat unsere Anfrage abgelehnt. Wir werden wohl alleine weiterkämpfen müssen."
+ aw_usa.51.a:0 "Das Glück ist nicht auf unserer Seite"
+ 
+ #Japan Events
+ aw_jap.1.t:0 "Japan besetzt Korea"
+ aw_jap.1.d:0 "Wir haben soeben die Meldung erhalten, dass die japanische Armee die koreanische Halbinsel wieder besetzt hat. Wenn wir sie dazu auffordern die Besetzung wieder rückgängig zu machen, dann könnte das zu einem kostspieligen Krieg werden. Wie sollen wir entscheiden?"
+ aw_jap.1.a:0 "Sie sollen sich wieder zurückziehen!"
+ aw_jap.1.b:0 "Das ist es nicht wert, lasst sie machen"
+ 
+ aw_jap.2.t:0 "Berlin verlangt Rückzug"
+ aw_jap.2.d:0 "[GER.GetNameDef] hat uns soeben mitgeteilt, dass sie die Besetzung Koreas nicht hinnehmen werden und den Rückzug aller japanischen Truppen verlangen. Sollte [JAP.GetNameDef] sich weigern, dann könnte [GER.GetNameDef] militärisch eingreifen."
+ aw_jap.2.a:0 "Versuchen wir stattdessen zu verhandeln"
+ aw_jap.2.b:0 "Wir ziehen uns lieber ganz zurück"
+ aw_jap.2.c:0 "Wir bleiben bei unserem Vorhaben!"
+ 
+ aw_jap.3.t:0 "Japan weigert sich"
+ aw_jap.3.d:0 "Das japanische Außenministerium hat uns soeben mitgeteilt, dass sie an ihrem Vorhaben festhalten und sich nichts von Berlin diktieren lassen werden. Sie werden in Korea bleiben."
+ aw_jap.3.a:0 "Dann müssen wir sie zum Rückzug zwingen"
+ aw_jap.3.b:0 "Ein Krieg wäre zu kostspielig für uns"
+ 
+ aw_jap.4.t:0 "Japan wünscht Verhandlungen"
+ aw_jap.4.d:0 "Das japanische Außenministerium hat eine Bitte an uns gerichtet: [JAP.GetNameDef] wünscht Verhandlungen über die Remilitarisierung Koreas. Wir könnten von einem Abkommen darüber profitieren."
+ aw_jap.4.a:0 "Lasst uns verhandeln!"
+ aw_jap.4.b:0 "Nicht daran interessiert"
+ 
+ aw_jap.5.t:0 "Berlin stimmt Verhandlungen zu"
+ aw_jap.5.d:0 "[GER.GetNameDef] kommt unserer Bitte nach und möchte über die Konditionen für eine Remilitarisierung Koreas informiert werden: \n"[GER.GetNameDef] könnte für einen bestimmten Zeitraum die Leistungen japanischer Baufirmen in Anspruch nehmen." "
+ aw_jap.5.a:0 "Bedingungen senden"
+ 
+ aw_jap.6.t:0 "Berlin lehnt Verhandlungen ab"
+ aw_jap.6.d:0 "[GER.GetNameDef] hat uns mitgeteilt, dass es nicht an Verhandlungen interessiert ist und keine Remilitarisierung Koreas dulden wird."
+ aw_jap.6.a:0 "Dann marschieren wir trotzdem in Korea ein"
+ aw_jap.6.b:0 "Dann müssen wir uns aus Korea fernhalten"
+ 
+ aw_jap.7.t:0 "Remilitarisierung Koreas: Bedingungen"
+ aw_jap.7.d:0 "[JAP.GetNameDef] bietet uns die Leistungen japanischer Baufirmen für 300 Tage an. Dafür wünschen sie die Erlaubnis für eine dauerhafte Besetzung Koreas."
+ aw_jap.7.a:0 "Das hört sich vernünftig an"
+ aw_jap.7.b:0 "Leider zu wenig"
+ 
+ aw_jap.8.t:0 "Berlin stimmt zu"
+ aw_jap.8.d:0 "[GER.GetNameDef] hat die Konditionen für eine Remilitarisierung Koreas angenommen. Sie nehmen jetzt die Leistungen unserer Baufirmen in Anspruch. "
+ aw_jap.8.a:0 "Gute Neuigkeiten!"
+ 
+ aw_jap.9.t:0 "Tokio verlangt Abtretung Shanghais"
+ aw_jap.9.d:0 "Wir haben soeben eine Aufforderung des japanischen Außenministeriums entgegen genommen. Sie verlangen von uns die Abtretung Shanghais und drohen mit militärischen Konsequenzen sollte China sich weigern."
+ aw_jap.9.a:0 "Wir können uns keine Konfrontation leisten"
+ aw_jap.9.b:0 "Sollen sie es doch wagen uns anzugreifen!"
+ 
+ aw_jap.10.t:0 "China lenkt ein"
+ aw_jap.10.d:0 "Die Chinesen sind unserer Aufforderung nachgekommen und haben mit der Räumung Shanghais begonnen. Kein Wunder das sie Spielball der großen Mächte sind, sie besitzen offensichtlich kein Rückgrat!"
+ aw_jap.10.a:0 "Das war zu erwarten"
+ 
+ aw_jap.11.t:0 "China weist Forderung zurück"
+ aw_jap.11.d:0 "Die Chinesen haben eine Abtretung Shanghais an [JAP.GetNameDef] abgelehnt. Das haben wir nicht erwartet, wie sollen wir nun vorgehen?"
+ aw_jap.11.a:0 "Dann holen wir uns Shanghai mit Gewalt"
+ aw_jap.11.b:0 "Blockiert ihre Häfen, sollen sie doch verhungern!"
+ aw_jap.11.c:0 "Wir kümmern uns zu einem anderen Zeitpunkt darum"
+ 
+ aw_jap.12.t:0 "Japanische Besatzung"
+ aw_jap.12.d:0 "Die Japaner haben uns mitgeteilt, dass sie vor haben die Philippinen zu besetzen. In ihrer Begründung dafür heißt es: "...zur Sicherheit der philippinischen Bevölkerung übernimmt die japanische Armee die Kontrolle über die Regierung der Philippinen."
+ aw_jap.12.a:0 "Wir sollten keine Toten riskieren und zustimmen"
+ aw_jap.12.b:0 "Was erlauben die sich? Wir wehren uns!"
+ 
+ aw_jap.13.t:0 "Besetzung der Philippinen"
+ aw_jap.13.d:0 "Unsere Armee hat die Philippinen widerstandslos besetzt und übernimmt nun die Sicherung der dort ansässigen Bevölkerung."
+ aw_jap.13.a:0 "Großartig"
+ 
+ aw_jap.14.t:0 "Die Philippinen leisten Widerstand"
+ aw_jap.14.d:0 "Die Regierung der [PHI.GetName] hat zum Widerstand gegen die japanische Besatzung aufgerufen. Wir werden jetzt gewaltätig gegen sie vorgehen müssen."
+ aw_jap.14.a:0 "Sie wollten es so"
+ 
+ aw_jap.15.t:0 "Japanische Besatzung"
+ aw_jap.15.d:0 "Die Japaner haben uns mitgeteilt, dass sie vor haben Indochina zu besetzen. In ihrer Begründung dafür heißt es: "...zur Sicherheit der indochinesischen Bevölkerung übernimmt die japanische Armee die Kontrolle über die Regierung Indochinas.""
+ aw_jap.15.a:0 "Wir sollten keine Toten riskieren und zustimmen"
+ aw_jap.15.b:0 "Was erlauben die sich? Wir wehren uns!"
+ 
+ aw_jap.16.t:0 "Besetzung Indochinas"
+ aw_jap.16.d:0 "Unsere Armee hat Indochina widerstandslos besetzt und übernimmt nun die Sicherung der dort ansässigen Bevölkerung."
+ aw_jap.16.a:0 "Großartig"
+ 
+ aw_jap.17.t:0 "Indochina leistet Widerstand"
+ aw_jap.17.d:0 "Die Regierung der [ICH.GetName] hat zum Widerstand gegen die japanische Besatzung aufgerufen. Wir werden jetzt gewaltätig gegen sie vorgehen müssen."
+ aw_jap.17.a:0 "Dann müssen wir die Waffen sprechen lassen"
+ 
+ aw_jap.18.t:0 "Japanisches Ultimatum"
+ aw_jap.18.d:0 "[JAP.GetName] verlangt von uns die Kontrolle über die mandschurische Regierung. Sie drohen uns mit "notwendigen Maßnahmen" sollten wir uns weigern."
+ aw_jap.18.a:0 "Wir haben keine Wahl"
+ aw_jap.18.b:0 "Wir lassen uns nichts diktieren von ihnen!"
+ 
+ aw_jap.19.t:0 "Mandschurei akzeptiert Ultimatum"
+ aw_jap.19.d:0 "[MAN.GetName] hat unser Ultimatum akzeptiert. Wir haben nun die Kontrolle über ihre Regierung."
+ aw_jap.19.a:0 "Gut so"
+ 
+ aw_jap.20.t:0 "Mandschurei lehnt Ultimatum ab"
+ aw_jap.20.d:0 "[MAN.GetName] hat unser Ultimatum abgelehnt. Wir werden das Land besetzen müssen um unseren Willen durchzusetzen."
+ aw_jap.20.a:0 "Mobilisiert die Armee"
+ 
+ aw_jap.21.t:0 "Gründung der Ostasiatischen Union"
+ aw_jap.21.d:0 "[JAP.GetName] hat die Ostasiatische Union gegründet und bietet uns an, dass wir der Union beitreten. Damit könnten wir uns besser gegen die europäischen Großmächte schützen."
+ aw_jap.21.a:0 "Treten wir der Union bei"
+ aw_jap.21.b:0 "Bleiben wir neutral"
+ 
+ aw_jap.22.t:0 "China tritt Union bei"
+ aw_jap.22.d:0 "Das chinesische Außenministerium hat uns mitgeteilt, dass die Regierung Chinas einem Beitritt zugestimmt hat. [CHI.GetName] ist jetzt ein Mitglied der Ostasiatischen Union."
+ aw_jap.22.a:0 "Gute Neuigkeiten"
+ 
+ aw_jap.23.t:0 "China lehnt Beitritt ab"
+ aw_jap.23.d:0 "Das chinesische Außenministerium hat uns mitgeteilt, dass die Regierung Chinas einen Beitritt abgelehnt hat. Damit entgeht uns leider ein wichtiger Partner."
+ aw_jap.23.a:0 "Vielleicht ändern sie ihre Meinung ja noch"
+ 
+ aw_jap.24.t:0 "Tokio lädt uns ein"
+ aw_jap.24.d:0 "Wir haben heute eine Nachricht aus dem japanischen Außenministerium bekommen. [JAP.GetName] lädt uns zur Ostasiatischen Union ein. Was sollen wir antworten?"
+ aw_jap.24.a:0 "Treten wir der Union bei"
+ aw_jap.24.b:0 "Bleiben wir neutral"
+ 
+ aw_jap.25.t:0 "Die Philippinen treten Union bei"
+ aw_jap.25.d:0 "Das philippinische Außenministerium hat uns mitgeteilt, dass die Regierung der Philippinen einem Beitritt zugestimmt hat. [PHI.GetName] ist jetzt ein Mitglied der Ostasiatischen Union."
+ aw_jap.25.a:0 "Gute Neuigkeiten"
+ 
+ aw_jap.26.t:0 "Die Philippinen lehnen Beitritt ab"
+ aw_jap.26.d:0 "Das philippinische Außenministerium hat uns mitgeteilt, dass die Regierung der Philippinen einen Beitritt abgelehnt hat. Damit entgeht uns leider ein wichtiger Partner."
+ aw_jap.26.a:0 "Vielleicht ändern sie ihre Meinung ja noch"
+ 
+ aw_jap.27.t:0 "Tokio lädt uns ein"
+ aw_jap.27.d:0 "Wir haben heute eine Nachricht aus dem japanischen Außenministerium bekommen. [JAP.GetName] lädt uns zur Ostasiatischen Union ein. Was sollen wir antworten?"
+ aw_jap.27.a:0 "Treten wir der Union bei"
+ aw_jap.27.b:0 "Bleiben wir neutral"
+ 
+ aw_jap.28.t:0 "Indochina tritt Union bei"
+ aw_jap.28.d:0 "Das indochinesische Außenministerium hat uns mitgeteilt, dass die Regierung Indochinas einem Beitritt zugestimmt hat. [ICH.GetName] ist jetzt ein Mitglied der Ostasiatischen Union."
+ aw_jap.28.a:0 "Gute Neuigkeiten"
+ 
+ aw_jap.29.t:0 "Indochina lehnt Beitritt ab"
+ aw_jap.29.d:0 "Das indochinesische Außenministerium hat uns mitgeteilt, dass die Regierung Indochinas einen Beitritt abgelehnt hat. Damit entgeht uns leider ein wichtiger Partner."
+ aw_jap.29.a:0 "Vielleicht ändern sie ihre Meinung ja noch"
+ 
+ aw_jap.30.t:0 "Tokio lädt uns ein"
+ aw_jap.30.d:0 "Wir haben heute eine Nachricht aus dem japanischen Außenministerium bekommen. [JAP.GetName] lädt uns zur Ostasiatischen Union ein. Was sollen wir antworten?"
+ aw_jap.30.a:0 "Treten wir der Union bei"
+ aw_jap.30.b:0 "Bleiben wir neutral"
+ 
+ aw_jap.31.t:0 "Mandschurei tritt Union bei"
+ aw_jap.31.d:0 "Das mandschurische Außenministerium hat uns mitgeteilt, dass die Regierung der Mandschurei einem Beitritt zugestimmt hat. [MAN.GetName] ist jetzt ein Mitglied der Ostasiatischen Union."
+ aw_jap.31.a:0 "Gute Neuigkeiten"
+ 
+ aw_jap.32.t:0 "Mandschurei lehnt Beitritt ab"
+ aw_jap.32.d:0 "Das mandschurische Außenministerium hat uns mitgeteilt, dass die Regierung der Mandschurei einen Beitritt abgelehnt hat. Damit entgeht uns leider ein wichtiger Partner."
+ aw_jap.32.a:0 "Vielleicht ändern sie ihre Meinung ja noch"
+ 
+ aw_jap.33.t:0 "Mandschurische Frage"
+ aw_jap.33.d:0 "[JAP.GetName] hat uns den Plan zur "Mandschurischen Frage" vorgelegt. Laut diesem würden wir einige Gebietsgewinne in der Mandschurei erlangen. Japan würde die Herrschaft über die östlichen Gebiete übernehmen. Wie sollen wir vorgehen?"
+ aw_jap.33.a:0 "Führen wir den Plan durch"
+ aw_jap.33.b:0 "Setzen wir den Plan später um"
+ aw_jap.33.c:0 "Lassen wir lieber die Finger davon"
+ 
+ aw_jap.34.t:0 "China stimmt Plan zu"
+ aw_jap.34.d:0 "[CHI.GetName] hat unserem Plan zur "Mandschurischen Frage" zugestimmt."
+ aw_jap.34.a:0 "Legen wir los"
+ 
+ aw_jap.35.t:0 "China lehnt Plan ab"
+ aw_jap.35.d:0 "[CHI.GetName] hat unseren Plan zur Mandschurischen Frage abgelehnt. Wir müssen uns wohl etwas anderes überlegen."
+ aw_jap.35.a:0 "Wir können uns auch später darum kümmern"
+ 
+ aw_jap.39.t:0 "China vertagt Plan"
+ aw_jap.39.d:0 "[CHI.GetName] möchte unseren Plan zur "Mandschurischen Frage" zu einem späteren Zeitpunkt durchführen. Wir werden uns gedulden müssen."
+ aw_jap.39.a:0 "Geduld ist das höchste Gut"
+ 
+ aw_jap.36.t:0 "Japan möchte Völkerbund beitreten"
+ aw_jap.36.d:0 "Wir haben eine Nachricht vom japanischen Außenministerium erhalten: [JAP.GetName] möchte dem Völkerbund beitreten. Sollen wir einem Beitritt zustimmen?"
+ aw_jap.36.a:0 "Sie wären ein würdiges Mitglied"
+ aw_jap.36.b:0 "Lieber nicht"
+ 
+ aw_jap.37.t:0 "Wien stimmt Beitritt zu"
+ aw_jap.37.d:0 "Das österreichische Außenministerium hat uns mitgeteilt, dass sie einem Beitritt Japans zustimmen. Wir sind nun Mitglied im Völkerbund."
+ aw_jap.37.a:0 "Großartig"
+ 
+ aw_jap.38.t:0 "Wien lehnt Beitritt ab"
+ aw_jap.38.d:0 "Das österreichische Außenministerium hat uns mitgeteilt, dass sie einen Beitritt Japans ablehnen."
+ aw_jap.38.a:0 "Dann müssen wir uns andere Verbündete suchen"
+ 
+ aw_jap.40.t:0 "Demokratischer Putsch"
+ aw_jap.40.d:0 "Heute hat die Demokratische Bewegung einen Putsch durchgeführt und wichtige Institutionen übernommen. Uns bleiben zwei Möglichkeiten:"
+ aw_jap.40.a:0 "Flucht ins Exil"
+ aw_jap.40.b:0 "Bekämpfung der Demokraten!"
+ 
+ aw_jap.41.t:0 "Japan zieht sich zurück"
+ aw_jap.41.d:0 "[JAP.GetNameDef] hat sich dazu entschlossen die koreanische Halbinsel nicht zu besetzen. Wir haben sie erfolgreich davon abgehalten."
+ aw_jap.41.a:0 "Niemand stellt sich gegen [GER.GetNameDef]"
+ 
+ aw_jap.42.t:0 "Japanische Seeblockade"
+ aw_jap.42.d:0 "Da wir dem Japanischen Kaiserreich Shanghai nicht zugesprochen haben, hat [JAP.GetLeader] eine Seeblockade gegen uns beschlossen. Sollten wir weiterhin von der Außenwelt über den Seeweg abgeschnitten sein, so könnte eine Hungerkatastrophe ausbrechen."
+ aw_jap.42.a:0 "Hinterhältige Japaner! Wir brauchen unbedingt eine starke Flotte!"
+ 
+ #China Events
+ aw_chi.1.t:0 "Krieg gegen Deutschland?"
+ aw_chi.1.d:0 "Die Japaner kämpfen schon seit einiger Zeit tapfer gegen [GER.GetNameDef]. Wir könnten die Gunst der Stunde nutzen und dem Krieg auf Seiten der Japaner beitreten, um die deutschen Kolonien zurück zu erlangen."
+ aw_chi.1.a:0 "Treten wir dem Krieg bei"
+ aw_chi.1.b:0 "Wir halten uns lieber raus"
+ 
+ aw_chi.2.t:0 "Chinesisches Ultimatum"
+ aw_chi.2.d:0 "[CHI.GetNameDef] hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss Tibets fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_chi.2.a:0 "Uns bleibt nichts anderes übrig"
+ aw_chi.2.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_chi.3.t:0 "Tibet akzeptiert"
+ aw_chi.3.d:0 "[TIB.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt wieder ein Teil von China."
+ aw_chi.3.a:0 "Großartig"
+ 
+ aw_chi.4.t:0 "Tibet lehnt ab"
+ aw_chi.4.d:0 "[TIB.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_chi.4.a:0 "Sie haben falsch entschieden"
+ 
+ aw_chi.5.t:0 "Chinesisches Ultimatum"
+ aw_chi.5.d:0 "[CHI.GetNameDef] hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss der Mongolei fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_chi.5.a:0 "Uns bleibt nichts anderes übrig"
+ aw_chi.5.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_chi.6.t:0 "Mongolei akzeptiert"
+ aw_chi.6.d:0 "[MON.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt wieder ein Teil von China."
+ aw_chi.6.a:0 "Großartig"
+ 
+ aw_chi.7.t:0 "Mongolei lehnt ab"
+ aw_chi.7.d:0 "[MON.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_chi.7.a:0 "Sie haben falsch entschieden"
+ 
+ aw_chi.8.t:0 "Chinesisches Ultimatum"
+ aw_chi.8.d:0 "[CHI.GetNameDef] hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss [SIK.GetName]s fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_chi.8.a:0 "Uns bleibt nichts anderes übrig"
+ aw_chi.8.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_chi.9.t:0 "[SIK.GetName] akzeptiert"
+ aw_chi.9.d:0 "[SIK.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt wieder ein Teil von China."
+ aw_chi.9.a:0 "Großartig"
+ 
+ aw_chi.10.t:0 "[SIK.GetName] lehnt ab"
+ aw_chi.10.d:0 "[SIK.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_chi.10.a:0 "Sie haben falsch entschieden"
+ 
+ aw_chi.11.t:0 "Chinesisches Ultimatum"
+ aw_chi.11.d:0 "[CHI.GetNameDef] hat ein Ultimatum an uns gerichtet, in dem sie den Anschluss der Mandschurei fordern. Sollten wir uns weigern könnten sie aggressive Schritte einleiten."
+ aw_chi.11.a:0 "Uns bleibt nichts anderes übrig"
+ aw_chi.11.b:0 "Wir leisten Widerstand bis zum letzen Atemzug"
+ 
+ aw_chi.12.t:0 "Mandschurei akzeptiert"
+ aw_chi.12.d:0 "[MAN.GetNameDef] hat das Ultimatum angenommen. Sie sind jetzt wieder ein Teil von China."
+ aw_chi.12.a:0 "Großartig"
+ 
+ aw_chi.13.t:0 "Mandschurei lehnt ab"
+ aw_chi.13.d:0 "[MAN.GetNameDef] hat unser Ultimatum zurückgewiesen. Sie wollen weiterhin unabhängig bleiben"
+ aw_chi.13.a:0 "Sie haben falsch entschieden"
+ 
+ aw_chi.14.t:0 "China fordert Hongkong"
+ aw_chi.14.d:0 "[CHI.GetNameDef] hat uns mitgeteilt, dass sie die Räumung Hongkongs und dessen Übergabe an China erwarten. Sollten wir uns weigern, könnten sie kriegerische Schritte einleiten."
+ aw_chi.14.a:0 "Vermeiden wir diesen Krieg lieber"
+ aw_chi.14.b:0 "Wir werden nicht nachgeben"
+ 
+ aw_chi.15.t:0 "Hongkong wird Teil Chinas"
+ aw_chi.15.d:0 "Die britische Besatzungsmacht hat sich dazu entschlossen Hongkong wieder an China zu übergeben."
+ aw_chi.15.a:0 "Großartig"
+ 
+ aw_chi.16.t:0 "Briten lehnen ab"
+ aw_chi.16.d:0 "[ENG.GetNameDef] hat unsere Forderung, Hongkong abzutreten, zurückgewiesen."
+ aw_chi.16.a:0 "Sie werden sehen was sie davon haben"
+ 
+ aw_chi.17.t:0 "China fordert Macau"
+ aw_chi.17.d:0 "[CHI.GetNameDef] hat uns mitgeteilt, dass sie die Räumung Macaus und dessen Übergabe an China erwarten. Sollten wir uns weigern, könnten sie kriegerische Schritte einleiten."
+ aw_chi.17.a:0 "Vermeiden wir diesen Krieg lieber"
+ aw_chi.17.b:0 "Wir werden nicht nachgeben"
+ 
+ aw_chi.18.t:0 "Macau wird Teil Chinas"
+ aw_chi.18.d:0 "Die portugiesische Besatzungsmacht hat sich dazu entschlossen Macau wieder an China zu übergeben."
+ aw_chi.18.a:0 "Großartig"
+ 
+ aw_chi.19.t:0 "Portugiesen lehnen ab"
+ aw_chi.19.d:0 "[POR.GetNameDef] hat unsere Forderung, Macau abzutreten, zurückgewiesen."
+ aw_chi.19.a:0 "Sie werden sehen was sie davon haben"
+ 
+ aw_chi.20.t:0 "China fordert Abzug deutscher Truppen"
+ aw_chi.20.d:0 "[CHI.GetNameDef] hat uns mitgeteilt, dass sie den Abzug aller deutschen Truppen aus den chinesischen Gebieten fordern. Sollte sich [GER.GetNameDef] weigern, so könnte es zu einem Krieg kommen."
+ aw_chi.20.a:0 "Vermeiden wir diesen Krieg lieber"
+ aw_chi.20.b:0 "Sollen sie es doch wagen"
+ 
+ aw_chi.21.t:0 "[GER.GetName] zieht ab"
+ aw_chi.21.d:0 "[GER.GetNameDef] hat sich dazu entschlossen seine Truppen aus Ostasien abzuziehen."
+ aw_chi.21.a:0 "Großartig"
+ 
+ aw_chi.22.t:0 "[GER.GetName] lehnt ab"
+ aw_chi.22.d:0 "[GER.GetNameDef] hat es abgelehnt sich aus Ostasien zurückzuziehen."
+ aw_chi.22.a:0 "Das werden sie noch bereuen"
+ 
+ aw_chi.23.t:0 "China wünscht Nichtangriffspakt"
+ aw_chi.23.d:0 "[CHI.GetNameDef] wünscht einen Nichtangriffspakt und eine Verbesserung der Beziehungen zwischen Indien und China."
+ aw_chi.23.a:0 "Das ist ein guter Schritt"
+ aw_chi.23.b:0 "Wir brauchen sie nicht als Partner"
+ 
+ aw_chi.24.t:0 "[RAJ.GetName] akzeptiert"
+ aw_chi.24.d:0 "[RAJ.GetNameDef] hat unser Angebot akzeptiert. Zwischen unseren Ländern besteht nun ein Nichtangriffspakt."
+ aw_chi.24.a:0 "Gute Neuigkeiten"
+ 
+ aw_chi.25.t:0 "[RAJ.GetName] lehnt ab"
+ aw_chi.25.d:0 "[RAJ.GetNameDef] hat einen Nichtangriffspakt abgelehnt."
+ aw_chi.25.a:0 "Wirklich Schade"
+ 
+ aw_chi.26.t:0 "China wünscht Nichtangriffspakt"
+ aw_chi.26.d:0 "[CHI.GetNameDef] wünscht einen Nichtangriffspakt und eine Verbesserung der Beziehungen zwischen Japan und China."
+ aw_chi.26.a:0 "Das ist ein guter Schritt"
+ aw_chi.26.b:0 "Wir brauchen sie nicht als Partner"
+ 
+ aw_chi.27.t:0 "[JAP.GetName] akzeptiert"
+ aw_chi.27.d:0 "[JAP.GetNameDef] hat unser Angebot akzeptiert. Zwischen unseren Ländern besteht nun ein Nichtangriffspakt."
+ aw_chi.27.a:0 "Gute Neuigkeiten"
+ 
+ aw_chi.28.t:0 "[JAP.GetName] lehnt ab"
+ aw_chi.28.d:0 "[JAP.GetNameDef] hat einen Nichtangriffspakt abgelehnt."
+ aw_chi.28.a:0 "Wirklich Schade"
+ 
+ aw_chi.29.t:0 "China möchte Komintern beitreten"
+ aw_chi.29.d:0 "[CHI.GetNameDef] hat den Wunsch geäußert dem Komintern Pakt beizutreten. Sollen wir sie aufnehmen?"
+ aw_chi.29.a:0 "Sie wären ein wichtiger Partner"
+ aw_chi.29.b:0 "Wir brauchen sie nicht als Partner"
+ 
+ aw_chi.30.t:0 "[SOV.GetName] akzeptiert"
+ aw_chi.30.d:0 "[SOV.GetNameDef] hat uns in den Komintern Pakt aufgenommen."
+ aw_chi.30.a:0 "Gute Neuigkeiten"
+ 
+ aw_chi.31.t:0 "[SOV.GetName] lehnt ab"
+ aw_chi.31.d:0 "[SOV.GetNameDef] hat einen Beitritt Chinas abgelehnt."
+ aw_chi.31.a:0 "Wirklich Schade"
+ 
+ aw_chi.32.t:0 "China möchte Völkerbund beitreten"
+ aw_chi.32.d:0 "[CHI.GetNameDef] hat den Wunsch geäußert dem Völkerbund beizutreten. Sollen wir sie aufnehmen?"
+ aw_chi.32.a:0 "Sie wären ein wichtiger Partner"
+ aw_chi.32.b:0 "Wir brauchen sie nicht als Partner"
+ 
+ aw_chi.33.t:0 "[UGA.GetName] akzeptiert"
+ aw_chi.33.d:0 "[UGA.GetNameDef] haben uns in den Völkerbund aufgenommen."
+ aw_chi.33.a:0 "Gute Neuigkeiten"
+ 
+ aw_chi.34.t:0 "[UGA.GetName] lehnt ab"
+ aw_chi.34.d:0 "[UGA.GetNameDef] hat einen Beitritt Chinas abgelehnt."
+ aw_chi.34.a:0 "Wirklich Schade"
+ 
+ aw_chi.35.t:0 "Macau ist gefallen"
+ aw_chi.35.d:0 "[CHI.GetNameDef] hat Macau besetzt und unsere Besatzung gefangen genommen. Sollen wir ihnen ein Friedensangebot machen und Macau als chinesisches Territorium anerkennen?"
+ aw_chi.35.a:0 "Wir sollten diesen Krieg beenden"
+ aw_chi.35.b:0 "Wir werden uns Macau zurückholen"
+ 
+ aw_chi.36.t:0 "Friedensangebot Portugals"
+ aw_chi.36.d:0 "[POR.GetNameDef] hat uns ein Friedensangebot gemacht in welchem sie uns Macau zugestehen. Sollen wir akzeptieren?"
+ aw_chi.36.a:0 "Wir haben was wir wollten"
+ aw_chi.36.b:0 "Sie wollten Krieg, sie bekommen Krieg"
+ 
+ aw_chi.37.t:0 "China lehnt ab"
+ aw_chi.37.d:0 "[CHI.GetNameDef] hat unser Friedensangebot abgelehnt. Sie wollen diesen Krieg weiterführen."
+ aw_chi.37.a:0 "Mutig von ihnen"
+ 
+ aw_chi.38.t:0 "Kommunistischer Putsch"
+ aw_chi.38.d:0 "In einer groß angelegten Verschwörung haben kommunistische Milizen einen Putsch gegen die Monarchie durchgeführt und den chinesischen Kaiser gefangen genommen. Trotz einiger blutiger Auseinandersetzungen konnten die kommunistischen Verschwörer die Macht an sich reißen."
+ aw_chi.38.a:0 "Unser Plan war erfolgreich!"
+ 
+ aw_chi.39.t:0 "Peking wird Regierungssitz"
+ aw_chi.39.d:0 "Nachdem sich Peking nicht mehr durch benachbarte Länder in Gefahr befindet, wird unser Regierungssitz wieder dorthin verlegt. Wir erwarten eine große Zeremonie für die Einweihung der neuen Hauptstadt."
+ aw_chi.39.a:0 "Großartig!"
+ 
+ #Ukraine
+ aw_ukr.1.t:0 "Unterstütze die Radikalen Parteien"
+ aw_ukr.1.d:0 "Der König hat versagt, unser Land verarmt immer mehr und die benachbarten Großmächte werden zu einer großen Bedrohung. Es wird Zeit, dass wir einen neuen Weg gehen."
+ aw_ukr.1.a:0 "Unterstütze die Faschisten"
+ aw_ukr.1.b:0 "Unterstütze die Kommunisten"
+ 
+ aw_ukr.2.t:0 "Faschisten stürzen den König"
+ aw_ukr.2.d:0 "Nachdem die Faschisten immer mehr Zulauf und Zustimmung von der Bevölkerung erfahren haben, nahmen sie in einer Nacht und Nebel Aktion den König und andere hochrangige Staatsvertreter gefangen und übernahmen die Regierungsgewalt."
+ aw_ukr.2.a:0 "Endlich können wir unser Land wieder großartig machen"
+ 
+ aw_ukr.3.t:0 "Kommunisten stürzen den König"
+ aw_ukr.3.d:0 "Nachdem die Kommunisten immer mehr Zulauf und Zustimmung von der Bevölkerung erfahren haben, nahmen sie in einer Nacht und Nebel Aktion den König und andere hochrangige Staatsvertreter gefangen und übernahmen die Regierungsgewalt."
+ aw_ukr.3.a:0 "Es wird Zeit für die sozialistische Revolution!"
+ 
+ aw_ukr.4.t:0 "Beziehung zu [GER.GetNameDef]"
+ aw_ukr.4.d:0 "Es wird Zeit, dass wir unser Verhältnis zu den Deutschen klären."
+ aw_ukr.4.a:0 "Wettere gegen die Deutschen"
+ aw_ukr.4.b:0 "Schlage einen Nichtangriffspakt vor"
+ aw_ukr.4.c:0 "Schlage eine tiefgreifende Kooperation vor"
+ 
+ aw_ukr.5.t:0 "Ukraine wünscht Nichtangriffspakt"
+ aw_ukr.5.d:0 "[UKR.GetLeader] wünscht einen Nichtangriffspakt mit dem Deutschen Reich und eine Verbesserung der Beziehung zwischen beiden Ländern."
+ aw_ukr.5.a:0 "Die Erhaltung des Friedens ist immer erwünscht"
+ aw_ukr.5.b:0 "Wir sind nicht interessiert"
+ 
+ aw_ukr.6.t:0 "Ukraine wünscht Kooperation"
+ aw_ukr.6.d:0 "[UKR.GetLeader] äußerte den Wunsch eine tiefgreifende Kooperation mit dem Deutschen Reich einzugehen. Wir könnten von weiteren Partnern profitieren."
+ aw_ukr.6.a:0 "Wir sollten mit ihnen zusammenarbeiten"
+ aw_ukr.6.b:0 "Wir sollten sie in die Wirtschaftsunion intigrieren"
+ aw_ukr.6.c:0 "Wir sind nicht interessiert"
+ 
+ aw_ukr.7.t:0 "Berlin akzeptiert Nichtangriffspakt"
+ aw_ukr.7.d:0 "[GER.GetLeader] hat unser Angebot eines Nichtangriffspakts angenommen."
+ aw_ukr.7.a:0 "Großartig!"
+ 
+ aw_ukr.8.t:0 "Berlin lehnt Nichtangriffspakt ab"
+ aw_ukr.8.d:0 "Die Deutschen haben unser Angebot einen Nichtangriffspakt abzuschließen abgelehnt."
+ aw_ukr.8.a:0 "Wir sollten uns auf Schlimmeres vorbereiten"
+ 
+ aw_ukr.9.t:0 "Berlin will kooperieren"
+ aw_ukr.9.d:0 "Das deutsche Außenministerium hat uns mitgeteilt, dass [GER.GetLeader] dazu bereit ist mit der Ukraine zu kooperieren. Die Oberste Heeresleitung wird uns Militärberater schicken und uns bei der Organisation unserer Armee helfen."
+ aw_ukr.9.a:0 "Gute Neuigkeiten"
+ 
+ aw_ukr.10.t:0 "Berlin will kooperieren"
+ aw_ukr.10.d:0 "Das deutsche Außenministerium hat uns mitgeteilt, dass [GER.GetLeader] dazu bereit ist mit der Ukraine zu kooperieren. Sie werden uns in die Wirtschaftsunion aufnehmen."
+ aw_ukr.10.a:0 "Großartig"
+ 
+ aw_ukr.11.t:0 "Berlin lehnt Kooperation ab"
+ aw_ukr.11.d:0 "Das deutsche Außenministerium hat uns mitgeteilt, dass das Deutsche Reich zu keiner Kooperation mit der Ukraine bereit ist."
+ aw_ukr.11.a:0 "Wir sollten auf Schlimmeres vorbereitet sein"
+ 
+ aw_ukr.12.t:0 "Beziehung zu [UGA.GetNameDef]"
+ aw_ukr.12.d:0 "Es wird Zeit, dass wir unser Verhältnis mit [UGA.GetNameDef] klären."
+ aw_ukr.12.a:0 "Wettere gegen die Österreicher"
+ aw_ukr.12.b:0 "Schlage einen Nichtangriffspakt vor"
+ 
+ aw_ukr.13.t:0 "Ukraine wünscht Nichtangriffspakt"
+ aw_ukr.13.d:0 "[UKR.GetLeader] wünscht einen Nichtangriffspakt und eine Verbesserung der Beziehung zwischen unseren Ländern."
+ aw_ukr.13.a:0 "Die Erhaltung des Friedens ist immer erwünscht"
+ aw_ukr.13.b:0 "Wir sind nicht interessiert"
+ 
+ aw_ukr.14.t:0 "Wien akzeptiert Nichtangriffspakt"
+ aw_ukr.14.d:0 "[UGA.GetLeader] hat unser Angebot eines Nichtangriffspakts angenommen."
+ aw_ukr.14.a:0 "Großartig!"
+ 
+ aw_ukr.15.t:0 "Wien lehnt Nichtangriffspakt ab"
+ aw_ukr.15.d:0 "[UGA.GetNameDef] haben unser Angebot einen Nichtangriffspakt abzuschließen abgelehnt."
+ aw_ukr.15.a:0 "Wir sollten uns auf Schlimmeres vorbereiten"
+ 
+ aw_ukr.16.t:0 "Beziehung zur [SOV.GetName]"
+ aw_ukr.16.d:0 "Es wird Zeit, dass wir unser Verhältnis mit der [SOV.GetName] klären."
+ aw_ukr.16.a:0 "Wettere gegen die Sowjets"
+ aw_ukr.16.b:0 "Schlage einen Nichtangriffspakt vor"
+ aw_ukr.16.c:0 "Trete den Komintern bei"
+ 
+ aw_ukr.17.t:0 "Ukraine wünscht Nichtangriffspakt"
+ aw_ukr.17.d:0 "[UKR.GetLeader] wünscht einen Nichtangriffspakt und eine Verbesserung der Beziehung zwischen unseren Ländern."
+ aw_ukr.17.a:0 "Die Erhaltung des Friedens ist immer erwünscht"
+ aw_ukr.17.b:0 "Wir sind nicht interessiert"
+ 
+ aw_ukr.18.t:0 "Moskau akzeptiert Nichtangriffspakt"
+ aw_ukr.18.d:0 "[SOV.GetLeader] hat unser Angebot eines Nichtangriffspakts angenommen."
+ aw_ukr.18.a:0 "Großartig!"
+ 
+ aw_ukr.19.t:0 "Moskau lehnt Nichtangriffspakt ab"
+ aw_ukr.19.d:0 "[SOV.GetNameDef] hat unser Angebot einen Nichtangriffspakt abzuschließen abgelehnt."
+ aw_ukr.19.a:0 "Wir sollten uns auf Schlimmeres vorbereiten"
+ 
+ aw_ukr.20.t:0 "Ukraine möchte Komintern beitreten"
+ aw_ukr.20.d:0 "[UKR.GetLeader] äußerte die Bitte, die Ukraine in die Komintern aufzunehmen."
+ aw_ukr.20.a:0 "Weitere Genossen sind immer erwünscht"
+ aw_ukr.20.b:0 "Wir brauchen sie nicht als Verbündete"
+ 
+ aw_ukr.21.t:0 "Moskau akzeptiert unsere Anfrage"
+ aw_ukr.21.d:0 "[SOV.GetLeader] hat unsere Anfrage die Ukraine in die Komintern aufzunehmen angenommen."
+ aw_ukr.21.a:0 "Großartig!"
+ 
+ aw_ukr.22.t:0 "Moskau lehnt unsere Anfrage ab"
+ aw_ukr.22.d:0 "[SOV.GetNameDef] hat unsere Anfrage die Ukraine in die Komintern aufzunehmen abgelehnt."
+ aw_ukr.22.a:0 "Wir sollten uns auf Schlimmeres vorbereiten"
+ 
+ aw_ukr.23.t:0 "Kiew lädt uns ein"
+ aw_ukr.23.d:0 "Das ukrainische Außenministerium hat uns mitgeteilt, dass [UKR.GetLeader] uns anbietet der Schwarzmeerkoalition beizutreten."
+ aw_ukr.23.a:0 "In diesen Zeiten brauchen wir Verbündete"
+ aw_ukr.23.b:0 "Wir brauchen sie nicht als Verbündete"
+ 
+ aw_ukr.24.t:0 "Bukarest nimmt unser Angebot an"
+ aw_ukr.24.d:0 "[ROM.GetLeader] hat unser Angebot angenommen, [ROM.GetNameDef] ist nun Mitglied in der Schwarzmeerkoalition."
+ aw_ukr.24.a:0 "Großartig!"
+ 
+ aw_ukr.25.t:0 "Bukarest lehnt unser Angebot ab"
+ aw_ukr.25.d:0 "[ROM.GetLeader] hat unser Angebot abgelehnt, [ROM.GetNameDef] bleibt vorerst neutral."
+ aw_ukr.25.a:0 "Wir sollten ein Auge auf sie werfen"
+ 
+ aw_ukr.26.t:0 "Kiew stellt Ultimatum"
+ aw_ukr.26.d:0 "Das ukrainische Außenministerium hat uns ein Ultimatum von der ukrainischen Führung übermittelt. Sie fordern Rumänien dazu auf, Bessarabien an die Ukraine abzutreten. Sollten wir uns weigern, so könnte der Konflikt blutig enden."
+ aw_ukr.26.a:0 "Wir sind nicht bereit für eine militärische Konfrontation"
+ aw_ukr.26.b:0 "Wir lassen uns nicht erpressen!"
+ 
+ aw_ukr.27.t:0 "Bukarest nimmt Ultimatum an"
+ aw_ukr.27.d:0 "[ROM.GetLeader] hat unser Ultimatum angenommen, sie werden uns Bessarabien übergeben."
+ aw_ukr.27.a:0 "Das ist auch besser so"
+ 
+ aw_ukr.28.t:0 "Bukarest weißt Forderungen zurück"
+ aw_ukr.28.d:0 "[ROM.GetLeader] hat unser Ultimatum abgelehnt und machte deutlich, dass Rumänien sich nicht erpressen lässt."
+ aw_ukr.28.a:0 "Dann werden wir härtere Schritte einleiten müssen"
+ 
+ aw_ukr.29.t:0 "Beziehung zu [FRA.GetName]"
+ aw_ukr.29.d:0 "Es wird Zeit, dass wir unser Verhältnis mit [FRA.GetName] klären."
+ aw_ukr.29.a:0 "Wettere gegen die Franzosen"
+ aw_ukr.29.b:0 "Schlage einen Nichtangriffspakt vor"
+ 
+ aw_ukr.30.t:0 "Ukraine wünscht Nichtangriffspakt"
+ aw_ukr.30.d:0 "[UKR.GetLeader] wünscht einen Nichtangriffspakt und eine Verbesserung der Beziehung zwischen unseren Ländern."
+ aw_ukr.30.a:0 "Die Erhaltung des Friedens ist immer erwünscht"
+ aw_ukr.30.b:0 "Wir sind nicht interessiert"
+ 
+ aw_ukr.31.t:0 "Paris akzeptiert Nichtangriffspakt"
+ aw_ukr.31.d:0 "[FRA.GetLeader] hat unser Angebot eines Nichtangriffspakts angenommen."
+ aw_ukr.31.a:0 "Großartig!"
+ 
+ aw_ukr.32.t:0 "Paris lehnt Nichtangriffspakt ab"
+ aw_ukr.32.d:0 "[FRA.GetNameDef] hat unser Angebot einen Nichtangriffspakt abzuschließen abgelehnt."
+ aw_ukr.32.a:0 "Wir müssen uns andere Verbündete suchen"
+ 
+ aw_ukr.33.t:0 "Kiew lädt uns ein"
+ aw_ukr.33.d:0 "Das ukrainische Außenministerium hat uns mitgeteilt, dass [UKR.GetLeader] uns anbietet der Schwarzmeerkoalition beizutreten."
+ aw_ukr.33.a:0 "In diesen Zeiten brauchen wir Verbündete"
+ aw_ukr.33.b:0 "Wir brauchen sie nicht als Verbündete"
+ 
+ aw_ukr.34.t:0 "Jekaterinodar nimmt unser Angebot an"
+ aw_ukr.34.d:0 "[KBN.GetLeader] hat unser Angebot angenommen, [KBN.GetNameDef] ist nun Mitglied in der Schwarzmeerkoalition."
+ aw_ukr.34.a:0 "Großartig!"
+ 
+ aw_ukr.35.t:0 "Jekaterinodar lehnt unser Angebot ab"
+ aw_ukr.35.d:0 "[KBN.GetLeader] hat unser Angebot abgelehnt, [KBN.GetNameDef] bleibt vorerst neutral."
+ aw_ukr.35.a:0 "Wir sollten ein Auge auf sie werfen"
+ 
+ aw_ukr.36.t:0 "Kiew lädt uns ein"
+ aw_ukr.36.d:0 "Das ukrainische Außenministerium hat uns mitgeteilt, dass [UKR.GetLeader] uns anbietet der Schwarzmeerkoalition beizutreten."
+ aw_ukr.36.a:0 "In diesen Zeiten brauchen wir Verbündete"
+ aw_ukr.36.b:0 "Wir brauchen sie nicht als Verbündete"
+ 
+ aw_ukr.37.t:0 "Sofia nimmt unser Angebot an"
+ aw_ukr.37.d:0 "[BUL.GetLeader] hat unser Angebot angenommen, [BUL.GetNameDef] ist nun Mitglied in der Schwarzmeerkoalition."
+ aw_ukr.37.a:0 "Großartig!"
+ 
+ aw_ukr.38.t:0 "Sofia lehnt unser Angebot ab"
+ aw_ukr.38.d:0 "[BUL.GetLeader] hat unser Angebot abgelehnt, [BUL.GetNameDef] bleibt vorerst neutral."
+ aw_ukr.38.a:0 "Wir sollten sie im Auge behalten"
+ 
+ aw_ukr.39.t:0 "Kiew stellt Ultimatum"
+ aw_ukr.39.d:0 "Das ukrainische Außenministerium hat uns ein Ultimatum von der ukrainischen Führung übermittelt. Sie fordern uns dazu auf, Ostgalizien an die Ukraine abzutreten. Sollten wir uns weigern, so könnte der Konflikt blutig enden."
+ aw_ukr.39.a:0 "Wir sind nicht bereit für eine militärische Konfrontation"
+ aw_ukr.39.b:0 "Sollen sie es doch wagen einen Krieg zu beginnen"
+ 
+ aw_ukr.40.t:0 "Wien nimmt Ultimatum an"
+ aw_ukr.40.d:0 "[UGA.GetLeader] hat unser Ultimatum angenommen, sie werden Ostgalizien an die Ukraine abtreten."
+ aw_ukr.40.a:0 "Das ist auch besser so"
+ 
+ aw_ukr.41.t:0 "Wien weißt Forderungen zurück"
+ aw_ukr.41.d:0 "[UGA.GetLeader] hat unser Ultimatum abgelehnt und machte deutlich, dass [UGA.GetNameDef] jederzeit für einen Krieg bereit sind."
+ aw_ukr.41.a:0 "Dann werden wir härtere Schritte einleiten müssen"
+ 
+ aw_ukr.42.t:0 "Kiew stellt Ultimatum"
+ aw_ukr.42.d:0 "Das ukrainische Außenministerium hat uns ein Ultimatum von der ukrainischen Führung übermittelt. Sie fordern die Regierung der Krim dazu auf, sich der Ukraine anzuschließen. Sollten wir uns weigern, so könnte der Konflikt blutig enden."
+ aw_ukr.42.a:0 "Wir sind nicht bereit für eine militärische Konfrontation"
+ aw_ukr.42.b:0 "Sollen sie es doch wagen einen Krieg zu beginnen"
+ 
+ aw_ukr.43.t:0 "Sewastopol nimmt Ultimatum an"
+ aw_ukr.43.d:0 "[KRI.GetLeader] hat unser Ultimatum angenommen, [KRI.GetNameDef] wird sich der Ukraine anschließen."
+ aw_ukr.43.a:0 "Großartig"
+ 
+ aw_ukr.44.t:0 "Sewastopol weißt Forderungen zurück"
+ aw_ukr.44.d:0 "[KRI.GetLeader] hat unser Ultimatum abgelehnt und machte deutlich, dass [KRI.GetNameDef] jederzeit dazu bereit ist ihr Territorium zu verteidigen."
+ aw_ukr.44.a:0 "Dann werden wir härtere Schritte einleiten müssen"
+ 
+ aw_ukr.45.t:0 "Kiew stellt Ultimatum"
+ aw_ukr.45.d:0 "Das ukrainische Außenministerium hat uns ein Ultimatum von der ukrainischen Führung übermittelt. Diese fordert uns dazu auf, die Krim der Ukraine zu überlassen. Sollten wir uns weigern, so werden sie aggressivere Schritte einleiten."
+ aw_ukr.45.a:0 "Wir verhindern diesen Krieg besser"
+ aw_ukr.45.b:0 "Sollen sie es doch wagen einen Krieg mit dem Kaiserreich zu beginnen"
+ 
+ aw_ukr.46.t:0 "Berlin nimmt Ultimatum an"
+ aw_ukr.46.d:0 "[GER.GetLeader] hat unser Ultimatum angenommen, sie werden die Krim der Ukraine überlassen."
+ aw_ukr.46.a:0 "Das ist auch besser so"
+ 
+ aw_ukr.47.t:0 "Berlin weißt Forderungen zurück"
+ aw_ukr.47.d:0 "[GER.GetLeader] hat unser Ultimatum abgelehnt und machte deutlich, dass sich das Kaiserreich nicht von der Ukraine einschüchtern lässt."
+ aw_ukr.47.a:0 "Dann werden wir härtere Schritte einleiten müssen"
+ 
+ #Ethiopia
+ aw_eth.1.t:0 "Abessinien besetzt Eritrea und Somaliland"
+ aw_eth.1.d:0 "[ETH.GetNameDef] hat unsere Kolonien Eritrea und das Somaliland besetzt. Sollen wir unsere Niederlage eingestehen und Abessinien Eritrea zugestehen?"
+ aw_eth.1.a:0 "Offensichtlich haben wir ihren Kampfwillen unterschätzt"
+ aw_eth.1.b:0 "Wir beenden diesen Krieg erst, wenn Abessinien unser ist"
+ 
+ aw_eth.2.t:0 "Friedensangebot Italiens"
+ aw_eth.2.d:0 "[ITA.GetNameDef] hat uns ein Friedensangebot gemacht in welchem sie uns Eritrea zugestehen. Sollen wir akzeptieren?"
+ aw_eth.2.a:0 "Wir sollten diesen Krieg jetzt beenden"
+ aw_eth.2.b:0 "Sie wollten Krieg, sie bekommen Krieg"
+ 
+ aw_eth.3.t:0 "Abessinien lehnt ab"
+ aw_eth.3.d:0 "[ETH.GetNameDef] hat unser Friedensangebot abgelehnt. Sie wollen diesen Krieg weiterführen."
+ aw_eth.3.a:0 "Mutig von ihnen"
+ 
+ #India
+ aw_india.1.t:0 "Ein-Indien Politik oder nicht?"
+ aw_india.1.d:0 "In letzter Zeit werden vermehrt Stimmen laut, die die Teilung Indiens und die Schaffung eines pakistanischen Staates fordern. Wir sollten uns überlegen wie wir uns diesem Thema gegenüber positionieren."
+ aw_india.1.a:0 "Wir sollten offen für eine Lösung des Problems sein"
+ aw_india.1.b:0 "Wir bleiben bei der Ein-Indien Politik!"
+ 
+ aw_india.2.t:0 "Pakistanische Unabhängigkeitsbewegung"
+ aw_india.2.d:0 "In einigen Regionen mit überwiegender Muslimischer Bevölkerung hat sich eine gefährliche pakistanische Unabhängigkeitsbewegung gebildet."
+ aw_india.2.a:0 "Wir sollten diese im Auge behalten"
+ 
+ aw_india.3.t:0 "Demokratische Reformation oder Unabhängigkeit?"
+ aw_india.3.d:0 "Um die Zufriedenheit in der Bevölkerung wiederherzustellen, sollte wir eine Referendum darüber abhalten, ob die Leute eine weitere demokratische Reformation wünschen oder eine Pakistanische Unabhängigkeit bevorzugen."
+ aw_india.3.a:0 "Halten wir das Referendum ab"
+ 
+ aw_india.4.t:0 "Demokratische Reformation gewählt"
+ aw_india.4.d:0 "Die Bevölkerung hat abgestimmt und sich für eine weitere demokratische Reformation der Verwaltung entschieden. Nun müssen wir uns entscheiden, ob wir dies wirklich durchführen möchten."
+ aw_india.4.a:0 "Wir müssen die Stimme des Volkes akzeptieren"
+ aw_india.4.b:0 "Wir können das nicht machen"
+ 
+ aw_india.5.t:0 "Freies Pakistan gewählt"
+ aw_india.5.d:0 "Die Bevölkerung hat abgestimmt und sich für die Unabhängigkeit Pakistans entschieden. Sollen wir das tatsächlich durchführen?"
+ aw_india.5.a:0 "Das Volk hat so entschieden"
+ aw_india.5.b:0 "Das können wir nicht machen"
+ 
+ aw_india.6.t:0 "Proteste der Unabhängigkeitsbewegung"
+ aw_india.6.d:0 "Die Pakistanische Unabhängigkeitsbewegung hat begonnen offen Proteste und Streiks abzuhalten. Wenn wir nicht bald eine Lösung des Problems finden, so könnten die Proteste im Chaos enden."
+ aw_india.6.a:0 "Lasst sie protestieren"
+ aw_india.6.b:0 "Treibt sie von den Straßen!"
+ 
+ aw_india.7.t:0 "Unabhängigkeit Pakistans"
+ aw_india.7.d:0 "Nach monatelanger Vorbereitung wird die Unabhängigkeit Pakistans vollzogen."
+ aw_india.7.a:0 "Wir heißen unseren neuen Nachbarn willkommen"
+ aw_india.7.b:0 "Spiele als Pakistan"
+ 
+ aw_india.8.t:0 "Reformation macht Fortschritte"
+ aw_india.8.d:0 "Die Reformation unserer Verwaltung läuft langsam voran, doch sollten wir nicht zu lange damit warten."
+ aw_india.8.a:0 "Beschleunigen wir die Sache"
+ aw_india.8.b:0 "Wir haben genug Zeit"
+ 
+ aw_india.9.t:0 "Reformation abgeschlossen"
+ aw_india.9.d:0 "Die Reformation ist abgeschlossen. Auf eine gemeinsame und friedliche Zukunft!"
+ aw_india.9.a:0 "Großartig"
+ 
+ aw_india.10.t:0 "Proteste werden stärker"
+ aw_india.10.d:0 "Die Proteste der Pakistanischen Unabhängigkeitsbewegung werden immer stärker. Wir sollten uns nochmals überlegen, ob wir nicht doch lieber eine Lösung für das Problem finden wollen."
+ aw_india.10.a:0 "Es ist eine Lösung notwendig"
+ aw_india.10.b:0 "Wir bleiben bei unserer Position"
+ 
+ #Indian-Pakistani Civil War
+ indian_cw.1.t:0 "Pakistan erklärt Unabhängigkeit"
+ indian_cw.1.d:0 "In den Regionen um Punjab und Sind haben sich Rebellen gegen die indische Regierung erhoben und den unabhängigen Staat Pakistan ausgerufen. Das können wir nicht zulassen."
+ indian_cw.1.a:0 "Wähle die indische Seite"
+ indian_cw.1.b:0 "Wähle die pakistanische Seite"
+ 
+ indian_cw.2.t:0 "Aufstand in Bengalen"
+ indian_cw.2.d:0 "In Bengalen haben sich muslimische Anhänger gegen Indien erhoben und dem pakistanischen Unabhängigkeitskampf angeschlossen. Das dürfte unsere Situation erschweren."
+ indian_cw.2.a:0 "Dafür werden sie bezahlen!"
+ 
+ indian_cw.3.t:0 "Bengalen schließen sich uns an"
+ indian_cw.3.d:0 "In der Provinz Bengalen gab es einen Aufstand gegen die indischen Besatzer. Sie haben sich unserem Unabhängigkeitskampf angeschlossen!"
+ indian_cw.3.a:0 "Großartig!"
+ 
+ 
+ #aw_com events
+ aw_com.1.t:0 "Joining the Ligue des Fasciste"
+ aw_com.1.d:0 "[ENG.GetNameDef] and [FRA.GetNameDef] decided to unite their factions to withstand the dangers in Europe."
+ aw_com.1.a:0 "Great"
+ 
+ aw_com.2.t:0 "Rearrangement of Commonwealth"
+ aw_com.2.d:0 "[ENG.GetNameDef] decided to rearrangement the Commonwealth."
+ aw_com.2.a:0 "Okay"
+ 
+ aw_com.3.t:0 "Joining the League of Nations"
+ aw_com.3.d:0 "[ENG.GetNameDef] has decided to join the League of Nations. We are allowed to follow them."
+ aw_com.3.a:0 "Great"
+ 
+ #aw_cen events
+ aw_cen.1.t:0 "Gründung der WU"
+ aw_cen.1.d:0 "[GER.GetNameDef] hat die Gründung der Wirtschaftsunion beschlossen. Wir sind herzlichst dazu eingeladen auch weiterhin an ihrer Seite zu bleiben."
+ aw_cen.1.a:0 "Sie sind ein wichtiger Partner"
+ aw_cen.1.b:0 "Bleiben wir besser neutral"
+ 
+ 
+ #Portugese Civil War
+ aw_portugal.1.t:0 "Ausbruch des Bürgerkrieges"
+ aw_portugal.1.d:0 "Vor ein paar Stunden haben Unterstützer der Kommunistischen Partei in Porto die Sozialistische Republik Portugal ausgerufen. Sie haben es sich zum Ziel gemacht König Manuel II. zu enthronen und die Macht an sich zu reißen!"
+ aw_portugal.1.a:0 "Unterstütze die Monarchie"
+ aw_portugal.1.b:0 "Unterstütze die Kommunisten"
+ 
+ 
+ #News events
+ aw_news.1.t:0 "Annektion Serbiens"
+ aw_news.1.d:0 "In einer Pressemitteilung am Vormittag hat Wien die Annektion von [SER.GetNameDef] bekannt gegeben. Es ist jetzt ein Kronland von [UGA.GetNameDef]. Wien rechtfertigte dieses Vorgehen damit, dass dadurch der Frieden am Balkan langfristig gesichert wird."
+ aw_news.1.a:0 "Nun, vielleicht hat Wien damit Recht"
+ aw_news.1.b:0 "Das ist erst der Anfang"
+ 
+ aw_news.2.t:0 "Annektion Montenegros"
+ aw_news.2.d:0 "In einer Pressemitteilung am Vormittag hat Wien die Annektion von [MNT.GetNameDef] bekannt gegeben. Es ist jetzt ein Kronland von [UGA.GetNameDef]. Wien rechtfertigte dieses Vorgehen damit, dass dadurch der Frieden am Balkan langfristig gesichert wird."
+ aw_news.2.a:0 "[MNT.GetNameDef] war ein Land?"
+ aw_news.2.b:0 "Tolle Neuigkeiten!"
+ 
+ aw_news.3.t:0 "[UGA.GetNameDef] treten den Mittelmächten bei"
+ aw_news.3.d:0 "Vor ein paar Stunden hat Berlin eine Pressemitteilung veröffentlicht in der es heißt, dass [UGA.GetNameDef], nach fast 18 Jahren, wieder den Mittelmächten beigetreten sind. Im Moment ist nicht ersichtlich, wie [ENG.GetNameDef] und [FRA.GetNameDef] auf dieses Ereignis reagieren werden."
+ aw_news.3.a:0 "Nicht das schon wieder"
+ aw_news.3.b:0 "Es fängt wieder von vorne an..."
+ aw_news.3.c:0 "Endlich sind wir wieder vereint"
+ 
+ aw_news.4.t:0 "[UGA.GetNameDef] treten Komintern bei"
+ aw_news.4.d:0 "Vor ein paar Stunden hat Wien bekanntgegeben, dass [UGA.GetNameDef] dem Komintern Pakt beigetreten sind. Die Reaktionen von [GER.GetNameDef], [FRA.GetNameDef] oder [ENG.GetNameDef] bleiben abzuwarten."
+ aw_news.4.a:0 "Das kann nichts Gutes bedeuten"
+ aw_news.4.b:0 "Seit wann ist Österreich kommunistisch?"
+ aw_news.4.c:0 "Dem Kommunismus gehört die Zukunft!"
+ 
+ aw_news.5.t:0 "[FRA.GetNameDef] tritt Komintern bei"
+ aw_news.5.d:0 "Vor ein paar Stunden hat Moskau bekanntgegeben, dass [FRA.GetNameDef] dem Komintern Pakt beitritt. Derzeit ist noch unklar wie [GER.GetNameDef] darauf reagieren wird."
+ aw_news.5.a:0 "Das wird nicht gut enden"
+ aw_news.5.b:0 "Interessant"
+ aw_news.5.c:0 "Dem Kommunismus gehört die Zukunft!"
+ 
+ aw_news.6.t:0 "Paris übernimmt Schutzherrschaft über Belgien"
+ aw_news.6.d:0 "Paris hat heute bekanntgegeben, dass [BEL.GetNameDef] nun unter französischer Schutzherrschaft steht. Das belgische Parlament wurde aufgelöst und durch eine Übergangsregierung ersetzt. [FRA.GetLeader] gab an, dass diese Maßnahme notwendig war um Belgien vor dem deutschen Imperialismus zu beschützen."
+ aw_news.6.a:0 "Das ist eine Provokation!"
+ aw_news.6.b:0 "Beunruhigend"
+ aw_news.6.c:0 "Es war notwendig"
+ 
+ aw_news.7.t:0 "[ITA.GetNameDef] tritt Ligue des Fasciste bei"
+ aw_news.7.d:0 "Heute morgen hat Paris verlautbart, dass [ITA.GetNameDef] der Ligue des Fasciste beigetreten ist. Laut Philippe Pétain ist diese Maßnahme notwendig um sich gegen deutsche Willkür zu verteidigen."
+ aw_news.7.a:0 "Das könnte Böse enden"
+ aw_news.7.b:0 "Interessant"
+ aw_news.7.c:0 "Den Faschisten gehört die Zukunft"
+ 
+ aw_news.8.t:0 "Ligue des Fasciste bekommt Zuwachs"
+ aw_news.8.d:0 "Kiew hat soeben verlautbart, dass [UKR.GetNameDef] der französischen Allianz "Ligue des Fasciste" beigetreten ist. Dies könnte zu steigenden Spannungen zwischen der Ukraine und benachbarten Staaten führen."
+ aw_news.8.a:0 "Beunruhigend"
+ aw_news.8.b:0 "Beunruhigend"
+ aw_news.8.c:0 "Alle Macht den Faschisten!"
+ 
+ aw_news.9.t:0 ""
+ aw_news.9.d:0 ""
+ aw_news.9.a:0 ""
+ aw_news.9.b:0 ""
+
+ aw_news.10.t:0 "[OSM.GetNameDef] tritt Mittelmächten bei"
+ aw_news.10.d:0 "Heute wurde bekanntgegeben, dass [OSM.GetNameDef] wieder dem Bündnis der Mittelmächten beigetreten ist. Es ist noch unklar aus welchem Grund man sich dazu entschieden hat, bisher gab es weder von Berlin noch von Konstantinopel eine Stellungnahme."
+ aw_news.10.a:0 "Beunruhigend"
+ aw_news.10.b:0 "Wie schnell die Presse doch ist"
+ 
+ aw_news.11.t:0 "Serbische Regierung wird Marionette"
+ aw_news.11.d:0 "Laut einem Bericht der österreichischen Zeitung 'Die Presse' hat [UGA.GetNameDef] Kontrolle über die serbische Politik erhalten. Der Kaiser soll der Regierung Serbiens ein Ultimatum gestellt haben, in dem er Kontrolle über serbische Regierungsmitglieder und Serbiens Außenpolitik gefordert hatte. Die serbische Regierung sah sich gezwungen das Ultimatum zu akzeptieren, da [UGA.GetNameDef] ansonsten womöglich aggressivere Schritte eingeleitet hätte."
+ aw_news.11.a:0 "Es war nur eine Frage der Zeit"
+ aw_news.11.b:0 "Es war ein notwendiger Schritt"
+ aw_news.11.c:0 "Möge Gott mit uns sein"
+ 
+ aw_news.12.t:0 "Regierung Montenegros wird Marionette"
+ aw_news.12.d:0 "Laut einem Bericht der österreichischen Zeitung 'Die Presse' hat [UGA.GetNameDef] Kontrolle über die montenegrinische Politik erhalten. Der Kaiser soll der Regierung Montenegros ein Ultimatum gestellt haben, in dem er Kontrolle über Regierungsmitglieder und Montenegros Außenpolitik gefordert hatte. Die montenegrinische Regierung sah sich gezwungen das Ultimatum zu akzeptieren, da [UGA.GetNameDef] ansonsten womöglich aggressivere Schritte eingeleitet hätte."
+ aw_news.12.a:0 "Monte was?"
+ aw_news.12.b:0 "Das nennt man 'Friedenssicherung'"
+ aw_news.12.c:0 "Möge Gott mit uns sein"
+ 
+ aw_news.13.t:0 "Machtübernahme in Großbritannien"
+ aw_news.13.d:0 "Laut einem Bericht einer englischen Zeitung hat die Partei 'British Union of Fascists' die Regierungsgewalt in Großbritannien übernommen. Schon innerhalb weniger Stunden wurden mehrere Mitglieder anderer Parteien, wie zum Beispiel der Conservative und Labor Party, von der paramilitärischen Organisation 'Immediate Action Force' (IAF) festgenommen. Aufgrund der turbulenten Ereignisse wurde in London eine Ausgangssperre verhängt; Oswald Mosley übernahm währenddessen die Kontrolle über alle Regierungsinstitutionen. Die 'British Union of Fascists' verkündete umfassende Reformen um das Land wieder zu alter Stärke zu führen. Gleichzeitig haben sich einige berühmte Persönlichkeiten wie Winston Churchill und Neville Chamberlain, sowie viele britische Intellektuelle dazu entschieden das Land zu verlassen."
+ aw_news.13.a:0 "Wir werden alle Verräter aufspüren und zur Rechenschaft ziehen"
+ aw_news.13.b:0 "Ein schwarzer Tag für Europa und die Welt"
+ aw_news.13.c:0 "Diese Faschisten sind wie die Pest"
+ aw_news.13.e:0 "Wir wünschen unseren Freunden nur das Beste"
+ 
+ aw_news.14.t:0 "Operation Baltikum gestartet"
+ aw_news.14.d:0 "Laut mehreren Insidern soll das Deutsche Kaiserreich vor ein paar Tagen eine große Operation im Baltikum gestartet haben. Bisher gab es vom deutschen Außenministerium keine Verlautbarungen über eine geplante Operation. Einer der Insider behauptete, dass die deutsche Regierung mithilfe dieser Operation die baltischen Staaten vom Deutschen Reich abhängig machen möchte."
+ aw_news.14.a:0 "Anscheinend haben wir einen Verräter unter uns"
+ aw_news.14.b:0 "Es wird wieder ungemütlich"
+ 
+ aw_news.15.t:0 "Paris stellt Vertrag von Nürnberg infrage"
+ aw_news.15.d:0 "In einer offizielen Verlautbarung hat die französische Regierung den Vertrag von Nürnberg, der nach dem Großen Krieg geschlossen wurde, infrage gestellt. In der Verlautbarung heißt es: "Der Vertrag von Nürnberg, der aus der Niederlage der Entente im Großen Krieg resultierte, hat die französische Wirtschaft in eine katastrophale Lage gebracht. Aus diesem Grund ist es unmöglich, die Raten der geforderten Reparationszahlungen an das Deutsche Reich einzuhalten. (...)". Desweiteren wird beklagt, dass der Vertrag die französische Bevölkerung demütige und das Land ausplündere. Besonders extreme Parteien wie die Parti Communiste Francais und die Mouvement Franciste schlugen Kapital aus der Regierungsverlautbarung und riefen zum Widerstand gegen das Deusche Reich auf. Von Berlin gab es bisher keine Reaktion."
+ aw_news.15.a:0 "Eine Unverschämtheit!"
+ aw_news.15.b:0 "Wir lassen uns nicht alles gefallen!"
+ aw_news.15.c:0 "Mutig von den Franzosen"
+ 
+ aw_news.16.t:0 "Pétain kritisiert Deutsche Vormacht"
+ aw_news.16.d:0 "In einer öffentlichen "Brandrede" am "Place de la République" sprach der Chef der Regierungspartei, Philippe Pétain, harte Worte gegen das Deutsche Reich. Pétain kritisierte die Vormachtstellung Deutschlands in der Welt damit, dass die deutsche Regierung "mache was sie wolle" und sich "an keine Regeln" halten würde. Er forderte eine weitgehende Eindämmung des deutschen Machtstrebens, bevor der Einfluss des Deutschen Reiches eine zu große Ausdehnung erreiche. \nDie Rede Philippe Pétains wird die Spannung in Europa weiter anheben. Der deutsche Kaiser Wilhelm III. zeigte sich bereits nach der Regierungsverlautbarung, die noch von der Parti Radical veröffentlicht wurde, äußert verärgert."
+ aw_news.16.a:0 "Pétain sollte seine Zunge zügeln"
+ aw_news.16.b:0 "Der Tag wird kommen..."
+ aw_news.16.c:0 "Beunruhigend"
+ 
+ aw_news.19.t:0 "18 Jahre Frieden"
+ aw_news.19.d:0 "Heute vor 18 Jahren endete einer der grausamsten und verlustreichsten Kriege der Menschheitsgeschichte. Auch dieses Jahr finden wieder unzählige Trauerfeiern und Messen statt, um den Opfern des Krieges zu gedenken und die Menschen daran zu erinnern welch unfassbares Leid der "Weltkrieg" gebracht hatte. Jedoch gibt es auch Gruppierungen die diesen Tag zu ihren eigenen Zwecken ausnutzen. So hielt der Parteichef der französischen Mouvement Franciste wie jedes Jahr eine Rede vor Parteimitgliedern und Anhängern, in der er das Opfer der gefallenen französischen Soldaten glorifizierte und den Tag der Besetzung von Paris durch deutsche Soldaten als "Tag der Schande" bezeichnete. Eine Wortwahl wie diese ist in den Verlierermächten bei vielen politischen Gruppierungen üblich."
+ aw_news.19.a:0 "Wir gedenken unseren tapferen Männern und Frauen"
+ aw_news.19.b:0 "18 Jahre Schandfrieden"
+ aw_news.19.c:0 "Möge nie wieder solch ein Krieg ausbrechen"
+ 
+ aw_news.20.t:0 "[ENG.GetLeader]s fesselnde Rede"
+ aw_news.20.d:0 "Im Zuge der neuen Herangehensweise der Konservativen Partei sich mehr den Ängsten und Anliegen der Bevölkerung zu widmen, hielt [ENG.GetLeader] eine Rede zur Bevölkerung. Ursprünglich zielte die Rede darauf ab, die zunehmende Radikalisierung der Bevölkerung zu stoppen und versöhnende Worte auszusprechen. Jedoch wandelte sie sich zunehmend in eine Brandrede gegen die "deutsche Bedrohung". Neben der Vormachtstellung Deutschlands in der Welt und der beängstigenden Machtfülle der deutschen Regierung, wurden vorallem die harten Bedingungen des Nürnberger Vertrags kritisiert. [ENG.GetLeader] machte diesen nämlich für die Radikalisierung und das Elend des britischen Volkes verantwortlich; jedoch ist es sehr wahrscheinlich, dass auch diese Rede zur Radikalisierung beitragen wird."
+ aw_news.20.a:0 "Sie haben den Krieg verloren, das müssen sie akzeptieren"
+ aw_news.20.b:0 "Die Friedensverträge müssten neu verhandelt werden!"
+ aw_news.20.c:0 "Das wird die Spannung weiter steigen lassen"
+ 
+ aw_news.21.t:0 "Remilitarisierung Koreas"
+ aw_news.21.d:0 "[JAP.GetNameDef] ist nach knapp 18 Jahren wieder mit Truppen auf die koreanische Halbinsel einmarschiert. Zur Erinnerung: Nach dem Großen Krieg blieb Korea zwar weiterhin unter japanischer Verwaltung, jedoch erzwang das Deutsche Kaiserreich im Friedensvertrag mit Japan eine demilitarisierte Zone. \n In japanischen Regierungskreisen wurde in den letzten Jahre immer wieder über eine Remilitarisierung Koreas gesprochen, dass [JAP.GetLeader] diese jedoch ohne Absprache zum Deutschen Reich durchsetzt wurde nicht erwartet. Sollte [GER.GetLeader] sich dazu entschließen zu intervenieren, dann könnte das einen neuen großen Konflikt auslösen."
+ aw_news.21.a:0 "Dieses Handeln ist an Dreistigkeit nicht zu überbieten!"
+ aw_news.21.b:0 "Wir lassen uns nicht einschüchtern!"
+ aw_news.21.c:0 "Das könnte ungemütlich werden"
+ 
+ aw_news.22.t:0 "[SOV.GetLeader] erlangt die Macht"
+ aw_news.22.d:0 "Der Machtkampf in der Sowjetunion hat ein Ende: [SOV.GetLeader] hat sich gegen seine Konkurrenten durchsetzen können und hat nun die überwiegende Kontrolle über die Regierung. Bisher ist nicht absehbar, wie sich [SOV.GetLeader] in der europäischen Politik verhalten wird und ob er auf Konfrontationskurs mit dem Deutschen Reich geht oder nicht."
+ aw_news.22.a:0 "Wir gratulieren unserem Genossen!"
+ aw_news.22.b:0 "Die Sowjets sind unberechenbar"
+ 
+ aw_news.23.t:0 "Abdülmecid II. legt Amt nieder"
+ aw_news.23.d:0 "Sensation im Osmanischen Reich: Abdülmecid II. tritt als Sultan zurück und übergibt der demokratischen Fraktion die Verantwortung über die Regierungsgeschäfte. Für viele kam dieser Schritt völlig unerwartet, niemand hätte sich gedacht, dass ein Sultan einfach so zugunsten der Demokratie-Befürworter abdankt."
+ aw_news.23.a:0 "Endlich hat die Freiheit gesiegt!"
+ aw_news.23.b:0 "Das kam unerwartet"
+ 
+ aw_news.24.t:0 "Anschluss Serbiens"
+ aw_news.24.d:0 "In einer österreichischen Regierungsverlautbarung wurde der Anschluss Serbiens an die Vereinigten Staaten von Groß-Österreich bekannt gegeben. Treibende Kraft hinter diesem Ereignis ist die serbische Regierung selbst. Diese hatte zuvor gegenüber der Regierung in Wien den Wunsch geäußert, dass der Rest Serbiens in die VSGÖ eingegliedert und mit dem Kronland Nord-Serbien vereinigt wird. Die österreichische Regierung hatte dem Vorschlag zugestimmt und leitete bald darauf den Anschluss in die Wege."
+ aw_news.24.a:0 "Auf eine gemeinsame Zukunft!"
+ aw_news.24.b:0 "Wenn es das serbische Volk so wünscht"
+ 
+ aw_news.25.t:0 "Bürgerkrieg im Osmanischen Reich"
+ aw_news.25.d:0 "Vor ein paar Stunden brach im Osmanischen Reich ein Bürgerkrieg aus. Araber, Kurden und Angehörige anderer Minderheiten erhoben sich gegen die osmanische Herrschaft und erklärten ihre Unabhängigkeit. In Bagdad riefen Aufständische die Republik aus, in Damaskus wurde die Arabische Syrische Republik ausgerufen und die Kurden legten in Diyarbakir den Grundstein für das unabhängige Kurdistan. Beinahe zeitgleich riefen Anhänger der faschistischen Bewegung in Ankara das "Großtürkische Reich" aus und erklärten der osmanischen Regierung den Krieg. Die Faschisten erklärten sich als die rechtmäßigen Machthaber im Reich und gaben bekannt, dass sie nicht nur die osmanische Regierung, sondern auch die Aufständischen im Mittleren Osten mit allen Mitteln bekämpfen werden."
+ aw_news.25.a:0 "Wir müssen wieder Ordnung herstellen!"
+ aw_news.25.b:0 "Wir werden über unsere Feinde obsiegen!"
+ aw_news.25.c:0 "Beunruhigend"
+ aw_news.25.e:0 "Wir kämpfen für unsere Freiheit!"
+ 
+ aw_news.26.t:0 "[TCR.GetName] besetzt Georgien"
+ aw_news.26.d:0 "Im Zuge des Osmanischen Bürgerkrieges hat die Transkaukasische Regierung die Region Georgien besetzt. Als Begründung wurde verlautbart, es sei notwendig gewesen die ansässige Bevölkerung Georgiens vor den Wirren des Bürgerkrieges zu beschützen. Die Besetzung könnte in Zukunft ein Konfliktauslöser sein, sollte die Osmanische Regierung es schaffen den Bürgerkrieg zu überstehen. Aber auch bei einem Triumph der Faschisten besteht die Gefahr, dass dadurch ein gefährlicher Konflikt zustande kommt."
+ aw_news.26.a:0 "Es war eine Notwendigkeit"
+ aw_news.26.b:0 "Eine Frechheit!"
+ aw_news.26.c:0 "Wenigstens werden die Georgier vom Krieg verschont"
+ 
+ aw_news.27.t:0 "Japan besetzt die Philippinen"
+ aw_news.27.d:0 "In einer unerwarteten militärischen Operation hat [JAP.GetNameDef] die philippinischen Inseln besetzt. Angeblich gab es seitens der philippinischen Regierung keinerlei Widerstand, nur vereinzelt haben sich philippinische Zivilisten gegen die japanischen Invasoren gewehrt."
+ aw_news.27.a:0 "Japans Einfluss wächst"
+ aw_news.27.b:0 "Die Japaner werden gefährlich!"
+ 
+ aw_news.28.t:0 "Japans baut Einfluss aus"
+ aw_news.28.d:0 "Nachdem [JAP.GetNameDef] bereits die Philippinen besetzte, hat Kaiser Hirohito nun auch die Besetzung Indochinas beschlossen. Auch diesmal gab es scheinbar keinerlei Widerstand seitens der Indochinesen. Es dürfte interessant sein wie China auf die fortwährende japanische Expansion reagieren wird."
+ aw_news.28.a:0 "Aggressiv, diese Japaner"
+ aw_news.28.b:0 "Wir werden uns auf eine Konfrontation verbereiten müssen!"
+ 
+ aw_news.29.t:0 "Bürgerkrieg in Portugal"
+ aw_news.29.d:0 "Nachdem bereits in Spanien ein blutiger Bürgerkrieg tobt, brach nun auch im Nachbarland Portugal ein schwerwiegender Konflikt zwischen den Kommunisten und der Regierung aus. In der Stadt Porto, im Norden Portugals gelegen, proklamierten kommunistische Anhänger die Sozialistische Republik Portugal. König Manuel II. befahl wiederum die Aufständischen zu bekämpfen, wodurch ein blutiger Konflikt losgetreten wurde."
+ aw_news.29.a:0 "Das Feuer weitet sich aus"
+ 
+ aw_news.30.t:0 "Indisch-Pakistanischer Krieg"
+ aw_news.30.d:0 "In Indien ist ein größerer Konflikt zwischen der Regierung und pakistanischen Unabhängigkeitskämpfern ausgebrochen. Die indische Regierung hatte zuvor stets alle Forderungen eines unabhängigen Pakistans abgewiesen und seine Ein-Indien Politik fortgesetzt. Anhänger der Unabhängigkeitsbewegung sahen sich somit gezwungen ihre Forderungen mit Waffengewalt durchzusetzen."
+ aw_news.30.a:0 "Das wird noch blutig"
+ aw_news.30.b:0 "Wir lassen uns nicht mehr unterdrücken!"
+ aw_news.30.c:0 "Wir werden die Ordnung wieder herstellen"
+ 
+ aw_news.31.t:0 "Vasil I. greift zur Macht"
+ aw_news.31.d:0 "In der Ukraine kam es zu einer beeindruckenden Machtdemostration seitens Vasil I. Dieser legte nämlich den Titel des Königs ab und ließ sich zum Kaiser der Ukraine krönen. Schon seit längerer Zeit war ein steigender Autoritarismus in der Ukraine beobachtbar, dass sich Vasil I. aber zum Kaiser krönen lässt kam für viele komplett unerwartet und bestätigt seine Unberechenbarkeit. Es bleibt unklar wie sich die Lage in der Ukraine weiterentwickeln wird und ob das ukrainische Volk hinter ihrem neuen Kaiser steht."
+ aw_news.31.a:0 "Interessant"
+ aw_news.31.b:0 "Es war eine Notwendigkeit"
+ 
+ 
+ #Random Events
+ aw_random.1.t:0 "Umgang mit der Presse"
+ aw_random.1.d:0 "Wir sollten uns überlegen, wie wir mit der Presse umgehen. Es wäre empfehlenswert kritische Stimmen der Gegner stumm zu machen und unsere Sache im ganzen Lande zu propagieren."
+ aw_random.1.a:0 "Eine Zensur wird benötigt"
+ aw_random.1.b:0 "Am besten propagieren wir unsere Sache"
+ 
+ aw_random.2.t:0 "Sowjetische Machtübernahme geglückt"
+ aw_random.2.d:0 "Die von der Sowjetunion unterstützten Putschisten haben die Macht in unserem Land übernommen."
+ aw_random.2.a:0 "Die Kommunistische Revolution breitet sich aus"
+ 
+ 
+ 
+ 
+ #Political events
+ election.18.t:0 "Wahl: Monarchisten in der Regierung?"
+ election.18.d:0 "In [Root.GetName] ist eine aggressive monarchische Stimmung herangewachsen, was nun dazu geführt hat, dass mehrere Parteien mit monarchischen Idealen werben: Ein Staat, der seine Macht mit Gewalt durchsetzt. Eine dieser Parteien konnte bei den jüngsten Wahlen die Gunst der Wähler gewinnen, was innerhalb der der [Root.GetRulingParty]-Partei zu Diskussionen geführt hat, ob wir nicht doch versuchen sollten, mit ihnen für die Regierungsbildung zu koalieren. Obwohl sie die demokratischen Ideale, auf denen unser Staat basiert, offen ablehnen, gibt die Tatsache, dass sie sich überhaupt zur Wahlteilnahme entschlossen hatten, unseren Ansichten einige Glaubwürdigkeit. Die Anerkennung ihres Rückhalts in der Bevölkerung könnte sie von gewalttätigen Handlungen abhalten."
+ election.18.a:0 "Lieber sie als die Kommunisten!"
+ election.18.b:0 "Eine breite Koalition demokratischer Parteien ist zu bevorzugen."
+ 
+ election.19.t:0 "Monarchisten beeinflussen Außenpolitik"
+ election.19.d:0 "Die Aufnahme der Monarchisten in unsere politische Koalition hat Einfluss auf unsere Außenpolitik gehabt. Trotz ihres vehementen Monarchismus haben sie Sympathisanten im Ausland, die dem Einfluss zustimmen, den sie in [Root.GetName] bekommen haben. Totalitäre Regierungen ähnlicher ideologischer Ausrichtungen sehen in uns potenzielle Verbündete. Egal, welche Abneigung die [Root.GetRulingParty] auch gegen ihre Ideale haben mag: es könnte notwendig werden, Beziehungen zu diesen Nationen zu unterhalten, wenn wir uns der Unterstützung der Monarchisten sicher sein wollen, die hinter unserer Regierung stehen."
+ election.19.a:0 "Gegen größere Bedrohungen könnten wir einige Verbündete gut gebrauchen."
+ election.19.b:0 "Bei solchen Freunden brauchen wir keine Feinde mehr."
+ 
+ election.20.t:0 "Wahl: Monarchische Mehrheit"
+ election.20.d:0 "Diese Wahlen waren für die Institution, die sie repräsentieren, eine verheerende Erfahrung. Die Mehrheit der [Root.GetAdjective]en Bevölkerung hat für eine monarchische Partei gestimmt, die alle Wahlen abschaffen und einen autokratischen Herrscher an die Macht bringen will. Viele möchten gegen diese Verletzung der demokratischen Ideale, denen die Monarchisten ihr Mandat überhaupt erst zu verdanken haben, gegen Waffengewalt vorgehen. Andere glauben, der Einsatz von Gewalt würde den monarchischen Idealen nur noch mehr Wind in die Segel geben."
+ election.20.a:0 "Ein schwarzer Tag für [Root.GetName], aber das Volk hat gesprochen."
+ election.20.b:0 "Kampflos werden wir unsere Freiheit nicht hergeben!"
+ 
+ election.21.t:0 "Wahl: Neutrale in der Regierung?"
+ election.21.d:0 "In [Root.GetName] ist eine aggressive neutrale Stimmung herangewachsen, was nun dazu geführt hat, dass mehrere Parteien mit neutralen Idealen werben: Ein Staat, der seine Macht mit Gewalt durchsetzt. Eine dieser Parteien konnte bei den jüngsten Wahlen die Gunst der Wähler gewinnen, was innerhalb der der [Root.GetRulingParty]-Partei zu Diskussionen geführt hat, ob wir nicht doch versuchen sollten, mit ihnen für die Regierungsbildung zu koalieren. Obwohl sie die demokratischen Ideale, auf denen unser Staat basiert, offen ablehnen, gibt die Tatsache, dass sie sich überhaupt zur Wahlteilnahme entschlossen hatten, unseren Ansichten einige Glaubwürdigkeit. Die Anerkennung ihres Rückhalts in der Bevölkerung könnte sie von gewalttätigen Handlungen abhalten."
+ election.21.a:0 "Lieber sie als die Kommunisten!"
+ election.21.b:0 "Eine breite Koalition demokratischer Parteien ist zu bevorzugen."
+ 
+ election.22.t:0 "Neutrale beeinflussen Außenpolitik"
+ election.22.d:0 "Die Aufnahme der Neutrale in unsere politische Koalition hat Einfluss auf unsere Außenpolitik gehabt. Trotz ihres vehementen Monarchismus haben sie Sympathisanten im Ausland, die dem Einfluss zustimmen, den sie in [Root.GetName] bekommen haben. Totalitäre Regierungen ähnlicher ideologischer Ausrichtungen sehen in uns potenzielle Verbündete. Egal, welche Abneigung die [Root.GetRulingParty] auch gegen ihre Ideale haben mag: es könnte notwendig werden, Beziehungen zu diesen Nationen zu unterhalten, wenn wir uns der Unterstützung der Neutralen sicher sein wollen, die hinter unserer Regierung stehen."
+ election.22.a:0 "Gegen größere Bedrohungen könnten wir einige Verbündete gut gebrauchen."
+ election.22.b:0 "Bei solchen Freunden brauchen wir keine Feinde mehr."
+ 
+ election.23.t:0 "Wahl: Neutrale Mehrheit"
+ election.23.d:0 "Diese Wahlen waren für die Institution, die sie repräsentieren, eine verheerende Erfahrung. Die Mehrheit der [Root.GetAdjective]en Bevölkerung hat für eine neutrale Partei gestimmt, die alle Wahlen abschaffen und einen autokratischen Herrscher an die Macht bringen will. Viele möchten gegen diese Verletzung der demokratischen Ideale, denen die Neutralen ihr Mandat überhaupt erst zu verdanken haben, gegen Waffengewalt vorgehen. Andere glauben, der Einsatz von Gewalt würde den neutralen Idealen nur noch mehr Wind in die Segel geben."
+ election.23.a:0 "Ein schwarzer Tag für [Root.GetName], aber das Volk hat gesprochen."
+ election.23.b:0 "Kampflos werden wir unsere Freiheit nicht hergeben!"
+ 
+ political_w.1.t:0 "Die Monarchie ist auf dem Vormarsch"
+ political_w.1.d:1 "'Das [Root.GetAdjective]e Volk hat schon zu lange unter der inkompetenten [Root.GetRulingParty]-Führung gelitten! Sie sagen, sie würden das Volk vertreten, dabei können sie nicht einmal auf unseren Straßen für Ordnung sorgen! Diese Nation kann nur wachsen, wenn wir sie stürzen!'\n\nDie monarchischen Sprecher in [Root.GetName] machen kein Geheimnis daraus, was sie von unseren jetzigen Machthabern und ihrem politischen System halten. Reden wie diese machen sich die öffentliche Unzufriedenheit zunutze, die in den konservativen Teilen des Militärs besonders deutlich ausgeprägt ist."
+ political_w.1.a:0 "Vielleicht hegen die höheren Tiere ja unausgesprochene Sympathien. "
+ political_w.1.a.tt:0 "Erhöht die Chance für inländische Unterstützung eines monarchischen Staatsstreichs."
+ political_w.1.b:0 "Die jüngere Generation wird die Fackel aufnehmen."
+ political_w.1.b.tt:0 "Erhöht die Chance für öffentliche Unterstützung eines monarchischen Staatsstreichs."
+ political_w.2.t:0 "Monarchische Sympathien im Militär"
+ political_w.2.d:1 "Mehrere hochrangige Soldaten des [Root.GetAdjective]en Militärs haben, teils offen, teil privat, ihre Unterstützung für die monarchische Bewegung in [Root.GetName] zum Ausdruck gebracht. Sie glauben, dass die [Root.GetRulingParty] vergessen hat, wie wichtig Waffengewalt für den Zusammenhalt des Landes ist. Und sie ärgern sich immer mehr darüber, dass die Armee von der Regierung wie ein Werkzeug behandelt wird, nicht wie eine der wichtigsten Einrichtungen der Nation. Einige von ihnen gehen gar so weit, die Notwendigkeit einer neuen Regierung anzudeuten - einer Regierung, die weiß, wie [Root.GetName] in die zweite Hälfte des Jahrhunderts zu führen ist.\n\nDiese Bündnis mag zwar nicht überwiegend aus Politikern bestehen, aber manche von ihnen haben Positionen im Verteidigungsministerium erlangt. Sollten diese Entwicklungen fortschreiten, könnten sie genügend politische Macht für einen Staatsstreich bekommen."
+ political_w.2.a:0 "Der Nationalgeist ist wichtiger als die Regierung."
+ political_w.3.t:0 "Monarchischer Staatsstreich"
+ political_w.3.d:0 "Manche werden sagen, sie hätten es kommen sehen. Heute bekamen jene Recht, die vor den Gefahren der Monarchie gewarnt hatten ... aber auch jene, die ihn als Retter von [Root.GetName] angepriesen hatten: Das Militär hat in [Root.Capital.GetName] die Regierung unter Führung der [Root.GetRulingParty] gestürzt und die Macht übernommen. Der Aufenthaltsort von [Root.GetLeader] ist unbekannt - Gerüchten zufolge soll er ins Exil gegangen sein. Dem Staatsstreich wurde anfangs kaum Widerstand geleistet.\n\nDie neue [Root.GetAdjective]e Führung hat auch nicht vor, größeren Widerstand aufkommen zu lassen. Das Kriegsrecht wurde verhängt ... und was auch immer danach kommt, wird sich nicht groß davon unterscheiden."
+ political_w.3.a:0 "Um das Volk vor sich selbst zu schützen, braucht es einen starken Staat."
+ political_w.4.t:0 "Bürgerkrieg für die Monarchie"
+ political_w.4.d:1 "Obwohl die Versuche der monarchischen Bewegung, nationalistische Gefühle wieder aufflammen zu lassen, zum Teil erfolgreich waren, bleibt der Widerstand gegen diese Ideen weiterhin groß. Die Generäle, die hinter der Verschwörung zum Sturz der jetzigen Regierung stecken, sind vom anscheinend fehlenden Vertrauen der [Root.GetAdjective]en Bevölkerung in die [Root.GetFascistParty] enttäuscht.\n\nSie bleiben überzeugt, dass das Volk letztlich genug von [Root.GetLeader] haben wird. Uneins sind sie sich jedoch, welche Schritte unternommen werden sollten. Manche fordern, dass jetzt ein Staatsstreich durchgeführt werden sollte, bevor die Feinde von [Root.GetName] aktiv werden. Würde das getan, während die öffentliche Unterstützung eingeschränkt ist, könnte dies die Nation aber in einen Bürgerkrieg stürzen."
+ political_w.4.a:0 "Der Wille, an die Macht zu kommen, ist bedeutungslos, wenn man zögert, sie sich auch zu nehmen!"
+ political_w.4.b:0 "Sie müssen zuerst das Volk einen, und es dann regieren."
+ political_w.5.t:0 "Monarchische Wehrdivisionen bilden sich"
+ political_w.5.d:0 "Die politischen und militärischen Zweige der Monarchie waren schon immer eng miteinander verbunden. Parallel zu ihrer wachsenden politischen Bewegung haben monarchische Parteien zum Schutz gegen inländische wie ausländische Bedrohungen mit der Aufstellung paramilitärischer Organisationen begonnen ... wobei die inländischen Bedrohungen ihre politischen Gegner sind. Obwohl viele diese Entwicklung beunruhigend finden, hat die aufbrandende militärische Raserei unseren Streitkräften mehr freiwillige Rekruten beschert.\n\nDie politischen Anführer der Bewegung haben darauf hingewiesen, dass ihre Gegner durchaus Grund haben, sich zu fürchten. Nachdem die Armee auf mehreren Ebenen von derart explizit politischen Elementen durchdrungen wurde, beginnen die Feinde von [Root.GetName] und die Feinde der Monarchie, einander zu ähneln."
+ political_w.5.a:0 "Nur Landesverräter haben etwas zu befürchten."
+ political_w.6.t:0 "Die kommunistische Bedrohung"
+ political_w.6.d:0 "'[Root.GetLeader] möchte uns glauben machen, dass [Root.GetName] sicher und einig ist. Es überrascht nicht, dass solche Lügen den Verstand unseres Volks vergiftet haben, wenn sich eine Schlange neben der Tür zusammengerollt hat! Man muss nur über unsere unmittelbare Grenze blicken, um Landsleute zu sehen, die sich im Namen des Kommunismus gegenseitig bekämpfen und das Ende der Nationen proklamieren. Wie lange wird es dauern, bis sie auch unsere Nation für tot erklären? Wird die [Root.GetRulingParty] uns vor dieser Bedrohung beschützen?'\n\nDas Wachstum der monarchischen Bewegung in [Root.GetName] ist durch die Nähe der kommunistischen Revolution verstärkt worden. Für viele moderat denkende Leute, die den Faschismus normalerweise als fehlgeleitetes ideologisches Experiment abtun würden, ist dies ebenfalls eine äußert reale Sorge. Vor die Wahl zwischen dem Kommunismus unserer Nachbarn und einem monarchischen Regime gestellt, würden sie allerdings die zweite Option wählen. Sie könnten sogar gewillt sein, es aktiv zu unterstützen."
+ political_w.6.a:0 "Wir werden die Vorhut gegen die rote Gefahr sein!"
+ political_w.7.t:0 "Monarchisten verlangen Volksbegehren"
+ political_w.7.d:1 "Die schnell wachsende [Root.GetAdjective]e monarchische Bewegung hat niemals behauptet, vor ihrer Machtübernahme die Stimmenmehrheit haben zu müssen. Sie verlässt sich darauf, dass sich die ganze Nation unter ihrer Führung vereint, sobald sie erst am Ruder sind. Ihre öffentliche Unterstützung scheint trotzdem schnell gewachsen zu sein. Viele Monarchisten beschimpfen [Root.GetLeader] nun als Heuchler, der behauptet, den Willen des Volkes zu repräsentieren, während er in Wahrheit die Massen ignoriert.\n\nDer Ruf nach einem Volksbegehren wurde von Mitgliedern der [Root.GetRulingParty] bisher als typischer Versuch abgeschmettert, das System zu stören, aber zumindest ist es eine politische Maßnahme. Wenn wir jetzt nicht handeln, könnten die Monarchisten den gewaltsamen Kampf als besseren Weg zur Macht wählen."
+ political_w.7.a:0 "Unterdrücken wir diese verabscheuungswürdige Bewegung!"
+ political_w.7.b:0 "Schenkt ihnen keinerlei Beachtung."
+ political_w.7.c:0 "Wenn das Volk es will, werden wir das Volksbegehren abhalten."
+ political_w.8.t:0 "Monarchisten marschieren nach [Root.Capital.GetName]"
+ political_w.8.d:0 "Nachdem ihr Volksbegehren, das im Grunde nur einen Pro-Forma-Versuch der legalen Machtergreifung darstellte, abgelehnt worden war, haben die Monarchisten mit Hilfe ihrer erheblichen öffentlichen Unterstützung und ihrer Verbindungen im [Root.GetAdjective]en Militär einen Putschversuch unternommen. Die Regierung unter Führung der [Root.GetRulingParty] hat ihre Bedingungen jedoch abgelehnt und geschworen, bis zum letzten Blutstropfen zu kämpfen, um [Root.GetName] in seiner jetzigen Form zu bewahren."
+ political_w.8.a:0 "Wir werden sie um jeden Preis aufhalten!"
+ political_w.8.b:0 "Die Monarchisten verkörpern den wahren Geist von [Root.GetName]!"
+ political_w.9.t:0 "Monarchisten lächerlich gemacht"
+ political_w.9.d:0 "Die Verblendung der [Root.GetAdjective]en Bevölkerung mit imperialistischem Stolz und Versuchen, den Ruhm vergangener Tage wieder aufleben zu lassen, scheint nun Geschichte zu sein. Ein böses Erwachen für ihre glühenden Verfechter, deren Uniformen, militärischem Getue und überzogenen Reden nun häufiger mit Spott als mit Sympathie begegnet wird.\n\nDie [Root.GetAdjective]e Monarchie, einst als Bedrohung der Machtbasis der [Root.GetRulingParty] wahrgenommen, erscheint nun immer mehr als absurde, extremistische Haltung und als Angriff auf die fundamentalen Grundwerte unserer Nation ... derselben Nation, die sie angeblich so hoch in Ehren halten. Das Wort scheint mehr als Beleidigung denn als politische Bezeichnung geeignet zu sein."
+ political_w.9.a:0 "Was für ein Haufen Narren."
+ 
+ political_w.10.t:0 "Die Neutralität ist auf dem Vormarsch"
+ political_w.10.d:1 "'Das [Root.GetAdjective]e Volk hat schon zu lange unter der inkompetenten [Root.GetRulingParty]-Führung gelitten! Sie sagen, sie würden das Volk vertreten, dabei können sie nicht einmal auf unseren Straßen für Ordnung sorgen! Diese Nation kann nur wachsen, wenn wir sie stürzen!'\n\nDie neutralen Sprecher in [Root.GetName] machen kein Geheimnis daraus, was sie von unseren jetzigen Machthabern und ihrem politischen System halten. Reden wie diese machen sich die öffentliche Unzufriedenheit zunutze, die in den konservativen Teilen des Militärs besonders deutlich ausgeprägt ist."
+ political_w.10.a:0 "Vielleicht hegen die höheren Tiere ja unausgesprochene Sympathien. "
+ political_w.10.a.tt:0 "Erhöht die Chance für inländische Unterstützung eines neutralen Staatsstreichs."
+ political_w.10.b:0 "Die jüngere Generation wird die Fackel aufnehmen."
+ political_w.10.b.tt:0 "Erhöht die Chance für öffentliche Unterstützung eines neutralen Staatsstreichs."
+ political_w.11.t:0 "Neutrale Sympathien im Militär"
+ political_w.11.d:1 "Mehrere hochrangige Soldaten des [Root.GetAdjective]en Militärs haben, teils offen, teil privat, ihre Unterstützung für die neutrale Bewegung in [Root.GetName] zum Ausdruck gebracht. Sie glauben, dass die [Root.GetRulingParty] vergessen hat, wie wichtig Waffengewalt für den Zusammenhalt des Landes ist. Und sie ärgern sich immer mehr darüber, dass die Armee von der Regierung wie ein Werkzeug behandelt wird, nicht wie eine der wichtigsten Einrichtungen der Nation. Einige von ihnen gehen gar so weit, die Notwendigkeit einer neuen Regierung anzudeuten - einer Regierung, die weiß, wie [Root.GetName] in die zweite Hälfte des Jahrhunderts zu führen ist.\n\nDiese Bündnis mag zwar nicht überwiegend aus Politikern bestehen, aber manche von ihnen haben Positionen im Verteidigungsministerium erlangt. Sollten diese Entwicklungen fortschreiten, könnten sie genügend politische Macht für einen Staatsstreich bekommen."
+ political_w.11.a:0 "Der Nationalgeist ist wichtiger als die Regierung."
+ political_w.12.t:0 "Neutraler Staatsstreich"
+ political_w.12.d:0 "Manche werden sagen, sie hätten es kommen sehen. Heute bekamen jene Recht, die vor den Gefahren der Neutralität gewarnt hatten ... aber auch jene, die ihn als Retter von [Root.GetName] angepriesen hatten: Das Militär hat in [Root.Capital.GetName] die Regierung unter Führung der [Root.GetRulingParty] gestürzt und die Macht übernommen. Der Aufenthaltsort von [Root.GetLeader] ist unbekannt - Gerüchten zufolge soll er ins Exil gegangen sein. Dem Staatsstreich wurde anfangs kaum Widerstand geleistet.\n\nDie neue [Root.GetAdjective]e Führung hat auch nicht vor, größeren Widerstand aufkommen zu lassen. Das Kriegsrecht wurde verhängt ... und was auch immer danach kommt, wird sich nicht groß davon unterscheiden."
+ political_w.12.a:0 "Um das Volk vor sich selbst zu schützen, braucht es einen starken Staat."
+ political_w.13.t:0 "Bürgerkrieg für die Neutralität"
+ political_w.13.d:1 "Obwohl die Versuche der neutralen Bewegung, nationalistische Gefühle wieder aufflammen zu lassen, zum Teil erfolgreich waren, bleibt der Widerstand gegen diese Ideen weiterhin groß. Die Generäle, die hinter der Verschwörung zum Sturz der jetzigen Regierung stecken, sind vom anscheinend fehlenden Vertrauen der [Root.GetAdjective]en Bevölkerung in die [Root.GetFascistParty] enttäuscht.\n\nSie bleiben überzeugt, dass das Volk letztlich genug von [Root.GetLeader] haben wird. Uneins sind sie sich jedoch, welche Schritte unternommen werden sollten. Manche fordern, dass jetzt ein Staatsstreich durchgeführt werden sollte, bevor die Feinde von [Root.GetName] aktiv werden. Würde das getan, während die öffentliche Unterstützung eingeschränkt ist, könnte dies die Nation aber in einen Bürgerkrieg stürzen."
+ political_w.13.a:0 "Der Wille, an die Macht zu kommen, ist bedeutungslos, wenn man zögert, sie sich auch zu nehmen!"
+ political_w.13.b:0 "Sie müssen zuerst das Volk einen, und es dann regieren."
+ political_w.14.t:0 "Neutrale Wehrdivisionen bilden sich"
+ political_w.14.d:0 "Die politischen und militärischen Zweige der Neutralität waren schon immer eng miteinander verbunden. Parallel zu ihrer wachsenden politischen Bewegung haben neutrale Parteien zum Schutz gegen inländische wie ausländische Bedrohungen mit der Aufstellung paramilitärischer Organisationen begonnen ... wobei die inländischen Bedrohungen ihre politischen Gegner sind. Obwohl viele diese Entwicklung beunruhigend finden, hat die aufbrandende militärische Raserei unseren Streitkräften mehr freiwillige Rekruten beschert.\n\nDie politischen Anführer der Bewegung haben darauf hingewiesen, dass ihre Gegner durchaus Grund haben, sich zu fürchten. Nachdem die Armee auf mehreren Ebenen von derart explizit politischen Elementen durchdrungen wurde, beginnen die Feinde von [Root.GetName] und die Feinde der Neutralität, einander zu ähneln."
+ political_w.14.a:0 "Nur Landesverräter haben etwas zu befürchten."
+ political_w.15.t:0 "Die kommunistische Bedrohung"
+ political_w.15.d:0 "'[Root.GetLeader] möchte uns glauben machen, dass [Root.GetName] sicher und einig ist. Es überrascht nicht, dass solche Lügen den Verstand unseres Volks vergiftet haben, wenn sich eine Schlange neben der Tür zusammengerollt hat! Man muss nur über unsere unmittelbare Grenze blicken, um Landsleute zu sehen, die sich im Namen des Kommunismus gegenseitig bekämpfen und das Ende der Nationen proklamieren. Wie lange wird es dauern, bis sie auch unsere Nation für tot erklären? Wird die [Root.GetRulingParty] uns vor dieser Bedrohung beschützen?'\n\nDas Wachstum der neutralen Bewegung in [Root.GetName] ist durch die Nähe der kommunistischen Revolution verstärkt worden. Für viele moderat denkende Leute, die den Faschismus normalerweise als fehlgeleitetes ideologisches Experiment abtun würden, ist dies ebenfalls eine äußert reale Sorge. Vor die Wahl zwischen dem Kommunismus unserer Nachbarn und einem neutralen Regime gestellt, würden sie allerdings die zweite Option wählen. Sie könnten sogar gewillt sein, es aktiv zu unterstützen."
+ political_w.15.a:0 "Wir werden die Vorhut gegen die rote Gefahr sein!"
+ political_w.16.t:0 "Neutrale verlangen Volksbegehren"
+ political_w.16.d:1 "Die schnell wachsende [Root.GetAdjective]e neutrale Bewegung hat niemals behauptet, vor ihrer Machtübernahme die Stimmenmehrheit haben zu müssen. Sie verlässt sich darauf, dass sich die ganze Nation unter ihrer Führung vereint, sobald sie erst am Ruder sind. Ihre öffentliche Unterstützung scheint trotzdem schnell gewachsen zu sein. Viele Neutrale beschimpfen [Root.GetLeader] nun als Heuchler, der behauptet, den Willen des Volkes zu repräsentieren, während er in Wahrheit die Massen ignoriert.\n\nDer Ruf nach einem Volksbegehren wurde von Mitgliedern der [Root.GetRulingParty] bisher als typischer Versuch abgeschmettert, das System zu stören, aber zumindest ist es eine politische Maßnahme. Wenn wir jetzt nicht handeln, könnten die Neutrale den gewaltsamen Kampf als besseren Weg zur Macht wählen."
+ political_w.16.a:0 "Unterdrücken wir diese verabscheuungswürdige Bewegung!"
+ political_w.16.b:0 "Schenkt ihnen keinerlei Beachtung."
+ political_w.16.c:0 "Wenn das Volk es will, werden wir das Volksbegehren abhalten."
+ political_w.17.t:0 "Neutrale marschieren nach [Root.Capital.GetName]"
+ political_w.17.d:0 "Nachdem ihr Volksbegehren, das im Grunde nur einen Pro-Forma-Versuch der legalen Machtergreifung darstellte, abgelehnt worden war, haben die Neutralen mit Hilfe ihrer erheblichen öffentlichen Unterstützung und ihrer Verbindungen im [Root.GetAdjective]en Militär einen Putschversuch unternommen. Die Regierung unter Führung der [Root.GetRulingParty] hat ihre Bedingungen jedoch abgelehnt und geschworen, bis zum letzten Blutstropfen zu kämpfen, um [Root.GetName] in seiner jetzigen Form zu bewahren."
+ political_w.17.a:0 "Wir werden sie um jeden Preis aufhalten!"
+ political_w.17.b:0 "Die Neutralen verkörpern den wahren Geist von [Root.GetName]!"
+ political_w.18.t:0 "Neutrale lächerlich gemacht"
+ political_w.18.d:0 "Die Verblendung der [Root.GetAdjective]en Bevölkerung mit neutralem Stolz und Versuchen, den Ruhm vergangener Tage wieder aufleben zu lassen, scheint nun Geschichte zu sein. Ein böses Erwachen für ihre glühenden Verfechter, deren Uniformen, militärischem Getue und überzogenen Reden nun häufiger mit Spott als mit Sympathie begegnet wird.\n\nDie [Root.GetAdjective]e Neutralität, einst als Bedrohung der Machtbasis der [Root.GetRulingParty] wahrgenommen, erscheint nun immer mehr als absurde, extremistische Haltung und als Angriff auf die fundamentalen Grundwerte unserer Nation ... derselben Nation, die sie angeblich so hoch in Ehren halten. Das Wort scheint mehr als Beleidigung denn als politische Bezeichnung geeignet zu sein."
+ political_w.18.a:0 "Was für ein Haufen Narren."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

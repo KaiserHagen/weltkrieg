@@ -1,0 +1,23 @@
+state={
+	id=783
+	name="STATE_783"
+	provinces={
+		5034 5077 7992 
+	}
+	manpower=178900
+	buildings_max_level_factor=1.000
+	state_category=rural
+	
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = MAU
+		victory_points = {
+			5034 1 
+		}
+
+	}
+}

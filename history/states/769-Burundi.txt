@@ -1,0 +1,26 @@
+
+state={
+	id=769
+	name="STATE_769"
+
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = IRQ
+		add_core_of = OSM
+		victory_points = {
+			3795 3 
+		}
+
+	}
+
+	provinces={
+		901 1600 1938 2013 3795 10882 12372 12413 12839 
+	}
+	manpower=729807
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

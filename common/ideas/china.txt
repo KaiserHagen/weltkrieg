@@ -1,0 +1,852 @@
+ideas = {
+	country = {
+	
+		
+		loner_chi = {
+
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				CHI = { is_puppet = yes }
+			}
+
+			removal_cost = -1
+			
+			rule = {
+				can_create_factions = yes
+			}
+
+		}
+		
+		economical_effort_focus_chi = {
+
+			picture = generic_production_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.06
+			}
+
+		}
+		
+		reformation_focus_chi = {
+
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = 0.10
+			}
+
+		}
+		
+		indoctrination_focus_chi = {
+
+			picture = generic_communism_drift_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = 20
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+
+		}
+		
+		communist_militia_focus_chi = {
+
+			picture = generic_infantry_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				partisan_effect = 0.20
+				communism_drift = 0.10
+			}
+
+		}
+		
+		support_the_republicans_focus_chi = {
+
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				neutrality > 0.55
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.10
+			}
+
+		}
+		
+		support_the_communists_focus_chi = {
+
+			picture = generic_communism_drift_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			cancel = {
+				communism > 0.55
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.10
+			}
+
+		}
+		
+		secret_police_focus_chi = {
+
+			picture = generic_spy_political
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				enemy_partisan_effect = -0.25
+				subversive_activites_upkeep = -0.25
+			}
+
+		}
+		
+		strengthen_emperors_authority_focus_chi = {
+
+			picture = generic_volunteer_expedition_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchism_drift = 0.05
+				political_power_factor = 0.10
+			}
+
+		}
+		
+		support_arms_industry_focus_chi = {
+
+			picture = generic_production_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+
+		}
+		
+		support_industrialization_focus_chi = {
+
+			picture = generic_production_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+
+		}
+	
+		side_with_opposition_focus_chi = {
+
+			picture = generic_volunteer_expedition_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = monarchism }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchism_drift = -0.05
+			}
+
+		}
+		
+		reconcile_with_opposition_focus_chi = {
+
+			picture = generic_morale_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+
+		}
+	
+		side_with_emperor_focus_chi = {
+
+			picture = generic_intel_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchism_drift = 0.05
+			}
+
+		}
+		
+		agrarian_society_chi = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = CHI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.69
+				production_speed_arms_factory_factor = -0.10
+				production_speed_industrial_complex_factor = -0.10
+			}
+		}
+		
+		young_industrial_society_chi = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = CHI
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.33
+			}
+		}
+		
+		japanese_blockade_focus_chi = {
+
+			picture = generic_intel_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+					JAP = {
+						OR = {
+							exists = no
+							has_capitulated = yes
+							has_war = yes
+						}
+					}
+					CHI = { has_navy_size = { size > 39 } }
+					JAP = { has_navy_size = { size < 60 } }
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = -1.0
+				stability_factor = -0.05
+				MONTHLY_POPULATION = -1.2
+			}
+
+		}
+		
+		international_pressure_chi = {
+
+			picture = generic_intel_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				num_of_factories > 200
+				has_army_manpower = { size > 2999999 }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.1 
+				trade_opinion_factor = -0.25
+			}
+
+		}
+		
+		internal_problems_chi = {
+
+			picture = generic_disjointed_gov
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1 
+				army_morale_factor = -0.1
+			}
+
+		}
+		
+		emperor_puyi_chi = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				AND = {
+					NOT = { has_government = democratic }
+					NOT = { has_government = neutrality }
+				}
+			}
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+
+		}
+		
+		CHI_civil_war_deserters = {
+
+			picture = generic_morale_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = -0.2
+			}
+
+		}
+
+		# Communist uprisings may cause states to defect to PRC
+		CHI_communist_uprisings = {
+
+			picture = FRA_scw_intervention_republicans_focus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+		}
+	}
+
+	army_chief = {
+		
+		#Communist
+
+		CHI_zhu_de = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Clique
+
+		CHI_chen_jitang = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Nationalist
+
+		CHI_li_zongren = {
+			
+			picture = generic_army_asia_3
+
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_he_yingqin = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = CHI
+			}
+						
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		
+		#Communist
+		#Fang Zeyi
+		#army_aviation_doctrine
+
+
+		#Clique
+
+		CHI_wang_shuming = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Nationalist
+
+		CHI_zhou_zhirou = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+
+			
+			traits = { air_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+		#Communist
+
+		CHI_xiao_jinguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Clique
+
+		CHI_bai_chongxi = {
+			
+			picture = generic_navy_asia_2
+
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		#Nationalist
+
+		CHI_chen_shaokuan = {
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = CHI
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	# TECHNOLOGY
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		jiangnan_shipyard_group = {
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			# riverine warfare weak on open waters
+						
+			traits = { naval_manufacturer }
+			
+		}
+	}
+	
+	aircraft_manufacturer = { #
+			
+		designer = yes
+		
+		camco = {
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	theorist = {
+		CHI_bo_yibo = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		CHI_fang_zeyi = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		CHI_huang_shen = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+	high_command = {
+
+		CHI_gao_zhihang = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { air_air_superiority_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHI_xiao_yisu = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_chen_cheng = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHI_yu_hanmou = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+}

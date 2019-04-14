@@ -1,0 +1,21 @@
+
+state={
+	id=557
+	name="STATE_557"
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = MAU
+	}
+
+	provinces={
+		1115 1897 1962 7943 8035 8058 10725 10779 10814 10838 10868 
+	}
+	manpower=250100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

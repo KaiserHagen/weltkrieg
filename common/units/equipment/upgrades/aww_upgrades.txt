@@ -1,0 +1,169 @@
+upgrades = {
+	#Infantry Equipment
+	infantry_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	infantry_soft_attack_upgrade = {
+		max_level = 5
+
+		cost = land
+		soft_attack = 0.05
+		reliability = -0.05
+	}
+	
+	infantry_hard_attack_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.10
+		ap_attack = 0.05
+		reliability = -0.05
+	}
+	
+	infantry_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.05
+		breakthrough = 0.05
+		reliability = -0.05
+	}
+	
+	#Artillery Equipment
+	artillery_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	artillery_soft_attack_upgrade = {
+		max_level = 5
+
+		cost = land
+		soft_attack = 0.05
+		reliability = -0.05
+	}
+	
+	artillery_hard_attack_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.05
+		ap_attack = 0.05
+		reliability = -0.05
+	}
+	
+	artillery_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.10
+		breakthrough = 0.05
+		reliability = -0.02
+	}
+	
+	#AT Equipment
+	AT_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	AT_pierce_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.05
+		ap_attack = 0.05
+		reliability = -0.05
+	}
+	
+	AT_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.10
+		breakthrough = 0.10
+	}
+	
+	#AA Equipment
+	AA_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	AA_anti_air_upgrade = {
+		max_level = 5
+
+		cost = land
+		air_attack = 0.10
+		reliability = -0.05
+	}
+	
+	AA_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.05
+		breakthrough = 0.10
+	}
+	
+	#Motorized Equipment
+	motorized_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	motorized_speed_upgrade = {
+		max_level = 5
+
+		cost = land
+		maximum_speed = 0.05
+		reliability = -0.05
+	}
+	
+	motorized_hardness_upgrade = {
+		max_level = 5
+
+		cost = land
+		hardness = 0.40
+		reliability = -0.05
+	}
+
+	#Mechanized Equipment
+	mechanized_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	mechanized_speed_upgrade = {
+		max_level = 5
+
+		cost = land
+		maximum_speed = 0.05
+		reliability = -0.05
+	}
+	
+	mechanized_armor_upgrade = {
+		max_level = 5
+
+		cost = land
+		hardness = 0.05
+		reliability = -0.05
+	}
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=677
+	name="STATE_677"
+	manpower = 1325594
+	
+	state_category = town
+	
+	resources={
+		
+	}
+	
+	history={
+		owner = OSM
+		victory_points = {
+			12473 10 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SYR
+		add_core_of = OSM
+
+	}
+
+	
+	provinces={
+		1056 1072 1088 7140 7671 10087 12473 
+	}
+}

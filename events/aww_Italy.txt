@@ -1,0 +1,660 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_ita
+
+
+######################## Italian Events ######################
+#Italy: Pact with Austria
+country_event = {
+	id = aw_ita.1
+	title = aw_ita.1.t
+	desc = aw_ita.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ita.1.a
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 100 
+				USG = {
+					has_war = yes
+					NOT = { has_war_with = ITA }
+				}
+			}
+			
+		}
+		USG = {
+			diplomatic_relation = { country = ITA relation = non_aggression_pact }
+			add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.2 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ita.1.b
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0 
+				USG = {
+					has_war = yes
+					NOT = { has_war_with = ITA }
+				}
+			}
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.3 }
+		}
+	}
+}
+#USG accepts
+country_event = {
+	id = aw_ita.2
+	title = aw_ita.2.t
+	desc = aw_ita.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.2.a
+	}
+}
+
+#USG refuses
+country_event = {
+	id = aw_ita.3
+	title = aw_ita.3.t
+	desc = aw_ita.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.3.a
+		add_opinion_modifier = { target = USG modifier = italy_refuses }
+	}
+	
+}
+
+#Italy demands Referendum in Switzerland
+country_event = {
+	id = aw_ita.4
+	title = aw_ita.4.t
+	desc = aw_ita.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ita.4.a
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 1 
+				ITA = {
+					has_war = yes
+				}
+			}
+			
+		}
+		SWI = {
+			random_list = { 
+				70 = { country_event = { days = 7 id = aw_ita.7 } }
+				30 = { country_event = { days = 7 id = aw_ita.8 } }
+			}
+			
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.5 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ita.4.b
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 99 
+				ITA = {
+					has_war = yes
+				}
+			}
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.6 }
+		}
+	}
+}
+#SWI accepts
+country_event = {
+	id = aw_ita.5
+	title = aw_ita.5.t
+	desc = aw_ita.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.5.a
+	}
+}
+
+#SWI refuses
+country_event = {
+	id = aw_ita.6
+	title = aw_ita.6.t
+	desc = aw_ita.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.6.a
+		773 = { add_core_of = ITA }
+		create_wargoal = {
+			type = take_state_focus
+			target = SWI
+			generator = { 773 }
+		}
+	}
+	
+}
+
+#Referendum positive
+country_event = {
+	id = aw_ita.7
+	title = aw_ita.7.t
+	desc = aw_ita.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.7.a
+		773 = { add_core_of = ITA }
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.9 }
+		}
+	}
+}
+#Referendum negative
+country_event = {
+	id = aw_ita.8
+	title = aw_ita.8.t
+	desc = aw_ita.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.8.a
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.10 }
+		}
+	}
+}
+
+#Referendum positive ITA
+country_event = {
+	id = aw_ita.9
+	title = aw_ita.9.t
+	desc = aw_ita.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.9.a
+		ITA = { transfer_state = 773 }
+	}
+}
+#Referendum negative ITA
+country_event = {
+	id = aw_ita.10
+	title = aw_ita.10.t
+	desc = aw_ita.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.10.a
+		773 = { add_claim_by = ITA }
+		add_opinion_modifier = { target = SWI modifier = italy_refuses }
+	}
+}
+
+#Italy demands Referendum in Trentino/Triest
+country_event = {
+	id = aw_ita.11
+	title = aw_ita.11.t
+	desc = aw_ita.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ita.11.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 40 
+				USG = {
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 50 
+				USG = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 100 
+				USG = {
+					is_puppet_of = ITA
+				}
+			}
+			
+		}
+		USG = {
+			random_list = { 
+				60 = { country_event = { days = 7 id = aw_ita.14 } }
+				40 = { country_event = { days = 7 id = aw_ita.15 } }
+			}
+			
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.12 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ita.11.b
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 60 
+				USG = {
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 50 
+				USG = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0 
+				USG = {
+					is_puppet_of = ITA
+				}
+			}
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.13 }
+		}
+	}
+}
+#USG accepts
+country_event = {
+	id = aw_ita.12
+	title = aw_ita.12.t
+	desc = aw_ita.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.12.a
+	}
+}
+
+#USG refuses
+country_event = {
+	id = aw_ita.13
+	title = aw_ita.13.t
+	desc = aw_ita.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.13.a
+		39 = { add_core_of = ITA }
+		72 = { add_core_of = ITA }
+		create_wargoal = {
+			type = take_state_focus
+			target = USG
+			generator = { 39 72 }
+		}
+		
+	}
+	
+}
+
+#Referendum positive USG
+country_event = {
+	id = aw_ita.14
+	title = aw_ita.14.t
+	desc = aw_ita.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.14.a
+		39 = { add_core_of = ITA }
+		72 = { add_core_of = ITA }
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.16 }
+		}
+	}
+}
+#Referendum negative USG
+country_event = {
+	id = aw_ita.15
+	title = aw_ita.15.t
+	desc = aw_ita.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.15.a
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.17 }
+		}
+	}
+}
+
+#Referendum positive ITA
+country_event = {
+	id = aw_ita.16
+	title = aw_ita.16.t
+	desc = aw_ita.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.16.a
+		ITA = { transfer_state = 39 transfer_state = 72 }
+	}
+}
+#Referendum negative ITA
+country_event = {
+	id = aw_ita.17
+	title = aw_ita.17.t
+	desc = aw_ita.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.17.a
+		add_opinion_modifier = { target = USG modifier = italy_refuses }
+		72 = { add_claim_by = ITA }
+		39 = { add_claim_by = ITA }
+	}
+}
+
+### Ultimatum Greece ###
+country_event = {
+	id = aw_ita.18
+	title = aw_ita.18.t
+	desc = aw_ita.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ita.18.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10 
+				ITA = { has_war = yes }
+			}
+			
+		}
+		ITA = {
+			annex_country = { target = GRE transfer_troops = yes }
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.19 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ita.18.b
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 90 
+				ITA = { has_war = yes }
+			}
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.20 }
+		}
+	}
+}
+#Greece accepts
+country_event = {
+	id = aw_ita.19
+	title = aw_ita.19.t
+	desc = aw_ita.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.19.a
+	}
+}
+
+#Greece refuses
+country_event = {
+	id = aw_ita.20
+	title = aw_ita.20.t
+	desc = aw_ita.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.20.a
+		create_wargoal = {
+			type = annex_everything
+			target = GRE 
+		}
+	}
+	
+}
+
+### Pact with Ottomans ###
+country_event = {
+	id = aw_ita.21
+	title = aw_ita.21.t
+	desc = aw_ita.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ita.21.a
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 100 
+				OSM = {
+					has_war = yes
+					NOT = { has_war_with = ITA }
+				}
+			}
+			
+		}
+		OSM = {
+			diplomatic_relation = { country = ITA relation = non_aggression_pact }
+			add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.22 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ita.21.b
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0 
+				OSM = {
+					has_war = yes
+					NOT = { has_war_with = ITA }
+				}
+			}
+		}
+		ITA = {
+			country_event = { hours = 12 id = aw_ita.23 }
+		}
+	}
+}
+#Ottomans accepts
+country_event = {
+	id = aw_ita.22
+	title = aw_ita.22.t
+	desc = aw_ita.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.22.a
+	}
+}
+
+#Ottomans refuses
+country_event = {
+	id = aw_ita.23
+	title = aw_ita.23.t
+	desc = aw_ita.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ita.23.a
+		add_opinion_modifier = { target = OSM modifier = refuses }
+	}
+	
+}
+
+#France questions Treaty of Nuernberg
+country_event = {
+	id = aw_ita.24
+	title = aw_ita.24.t
+	desc = aw_ita.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # approve
+		name = aw_ita.24.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+				ITA = { has_government = fascism }
+			}
+			modifier = {
+				factor = 10
+				ITA = { has_government = democratic }
+			}
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = question_treaty_of_nuernberg_approval
+		}
+		FRA = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = question_treaty_of_nuernberg_approval
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = qton_negative_reaction
+					NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_ita }
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = question_treaty_of_nuernberg_reaction_ita
+				}
+			}
+		}
+		set_country_flag = qton_approval_ita
+	}
+	
+	option = { # ignore
+		name = aw_ita.24.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				ITA = { has_government = fascism }
+			}
+			modifier = {
+				factor = 90
+				ITA = { has_government = democratic }
+			}
+		}
+	}
+	
+}
+
+# Attack Libya
+country_event = {
+	id = aw_ita.25
+	title = aw_ita.25.t
+	desc = aw_ita.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = aw_ita.25.a
+		ITA = { country_event = { id = aw_ita.26 } }
+	}
+}
+
+# Attack Libya
+country_event = {
+	id = aw_ita.26
+	title = aw_ita.26.t
+	desc = aw_ita.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = aw_ita.26.a
+		create_wargoal = {
+			type = take_claimed_state
+			target = FROM
+			generator = { 273 448 449 450 451 661 662 663 }
+		}
+	}
+}

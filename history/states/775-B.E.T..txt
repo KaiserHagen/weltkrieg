@@ -1,0 +1,30 @@
+state= {
+	id=775
+	name="STATE_775"
+	manpower = 297550 
+	state_category = rural
+	
+	resources={
+		
+	}
+	
+	history=
+	{
+		owner = GER
+		buildings = {
+			infrastructure = 6
+			11251 = {
+				bunker = 3
+			}
+			332 = {
+				bunker = 3
+			}
+		}
+		add_core_of = GER
+		add_core_of = DEN
+	}
+
+	provinces= {
+		332 11251
+ 	}
+}

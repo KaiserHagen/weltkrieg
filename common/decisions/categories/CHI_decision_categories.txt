@@ -1,0 +1,11 @@
+expansion_plans_chi = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = CHI
+  }
+  
+	visible = {
+		has_completed_focus = expansion_plans_chi
+	}
+}

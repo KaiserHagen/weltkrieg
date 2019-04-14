@@ -1,0 +1,29 @@
+state={
+	id=765
+	
+	state_category = rural
+	
+	name="STATE_765"
+	resources={
+		tungsten=16
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			191 1 
+		}
+		
+		add_core_of = RHO
+	}
+
+	provinces={
+		191 1817 1846 2255 4515 5221 10594 10930 12907 12908 12986 13173 
+	}
+	manpower=1632700
+	buildings_max_level_factor=1.000
+}

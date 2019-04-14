@@ -1,0 +1,31 @@
+
+state={
+	id=761
+	name="STATE_761"
+	manpower = 1073920
+	
+	state_category = city_state
+
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			dockyard = 1
+			9833 = {
+				naval_base = 8
+				bunker = 3
+			}
+		}
+		victory_points = {
+			9833 40
+		}
+		add_core_of = TUR
+		add_core_of = OSM
+		add_core_of = GRE
+	}
+
+	provinces={
+		9833 11829
+	}
+}

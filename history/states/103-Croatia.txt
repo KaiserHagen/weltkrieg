@@ -1,0 +1,31 @@
+
+state={
+	id=103
+	name="STATE_103" # Northern Dalmatia
+	manpower = 1094800
+
+	state_category = town
+	
+	resources={
+
+	}
+
+	history={
+		owner = USG
+		
+		buildings = {
+			dockyard = 1
+			infrastructure = 5
+			industrial_complex = 1
+			11901 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = CRO
+		add_core_of = USG
+	}
+
+	provinces={
+		591 984 3601 3943 3974 6611 11564 11901 
+	}
+}

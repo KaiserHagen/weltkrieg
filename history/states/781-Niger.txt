@@ -1,0 +1,27 @@
+state={
+	id=781
+	name="STATE_781"
+	provinces={
+		3890 6965 9860 9868 11797 
+	}
+	manpower=298700
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=10
+	}
+	
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = TUR
+		add_core_of = OSM
+		add_core_of = KUD
+
+	}
+
+	state_category=rural
+}

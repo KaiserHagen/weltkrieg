@@ -1,0 +1,1010 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_usa
+
+
+############ USA events ################
+# Usa asks Canada to leave Commonwealth
+country_event = {
+	id = aw_usa.1
+	title = aw_usa.1.t
+	desc = aw_usa.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.1.a
+		ai_chance = { factor = 70 }
+		ENG = { remove_from_faction = CAN }
+		diplomatic_relation = { country = USA relation = non_aggression_pact }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.2 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.1.b
+		ai_chance = { factor = 30 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.3 }
+		}
+	}
+}
+#Canada stays
+country_event = {
+	id = aw_usa.2
+	title = aw_usa.2.t
+	desc = aw_usa.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.2.a
+		CAN = {
+			add_opinion_modifier = {
+			target = USA 
+			modifier = befriend
+		}
+		}
+		add_opinion_modifier = {
+			target = CAN 
+			modifier = befriend
+		}
+	}
+}
+
+#Canada leaves
+country_event = {
+	id = aw_usa.3
+	title = aw_usa.3.t
+	desc = aw_usa.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.3.a
+		add_opinion_modifier = {
+			target = CAN
+			modifier = italy_refuses
+		}
+	}
+}
+### Canada gets invited by USA
+country_event = {
+	id = aw_usa.4
+	title = aw_usa.4.t
+	desc = aw_usa.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.4.a
+		ai_chance = { factor = 80 }
+		USA = {
+			add_to_faction = CAN
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.5 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.4.b
+		ai_chance = { factor = 20 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.6 }
+		}
+	}
+}
+#Canada joins
+country_event = {
+	id = aw_usa.5
+	title = aw_usa.5.t
+	desc = aw_usa.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.5.a
+	}
+}
+
+#Canada refuses
+country_event = {
+	id = aw_usa.6
+	title = aw_usa.6.t
+	desc = aw_usa.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.6.a
+		add_opinion_modifier = {
+			target = CAN
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Central American Countries get invited by USA
+country_event = {
+	id = aw_usa.7
+	title = aw_usa.7.t
+	desc = aw_usa.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.7.a
+		ai_chance = { factor = 80 }
+		USA = {
+			add_to_faction = ROOT
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.8 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.7.b
+		ai_chance = { factor = 20 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.9 }
+		}
+	}
+}
+#CAC joins
+country_event = {
+	id = aw_usa.8
+	title = aw_usa.8.t
+	desc = aw_usa.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.8.a
+	}
+}
+
+#CAC refuses
+country_event = {
+	id = aw_usa.9
+	title = aw_usa.9.t
+	desc = aw_usa.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.9.a
+	}
+}
+
+### Mexico gets invited by USA
+country_event = {
+	id = aw_usa.10
+	title = aw_usa.10.t
+	desc = aw_usa.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.10.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = MEX
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.11 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.10.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.12 }
+		}
+	}
+}
+#Mexico joins
+country_event = {
+	id = aw_usa.11
+	title = aw_usa.11.t
+	desc = aw_usa.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.11.a
+	}
+}
+
+#Mexico refuses
+country_event = {
+	id = aw_usa.12
+	title = aw_usa.12.t
+	desc = aw_usa.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.12.a
+		add_opinion_modifier = {
+			target = MEX
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Brazil gets invited by USA
+country_event = {
+	id = aw_usa.13
+	title = aw_usa.13.t
+	desc = aw_usa.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.13.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = BRA
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.14 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.13.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.15 }
+		}
+	}
+}
+#Brazil joins
+country_event = {
+	id = aw_usa.14
+	title = aw_usa.14.t
+	desc = aw_usa.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.14.a
+	}
+}
+
+#Brazil refuses
+country_event = {
+	id = aw_usa.15
+	title = aw_usa.15.t
+	desc = aw_usa.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.15.a
+		add_opinion_modifier = {
+			target = BRA
+			modifier = italy_refuses
+		}
+	}
+}
+
+# USA want to join Comintern
+country_event = {
+	id = aw_usa.16
+	title = aw_usa.16.t
+	desc = aw_usa.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.16.a
+		add_to_faction = USA
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = { id = aw_usa.17 } 
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.16.b
+		USA = {
+			country_event = { hours = 6 id = aw_usa.18 }
+		}
+	}
+}
+#SOV accepts
+country_event = {
+	id = aw_usa.17
+	title = aw_usa.17.t
+	desc = aw_usa.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.17.a
+	}
+}
+
+#SOV refuses
+country_event = {
+	id = aw_usa.18
+	title = aw_usa.18.t
+	desc = aw_usa.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.18.a
+		add_opinion_modifier = {
+			target = SOV 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+
+# USA want to join L'Union Internationale
+country_event = {
+	id = aw_usa.19
+	title = aw_usa.19.t
+	desc = aw_usa.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.19.a
+		add_to_faction = USA
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = { id = aw_usa.20 } 
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.19.b
+		USA = {
+			country_event = { hours = 6 id = aw_usa.21 }
+		}
+	}
+}
+#FRA accepts
+country_event = {
+	id = aw_usa.20
+	title = aw_usa.20.t
+	desc = aw_usa.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.20.a
+	}
+}
+
+#FRA refuses
+country_event = {
+	id = aw_usa.21
+	title = aw_usa.21.t
+	desc = aw_usa.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.21.a
+		add_opinion_modifier = {
+			target = FRA 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+
+### Mexico gets invited by USA ###
+country_event = {
+	id = aw_usa.22
+	title = aw_usa.22.t
+	desc = aw_usa.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.22.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = MEX
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.23 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.22.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.24 }
+		}
+	}
+}
+#Mexico joins
+country_event = {
+	id = aw_usa.23
+	title = aw_usa.23.t
+	desc = aw_usa.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.23.a
+	}
+}
+
+#Mexico refuses
+country_event = {
+	id = aw_usa.24
+	title = aw_usa.24.t
+	desc = aw_usa.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.24.a
+		add_opinion_modifier = {
+			target = MEX
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Brazil gets invited by USA ###
+country_event = {
+	id = aw_usa.25
+	title = aw_usa.25.t
+	desc = aw_usa.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.25.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = BRA
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.26 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.25.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.27 }
+		}
+	}
+}
+#Brazil joins
+country_event = {
+	id = aw_usa.26
+	title = aw_usa.26.t
+	desc = aw_usa.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.26.a
+	}
+}
+
+#Brazil refuses
+country_event = {
+	id = aw_usa.27
+	title = aw_usa.27.t
+	desc = aw_usa.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.27.a
+		add_opinion_modifier = {
+			target = BRA
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Cuba gets invited by USA ###
+country_event = {
+	id = aw_usa.28
+	title = aw_usa.28.t
+	desc = aw_usa.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.28.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = CUB
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.29 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.28.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.30 }
+		}
+	}
+}
+#Cuba joins
+country_event = {
+	id = aw_usa.29
+	title = aw_usa.29.t
+	desc = aw_usa.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.29.a
+	}
+}
+
+#Cuba refuses
+country_event = {
+	id = aw_usa.30
+	title = aw_usa.30.t
+	desc = aw_usa.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.30.a
+		add_opinion_modifier = {
+			target = CUB
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Colombia gets invited by USA ###
+country_event = {
+	id = aw_usa.31
+	title = aw_usa.31.t
+	desc = aw_usa.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.31.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = COL
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.32 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.31.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.33 }
+		}
+	}
+}
+#Columbia joins
+country_event = {
+	id = aw_usa.32
+	title = aw_usa.32.t
+	desc = aw_usa.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.32.a
+	}
+}
+
+#Columbia refuses
+country_event = {
+	id = aw_usa.33
+	title = aw_usa.33.t
+	desc = aw_usa.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.33.a
+		add_opinion_modifier = {
+			target = COL
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Venezuela gets invited by USA ###
+country_event = {
+	id = aw_usa.34
+	title = aw_usa.34.t
+	desc = aw_usa.34.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.34.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = VEN
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.35 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.34.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.36 }
+		}
+	}
+}
+#Venezuela joins
+country_event = {
+	id = aw_usa.35
+	title = aw_usa.35.t
+	desc = aw_usa.35.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.35.a
+	}
+}
+
+#Venezuela refuses
+country_event = {
+	id = aw_usa.36
+	title = aw_usa.36.t
+	desc = aw_usa.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.36.a
+		add_opinion_modifier = {
+			target = VEN
+			modifier = italy_refuses
+		}
+	}
+}
+
+### Canada gets invited by USA ###
+country_event = {
+	id = aw_usa.37
+	title = aw_usa.37.t
+	desc = aw_usa.37.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.37.a
+		ai_chance = { factor = 99 }
+		USA = {
+			add_to_faction = CAN
+		}
+		USA = {
+			country_event = { hours = 6 id = aw_usa.38 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.37.b
+		ai_chance = { factor = 1 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.39 }
+		}
+	}
+}
+#Canada joins
+country_event = {
+	id = aw_usa.38
+	title = aw_usa.38.t
+	desc = aw_usa.38.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.38.a
+	}
+}
+
+#Canada refuses
+country_event = {
+	id = aw_usa.39
+	title = aw_usa.39.t
+	desc = aw_usa.39.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.39.a
+		add_opinion_modifier = {
+			target = CAN
+			modifier = italy_refuses
+		}
+	}
+}
+
+#USA ultimatum on Mexico
+country_event = {
+	id = aw_usa.40
+	title = aw_usa.40.t
+	desc = aw_usa.40.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.40.a
+		ai_chance = { factor = 80 }
+		MEX = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		USA = {
+			puppet = MEX
+			country_event = { hours = 6 id = aw_usa.41 }
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.40.b
+		ai_chance = { factor = 20 }
+		USA = {
+			country_event = { hours = 6 id = aw_usa.42 }
+		}
+	}
+}
+#Mexico accepts
+country_event = {
+	id = aw_usa.41
+	title = aw_usa.41.t
+	desc = aw_usa.41.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.41.a
+	}
+}
+
+#Mexico refuses
+country_event = {
+	id = aw_usa.42
+	title = aw_usa.42.t
+	desc = aw_usa.42.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.42.a
+		if = {
+			limit = {
+				MEX = { is_in_faction_with = USA }
+			}
+			remove_from_faction = MEX
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+		}
+	}
+	
+}
+
+# USA want to join ligue des fasciste
+country_event = {
+	id = aw_usa.43
+	title = aw_usa.43.t
+	desc = aw_usa.43.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.43.a
+		add_to_faction = USA
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = { id = aw_usa.44 } 
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.43.b
+		USA = {
+			country_event = { hours = 6 id = aw_usa.45 }
+		}
+	}
+}
+#FRA accepts
+country_event = {
+	id = aw_usa.44
+	title = aw_usa.44.t
+	desc = aw_usa.44.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.44.a
+	}
+}
+
+#FRA refuses
+country_event = {
+	id = aw_usa.45
+	title = aw_usa.45.t
+	desc = aw_usa.45.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.45.a
+		add_opinion_modifier = {
+			target = FRA 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+
+# USA want to join IUF
+country_event = {
+	id = aw_usa.46
+	title = aw_usa.46.t
+	desc = aw_usa.46.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.46.a
+		add_to_faction = USA
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = { id = aw_usa.47 } 
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.46.b
+		USA = {
+			country_event = { hours = 6 id = aw_usa.48 }
+		}
+	}
+}
+#ENG accepts
+country_event = {
+	id = aw_usa.47
+	title = aw_usa.47.t
+	desc = aw_usa.47.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.47.a
+	}
+}
+
+#ENG refuses
+country_event = {
+	id = aw_usa.48
+	title = aw_usa.48.t
+	desc = aw_usa.48.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.48.a
+		add_opinion_modifier = {
+			target = ENG 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+
+# USA want to join league of nations
+country_event = {
+	id = aw_usa.49
+	title = aw_usa.49.t
+	desc = aw_usa.49.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_usa.49.a
+		add_to_faction = USA
+		ai_chance = { factor = 100 }
+		USA = { 
+			country_event = { id = aw_usa.50 } 
+		}
+	}
+	option = { # Refuse
+		name = aw_usa.43.b
+		USA = {
+			country_event = { hours = 6 id = aw_usa.51 }
+		}
+	}
+}
+#USG accepts
+country_event = {
+	id = aw_usa.50
+	title = aw_usa.50.t
+	desc = aw_usa.50.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.50.a
+	}
+}
+
+#USG refuses
+country_event = {
+	id = aw_usa.51
+	title = aw_usa.51.t
+	desc = aw_usa.51.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_usa.51.a
+		add_opinion_modifier = {
+			target = USG
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+

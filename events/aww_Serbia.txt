@@ -1,0 +1,123 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_ser
+
+
+################### Serbia ######################
+
+# if USG stays democratic: More Serbs are living in USG, so should Serbia join them?
+country_event = {
+	id = aw_ser.1
+	title = aw_ser.1.t
+	desc = aw_ser.1.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		days=1
+	}
+	trigger = {
+		tag = SER 
+		owns_state = 108
+		USG = {
+			has_government = democratic
+			owns_state = 107
+			owns_state = 45
+			owns_state = 104
+			has_war = no
+		}
+		SER = {
+			has_war = no
+			OR = {
+				AND = {
+					has_government = democratic
+					has_opinion = {
+						target = USG
+						value > 49
+					}
+				}
+				has_opinion = {
+					target = USG
+					value > 74
+				}
+			}
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = USG
+			}
+			OR = {
+				is_puppet = no
+				is_puppet_of = USG
+			}
+		}
+		date > 1938.7.14
+	}
+	
+	option = {
+		name = aw_ser.1.a # Serbia wants to join United States of Greater Austria
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 
+				SER = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+			}
+			modifier = {
+				factor = 100 
+				SER = {
+					has_government = democratic
+				}
+			}
+		}
+		USG = {
+			country_event = { hours = 12 id = usg.41 }
+			
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		name = aw_ser.1.b # dismiss idea
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100 
+				SER = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+			}
+			modifier = {
+				factor = 0 
+				SER = {
+					has_government = democratic
+				}
+			}
+		}
+	}
+}
+
+# USG refuses
+country_event = {
+	id = aw_ser.2
+	title = aw_ser.2.t
+	desc = aw_ser.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ser.2.a
+		
+	}
+}

@@ -1,0 +1,82 @@
+war_plans_osm = {
+
+	# 
+	war_with_bulgaria_osm = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = OSM
+		}
+
+		available = {
+			BUL = {
+				exists = yes
+				NOT = { is_in_faction_with = OSM }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = BUL }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = BUL
+ 			}
+		}
+		
+	}
+  
+  war_with_greece_osm = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = OSM
+		}
+
+		available = {
+			GRE = {
+				exists = yes
+				NOT = { is_in_faction_with = OSM }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = GRE }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = GRE
+ 			}
+		}
+		
+	}
+  
+}

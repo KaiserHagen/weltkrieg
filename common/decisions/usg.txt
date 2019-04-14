@@ -1,0 +1,385 @@
+expansion_plans_uga = {
+
+	# 
+	war_with_romania_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      NOT = { has_completed_focus = invite_romania_uga }
+			ROM = {
+				exists = yes
+				NOT = { is_in_faction_with = UGA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 4
+        has_war = no
+				NOT = { has_completed_focus = establish_vienna_alliance_uga }
+			}
+      modifier = {
+				factor = 1
+        has_war = no
+				has_completed_focus = establish_vienna_alliance_uga
+        
+			}
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = ROM }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = ROM
+ 			}
+		}
+		
+	}
+  
+  war_with_ukraine_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      NOT = { has_completed_focus = invite_ukraine_uga }
+			UKR = {
+				exists = yes
+				NOT = { is_in_faction_with = UGA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 4
+				UGA = {
+					OR = {
+						is_faction_leader = no
+            AND = {
+              is_faction_leader = yes
+              UKR = { NOT = { has_government = monarchism }}
+            }
+						NOT = { UKR = { has_government = monarchism } }
+						UGA = { owns_state = 78 }
+					}
+					has_war = no
+				}
+			}
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = UKR }
+		}
+    complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						UGA = { owns_state = 78 }
+						UGA = { has_war_with = ROM }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = UKR
+					generator = { 199 93 201 198 192 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						UGA = { owns_state = 78 }
+						UGA = { has_war_with = ROM }
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = UKR
+				}
+			}
+		}
+		
+	}
+  
+  war_with_italy_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      ITA = {
+				exists = yes
+				NOT = { is_in_faction_with = UGA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 5
+				has_war = no
+			}
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = ITA }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = ITA
+ 				generator = { 160 159 161 158 156 115 }
+ 			}
+		}
+		
+	}
+  
+  war_with_germany_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      GER = {
+				exists = yes
+				NOT = { is_in_faction_with = UGA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 5
+				has_war = no
+        has_army_manpower = { size > 799999 }
+        GER = {
+          OR = {
+            NOT = { has_war_with = FRA }
+            NOT = { has_war_with = SOV }
+          }
+        }
+			}
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+		}
+    complete_effect = {
+      set_country_flag = grossdeutsche_loesung
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = GER
+ 			}
+		}
+		
+	}
+  
+}
+
+intervention_plans_uga = {
+
+	# 
+	intervene_against_germany_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      GER = {
+				exists = yes
+				has_completed_focus = aggressive_policy_ger
+				is_puppet = no
+				has_offensive_war = yes
+        has_added_tension_amount > 20
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 5
+				threat > 0.5
+        has_war = no
+        GER = {
+          OR = {
+            NOT = { has_war_with = FRA }
+            NOT = { has_war_with = SOV }
+          }
+        }
+				UGA = {
+					has_army_manpower = { size > 799999 }
+				}
+				any_other_country = {
+					is_in_faction_with = UGA
+					exists = yes
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = GER
+ 			}
+		}
+		
+	}
+  
+  intervene_against_soviet_union_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      SOV = {
+				exists = yes
+				OR = {
+          has_completed_focus = expansionism_sov
+          has_completed_focus = expand_influence_sov
+        }
+				is_puppet = no
+				has_offensive_war = yes
+        has_added_tension_amount > 20
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 5
+				threat > 0.5
+        has_war = no
+				UGA = {
+					has_army_manpower = { size > 799999 }
+				}
+				any_other_country = {
+					is_in_faction_with = UGA
+					exists = yes
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_war_with = SOV }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = SOV
+ 			}
+		}
+		
+	}
+  
+  intervene_against_ldf_uga = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UGA
+		}
+
+		available = {
+      FRA = {
+				exists = yes
+				has_government = fascism
+        is_faction_leader = yes
+				is_puppet = no
+				has_offensive_war = yes
+        has_added_tension_amount > 20
+        OR = {
+          is_in_faction_with = ITA
+          is_in_faction_with = ENG
+        }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+				factor = 5
+        has_war = no
+				threat > 0.5
+				UGA = {
+					has_army_manpower = { size > 799999 }
+				}
+				any_other_country = {
+					is_in_faction_with = UGA
+					exists = yes
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_war_with = FRA }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = FRA
+ 			}
+		}
+		
+	}
+  
+}
+
+

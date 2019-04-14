@@ -1,0 +1,55 @@
+﻿l_german:
+
+ #Inf EQ
+ infantry_reliability_upgrade:0 "Zuverlässigkeit"
+ infantry_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ infantry_soft_attack_upgrade:0 "Weicher Angriff"
+ infantry_soft_attack_upgrade_desc:0 "Erhöht Weichen Angriff"
+ infantry_hard_attack_upgrade:0 "Panzerabwehr"
+ infantry_hard_attack_upgrade_desc:0 "Verbessert Harten Angriff und Durchschlagskraft"
+ infantry_defence_upgrade:0 "Unterstützungswaffen"
+ infantry_defence_upgrade_desc:0 "Verbessert Verteidigung und Durchbruch"
+ 
+ 
+ artillery_reliability_upgrade:0 "Zuverlässigkeit"
+ artillery_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ artillery_soft_attack_upgrade:0 "HE-Munition"
+ artillery_soft_attack_upgrade_desc:0 "Erhöht Weichen Angriff"
+ artillery_hard_attack_upgrade:0 "Hartkernmunition"
+ artillery_hard_attack_upgrade_desc:0 "Verbessert Harten Angriff und Durchschlagskraft"
+ artillery_defence_upgrade:0 "Flexibilität"
+ artillery_defence_upgrade_desc:0 "Verbessert Verteidigung und Durchbruch"
+ 
+ 
+ AT_reliability_upgrade:0 "Zuverlässigkeit"
+ AT_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ AT_pierce_upgrade:0 "Hartkernmunition"
+ AT_pierce_upgrade_desc:0 "Verbessert Durchschlagskraft"
+ AT_defence_upgrade:0 "Tarnmaßnahmen"
+ AT_defence_upgrade_desc:0 "Verbessert Verteidigung und Durchbruch"
+ 
+ 
+ AA_reliability_upgrade:0 "Zuverlässigkeit"
+ AA_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ AA_anti_air_upgrade:0 "Luftaufklärung"	
+ AA_anti_air_upgrade_desc:0 "Verbessert Luftangriff"
+ AA_defence_upgrade:0 "Tarnmaßnahmen"
+ AA_defence_upgrade_desc:0 "Verbessert Verteidigung und Durchbruch"
+ 
+ 
+ motorized_reliability_upgrade:0 "Zuverlässigkeit"
+ motorized_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ motorized_speed_upgrade:0 "Motorverbesserung"
+ motorized_speed_upgrade_desc:0 "Verbessert Max. Geschwindigkeit"
+ motorized_hardness_upgrade:0 "Panzerung"
+ motorized_hardness_upgrade_desc:0 "Verbessert Panzerungsgrad"
+ 
+ 
+ mechanized_reliability_upgrade:0 "Zuverlässigkeit"
+ mechanized_reliability_upgrade_desc:0 "Verbessert die Zuverlässigkeit"
+ mechanized_speed_upgrade:0 "Motorverbesserung"
+ mechanized_speed_upgrade_desc:0 "Verbessert Max. Geschwindigkeit"
+ mechanized_armor_upgrade:0 "Panzerung"
+ mechanized_armor_upgrade_desc:0 "Verbessert Panzerungsgrad"
+ 
+ 

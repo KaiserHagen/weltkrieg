@@ -1,0 +1,612 @@
+war_operations_sov = {
+
+	# 
+	war_with_ukraine_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			UKR = {
+				exists = yes
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 4 
+        has_war = no
+        has_completed_focus = ultimatum_turkestan_sov
+        has_completed_focus = ultimatum_kuban_sov
+        has_completed_focus = ultimatum_tcr_sov
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = UKR }
+      has_completed_focus = expansionism_sov
+		}
+    complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = UKR
+					}
+					add_claim_by = SOV
+				}
+				add_state_claim = 78
+			}
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = UKR
+ 			}
+		}
+		
+	}
+  
+  war_with_finland_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			FIN = {
+				exists = yes
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 6 
+        has_war = no
+        has_completed_focus = ultimatum_turkestan_sov
+        has_completed_focus = ultimatum_kuban_sov
+        has_completed_focus = ultimatum_tcr_sov
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = FIN }
+      has_completed_focus = expansionism_sov
+		}
+    complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = FIN
+					}
+					add_claim_by = SOV
+				}
+			}
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = FIN
+ 			}
+		}
+		
+	}
+  
+  war_with_germany_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = SOV 
+				}
+			}
+			OR = {
+        any_country = {
+          OR = {
+            original_tag = GER
+            is_puppet_of = GER
+          }
+          is_neighbor_of = SOV
+        }
+        any_country = {
+          OR = {
+            original_tag = SOV
+            is_puppet_of = SOV
+          }
+          is_neighbor_of = GER
+        }
+      }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 6 
+        has_war = no
+        has_army_manpower = { size > 999999 }
+        OR = {
+          AND = {
+            UKR = { is_puppet_of = SOV }
+            FIN = { is_puppet_of = SOV }
+          }
+          AND = {
+            NOT = { country_exists = UKR }
+            NOT = { country_exists = FIN }
+          }
+          AND = {
+            NOT = { country_exists = UKR }
+            FIN = { is_puppet_of = SOV }
+          }
+          AND = {
+            UKR = { is_puppet_of = SOV }
+            NOT = { country_exists = FIN }
+          }
+        }
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+		}
+    complete_effect = {
+			if = {
+        limit = { NOT = { has_completed_focus = expand_influence_sov } }
+        create_wargoal = {
+          type = take_state_focus
+          target = GER
+          generator = { 5 98 87 85 86 67 }
+        }
+      }
+      if = {
+        limit = { has_completed_focus = expand_influence_sov }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = GER
+        }
+      }
+		}
+		
+	}
+  
+  war_with_austria_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			UGA = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = SOV 
+				}
+			}
+			OR = {
+        any_country = {
+          OR = {
+            original_tag = UGA
+            is_puppet_of = UGA
+          }
+          is_neighbor_of = SOV
+        }
+        any_country = {
+          OR = {
+            original_tag = SOV
+            is_puppet_of = SOV
+          }
+          is_neighbor_of = UGA
+        }
+      }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 4 
+        has_war = no
+        GER = {
+          OR = {
+            NOT = { has_idea = german_supremacy }
+            is_puppet_of = SOV
+            exists = no
+          }
+        }
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+		}
+    complete_effect = {
+			if = {
+        limit = { NOT = { has_completed_focus = expand_influence_sov } }
+        create_wargoal = {
+          type = take_state_focus
+          target = UGA
+          generator = { 91 89 80 88 73 71 }
+        }
+      }
+      if = {
+        limit = { has_completed_focus = expand_influence_sov }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = UGA
+        }
+      }
+		}
+		
+	}
+  
+}
+
+spread_communist_propaganda_sov = {
+
+	# 
+	influence_tcr_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			country_exists = TCR
+		}
+
+		cost = 50
+    
+    days_remove = 210
+		days_re_enable = 300
+
+		ai_will_do = {
+			factor = 0.1
+      modifier = {
+        factor = 4 
+        TCR = {
+          communism < 0.50 
+          NOT = { has_government = communism }
+        }
+      }
+		}
+    
+    modifier = {
+			political_power_factor = -0.05
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			TCR = {
+				add_timed_idea = { idea = comintern_influence days = 210 }
+			}
+		}
+		
+	}
+  
+  puppet_tcr_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			TCR = {
+        exists = yes
+        communism > 0.40
+        NOT = { has_government = communism }
+      }
+		}
+
+		cost = 100
+    
+    fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+      
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			TCR = {
+        set_country_flag = {
+          flag = soviet_coup
+          days = 750
+        }
+				start_civil_war = { ideology = communism size = 0.40 }
+			}
+		}
+		
+	}
+  
+  influence_kuban_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			country_exists = KBN
+		}
+
+		cost = 50
+    
+    days_remove = 210
+		days_re_enable = 300
+
+		ai_will_do = {
+			factor = 0.1
+      modifier = {
+        factor = 4 
+        KBN = {
+          communism < 0.50 
+          NOT = { has_government = communism }
+        }
+      }
+		}
+    
+    modifier = {
+			political_power_factor = -0.05
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			KBN = {
+				add_timed_idea = { idea = comintern_influence days = 210 }
+			}
+		}
+		
+	}
+  
+  puppet_kuban_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			KBN = {
+        exists = yes
+        communism > 0.40
+        NOT = { has_government = communism }
+      }
+		}
+
+		cost = 100
+    
+    fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+      
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			KBN = {
+        set_country_flag = {
+          flag = soviet_coup
+          days = 750
+        }
+				start_civil_war = { ideology = communism size = 0.40 }
+			}
+		}
+		
+	}
+  
+  influence_turkestan_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			country_exists = TUK
+		}
+
+		cost = 50
+    
+    days_remove = 210
+		days_re_enable = 300
+
+		ai_will_do = {
+			factor = 0.1
+      modifier = {
+        factor = 4 
+        TUK = {
+          communism < 0.50 
+          NOT = { has_government = communism }
+        }
+      }
+		}
+    
+    modifier = {
+			political_power_factor = -0.05
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			TUK = {
+				add_timed_idea = { idea = comintern_influence days = 210 }
+			}
+		}
+		
+	}
+  
+  puppet_turkestan_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			TUK = {
+        exists = yes
+        communism > 0.40
+        NOT = { has_government = communism }
+      }
+		}
+
+		cost = 100
+    
+    fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+      
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			TUK = {
+        set_country_flag = {
+          flag = soviet_coup
+          days = 750
+        }
+				start_civil_war = { ideology = communism size = 0.40 }
+			}
+		}
+		
+	}
+  
+  communism_influence_china_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			country_exists = CHI
+			CHI = { NOT = { has_government = communism }}
+		}
+
+		cost = 50
+    
+    days_remove = 210
+		days_re_enable = 330
+
+		ai_will_do = {
+			factor = 0.1
+      modifier = {
+        factor = 4 
+        CHI = {
+          communism < 0.50 
+          NOT = { has_government = communism }
+        }
+      }
+		}
+    
+    modifier = {
+			political_power_factor = -0.05
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			CHI = {
+				add_timed_idea = { idea = comintern_influence days = 210 }
+			}
+		}
+		
+	}
+  
+  puppet_china_sov = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			CHI = {
+        exists = yes
+        communism > 0.40
+        has_stability < 0.30
+        NOT = { has_government = communism }
+      }
+		}
+
+		cost = 100
+    
+    fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+      
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			CHI = {
+        set_country_flag = {
+          flag = soviet_coup
+          days = 750
+        }
+				start_civil_war = { ideology = communism size = 0.40 }
+			}
+		}
+		
+	}
+  
+}

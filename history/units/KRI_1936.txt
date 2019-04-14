@@ -1,0 +1,64 @@
+ï»¿division_template = {
+	name = "Infantry Division"			# Infantry Division
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	######## LAND OOB ########
+	##### Lietuva Aukaèiausiosios Vadaviete #####
+	division = {
+		name = "1. Infantry Division"
+		location = 3686
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "2. Infantry Division"
+		location = 3686
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "3. Infantry Division"
+		location = 6741
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+
+	}
+
+	##### No Naval OOB #####
+}
+
+air_wings = {
+	### Planes
+	137 = {
+		# Naikintuvas Aviacijos Grupo -- Dewotine 501s, Fiat CR.20s, Fokker D.VIIs, Letov S.20Ls
+		fighter_equipment_0 =  {
+			owner = "KRI" 
+			amount = 20
+		}
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "KRI"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

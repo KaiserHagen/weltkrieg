@@ -1,0 +1,25 @@
+state = {
+	id=754
+	name="STATE_754"
+	manpower = 2479040
+	
+	state_category = town
+	
+	resources={
+		
+	}
+	
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			
+		}
+		
+		add_core_of = CAU
+
+	}
+	provinces = {
+		1993 2080 5036 5054 6039 7963 9137 11194
+	}
+}

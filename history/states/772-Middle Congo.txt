@@ -1,0 +1,30 @@
+state={
+	id=772
+	name="STATE_772"
+	manpower = 267300
+	
+	state_category = rural
+	
+	resources={
+		oil=8
+	}
+	
+	history={
+		owner = SAU
+
+		buildings = {
+			infrastructure = 2
+			12702 = {
+				naval_base = 6
+			}
+			8051 = {
+				naval_base = 2
+			}
+		}
+		
+		add_core_of = SAU
+	}
+	provinces={
+		1955 8051 10791 12702 13205
+	}
+}

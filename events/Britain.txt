@@ -1,0 +1,42 @@
+﻿add_namespace = britain 
+
+
+# Chamberlain Passes Away
+country_event = {
+	id = britain.10
+	title = britain.10.t
+	desc = britain.10.d
+	picture = GFX_report_event_chamberlain
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		has_government = democratic
+		date > 1940.9.11
+		NOT = { has_country_flag = chamberlain_resigned }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = britain.10.a
+		kill_country_leader = yes
+	}
+	option = {
+		name = britain.10.b
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Lord Edward Halifax"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			picture = "Portrait_Britain_Edward_Halifax.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+	}
+}

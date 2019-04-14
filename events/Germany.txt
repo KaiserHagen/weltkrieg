@@ -1,0 +1,35 @@
+﻿############# German events #############
+add_namespace = germany
+
+# USGA wants to join Central Powers
+country_event = {
+	id = germany.1
+	title = germany.1.t
+	desc = germany.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.1.a
+		add_to_faction = USG
+		ai_chance = { factor = 90 }
+		
+		USG = { 
+			country_event = { id = usg.7} 
+		}
+		
+		hidden_effect = {
+			news_event = { hours = 5 id = aw_news.3 }
+		}
+	}
+	
+	option = {
+		name = germany.1.b
+		ai_chance = { factor = 5 }
+		
+		USG = {
+			country_event = { id = usg.8 }
+		}
+	}
+}

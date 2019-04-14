@@ -1,0 +1,702 @@
+ideas = {
+	country = {
+		
+		
+		
+		communist_militia_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				NOT = { has_government = communism }
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				enemy_partisan_effect = -0.15
+				subversive_activites_upkeep = -0.15
+			}
+		}
+		
+		socialist_society_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				NOT = { has_government = communism }
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		militarism_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				NOT = { has_government = fascism }
+			}
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				army_org_factor = 0.05
+				conscription = 0.01
+			}
+		}
+		
+		reorganize_country_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				NOT = { has_government = fascism }
+			}
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		domestic_reforms_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				
+			}
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1 
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		
+		deradicalization_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				monarchism > 0.60
+			}
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		
+		absolute_power_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = -0.05
+			}
+		}
+		
+		constitutional_power_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				democratic_drift = 0.03
+				monarchism_acceptance = 30
+				democratic_acceptance = 30
+			}
+		}
+		
+		stabilize_the_country_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.20
+			}
+		}
+		
+		side_with_fascists_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.10
+			}
+		}
+	
+		side_with_communists_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+	
+		loyal_to_the_monarchy_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				monarchism_drift = 0.05
+			}
+		}
+	
+		german_advisors_2 = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			cancel = {
+				OR = {
+					UKR = {
+						AND = {
+							is_puppet = yes
+							NOT = { is_puppet_of = GER }
+						}
+					}
+					GER = {
+						OR = {
+							exists = no
+							has_war_with = UKR
+							has_capitulated = yes
+							has_opinion = { target = UKR value < -99 }
+						}
+					}
+				}
+				
+			}
+
+			removal_cost = -1
+			
+			picture = german_advisors
+			
+			research_bonus = {
+				land_doctrine = 0.09
+			}
+		}
+		
+		political_extremists_UKR = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			cancel = {
+				OR = {
+					communism > 0.70
+					fascism > 0.70
+					monarchism > 0.70
+					democratic > 0.70
+					neutrality > 0.70
+				}
+			}
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.10
+			}
+		}
+		
+		buffer_state = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			picture = neutrality_idea
+			
+			cancel = {
+				OR = {
+					num_of_factories > 50
+					has_army_manpower = { size > 799999 }
+				}
+			}
+			
+			modifier = {
+				drift_defence_factor = -0.25
+			}
+			rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+	}
+
+
+	# MILITARY
+	army_chief = {
+
+		UKR_johan_laidoner = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		UKR_alfons_rebane = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		semyon_timoshenko = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = reform_military_command_ukr
+			}
+			
+			traits = { army_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+
+		UKR_richard_tomberg = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		UKR_leo_sepp = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = UKR
+			}
+						
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	navy_chief = {
+
+		UKR_oskar_eiriksson = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+
+			
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		UKR_alfred_vendt = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = UKR
+			}
+						
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+
+	high_command = {
+
+		UKR_richard_veermaa = {
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		UKR_alexander_jaakson = {
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { army_artillery_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		UKR_nikolay_g_karotamm = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		UKR_voldemar_mere = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { navy_fleet_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		UKR_air_chief = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		UKR_air_chief_2 = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	theorist = {
+		UKR_juhan_tuuling = {
+			
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = UKR
+			}
+			
+			available = {
+				has_completed_focus = reform_military_command_ukr
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		sergey_gorshkov = {
+			
+			
+			allowed = {
+				original_tag = UKR
+
+			}
+			available = {
+				has_completed_focus = reform_military_command_ukr
+			}
+			
+			cost = 150
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}		
+
+	naval_manufacturer = { 
+			
+		designer = yes
+		
+		paldiski_port_2 = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+	
+		}
+	}
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		arsenal_2 = {
+			
+			picture = generic_infantry_equipment_manufacturer_3
+
+			
+			allowed = {
+				original_tag = UKR
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			# rifles and pistols
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}

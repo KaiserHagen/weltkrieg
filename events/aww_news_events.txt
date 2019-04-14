@@ -1,0 +1,1163 @@
+﻿############# Weltkrieg News Events ##############
+
+add_namespace = aw_news
+
+#Serbia gets annexed by USG
+news_event = {
+	id = aw_news.1
+	title = aw_news.1.t
+	desc = aw_news.1.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.1.a
+		trigger = {
+			NOT = {
+				TAG = USG
+			}
+		}
+	}
+	option = {
+		name = aw_news.1.b
+		trigger = { TAG = USG }
+	}
+}
+#Montenegro gets annexed by USG
+news_event = {
+	id = aw_news.2
+	title = aw_news.2.t
+	desc = aw_news.2.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.2.a
+		trigger = {
+			NOT = {
+				TAG = USG
+			}
+		}
+	}
+	option = {
+		name = aw_news.2.b
+		trigger = { TAG = USG }
+	}
+}
+#Austria joins Central Powers
+news_event = {
+	id = aw_news.3
+	title = aw_news.3.t
+	desc = aw_news.3.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# Not this again
+	option = { 
+		name = aw_news.3.a
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = FRA
+			}
+		}
+	}
+	# Here we go again
+	option = {
+		name = aw_news.3.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = ENG
+					tag = GER
+					tag = USG
+				}
+			}
+		}
+	}
+
+	# Brothers united again
+	option = {
+		name = aw_news.3.c
+		trigger = {
+			OR = {
+				tag = GER
+				tag = USG
+			}
+		}
+	}
+}
+# Austria joins Comintern
+news_event = {
+	id = aw_news.4
+	title = aw_news.4.t
+	desc = aw_news.4.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# Hopefully this means nothing bad
+	option = { 
+		name = aw_news.4.a
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = GER
+			}
+		}
+	}
+	# Austria communist?
+	option = {
+		name = aw_news.4.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = ENG
+					tag = GER
+					tag = USG
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	# Communism is the future
+	option = {
+		name = aw_news.4.c
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = USG
+			}
+		}
+	}
+}
+
+#France joins Comintern
+news_event = {
+	id = aw_news.5
+	title = aw_news.5.t
+	desc = aw_news.5.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# This might not be good
+	option = { 
+		name = aw_news.5.a
+		trigger = {
+			tag = GER
+		}
+	}
+	# Interesting
+	option = {
+		name = aw_news.5.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = GER
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	# Communism is the future
+	option = {
+		name = aw_news.5.c
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = FRA
+			}
+		}
+	}
+}
+
+#Belgium gets puppeted by France
+news_event = {
+	id = aw_news.6
+	title = aw_news.6.t
+	desc = aw_news.6.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# This is a threat
+	option = { 
+		name = aw_news.6.a
+		trigger = {
+			tag = GER
+		}
+	}
+	# Interesting
+	option = {
+		name = aw_news.6.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = GER
+					tag = BEL
+				}
+			}
+		}
+	}
+
+	# We stand together
+	option = {
+		name = aw_news.6.c
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = BEL
+			}
+		}
+	}
+}
+
+#Italy joins France
+news_event = {
+	id = aw_news.7
+	title = aw_news.7.t
+	desc = aw_news.7.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# Hopefully this means nothing bad
+	option = { 
+		name = aw_news.7.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = USG
+				tag = SOV
+			}
+		}
+	}
+	# Interesting
+	option = {
+		name = aw_news.7.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = ITA
+					tag = GER
+					tag = USG
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	# Fascists are on the rise
+	option = {
+		name = aw_news.7.c
+		trigger = {
+			OR = {
+				tag = ITA
+				tag = FRA
+			}
+		}
+	}
+}
+
+#Ukraine joins France
+news_event = {
+	id = aw_news.8
+	title = aw_news.8.t
+	desc = aw_news.8.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# Hopefully this means nothing bad
+	option = { 
+		name = aw_news.8.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = USG
+				tag = SOV
+			}
+		}
+	}
+	# Interesting
+	option = {
+		name = aw_news.8.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = UKR
+					tag = GER
+					tag = USG
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	# Fascists are on the rise
+	option = {
+		name = aw_news.8.c
+		trigger = {
+			OR = {
+				tag = UKR
+				tag = FRA
+			}
+		}
+	}
+}
+
+# The Ottoman Civil War
+news_event = {
+	id = aw_news.9
+	title = aw_news.9.t
+	desc = aw_news.9.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.9.a
+		trigger = {
+			NOT = { original_tag = OSM }
+		}
+	}
+	option = {
+		name = aw_news.9.b
+		trigger = { 
+			original_tag = OSM
+		}
+	}
+}
+#Turkey joins Central Powers
+news_event = {
+	id = aw_news.10
+	title = aw_news.10.t
+	desc = aw_news.10.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.10.a
+		trigger = {
+			NOT = { 
+				OR = {
+					tag = OSM 
+					tag = GER
+				}
+			}
+		}
+	}
+	option = {
+		name = aw_news.10.b
+		trigger = { 
+			OR = {
+				tag = OSM
+				tag = GER
+			}
+		}
+	}
+}
+#Austrian puppet Serbia
+news_event = {
+	id = aw_news.11
+	title = aw_news.11.t
+	desc = aw_news.11.d
+	picture = GFX_news_event_032
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.11.a
+		trigger = {
+			NOT = { 
+				OR = {
+					tag = USG 
+					tag = SER
+				}
+			}
+		}
+	}
+	option = {
+		name = aw_news.11.b
+		trigger = { 
+			tag = USG
+		}
+	}
+	option = {
+		name = aw_news.11.c 
+		trigger = {
+			tag = SER
+		}
+	}
+}
+
+#Austrian puppet Montenegro
+news_event = {
+	id = aw_news.12
+	title = aw_news.12.t
+	desc = aw_news.12.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.12.a
+		trigger = {
+			NOT = { 
+				OR = {
+					tag = USG 
+					tag = YUG
+				}
+			}
+		}
+	}
+	option = {
+		name = aw_news.12.b
+		trigger = { 
+			tag = USG
+		}
+	}
+	option = {
+		name = aw_news.12.c 
+		trigger = {
+			tag = YUG
+		}
+	}
+}
+#Britain goes fascist
+news_event = {
+	id = aw_news.13
+	title = aw_news.13.t
+	desc = aw_news.13.d
+	picture = GFX_news_event_gathering_protest
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = british_fascists_aww }
+		country_exists = ENG
+		country_exists = SWE
+		ENG = {
+			has_government = fascism
+			has_civil_war = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		set_global_flag = british_fascists_aww
+	}
+	
+	option = {
+		name = aw_news.13.a
+		trigger = { 
+			tag = ENG
+		}
+	}
+	option = {
+		name = aw_news.13.b
+		trigger = { 
+			has_government = democratic
+		}
+	}
+	option = {
+		name = aw_news.13.c
+		trigger = { 
+			OR = {
+				has_government = communism
+				has_government = neutrality
+				has_government = monarchism
+			}
+		}
+	}
+	option = {
+		name = aw_news.13.e
+		trigger = { 
+			AND = {
+				has_government = fascism
+				NOT = { original_tag = ENG }
+			}
+		}
+	}
+}
+#Germany launches Operation Baltikum
+news_event = {
+	id = aw_news.14
+	title = aw_news.14.t
+	desc = aw_news.14.d
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = german_operation_baltikum_launched
+	}
+	
+	option = {
+		name = aw_news.14.a
+		trigger = { 
+			tag = GER
+		}
+	}
+	option = {
+		name = aw_news.14.b
+		trigger = { 
+			NOT = {
+				tag = GER
+			}
+		}
+	}
+}
+
+#France questions the Treaty of Nürnberg
+news_event = {
+	id = aw_news.15
+	title = aw_news.15.t
+	desc = aw_news.15.d
+	picture = GFX_news_event_gathering_protest
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = treaty_of_nuernberg_questioned
+		hidden_effect = {
+			GER = { country_event = { id = aw_ger.43 hours = 1 } }
+			ENG = { country_event = { id = aw_eng.35 hours = 2 } }
+			ITA = { country_event = { id = aw_ita.24 hours = 2 } }
+			SOV = { country_event = { id = aw_sov.16 hours = 2 } }
+		}
+	}
+	
+	option = {
+		name = aw_news.15.a
+		trigger = { 
+			tag = GER
+		}
+	}
+	option = {
+		name = aw_news.15.b
+		trigger = { 
+			tag = FRA
+		}
+	}
+	option = {
+		name = aw_news.15.c
+		trigger = { 
+			NOT = {
+				tag = GER
+				tag = FRA
+			}
+		}
+	}
+}
+
+#France: Critisize german hegemony
+news_event = {
+	id = aw_news.16
+	title = aw_news.16.t
+	desc = aw_news.16.d
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = treaty_of_nuernberg_questioned
+	}
+	
+	option = {
+		name = aw_news.16.a
+		trigger = { 
+			tag = GER
+		}
+	}
+	option = {
+		name = aw_news.16.b
+		trigger = { 
+			tag = FRA
+		}
+	}
+	option = {
+		name = aw_news.16.c
+		trigger = { 
+			NOT = {
+				tag = GER
+				tag = FRA
+			}
+		}
+	}
+}
+### remove idea german_supremacy
+news_event = {
+	id = aw_news.17
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+      GER = { has_capitulated = yes }
+      GER = { is_puppet = yes }
+    }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		GER = {
+			remove_ideas = german_supremacy
+#			news_event = { id = aw_news.18 }
+		}
+	}
+	
+	option = {
+		name = aw_news.17.a
+	}
+}
+### Germany has capitulated
+#news_event = {
+#	id = aw_news.18
+#	title = aw_news.18.t
+#	desc = aw_news.18.d
+#	picture = GFX_news_event_019
+#	
+#	major = yes
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		GER = { remove_ideas = german_supremacy }
+#	}
+#	
+#	option = {
+#		name = aw_news.18.a
+#		trigger = { 
+#			tag = GER
+#		}
+#	}
+#	option = {
+#		name = aw_news.18.b
+#		trigger = { 
+#			NOT = { tag = GER }
+#		}
+#	}
+#}
+
+### 18 years peace 
+news_event = {
+	id = aw_news.19
+	title = aw_news.19.t
+	desc = aw_news.19.d
+	picture = GFX_news_event_memorial_day
+	
+	major = yes
+	
+#	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.4.27
+		date < 1936.4.29
+		NOT = { has_global_flag = memorial_day }
+		NOT = { GER = { has_war_with = FRA } }
+		NOT = { GER = { has_war_with = SOV } }
+		NOT = { GER = { has_war_with = ENG } }
+		NOT = { GER = { has_war_with = USA } }
+		NOT = { GER = { has_war_with = USG } }
+		NOT = { GER = { has_war_with = ITA } }
+		NOT = { FRA = { has_war_with = SOV } }
+		NOT = { FRA = { has_war_with = ENG } }
+		NOT = { FRA = { has_war_with = USG } }
+		NOT = { FRA = { has_war_with = ITA } }
+		NOT = { FRA = { has_war_with = OSM } }
+		NOT = { FRA = { has_war_with = USA } }
+		NOT = { ENG = { has_war_with = SOV } }
+		NOT = { ENG = { has_war_with = USG } }
+		NOT = { ENG = { has_war_with = ITA } }
+		NOT = { ENG = { has_war_with = OSM } }
+		NOT = { ENG = { has_war_with = USA } }
+		NOT = { SOV = { has_war_with = OSM } }
+		NOT = { SOV = { has_war_with = USG } }
+		NOT = { SOV = { has_war_with = USA } }
+		NOT = { SOV = { has_war_with = ITA } }
+		NOT = { SOV = { has_war_with = UKR } }
+		NOT = { ITA = { has_war_with = OSM } }
+		NOT = { ITA = { has_war_with = USG } }
+		NOT = { ITA = { has_war_with = USA } }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = memorial_day
+	}
+	
+	option = {
+		name = aw_news.19.a
+		trigger = { 
+			OR = {
+				tag = GER
+				tag = USG
+				tag = OSM
+				tag = BUL
+			}
+		}
+	}
+	option = {
+		name = aw_news.19.b
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = ENG
+				tag = SOV
+				tag = ITA
+			}
+		}
+	}
+	option = {
+		name = aw_news.19.c
+		trigger = { 
+			NOT = {
+				tag = GER
+				tag = FRA
+				tag = ENG
+				tag = SOV
+				tag = ITA 
+				tag = USG
+				tag = OSM
+				tag = BUL
+			}
+		}
+	}
+}
+
+### GB: Speech about german threat
+news_event = {
+	id = aw_news.20
+	title = aw_news.20.t
+	desc = aw_news.20.d
+	picture = GFX_news_event_gathering_protest
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.20.a
+		trigger = { 
+			tag = GER
+		}
+	}
+	option = {
+		name = aw_news.20.b
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = ENG
+				tag = SOV
+				tag = ITA
+			}
+		}
+	}
+	option = {
+		name = aw_news.20.c
+		trigger = { 
+			NOT = {
+				tag = GER
+				tag = FRA
+				tag = ENG
+				tag = SOV
+				tag = ITA 
+			}
+		}
+	}
+}
+
+### Japan: Remilitarization of Korea
+news_event = {
+	id = aw_news.21
+	title = aw_news.21.t
+	desc = aw_news.21.d
+	picture = GFX_news_event_070
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.21.a
+		trigger = { 
+			tag = GER
+		}
+	}
+	option = {
+		name = aw_news.21.b
+		trigger = {
+			tag = JAP
+		}
+	}
+	option = {
+		name = aw_news.21.c
+		trigger = { 
+			NOT = {
+				tag = GER
+				tag = JAP
+			}
+		}
+	}
+}
+
+### SOV: Power Struggle over
+news_event = {
+	id = aw_news.22
+	title = aw_news.22.t
+	desc = aw_news.22.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.22.a
+		trigger = { 
+			tag = SOV
+		}
+	}
+	option = {
+		name = aw_news.22.b
+		trigger = { 
+			NOT = {
+				tag = SOV
+			}
+		}
+	}
+}
+
+### OSM: Sultan retires
+news_event = {
+	id = aw_news.23
+	title = aw_news.23.t
+	desc = aw_news.23.d
+	picture = GFX_news_event_abduelmecid_ii_retires
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.23.a
+		trigger = { 
+			tag = OSM
+		}
+	}
+	option = {
+		name = aw_news.23.b
+		trigger = { 
+			NOT = {
+				tag = OSM
+			}
+		}
+	}
+}
+
+### Serbia joins United States of Greater Austria (voluntary)
+news_event = {
+	id = aw_news.24
+	title = aw_news.24.t
+	desc = aw_news.24.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.24.a
+		trigger = { 
+			tag = USG
+		}
+	}
+	option = {
+		name = aw_news.24.b
+		trigger = { 
+			NOT = {
+				tag = USG
+			}
+		}
+	}
+}
+
+### Ottoman Civilwar
+news_event = {
+	id = aw_news.25
+	title = aw_news.25.t
+	desc = aw_news.25.d
+	picture = GFX_news_event_004
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.25.a
+		trigger = { 
+			tag = OSM
+		}
+	}
+	option = {
+		name = aw_news.25.b
+		trigger = { 
+			tag = TUR
+		}
+	}
+	option = {
+		name = aw_news.25.c
+		trigger = { 
+			NOT = {
+				tag = OSM
+				tag = SYR
+				tag = TUR
+				tag = KUD
+				tag = IRQ
+			}
+		}
+	}
+	option = {
+		name = aw_news.25.e
+		trigger = { 
+			OR = {
+				tag = SYR
+				tag = KUD
+				tag = IRQ
+			}
+		}
+	}
+}
+
+### TCR occupies georgia
+news_event = {
+	id = aw_news.26
+	title = aw_news.26.t
+	desc = aw_news.26.d
+	picture = GFX_news_event_018
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.26.a
+		trigger = { 
+			tag = TCR
+		}
+	}
+	option = {
+		name = aw_news.26.b
+		trigger = { 
+			tag = OSM
+		}
+	}
+	option = {
+		name = aw_news.26.c
+		trigger = { 
+			NOT = {
+				tag = TCR
+				tag = OSM
+			}
+		}
+	}
+}
+
+### Japan occupies Philippines
+news_event = {
+	id = aw_news.27
+	title = aw_news.27.t
+	desc = aw_news.27.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.27.a
+		trigger = { 
+			NOT = {
+				tag = JAP
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = aw_news.27.b
+		trigger = { 
+			tag = CHI
+		}
+	}
+	
+}
+
+### Japan occupies Indochina
+news_event = {
+	id = aw_news.28
+	title = aw_news.28.t
+	desc = aw_news.28.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.28.a
+		trigger = { 
+			NOT = {
+				tag = JAP
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = aw_news.28.b
+		trigger = { 
+			tag = CHI
+		}
+	}
+	
+}
+
+### Portugese Civil War
+news_event = {
+	id = aw_news.29
+	title = aw_news.29.t
+	desc = aw_news.29.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.29.a
+		trigger = { 
+			NOT = {
+				original_tag = POR
+			}
+		}
+	}
+	
+}
+
+### Indian-Pakistani Civil War
+news_event = {
+	id = aw_news.30
+	title = aw_news.30.t
+	desc = aw_news.30.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.30.a
+		trigger = { 
+			NOT = {
+				original_tag = RAJ
+				original_tag = PAK
+			}
+		}
+	}
+	option = {
+		name = aw_news.30.b
+		trigger = { 
+			original_tag = PAK
+		}
+	}
+	option = {
+		name = aw_news.30.c
+		trigger = { 
+			original_tag = RAJ
+		}
+	}
+	
+}
+
+### Ukraine becomes Empire
+news_event = {
+	id = aw_news.31
+	title = aw_news.31.t
+	desc = aw_news.31.d
+	picture = GFX_news_event_gathering_protest
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_news.31.a
+		trigger = { 
+			NOT = {
+				original_tag = UKR
+			}
+		}
+	}
+	option = {
+		name = aw_news.31.b
+		trigger = { 
+			original_tag = UKR
+		}
+	}
+}
+
+

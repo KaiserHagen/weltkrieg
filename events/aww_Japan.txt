@@ -1,0 +1,1216 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_jap
+
+
+################### Japanese Events ##################
+
+
+######## occupation of korea ######## 
+country_event = {
+	id = aw_jap.1
+	title = aw_jap.1.t
+	desc = aw_jap.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Demand withdrawal
+		name = aw_jap.1.a
+		ai_chance = {
+			factor = 15
+		}
+		add_political_power = -100
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.2 }
+		}
+	}
+	option = { # Ignore
+		name = aw_jap.1.b
+		ai_chance = {
+			factor = 85
+		}
+		
+	}
+}
+#### Germany demands withdrawal (Korea)
+country_event = {
+	id = aw_jap.2
+	title = aw_jap.2.t
+	desc = aw_jap.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Negotiate instead
+		name = aw_jap.2.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -50
+		525 = { set_demilitarized_zone = yes }
+		527 = { set_demilitarized_zone = yes }
+		JAP = { set_country_flag = negotiate_instead }
+		GER = {
+			country_event = { id = aw_jap.4 hours = 12 } #negotiate instead
+		}
+	}
+	
+	option = { # Withdraw
+		name = aw_jap.2.b
+		ai_chance = {
+			factor = 20
+		}
+		525 = { set_demilitarized_zone = yes }
+		527 = { set_demilitarized_zone = yes }
+		GER = {
+			country_event = { id = aw_jap.41 hours = 12 }
+		}
+	}
+	
+	option = { # stay in korea
+		name = aw_jap.2.c
+		ai_chance = {
+			factor = 20
+		}
+		GER = {
+			country_event = { id = aw_jap.3 hours = 12 }
+		}
+	}
+}
+#### Germany declares war on Japan 
+country_event = {
+	id = aw_jap.3
+	title = aw_jap.3.t
+	desc = aw_jap.3.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	
+	option = {	# Go to War
+		name = aw_jap.3.a
+		ai_chance = {
+			factor = 75
+		}
+		GER = {
+			add_ideas = war_against_japan_ger
+			declare_war_on = {
+				target = JAP
+				type = take_state_focus
+				generator = { 525 527 } 
+			}
+		}
+		set_global_flag = germany_attacks_japan
+		JAP = {
+			add_ideas = german_attack_focus_jap		#Fighting Bonus in Core States to Japanese Army
+		}
+	}
+	
+	option = { # back away
+		name = aw_jap.3.b
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = -50
+	}
+}
+
+######## Negotiations with Germany ########
+country_event = {
+	id = aw_jap.4
+	title = aw_jap.4.t
+	desc = aw_jap.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # negotiate!
+		name = aw_jap.4.a
+		ai_chance = {
+			factor = 95
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.5 }
+		}
+	}
+	option = { # refuse
+		name = aw_jap.4.b
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.6 }
+		}
+	}
+}
+#### Negotiations Japan announces conditions (Japan)
+country_event = {
+	id = aw_jap.5
+	title = aw_jap.5.t
+	desc = aw_jap.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # submit demands
+		name = aw_jap.5.a
+		ai_chance = {
+			factor = 85
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_jap.7 }
+		}
+		add_political_power = -50
+	}
+}
+#### Germany refuses
+country_event = {
+	id = aw_jap.6
+	title = aw_jap.6.t
+	desc = aw_jap.6.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #occupate korea
+		name = aw_jap.6.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				JAP = { has_country_flag = negotiate_instead }
+			}
+		}
+		525 = { set_demilitarized_zone = no }
+		527 = { set_demilitarized_zone = no }
+		add_political_power = 50
+		if = {
+			limit = { JAP = { has_country_flag = negotiate_instead }}
+			GER = {
+				country_event = { hours = 12 id = aw_jap.3 }
+			}
+		}
+		if = {
+			limit = { JAP = { NOT = { has_country_flag = negotiate_instead }}}
+			GER = {
+				country_event = { hours = 12 id = aw_jap.1 }
+			}
+		}
+	}
+	
+	option = { # withdraw
+		name = aw_jap.6.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				JAP = { has_country_flag = negotiate_instead }
+			}
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_jap.41 }
+		}
+	}
+}
+
+#### Negotiations - Germany decides (Germany)
+country_event = {
+	id = aw_jap.7
+	title = aw_jap.7.t
+	desc = aw_jap.7.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #accept conditions
+		name = aw_jap.7.a
+		ai_chance = {
+			factor = 100
+		}
+		525 = { set_demilitarized_zone = no }
+		527 = { set_demilitarized_zone = no }
+		
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.8 }
+		}
+	}
+	
+	option = { #reject conditions
+		name = aw_jap.7.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.6 }
+		}
+	}
+}
+#### Effect of positive negotiations
+country_event = {
+	id = aw_jap.8
+	title = aw_jap.8.t
+	desc = aw_jap.8.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #conditions accepted
+		name = aw_jap.8.a
+		ai_chance = {
+			factor = 100
+		}
+		JAP = { add_timed_idea = { idea = negotiations_with_germany_focus_jap days = 300 } } #more PP & less building speed
+		GER = { add_timed_idea = { idea = negotiations_with_germany_focus_ger days = 300 } } #faster building speed
+		GER = {
+			add_opinion_modifier = { target = JAP modifier = befriend }
+		}
+	}
+}
+##################################################################
+#### Shanghai Question
+country_event = {
+	id = aw_jap.9
+	title = aw_jap.9.t
+	desc = aw_jap.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = aw_jap.9.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				CHI = {
+					OR = {
+						has_completed_focus = reunite_chinese_empire_chi
+						has_government = communism
+						has_government = fascism
+						has_army_manpower = { size > 749999 }
+					}
+					has_war = no
+				}
+			}
+			modifier = {
+				factor = 100
+				has_war = yes
+				surrender_progress > 0.10
+			}
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.10 }
+		}
+	}
+	
+	option = { #refuse
+		name = aw_jap.9.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100
+				CHI = {
+					OR = {
+						has_completed_focus = reunite_chinese_empire_chi
+						has_government = communism
+						has_government = fascism
+						has_army_manpower = { size > 749999 }
+					}
+					has_war = no
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				surrender_progress > 0.10
+			}
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.11 }
+		}
+	}
+}
+#### China accepts
+country_event = {
+	id = aw_jap.10
+	title = aw_jap.10.t
+	desc = aw_jap.10.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #shanghai comes under japanese rule
+		name = aw_jap.10.a
+		add_named_threat = { threat = 1 name = jap_imperialism }
+		JAP = {
+			transfer_state = 777
+		}
+	}
+}
+
+#### China refuses
+country_event = {
+	id = aw_jap.11
+	title = aw_jap.11.t
+	desc = aw_jap.11.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #war!
+		name = aw_jap.11.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_war = no
+				has_army_manpower = { size > 699999 }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		JAP = {
+			declare_war_on = {
+				target = CHI
+				type = take_state_focus
+				generator = { 777 613 598 597 } 
+			}
+		}
+	}
+	option = { #blockade china!
+		name = aw_jap.11.b
+		trigger={
+			JAP = {
+				has_navy_size = { size > 59 }
+				
+			}
+			CHI = { has_navy_size = { size < 40 } }
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_war = no
+				has_army_manpower = { size > 649999 }
+			}
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+		JAP = {
+			add_opinion_modifier = { target = CHI modifier = japanese_blockade }
+		}
+		CHI = {
+			country_event = { hours = 12 id = aw_jap.42 }
+			add_timed_idea = { idea = japanese_blockade_focus_chi days = 730 }
+		}
+	}
+	option = { #do nothing
+		name = aw_jap.11.c
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				has_war = no
+				has_army_manpower = { size > 649999 }
+			}
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+		JAP = {
+			add_opinion_modifier = { target = CHI modifier = refuses }
+		}
+	}
+}
+
+#### Japanese Blockade
+country_event = {
+	id = aw_jap.42
+	title = aw_jap.42.t
+	desc = aw_jap.42.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #okay
+		name = aw_jap.42.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+	
+}
+
+#### occupation of phillipines
+country_event = {
+	id = aw_jap.12
+	title = aw_jap.12.t
+	desc = aw_jap.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_jap.12.a
+		ai_chance = {
+			factor = 70
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.13 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_jap.12.b
+		ai_chance = {
+			factor = 30
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.14 }
+		}
+	}
+}
+#### Phillipines surrender
+country_event = {
+	id = aw_jap.13
+	title = aw_jap.13.t
+	desc = aw_jap.13.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.13.a
+		add_named_threat = { threat = 2 name = jap_imperialism }
+		JAP = {
+			annex_country = { target = PHI transfer_troops = yes }
+			add_timed_idea = { idea = occupation_jap days = 300 }
+			news_event = { hours = 24 id = aw_news.27 }
+		}
+	}
+}
+#### Phillipines refuse to surrender
+country_event = {
+	id = aw_jap.14
+	title = aw_jap.14.t
+	desc = aw_jap.14.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_jap.14.a
+		JAP = {
+			declare_war_on = {
+				type = annex_everything
+				target = PHI
+			}
+		}
+	}
+}
+
+#### occupation of Indochina
+country_event = {
+	id = aw_jap.15
+	title = aw_jap.15.t
+	desc = aw_jap.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #surrender
+		name = aw_jap.15.a
+		ai_chance = {
+			factor = 60
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.16 }
+		}
+	}
+	
+	option = { #fight until the end!
+		name = aw_jap.15.b
+		ai_chance = {
+			factor = 40
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.17 }
+		}
+	}
+}
+#### Indochina surrenders
+country_event = {
+	id = aw_jap.16
+	title = aw_jap.16.t
+	desc = aw_jap.16.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.16.a
+		add_named_threat = { threat = 2 name = jap_imperialism }
+		JAP = {
+			annex_country = { target = ICH transfer_troops = yes }
+			add_timed_idea = { idea = occupation_2_jap days = 300 }
+			news_event = { hours = 24 id = aw_news.28 }
+		}
+	}
+}
+#### Indochina refuses to surrender
+country_event = {
+	id = aw_jap.17
+	title = aw_jap.17.t
+	desc = aw_jap.17.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_jap.17.a
+		JAP = {
+			declare_war_on = {
+				type = annex_everything
+				target = ICH
+			}
+		}
+	}
+}
+
+#### pressure on Manchuria
+country_event = {
+	id = aw_jap.18
+	title = aw_jap.18.t
+	desc = aw_jap.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # surrender
+		name = aw_jap.18.a
+		ai_chance = {
+			factor = 70
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.19 }
+		}
+	}
+	
+	option = { # resist
+		name = aw_jap.18.b
+		ai_chance = {
+			factor = 30
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.20 }
+		}
+	}
+}
+#### Manchuria accepts demands
+country_event = {
+	id = aw_jap.19
+	title = aw_jap.19.t
+	desc = aw_jap.19.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.19.a
+		add_named_threat = { threat = 2 name = jap_imperialism }
+		JAP = {
+			puppet = MAN
+		}
+	}
+}
+#### Manchuria resists
+country_event = {
+	id = aw_jap.20
+	title = aw_jap.20.t
+	desc = aw_jap.20.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_jap.20.a
+		JAP = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ICH
+				generator = { 671 670 286 741 }
+			}
+		}
+	}
+}
+################################
+#### Japan invites China (East Asian Union)
+country_event = {
+	id = aw_jap.21
+	title = aw_jap.21.t
+	desc = aw_jap.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = aw_jap.21.a
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 50
+				JAP = { NOT = { has_government = monarchism } }
+				CHI = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 50
+				JAP = { has_government = monarchism }
+				CHI = { NOT = { has_government = monarchism } }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					CHI = { has_government = communism }
+					CHI = { has_government = fascism }
+				}
+			}
+		}
+		JAP = { add_to_faction = CHI }
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.22 }
+		}
+	}
+	
+	option = { # reject
+		name = aw_jap.21.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 50
+				JAP = { NOT = { has_government = monarchism } }
+				CHI = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 50
+				JAP = { has_government = monarchism }
+				CHI = { NOT = { has_government = monarchism } }
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					CHI = { has_government = communism }
+					CHI = { has_government = fascism }
+				}
+			}
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.23 }
+		}
+	}
+}
+#### China joins
+country_event = {
+	id = aw_jap.22
+	title = aw_jap.22.t
+	desc = aw_jap.22.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.22.a
+		
+	}
+}
+#### China rejects
+country_event = {
+	id = aw_jap.23
+	title = aw_jap.23.t
+	desc = aw_jap.23.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #go to war!
+		name = aw_jap.23.a
+		add_opinion_modifier = {
+			target = CHI
+			modifier = italy_refuses
+		}
+	}
+}
+
+#### Japan invites Phillipines (East Asian Union)
+country_event = {
+	id = aw_jap.24
+	title = aw_jap.24.t
+	desc = aw_jap.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = aw_jap.24.a
+		ai_chance = {
+			factor = 99
+		}
+		JAP = { add_to_faction = PHI }
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.25 }
+		}
+	}
+	
+	option = { # reject
+		name = aw_jap.24.b
+		ai_chance = {
+			factor = 1
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.26 }
+		}
+	}
+}
+#### Phillipines joins
+country_event = {
+	id = aw_jap.25
+	title = aw_jap.25.t
+	desc = aw_jap.25.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.25.a
+		
+	}
+}
+#### Phillipines rejects
+country_event = {
+	id = aw_jap.26
+	title = aw_jap.26.t
+	desc = aw_jap.26.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.26.a
+		add_opinion_modifier = {
+			target = PHI
+			modifier = italy_refuses
+		}
+	}
+}
+
+#### Japan invites Indochina (East Asian Union)
+country_event = {
+	id = aw_jap.27
+	title = aw_jap.27.t
+	desc = aw_jap.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = aw_jap.27.a
+		ai_chance = {
+			factor = 99
+		}
+		JAP = { add_to_faction = ICH }
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.28 }
+		}
+	}
+	
+	option = { # reject
+		name = aw_jap.27.b
+		ai_chance = {
+			factor = 1
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.29 }
+		}
+	}
+}
+#### Indochina joins
+country_event = {
+	id = aw_jap.28
+	title = aw_jap.28.t
+	desc = aw_jap.28.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.28.a
+		
+	}
+}
+#### Indochina rejects
+country_event = {
+	id = aw_jap.29
+	title = aw_jap.29.t
+	desc = aw_jap.29.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.29.a
+		add_opinion_modifier = {
+			target = ICH
+			modifier = italy_refuses
+		}
+	}
+}
+
+#### Japan invites Manchuria (East Asian Union)
+country_event = {
+	id = aw_jap.30
+	title = aw_jap.30.t
+	desc = aw_jap.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = aw_jap.30.a
+		ai_chance = {
+			factor = 99
+		}
+		JAP = { add_to_faction = MAN }
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.31 }
+		}
+	}
+	
+	option = { # reject
+		name = aw_jap.30.b
+		ai_chance = {
+			factor = 1
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.32 }
+		}
+	}
+}
+#### Manchuria joins
+country_event = {
+	id = aw_jap.31
+	title = aw_jap.31.t
+	desc = aw_jap.31.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.31.a
+		
+	}
+}
+#### Manchuria rejects
+country_event = {
+	id = aw_jap.32
+	title = aw_jap.32.t
+	desc = aw_jap.32.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.32.a
+		add_opinion_modifier = {
+			target = MAN
+			modifier = italy_refuses
+		}
+	}
+}
+
+#### Manchurian Question
+country_event = {
+	id = aw_jap.33
+	title = aw_jap.33.t
+	desc = aw_jap.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # execute plan
+		name = aw_jap.33.a
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 5
+				CHI = { has_war = yes }
+			}
+		}
+		declare_war_on = {
+			type = take_state_focus
+			target = MAN
+			generator = { 609 610 611 612 715 }
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.34 }
+		}
+	}
+	
+	option = { # execute plan later
+		name = aw_jap.33.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 90
+				CHI = { has_war = yes}
+			}
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.39 }
+		}
+		CHI = {
+			country_event = { days = 200 id = aw_jap.35 }
+		}
+	}
+	
+	option = { # never execute plan
+		name = aw_jap.33.c
+		ai_chance = {
+			factor = 5
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.35 }
+		}
+	}
+}
+#### China joins Plan
+country_event = {
+	id = aw_jap.34
+	title = aw_jap.34.t
+	desc = aw_jap.34.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.34.a
+		declare_war_on = {
+			type = take_state_focus
+			target = MAN
+			generator = { 716 328 717  }
+		}
+	}
+}
+#### China rejects Plan
+country_event = {
+	id = aw_jap.35
+	title = aw_jap.35.t
+	desc = aw_jap.35.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.35.a
+		add_state_claim = 716 
+		add_state_claim = 328 
+		add_state_claim = 717
+	}
+}
+
+#### Japan wants to join League of Nations
+country_event = {
+	id = aw_jap.36
+	title = aw_jap.36.t
+	desc = aw_jap.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = aw_jap.36.a
+		ai_chance = {
+			factor = 100
+		}
+		USG = { add_to_faction = JAP }
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.37 }
+		}
+	}
+	
+	option = { # reject
+		name = aw_jap.36.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = {
+			country_event = { hours = 12 id = aw_jap.38 }
+		}
+	}
+}
+#### Austria accepts
+country_event = {
+	id = aw_jap.37
+	title = aw_jap.37.t
+	desc = aw_jap.37.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.37.a
+		
+	}
+}
+#### Austria refuses
+country_event = {
+	id = aw_jap.38
+	title = aw_jap.38.t
+	desc = aw_jap.38.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.38.a
+		add_opinion_modifier = {
+			target = USG
+			modifier = italy_refuses
+		}
+	}
+}
+
+#### China wants to execute Plan later (Manchurian Question)
+country_event = {
+	id = aw_jap.39
+	title = aw_jap.39.t
+	desc = aw_jap.39.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.39.a
+		add_state_claim = 716 
+		add_state_claim = 328 
+		add_state_claim = 717
+	}
+}
+
+#Democratic Coup (because AI doesn't like to switch from fascist to democratic)
+country_event = {
+	id = aw_jap.40
+	title = aw_jap.40.t
+	desc = aw_jap.40.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		days=2
+	}
+	trigger = {
+		tag = JAP
+		JAP = {
+			democratic > 0.44
+			NOT = { has_government = democratic }
+			has_completed_focus = democratic_reformation_jap
+		}
+	}
+	
+	option = { # Go to exile (current government)
+		name = aw_jap.40.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				JAP = { has_completed_focus = democratic_reformation_jap }
+			}
+		}
+		JAP = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	option = { # start civilwar
+		name = aw_jap.40.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				JAP = { has_completed_focus = democratic_reformation_jap }
+			}
+		}
+		if = {
+			limit = { has_government = fascism }
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = fascism
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = communism
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = neutrality
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = monarchism
+			}
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = monarchism
+				size = 0.6
+			}
+		}
+	}
+}
+
+#### Japan withdraws from Korea
+country_event = {
+	id = aw_jap.41
+	title = aw_jap.41.t
+	desc = aw_jap.41.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_jap.41.a
+		add_political_power = 25
+	}
+}
+
+

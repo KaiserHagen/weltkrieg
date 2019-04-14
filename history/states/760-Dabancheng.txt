@@ -1,0 +1,32 @@
+
+state={
+	id=760
+	name="STATE_760"
+	manpower = 1627100
+	
+	state_category = town
+	
+	resources={
+		
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			10968 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			5117 3 
+		}
+		
+		add_core_of = CAU
+		add_core_of = COG
+	}
+
+	provinces={
+		2115 4128 5117 8219 10025 10968 12896 12945 12925 
+	}
+}

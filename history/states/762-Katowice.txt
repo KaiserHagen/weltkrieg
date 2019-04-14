@@ -1,0 +1,29 @@
+
+state={
+	id=762
+	name="STATE_762" # Nancy
+	manpower = 506800
+	
+	state_category = town
+	
+	resources={
+		steel=19
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			11516 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		521 698 11516 11642 
+	}
+}

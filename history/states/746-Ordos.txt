@@ -1,0 +1,33 @@
+state={
+	id=746
+	name="STATE_746"
+	manpower = 1554905
+	
+	state_category = rural
+	
+	resources={
+		
+	}
+
+	history={
+		owner = GER
+		
+		victory_points = {
+			7203 3 
+		}
+		
+		buildings = {
+			infrastructure = 3
+			air_base = 1 
+			7203 = {
+				naval_base = 3 
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = MOR
+	}
+
+	provinces={
+		1102 4022 4108 5046 7203
+	}
+}

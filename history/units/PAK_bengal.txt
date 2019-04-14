@@ -1,0 +1,86 @@
+﻿division_template = {
+	name = "Bengal Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Bengal Division"
+		location = 7124
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Bengal Division"
+		location = 4616
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Bengal Division"
+		location = 2843
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Bengal Division"
+		location = 1075
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Bengal Division"
+		location = 11929
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Bengal Division"
+		location = 12010
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Bengal Division"
+		location = 11929
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Bengal Division"
+		location = 9993
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Bengal Division"
+		location = 10035
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Bengal Division"
+		location = 7179
+		division_template = "Bengal Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}

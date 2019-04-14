@@ -1,0 +1,17 @@
+spriteTypes = {	
+
+	##### Weltkrieg Technologies #####
+	SpriteType = {
+		name = "GFX_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/basic_armored_car.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/basic_armored_car.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/basic_armored_car.dds"
+	}

@@ -1,0 +1,204 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+				general_staff
+				victors_of_wwi
+				german_supremacy
+			}
+			focuses = {
+				moderate_policy_ger
+				aggressive_policy_ger
+				operation_baltikum_ger
+			}
+		}
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				ww_one_trauma_country
+				FRA_disjointed_government
+				to_seek_revenge
+			}
+			focuses = {
+				question_the_treaty_of_nuernberg_fra
+				humanite_unie_fra
+				anti_german_pact_fra
+			}
+		}
+		
+		"USG"={
+			history = "USG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				great_reformation
+				democratic_movement
+				victors_of_wwi_2
+			}
+			focuses = {
+				league_of_nations_uga
+				habsburger_coup_uga
+				communist_coup_uga
+			}
+		}
+		
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				lost_pride
+				ENG_king_edward_fascism
+			}
+			focuses = {
+				restoration_of_british_empire_eng
+				immediate_action_force_eng
+				talk_to_the_people_eng
+			}
+		}
+		
+		"OSM"={
+			history = "OSM_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas={
+				weak_government
+				ethnical_trouble
+			}
+			focuses = {
+				sultan_retires_osm
+				side_with_atatuerk_osm
+				power_to_the_sultan_osm
+			}
+		}
+		
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				home_of_revolution
+				workers_culture
+				power_struggle_focus
+				under_pressure_focus
+			}
+			focuses = {
+				power_struggle_sov
+				rapid_industrialisation_sov
+				expansionism_sov
+			}
+		}
+		
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				home_of_the_free
+				great_depression
+				food_shortage
+				political_crisis
+			}
+			focuses = {
+				liberty_ethos_usa
+				for_the_workers_usa
+				for_our_nation_usa
+			}
+		}
+		
+		"JAP"={
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				state_shintoism
+				shokusan_kogyo_JAP
+			}
+			focuses = {
+				remilitarization_of_korea_jap
+				east_asia_conference_jap
+				japanese_imperialism_jap
+			}
+		}
+		
+		# minors from DLC ####
+		"ITA"={
+			minor = yes
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas={
+				vittoria_mutilata
+				victor_emmanuel
+				economic_crisis_focus_ita
+			}
+			focuses = {
+				demand_referendum_in_switzerland_ita
+				italian_settler_ita
+				claim_austrian_territory_ita
+			}
+		}
+		"UKR"={
+			minor = yes
+			history = "UKR_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+				political_extremists_UKR
+				buffer_state
+			}
+			focuses = {
+				loyal_to_the_monarchy_ukr
+				side_with_radical_parties_ukr
+				black_sea_coalition_ukr
+			}
+		}
+		"CHI"={
+			minor = yes
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+				international_pressure_chi
+				internal_problems_chi
+				agrarian_society_chi
+			}
+			focuses = {
+				side_with_emperor_chi
+				consolidate_communist_rule_chi
+				reunite_chinese_empire_chi
+				
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+				german_advisors
+			}
+			focuses = {
+				
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

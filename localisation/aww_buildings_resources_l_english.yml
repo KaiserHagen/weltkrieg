@@ -1,0 +1,25 @@
+﻿l_english:
+ 
+ #Resources
+ food_supply_1:0 "Food Supply"
+ food_supply:0 "Food Supply"
+ food_supply_desc:0 "Food Supplies are essential for the army"
+ grain:0 "Food"
+ gran_desc:0 "Food can either be received by the natural occurrence in a state or produced by an agricultural company."
+ PRODUCTION_MATERIALS_GRAIN:0 "Food"
+ PRODUCTION_MATERIALS_WOOD:0 ""
+ 
+ 
+ #Buildings
+ agricultural_company_amount:0 "$VALUE|Y0=$"
+ agricultural_company_resource:0 "£resources_strip|$FRAME$"
+ agricultural_company_plural:0 "Agricultural Companies"
+ agricultural_company:0 "Agricultural Company"
+ agricultural_company_desc:0 "This building increases the production of Food "
+ 
+ agricultural_field:0 "Simple Agricultural Field"
+ agricultural_field_resource:0 "£resources_strip|$FRAME$"
+ agricultural_field_plural:0 "Simple Agricultural Fields"
+ agricultural_field_desc:0 "This building increases the production of Food "
+ agricultural_field_amount:0 "$VALUE|Y0=$"
+ 

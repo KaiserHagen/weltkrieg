@@ -1,0 +1,23 @@
+
+state={
+	id=233
+	name="STATE_233"
+	manpower = 1241270
+	state_category = rural
+	resources={
+		chromium=36
+		steel=8
+	}
+
+	history={
+		owner = KBN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KBN
+	}
+
+	provinces={
+		666 670 685 1455 3667 3698 6436 6674 6692 6721 9628 9632 9647 9649 9663 9674 11609 11614 11647 11664 
+	}
+}

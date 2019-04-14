@@ -1,0 +1,62 @@
+﻿capital = 328
+
+oob = "MAN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	
+	early_destroyer = 1
+	
+}
+
+set_war_support = 0.30
+
+add_ideas = {
+	limited_conscription
+	censored_press
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+			banned = yes
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+			banned = yes
+		}
+
+		neutrality = {
+			popularity = 70
+		}
+		
+		monarchism = {
+			popularity = 30
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Datong"
+	desc = "POLITICS_DATONG_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	expire = "1952.9.23"
+	ideology = despotism
+	traits = {
+		#inexperienced_imperialist
+	}
+}

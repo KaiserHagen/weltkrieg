@@ -1,0 +1,3705 @@
+focus_tree = {
+	id = osman_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = OSM
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = reformation_osm
+		icon = GFX_goal_continuous_increase_nu
+		x = 5
+		y = 3
+		cost = 21.43
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = state_reform_osm
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 4
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = reformation_osm }
+		mutually_exclusive = { focus = side_with_monarchy_osm }
+		mutually_exclusive = { focus = side_with_atatuerk_osm }
+		
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality 
+				has_government = monarchism
+			}
+			hidden_trigger = {
+				OR = {
+					AND = {
+						has_global_flag = ottoman_civil_war
+						has_civil_war = no
+					}
+					has_country_flag = state_reform_plan
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = state_reform_focus
+		}
+	}
+	
+	focus = {
+		id = sultan_retires_osm
+		icon = GFX_goal_support_democracy
+		x = 1 
+		y = 5
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = { focus = state_reform_osm }
+		
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = aw_news.23 }
+			}
+			add_political_power = 100
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			if = {
+				limit = {
+					OSM = {
+						is_in_faction_with = GER
+					}
+				}
+				GER = { remove_from_faction = OSM }
+			}
+		}
+	}
+	
+	focus = {
+		id = government_reform_osm
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 6
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = sultan_retires_osm }
+		
+		completion_reward = {
+			remove_ideas = weak_government
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = federalization_osm
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 6
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = sultan_retires_osm }
+		
+		completion_reward = {
+			remove_ideas = ethnical_trouble
+			add_ideas = federalization_focus
+		}
+	}
+	
+	
+	
+	focus = {
+		id = social_reform_osm
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 6
+		}
+		
+		prerequisite = { focus = federalization_osm }
+		
+		completion_reward = {
+			remove_ideas = increased_population_growth
+			add_ideas = social_reform_focus_osm
+		}
+	}
+	
+	focus = {
+		id = interventionism_osm
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = government_reform_osm }
+		
+		available = {
+			has_government = democratic
+		}
+		
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+	
+	focus = {
+		id = defend_against_enemies_osm
+		icon = GFX_goal_generic_defence
+		x = 2 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = social_reform_osm }
+		
+		available = {
+			has_government = democratic
+		}
+		
+		completion_reward = {
+			add_ideas = defend_against_enemies_focus_osm
+		}
+	}
+	
+	focus = {
+		id = vouch_for_democracy_osm
+		icon = GFX_goal_generic_demand_territory
+		x = 0 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4 
+		}
+		
+		prerequisite = { focus = interventionism_osm }
+		
+		available = {
+			has_government = democratic
+		}
+		
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = foreign_policy_osm
+		icon = GFX_goal_generic_improve_relations
+		x = 1 
+		y = 9 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4 
+		}
+		
+		prerequisite = { focus = vouch_for_democracy_osm focus = defend_against_enemies_osm }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = befriend_transcaucasian_rep_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 0 
+		y = 11 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+#		prerequisite = { focus = foreign_policy_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			OR = {
+				has_completed_focus = foreign_policy_osm
+				has_completed_focus = finish_reformation_osm
+			}
+			TCR = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			TCR = {
+				country_event = { id = aw_osm.4 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = befriend_kuban_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 0 
+		y = 12 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2 
+		}
+		
+		prerequisite = { focus = foreign_policy_osm focus = finish_reformation_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			KBN = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			KBN = {
+				country_event = { id = aw_osm.40 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = befriend_greece_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 1 
+		y = 10
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2 
+		}
+		
+		prerequisite = { focus = foreign_policy_osm focus = finish_reformation_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+#			has_completed_focus = foreign_policy_osm
+			GRE = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			GRE = {
+				country_event = { id = aw_osm.43 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = befriend_bulgaria_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 2 
+		y = 12 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2 
+		}
+		
+		prerequisite = { focus = foreign_policy_osm focus = finish_reformation_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			BUL = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			BUL = {
+				country_event = { id = aw_osm.46 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = befriend_persia_1_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 11
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+#		prerequisite = { focus = foreign_policy_osm }
+		mutually_exclusive = { focus = invite_persia_osm }
+		
+		available = {
+			OR = {
+				has_completed_focus = foreign_policy_osm
+				has_completed_focus = finish_reformation_osm
+			}
+			PER = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			PER = {
+				country_event = { id = aw_osm.21 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = side_with_atatuerk_osm
+		icon = GFX_goal_anschluss
+		x = 5 
+		y = 4 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 10 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = reformation_osm }
+		mutually_exclusive = { focus = side_with_monarchy_osm }
+		mutually_exclusive = { focus = state_reform_osm }
+		
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchism
+				has_government = democratic
+			}
+			hidden_trigger = {
+				OR = {
+					AND = {
+						has_global_flag = ottoman_civil_war
+						has_civil_war = no
+					}
+					has_country_flag = atatuerks_plan
+				}
+			}
+			
+		}
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			add_ideas = atatuerk_focus_osm
+		}
+	}
+	
+	focus = {
+		id = resolve_ethnical_conflict_osm
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 5
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = { focus = side_with_atatuerk_osm }
+		
+		available = {
+			OR = {
+				has_government = democratic 
+				has_government = neutrality 
+				has_government = monarchism
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = resolve_ethnical_conflict_focus
+			set_country_flag = resolve_ethnical_conflict_flag
+		}
+	}
+	
+	focus = {
+		id = agreement_with_arabia_osm
+		icon = GFX_goal_anschluss
+		x = 5
+		y = 6
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = { focus = resolve_ethnical_conflict_osm }
+		
+		available = {
+			SAU = {
+				exists = yes
+				has_war = no
+				OR = {
+					is_puppet = no
+					is_puppet_of = OSM
+				}
+			}
+			has_war = no
+		}
+		
+		completion_reward = {
+      SAU = {
+        country_event = {
+          id = aw_osm.71
+          hours = 6
+        }
+      }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = release_bagdad_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 4
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = agreement_with_arabia_osm }
+		
+		available = {
+			has_war = no
+			is_puppet = no
+		}
+		
+		completion_reward = {
+			add_political_power = 60
+			release_puppet = IRQ
+			hidden_effect = {
+				IRQ = { load_oob = "IRQ_released" }
+				OSM = {
+					remove_state_core = 291
+					remove_state_core = 675
+					remove_state_core = 656
+          remove_state_core = 676
+					remove_state_core = 769
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = release_palestine_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 6
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = agreement_with_arabia_osm }
+		
+		available = {
+			has_war = no
+			is_puppet = no
+		}
+		
+		completion_reward = {
+			add_political_power = 60
+			release_puppet = PAL
+			PAL = {
+				transfer_state = 453
+        if = {
+          limit = {
+            has_country_flag = arabia_refused
+          }
+          transfer_state = 744
+        }
+			}
+			hidden_effect = {
+				PAL = { load_oob = "PAL_released" }
+				OSM = {
+					remove_state_core = 453
+					remove_state_core = 454
+					remove_state_core = 455
+          if = {
+            limit = {
+              has_country_flag = arabia_refused
+            }
+            remove_state_core = 744
+          }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = release_syria_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 6
+		y = 8
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = release_palestine_osm }
+		
+		available = {
+			has_war = no
+			is_puppet = no
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+			release_puppet = SYR
+			hidden_effect = {
+				SYR = { load_oob = "SYR_released" }
+				OSM = {
+					remove_state_core = 554
+					remove_state_core = 553
+					remove_state_core = 680
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = release_kurdistan_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 4
+		y = 8
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = release_bagdad_osm }
+		
+		available = {
+			has_war = no
+			is_puppet = no
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+			release_puppet = KUD
+			hidden_effect = {
+				KUD = { load_oob = "KUD_released" }
+				OSM = {
+					remove_state_core = 676
+          transfer_state = 781
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = finish_reformation_osm
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 9 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = { focus = release_kurdistan_osm }
+		prerequisite = { focus = release_syria_osm }
+		
+		available = {
+			AND = {
+				NOT = {
+					has_offensive_war_with = KUD
+					has_offensive_war_with = PAL
+					has_offensive_war_with = IRQ
+					has_offensive_war_with = SYR
+					has_offensive_war_with = SAU
+				}
+			}
+		}
+		
+		completion_reward = {
+			remove_ideas = ethnical_trouble
+			remove_ideas = weak_government
+			remove_ideas = resolve_ethnical_conflict_focus
+			add_ideas = unite_country_focus
+		}
+	}
+	
+	focus = {
+		id = join_league_of_nations_osm
+		icon = GFX_goal_generic_national_unity
+		x = 3 
+		y = 10
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = finish_reformation_osm focus = foreign_policy_osm }
+		mutually_exclusive = { focus = beirut_conference_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			USG = {
+				is_faction_leader = yes
+				has_government = democratic
+			}
+			any_country = {
+				original_tag = OSM
+				NOT = { has_war_with = USG }
+			}
+		}
+		
+		completion_reward = {
+			USG = {
+				country_event = { id = aw_osm.68 hours = 6 }
+			}
+		}
+	}
+	
+	focus = {
+		id = beirut_conference_osm
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 10
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2.5
+				USG = {
+					is_faction_leader = yes
+					has_government = democratic
+				}
+			}
+		}
+		
+		prerequisite = { focus = finish_reformation_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			OSM = {
+				is_in_faction = no
+				is_puppet = no
+			}
+			any_country = {
+				owns_state = 553
+				controls_state = 553 
+				NOT = { has_war_with = OSM }
+			}
+			OR = {
+				PAL = {
+					is_puppet_of = OSM
+					is_in_faction = no
+				}
+				IRQ = {
+					is_puppet_of = OSM
+					is_in_faction = no
+				}
+				SYR = {
+					is_puppet_of = OSM
+					is_in_faction = no
+				}
+				KUD = {
+					is_puppet_of = OSM
+					is_in_faction = no
+				}
+			}
+		}
+		
+		completion_reward = {
+			create_faction = "beirut_coalition"
+			add_political_power = 100
+			
+		}
+	}
+	
+	focus = {
+		id = invite_persia_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 11
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = { focus = beirut_conference_osm }
+		mutually_exclusive = { focus = befriend_persia_1_osm }
+		
+		bypass = {
+			PER = {
+				OR = {
+					is_puppet = yes
+					is_in_faction = yes
+					exists = no
+				}
+			}
+		}
+		
+		available = {
+			PER = {
+				AND = {
+					is_puppet = no
+					is_in_faction = no
+					exists = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			PER = {
+				country_event = { id = aw_osm.11 }
+			}
+		}
+	}
+	
+	focus = {
+		id = invite_arabia_oman_osm
+		icon = GFX_goal_generic_major_alliance
+		x = 6
+		y = 11
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = { focus = beirut_conference_osm }
+		
+		bypass = {
+			AND = {
+				OMA = {
+					OR = {
+						is_puppet = yes
+						is_in_faction = yes
+						exists = no
+					}
+				}
+				SAU = {
+					OR = {
+						is_puppet = yes
+						is_in_faction = yes
+						exists = no
+					}
+				}
+			}
+		}
+		
+		available = {
+			OR = {
+				OMA = {
+					AND = {
+						is_puppet = no
+						is_in_faction = no
+						exists = yes
+            NOT = { has_war_with = OSM }
+					}
+				}
+				SAU = {
+					AND = {
+						is_puppet = no
+						is_in_faction = no
+						exists = yes
+            NOT = { has_war_with = OSM }
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+      if = {
+        limit = {
+          OMA = {
+            exists = yes
+            is_puppet = no
+            is_in_faction = no
+            NOT = { has_war_with = OSM }
+          }
+        }
+        OMA = {
+          country_event = { id = aw_osm.17 }
+        }
+      }
+			
+			if = {
+        limit = {
+          SAU = {
+            exists = yes
+            is_puppet = no
+            is_in_faction = no
+            NOT = { has_war_with = OSM }
+          }
+        }
+        SAU = {
+          country_event = { id = aw_osm.14 }
+        }
+      }
+		}
+	}
+	
+	focus = {
+		id = side_with_monarchy_osm
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 8
+		y = 4 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = { focus = reformation_osm }
+		mutually_exclusive = { focus = state_reform_osm }
+		mutually_exclusive = { focus = side_with_atatuerk_osm }
+		
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchism
+			}
+			hidden_trigger = {
+				OR = {
+					AND = {
+						has_global_flag = ottoman_civil_war
+						has_civil_war = no
+					}
+					has_country_flag = uprisings_crushed
+				}
+			}
+			
+		}
+		
+		completion_reward = {
+			add_ideas = side_with_monarchy_focus
+		}
+	}
+	
+	focus = {
+		id = power_to_the_sultan_osm
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 5
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = side_with_monarchy_osm }
+		
+		available = {
+			has_government = monarchism
+		}
+		
+		completion_reward = {
+			add_ideas = iron_fist_focus
+			set_country_flag = power_to_the_sultan_reaction
+		}
+	}
+	
+	focus = {
+		id = ban_political_parties_osm
+		icon = GFX_goal_generic_secret_weapon
+		x = 9
+		y = 6 
+		cost = 7.143 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = power_to_the_sultan_osm }
+		
+		available = {
+			has_government = monarchism
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = ban_political_parties_OSM
+			add_political_power = 100
+			hidden_effect = {
+				set_political_party = {
+					ideology = democratic 
+					banned = yes
+				}
+				set_political_party = {
+					ideology = fascism
+					banned = yes
+				}
+				set_political_party = {
+					ideology = communism
+					banned = yes
+				}
+				set_political_party = {
+					ideology = neutrality
+					banned = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = suppress_ethnical_conflict_osm
+		icon = GFX_goal_demand_sudetenland
+		x = 11
+		y = 6
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = power_to_the_sultan_osm }
+		
+		available = {
+			has_government = monarchism
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = ethnical_trouble
+				add_idea = suppress_ethnical_conflict_focus
+			}
+			set_country_flag = suppress_ethnical_conflict_flag
+		}
+	}
+	
+	focus = {
+		id = the_purge_osm
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 9
+		y = 7 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = ban_political_parties_osm }
+		
+		available = {
+			has_government = monarchism
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			remove_ideas = weak_government
+		}
+	}
+	
+	focus = {
+		id = reorganize_army_osm
+		icon = GFX_goal_generic_attack_allies
+		x = 8
+		y = 8
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = the_purge_osm }
+		
+		available = {
+			has_government = monarchism 
+		}
+		
+		completion_reward = {
+			set_country_flag = army_purged_OSM
+			add_ideas = reorganize_army_focus
+		}
+	}
+	
+	focus = {
+		id = companies_universities_purged_osm
+		icon = GFX_goal_generic_attack_allies
+		x = 10
+		y = 8
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = the_purge_osm }
+		
+		available = {
+			has_government = monarchism 
+		}
+		
+		completion_reward = {
+			set_country_flag = companies_universities_purged_OSM
+			add_ideas = companies_universities_purged_focus
+		}
+	}
+	
+	focus = {
+		id = persecution_of_rebels_osm
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 11
+		y = 9 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = suppress_ethnical_conflict_osm }
+		prerequisite = { focus = reorganize_army_osm }
+		prerequisite = { focus = companies_universities_purged_osm }
+		
+		available = {
+			has_government = monarchism 
+		}
+		
+		completion_reward = {
+			set_country_flag = persecution_of_rebels_osm
+			add_ideas = persecution_of_rebels_focus
+		}
+	}
+	
+	focus = {
+		id = ottoman_imperialism_osm
+		icon = GFX_goal_demand_sudetenland
+		x = 9 
+		y = 10 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = persecution_of_rebels_osm }
+		mutually_exclusive = { focus = proclaim_pan_turkism_osm }
+		
+		available = {
+			is_puppet = no
+		}
+		
+		completion_reward = {
+      unlock_decision_category_tooltip = war_plans_osm
+			add_political_power = 100
+			if = {
+				limit = {
+					OSM = { is_in_faction_with = GER }
+					has_war = no
+					has_civil_war = no
+					GER = { is_faction_leader = yes }
+				}
+				custom_effect_tooltip = relation_to_GER
+			}
+		}
+	}
+	
+	focus = {
+		id = proclaim_pan_turkism_osm
+		icon = GFX_goal_support_fascism
+		x = 13
+		y = 10 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = persecution_of_rebels_osm }
+		mutually_exclusive = { focus = ottoman_imperialism_osm }
+		
+		available = {
+			is_puppet = no
+			OR = {
+				has_government = monarchism
+				has_government = fascism
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = pan_turkism_focus_osm
+      hidden_effect = {
+        remove_ideas = side_with_monarchy_focus
+      }
+			if = {
+				limit = { OSM = { NOT = { is_in_faction_with = GER }}}
+				add_state_claim = 137
+				add_state_claim = 771
+			}
+			add_state_claim = 230
+			add_state_claim = 229
+			add_state_claim = 231
+			add_state_claim = 776
+			add_state_claim = 232
+			add_state_claim = 419
+			add_state_claim = 420
+			add_state_claim = 584
+			add_state_claim = 587
+			add_state_claim = 585
+			add_state_claim = 405
+			add_state_claim = 586
+			add_state_claim = 742
+			add_state_claim = 732
+			add_state_claim = 266
+			if = {
+				limit = { threat < 0.3 }
+				add_named_threat = { threat = 2 name = pan_turkism }
+			}
+		}
+	}
+	
+	focus = {
+		id = turkestanian_question_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 12
+		y = 12
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = subjugate_persia_osm }
+		
+		available = {
+			TUK = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			OSM = {
+				country_event = { id = aw_osm.56 hours = 6 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ultimatum_tcr_osm
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 14
+		y = 11 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = proclaim_pan_turkism_osm }
+		
+		available = {
+			is_puppet = no
+			TCR = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			TCR = { country_event = { id = aw_osm.50 hours = 12 }}
+		}
+	}
+	
+	focus = {
+		id = occupation_kuban_osm
+		icon = GFX_goal_generic_political_pressure
+		x = 14
+		y = 12 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = ultimatum_tcr_osm }
+		
+		available = {
+			is_puppet = no
+			KBN = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			KBN = { country_event = { id = aw_osm.63 hours = 2 }}
+		}
+	}
+	
+	focus = {
+		id = ultimatum_on_arabia_osm
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 11 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = ottoman_imperialism_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			SAU = {
+				exists = yes
+				is_puppet = no
+				is_in_faction = no
+			}
+		}
+		
+		completion_reward = {
+			SAU = { country_event = { id = aw_osm.1 hours = 12 } }
+		}
+	}
+	
+	focus = {
+		id = ultimatum_on_oman_osm
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 11 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = ottoman_imperialism_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			OMA = {
+				exists = yes
+				is_puppet = no
+				is_in_faction = no
+			}
+		}
+		
+		completion_reward = {
+			OMA = { country_event = { id = aw_osm.24 hours = 12 } }
+		}
+	}
+	
+	focus = {
+		id = subjugate_persia_osm
+		icon = GFX_goal_generic_political_pressure
+		x = 12
+		y = 11
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = proclaim_pan_turkism_osm }
+#		mutually_exclusive = { focus = war_with_persia_osm }
+		
+		available = {
+			PER = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			PER = {
+				country_event = { id = aw_osm.53 hours = 2 }
+			}
+		}
+	}
+	
+	focus = {
+		id = demand_egypt_osm
+		icon = GFX_goal_generic_territory_or_war
+		x = 9 
+		y = 12 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0.5
+				OSM = { has_war = yes }
+			}
+		}
+		
+		prerequisite = { focus = ottoman_imperialism_osm }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			ENG = {
+				exists = yes
+				NOT = { is_in_faction_with = OSM }
+				NOT = { has_war_with = OSM }
+				owns_state = 446
+				owns_state = 447
+				owns_state = 457
+				owns_state = 456
+				owns_state = 552
+			}
+		}
+		
+		completion_reward = {
+			ENG = {
+				country_event = { id = aw_osm.27 hours = 12 }
+			}
+			hidden_effect = {
+				add_state_claim = 446
+				add_state_claim = 447  
+				add_state_claim = 456
+				add_state_claim = 457
+				add_state_claim = 552
+			}
+		}
+	}
+	
+	focus = {
+		id = economical_reform_osm
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 17
+		y = 0
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		available = {
+			has_completed_focus = reformation_osm
+		}
+		
+		completion_reward = {
+			add_ideas = economical_reform_focus
+		}
+	}
+	
+	focus = {
+		id = extensive_reforms_osm
+		icon = GFX_goal_generic_demand_territory
+		x = 11 
+		y = 2 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 4 
+		}
+		
+		prerequisite = { focus = infrastructure_resolve_conflict_osm }
+		
+		available = {
+			has_government = neutrality
+		}
+		
+		completion_reward = {
+#			add_political_power = 100
+			add_ideas = extensive_reforms_focus_osm
+		}
+	}
+	
+	focus = {
+		id = defend_libya_osm
+		icon = GFX_goal_generic_construct_military
+		x = 11 
+		y = 3
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = extensive_reforms_osm }
+		
+		available = {
+			has_government = neutrality
+			owns_state = 448
+			controls_state = 448
+			owns_state = 661
+			controls_state = 661
+			owns_state = 450
+			controls_state = 450
+			owns_state = 451
+			controls_state = 451
+			owns_state = 663
+			controls_state = 663
+		}
+		
+		completion_reward = {
+			448 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12039
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 1149
+					instant_build = yes
+				}
+			}
+			661 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10067
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7154
+					instant_build = yes
+				}
+			}
+			450 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11954
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 11954
+					instant_build = yes
+				}
+			}
+			451 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 1130
+					instant_build = yes
+				}
+			}
+			452 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11967
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12091
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = build_up_yemen_osm
+		icon = GFX_goal_generic_construction2
+		x = 11
+		y = 4 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3 
+		}
+		
+		prerequisite = { focus = defend_libya_osm }
+		
+		available = {
+			has_government = neutrality
+			owns_state = 293
+			controls_state = 293
+		}
+		
+		completion_reward = {
+			293 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 10840
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10840
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 10840
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_manpower = 50000
+			}
+			659 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 5074
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 5074
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_manpower = 50000
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_resolve_conflict_osm
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = economical_reform_osm }
+		mutually_exclusive = { focus = infrastructure_democratic_osm }
+		mutually_exclusive = { focus = german_investments_osm }
+		x = 15
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		available = {
+			has_completed_focus = side_with_atatuerk_osm
+			has_government = neutrality
+		}
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 2
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialization_resolve_conflict_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 13
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = infrastructure_resolve_conflict_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialization_resolve_conflict_2_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 13
+		y = 3 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = industrialization_resolve_conflict_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					region = 129
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = production_resolve_conflict_osm
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15 
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = infrastructure_resolve_conflict_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					region = 129 
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					region = 129 
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = production_resolve_conflict_2_osm
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15 
+		y = 3
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = production_resolve_conflict_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					region = 129 
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					region = 129 
+					NOT = {
+						state = 350
+						state = 352
+						state = 353
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = expand_industry_osm
+		icon = GFX_goal_generic_production2
+		x = 13
+		y = 4
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = industrialization_resolve_conflict_2_osm }
+		
+		completion_reward = {
+			add_ideas = expand_industry_focus
+		}
+	}
+	
+	focus = {
+		id = oil_extraction_osm
+		icon = GFX_goal_generic_oil_refinery
+		x = 15
+		y = 4 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = production_resolve_conflict_2_osm }
+		
+		available = {
+			owns_state = 662
+			controls_state = 662
+			owns_state = 273
+			controls_state = 273
+		}
+		
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 662
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 273
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_democratic_osm
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = economical_reform_osm }
+		mutually_exclusive = { focus = infrastructure_resolve_conflict_osm }
+		mutually_exclusive = { focus = german_investments_osm }
+		x = 17
+		y = 1
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = side_with_atatuerk_osm
+					has_completed_focus = side_with_monarchy_osm
+				}
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 2
+					}
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_completed_focus = side_with_atatuerk_osm
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialization_democratic_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 17
+		y = 2 
+		cost = 21.43
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = side_with_atatuerk_osm
+					has_completed_focus = side_with_monarchy_osm
+					has_completed_focus = state_reform_osm
+				}
+			}
+		}
+		
+		prerequisite =  { focus = infrastructure_democratic_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialization_democratic_2_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 17
+		y = 3 
+		cost = 21.43
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite =  { focus = industrialization_democratic_osm }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = oil_extraction_2_osm
+		icon = GFX_goal_generic_oil_refinery
+		x = 17
+		y = 4 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = industrialization_democratic_2_osm }
+		
+		bypass = {
+			NOT = {
+				OR = {
+					owns_state = 273
+					controls_state = 273
+					owns_state = 769
+					controls_state = 769
+				}
+			}
+		}
+		
+		available = {
+			owns_state = 273
+			controls_state = 273
+			owns_state = 769
+			controls_state = 769
+		}
+		
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 273
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 769
+			}
+		}
+	}
+	
+	focus = {
+		id = german_investments_osm 	 #ask germany for help
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 19
+		y = 1 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = economical_reform_osm }
+		mutually_exclusive = { focus = infrastructure_resolve_conflict_osm }
+		mutually_exclusive = { focus = infrastructure_democratic_osm }
+		
+		available = {
+			has_completed_focus = side_with_monarchy_osm
+			has_government = monarchism
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = { idea = german_investments_focus_osm days = 365 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+				category = construction_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = bagdad_bahn_osm
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 19
+		y = 2 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = german_investments_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			340 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			343 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			346 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			344 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			350 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			676 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			291 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = oil_extraction_3_osm
+		icon = GFX_goal_generic_oil_refinery
+		x = 21
+		y = 2 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = german_investments_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+			NOT = {
+				OR = {
+					owns_state = 273
+					controls_state = 273
+					owns_state = 676
+					controls_state = 676
+					owns_state = 769
+					controls_state = 769
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+			owns_state = 273
+			controls_state = 273
+			owns_state = 676
+			controls_state = 676
+			owns_state = 769
+			controls_state = 769
+		}
+		
+		completion_reward = {
+			add_ideas = oil_extraction_focus_osm
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 273
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 676
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 769
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialize_middle_east_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 3 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = bagdad_bahn_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					region = 28
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					region = 28
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = industrialize_middle_east_2_osm
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 4 
+		cost = 10.715 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = industrialize_middle_east_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					region = 28
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					region = 28
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = further_german_investments_osm
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 21
+		y = 3 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = oil_extraction_3_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = rapid_industrialization_focus_osm
+		}
+	}
+	
+	focus = {
+		id = further_german_investments_2_osm
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 21
+		y = 4 
+		cost = 10.715
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = further_german_investments_osm }
+		
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = OSM
+				}
+			}
+		}
+		
+		available = {
+			GER = {
+				has_opinion = { target = OSM value > 99 }
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = OSM }
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = production_capacity_focus_osm
+		}
+	}
+	
+	focus = {
+		id = more_universities_osm
+		icon = GFX_focus_research
+		x = 17
+		y = 5
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = oil_extraction_osm focus = expand_industry_osm focus = oil_extraction_2_osm focus = industrialize_middle_east_2_osm focus = further_german_investments_2_osm }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = reform_army_osm
+		icon = GFX_goal_generic_build_tank
+		x = 25
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		available = {
+			OR = {
+				has_completed_focus = state_reform_osm
+				has_completed_focus = side_with_atatuerk_osm 
+				has_completed_focus = side_with_monarchy_osm
+			}
+		}
+		
+		completion_reward = {
+			army_experience = 25
+      add_command_power = 10
+		}
+	}
+  
+  focus = {
+		id = emergency_conscription_osm
+		icon = GFX_goal_generic_build_tank
+		x = 29
+		y = 2
+		cost = 5
+    
+    prerequisite = { focus = military_school_osm }
+		
+		ai_will_do = {
+			factor = 0.5 
+      modifier = {
+        factor = 5 
+        has_war = yes
+      }
+		}
+		
+		available = {
+			has_war = yes
+		}
+		
+		completion_reward = {
+			add_ideas = emergency_conscription_OSM
+			
+		}
+	}
+	
+	focus = {
+		id = kazim_orbay_osm
+		icon = GFX_goal_generic_demand_territory
+		x = 23
+		y = 1
+		cost = 20 
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = reform_army_osm }
+		mutually_exclusive = { focus = abdurrahman_gurman_osm }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = abdurrahman_gurman_osm
+		icon = GFX_goal_generic_demand_territory
+		x = 25
+		y = 1 
+		cost = 20 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = { focus = reform_army_osm }
+		mutually_exclusive = { focus = kazim_orbay_osm }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				category = naval_air
+			}
+		}
+	}
+	
+	focus = {
+		id = military_school_osm
+		icon = GFX_goal_generic_small_arms
+		x = 27
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = reform_army_osm }
+		
+		completion_reward = {
+			add_ideas = military_school_osm_focus
+		}
+	}
+	
+	focus = {
+		id = naval_effort_osm
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 29
+		y = 1 
+		cost = 10.715 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = reform_army_osm }
+		
+		completion_reward = {
+			add_ideas = naval_effort_focus_osm
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+						region = 129
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						dockyard > 0
+						region = 129
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						region = 129
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = military_education_osm
+		icon = GFX_goal_support_fascism
+		x = 27
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = military_school_osm }
+		
+		available = {
+			has_completed_focus = reorganize_army_osm
+		}
+		
+		completion_reward = {
+			add_ideas = military_education_osm_focus
+		}
+	}
+	
+	focus = {
+		id = research_effort_osm
+		icon = GFX_focus_research
+		x = 25
+		y = 3
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+		prerequisite = { focus = kazim_orbay_osm focus = abdurrahman_gurman_osm }
+		prerequisite = { focus = military_school_osm }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = air_doctrine_osm
+		icon = GFX_goal_generic_army_doctrines
+		x = 23
+		y = 4 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = research_effort_osm }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			air_experience = 20
+		}
+	}
+	
+	focus = {
+		id = army_doctrine_osm
+		icon = GFX_goal_generic_army_doctrines
+		x = 25
+		y = 4 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = research_effort_osm }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = navy_doctrine_osm
+		icon = GFX_goal_generic_build_navy
+		x = 27 
+		y = 4 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = research_effort_osm }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 20
+		}
+	}
+	
+	
+	
+}

@@ -1,0 +1,457 @@
+﻿division_template = {
+	name = "Piyade Tümeni"  			# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Dag Tugayi" 				# Mountain Brigade
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Bogazi Tugay" 				# Fortress Brigade - garrison brigade, lower experience and equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Süvari Tümeni" 				# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	division = {
+		name = "4. Dag Tugayi"
+		location = 10403
+		division_template = "Dag Tugayi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+
+	}
+	division = {
+		name = "1. Piyade Tümeni"
+		location = 1599
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "2. Piyade Tümeni"
+		location = 1599
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "3. Piyade Tümeni"
+		location = 1599
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4. Piyade Tümeni"
+		location = 4206
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "5. Piyade Tümeni"
+		location = 4206
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "6. Piyade Tümeni"
+		location = 2097
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "7. Piyade Tümeni"
+		location = 2097
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "8. Piyade Tümeni"
+		location = 11954
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "1. Süvari Tümeni"
+		location = 10840
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "2. Süvari Tümeni"
+		location = 5074
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "3. Süvari Tümeni"
+		location = 12883
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4. Süvari Tümeni"
+		location = 4206
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "7. Süvari Tümeni"
+		location = 8085
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "16. Süvari Tümeni"
+		location = 1149
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "17. Süvari Tümeni"
+		location = 1130
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## VI. Kolordu ##
+
+	### Birinci Ordu ###
+	division = {
+		name = "11. Piyade Tümeni"
+		location = 9833
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## III. Kolordu ##
+	division = {
+		name = "1. Piyade Tümeni"
+		location = 11842
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "23. Piyade Tümeni"
+		location = 3893
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "24. Piyade Tümeni"
+		location = 11842
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	### Ikinci Ordu Ordu ###
+	division = {
+		name = "39. Dag Tugayi"
+		location = 947
+		division_template = "Dag Tugayi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## I. Kolordu ##
+	division = {
+		name = "6. Piyade Tümeni"
+		location = 4112
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "16. Piyade Tümeni"
+		location = 4112
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "Çanakkale Bogazi Tugay"
+		location = 4112
+		division_template = "Bogazi Tugay"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "OSM" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	## II.  Kolordu ##
+	division = {
+		name = "4. Piyade Tümeni"
+		location = 849
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "18. Dag Tugayi"
+		location = 849
+		division_template = "Dag Tugayi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## V. Kolordu ##
+	division = {
+		name = "5. Piyade Tümeni"
+		location = 947
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "25. Piyade Tümeni"
+		location = 947
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Üçüncüsü Ordu ###
+	## VII. Kolordu ##
+	division = {
+		name = "2. Piyade Tümeni"
+		location = 4512
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "10. Piyade Tümeni"
+		location = 4512
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## VIII. Kolordu ##
+	division = {
+		name = "12. Piyade Tümeni"
+		location = 11894
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "15. Piyade Tümeni"
+		location = 11894
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## IX. Kolordu ##
+	division = {
+		name = "3. Piyade Tümeni"
+		location = 10403
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "9. Piyade Tümeni"
+		location = 10472
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "1. Süvari Tümeni"
+		location = 10472
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	##### NAVAL UNITS #####
+	### Türk Donanmasi ###
+	navy = {				
+		name = "Türk Donanmasi"			
+		base = 4112 
+		location = 4112 # Izmir
+		ship = { name = "TCG Yavuz" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = OSM } } }	
+		ship = { name = "TCG Izmir" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Mecidiye" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Hamidiye" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Ankara" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Adana" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Peyk" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Berk" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG Kocatepe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OSM create_if_missing = yes } } }
+		ship = { name = "TCG Adatepe" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = OSM create_if_missing = yes } } }
+		ship = { name = "TCG Zafer" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = OSM create_if_missing = yes } } }
+		ship = { name = "TCG Tinaztepe" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = OSM create_if_missing = yes } } }
+		ship = { name = "TCG Adrianopel" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OSM create_if_missing = yes } } }
+		ship = { name = "TCG Konya" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OSM create_if_missing = yes } } }
+	}				
+	navy = {				
+		name = "Filotilla Denizalti Kücük"			
+		base = 11894 
+		location = 11894 # Samsun
+		ship = { name = "TCG Birinci Inönü" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM } } }		
+		ship = { name = "TCG Ikinci Inönü" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM } } }		
+		ship = { name = "TCG Dumlupinar" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM version_name = "Dumlupinar Class" } } }
+		ship = { name = "TCG Sakarya" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM version_name = "Dumlupinar Class" } } }
+		ship = { name = "TCG Gür" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM version_name = "Dumlupinar Class" } } }
+		ship = { name = "TCG U-Boot 2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM } } }
+		ship = { name = "TCG U-Boot 1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OSM } } }
+	}				
+}
+
+
+### Air Wings ###
+air_wings = {
+	##### Türk Hava Kuvvetleri #####
+	341 = { 
+		# 1. Havacilik Alay -- Curtiss F11C Hawk II fighters (technically CAG fighters)
+		fighter_equipment_0 = {
+			owner = "OSM" 
+			amount = 54
+		}
+		# 2. Havacilik Alay -- Letov S.16T light bombers
+		CAS_equipment_1 = {
+			owner = "OSM" 
+			amount = 42
+		}
+	}
+	350 = {
+		fighter_equipment_0 = {
+			owner = "OSM" 
+			amount = 56
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "OSM" 
+			amount = 48
+		}
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "OSM"
+		}
+		requested_factories = 5
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "OSM"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "OSM"
+		}
+		requested_factories = 1
+		progress = 0.47
+		efficiency = 100
+	}
+	
+	### Ships Under Contruction ###
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "OSM" 
+		}
+		requested_factories = 3
+		progress = 0.9
+		amount = 8
+	}
+}

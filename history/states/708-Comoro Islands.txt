@@ -1,0 +1,27 @@
+state={
+	id=708
+	name="STATE_708"
+	manpower = 126703
+
+	state_category = small_island
+	
+	resources={
+		tungsten=8
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			13072 = {
+				naval_base = 1
+			}
+		}
+		
+		add_core_of = FSO
+	}
+
+	provinces={
+		13072 
+	}
+}

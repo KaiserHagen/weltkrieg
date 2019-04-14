@@ -1,0 +1,227 @@
+ideas = {
+
+	press_law = { 
+		law = yes
+		
+		war_propaganda = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = monarchism
+					has_government = neutrality
+					AND = {
+						has_government = democratic
+						threat > 0.8
+					}
+					has_war = yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 1
+					has_war = yes
+				}
+			}
+
+			modifier = { 
+				justify_war_goal_time = -0.3
+				army_morale_factor = 0.08
+				conscription = 0.005
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		propaganda = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					AND = {
+						has_government = democratic
+						has_war = yes
+						surrender_progress > 0.40
+					}
+					AND = {
+						OR = {
+							has_government = neutrality
+							has_government = monarchism
+						}
+						has_war = yes
+					}
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+				
+				modifier = {
+					factor = 5 
+					
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+				modifier = {
+					factor = 2
+					
+					surrender_progress > 0.40
+					has_government = democratic
+					has_war = yes
+				}
+				modifier = {
+					factor = 2
+					
+					OR = {
+						has_government = neutrality
+						has_government = monarchism
+					}
+					has_war = yes
+				}
+			}
+
+			modifier = { 
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				stability_weekly = 0.001
+				political_power_factor = -0.10
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		censored_press = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+				
+				modifier = {
+					factor = 1 
+					
+					OR = {
+						has_government = monarchism
+						has_government = neutrality
+					}
+					has_war = yes
+				}
+				modifier = {
+					factor = 5 
+					
+					OR = {
+						has_government = monarchism
+						has_government = neutrality
+					}
+					has_war = no
+				}
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				drift_defence_factor = 0.25
+				research_speed_factor = -0.05
+			}
+			
+
+			cancel_if_invalid = no
+		}
+		
+		free_press = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				NOT = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+				
+				modifier = {
+					factor = 0.5
+					has_government = monarchism
+				}
+				
+				modifier = {
+					factor = 1
+					has_government = neutrality
+				}
+				
+				modifier = {
+					factor = 50
+					has_government = democratic
+					has_war = no
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				drift_defence_factor = -0.3
+				opinion_gain_monthly_factor = 0.1
+				research_speed_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			default = yes
+		}
+		
+		resistance_press = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						surrender_progress > 0.1
+					}
+					has_capitulated = yes
+				}
+				
+			}
+			
+			ai_will_do = {
+				factor = 0
+				
+				modifier = {
+					factor = 5 
+					
+					is_major = no
+					surrender_progress > 0.45
+				}
+			}
+
+			modifier = {
+				partisan_effect = 0.4
+				subversive_activites_upkeep = -0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

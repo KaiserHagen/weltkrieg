@@ -1,0 +1,39 @@
+
+state={
+	id=291
+	name="STATE_291"
+	manpower = 1909165
+	
+	state_category = city
+	
+	resources={
+		oil=14
+		
+	}
+
+	history={
+		owner = OSM
+		victory_points = {
+			2097 10
+		}
+		victory_points = {
+			2089 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 2 
+			air_base = 4
+			
+			2089 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = OSM
+		add_core_of = IRQ
+	}
+
+	provinces={
+		78 2004 2089 2097 7977 7994 8001 10876 12046 12726 12855 
+	}
+}

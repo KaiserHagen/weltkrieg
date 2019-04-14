@@ -1,0 +1,52 @@
+German_alternate_aggressive = {
+	name = "German Aggressive Path"
+	desc = ""
+
+	enable = {
+		original_tag = GER
+		OR = {
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = AGGRESSIVE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		aggressive_policy_ger
+    planungsphase1_ger
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

@@ -1,0 +1,27 @@
+
+state={
+	id=787
+	name="STATE_787"
+	resources={
+		aluminium=8.000
+	}
+
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = HUN
+		add_core_of = USG
+	}
+
+	provinces={
+		646 679 6643 6670 6700 9621 11625 
+	}
+	manpower=1854900
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

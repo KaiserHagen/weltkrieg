@@ -1,0 +1,101 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+add_namespace = aw_tcr
+
+
+################### Transcaucasian Republic ######################
+
+# Ottoman Civilwar // occupy Georgia?
+country_event = {
+	id = aw_tcr.1
+	title = aw_tcr.1.t
+	desc = aw_tcr.1.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = ottoman_civil_war
+		tag = TCR
+		TCR = { is_puppet = no }
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 10	
+	}
+	
+	# Occupy
+	option = {
+		name = aw_tcr.1.a # 
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 
+				TCR = {
+					OR = {
+						is_puppet = yes
+						has_war = yes
+						has_civil_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100 
+				TCR = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					has_war = no
+					has_civil_war = no
+					is_puppet = no
+				}
+			}
+		}
+		TCR = {
+			transfer_state = 231
+			add_state_core = 231
+			news_event = { id = aw_news.26 hours = 12 }
+		}
+		add_political_power = -100
+		add_manpower = -10000
+	}
+	# keep out
+	option = {
+		name = aw_tcr.1.b 
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100 
+				TCR = {
+					OR = {
+						is_puppet = yes
+						has_war = yes
+						has_civil_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0 
+				TCR = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					has_war = no
+					has_civil_war = no
+					is_puppet = no
+				}
+			}
+		}
+		hidden_effect = {
+			OSM = {
+				random_list = {
+					80 = { country_event = { id = aw_osm.49 days = 10 } }
+					20 = {  }
+				}
+			}
+		}
+	}
+}

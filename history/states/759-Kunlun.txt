@@ -1,0 +1,25 @@
+
+state={
+	id=759
+	name="STATE_759"
+	manpower = 67900
+	
+	state_category = rural
+	
+	resources={
+		
+	}
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = AST
+	}
+
+	provinces={
+		1511 1540 2201 4645 5125 8152 10971 12323
+	}
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=774
+	name="STATE_774" # Northern Dobruja
+	manpower = 1311400
+
+	state_category = town
+	
+	resources={
+		steel=4
+	}
+
+	history={
+		owner = ROM
+		victory_points = { 657 3 }
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			
+			657 = {
+				naval_base = 8
+			}
+			687 = {
+				naval_base = 1
+			}
+			dockyard = 1
+		}
+		add_core_of = ROM
+		add_core_of = BUL
+	}
+
+	provinces={
+		657 687 3076 9635 
+	}
+}

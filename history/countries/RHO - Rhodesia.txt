@@ -1,0 +1,53 @@
+﻿capital = 765
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_convoys = 0
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		monarchism = {
+			popularity = 100
+		}
+		
+		communism = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = monarchism
+	last_election = "1931.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = " Léopold Sédar Senghor"
+	desc = "POLITICS_LEOPOLD_SEDAR_SENGHOR_DESC"
+	picture = "gfx/leaders/FSW/Portrait_FSW_Leopold_Sedar_Senghor.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+add_ideas = {
+	strong_population_growth
+}

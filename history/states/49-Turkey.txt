@@ -1,0 +1,32 @@
+
+state={
+	id=49
+	name="STATE_49" # Ankara
+	manpower = 870758
+	resources={
+		chromium=16
+	}
+	
+	state_category = large_town
+
+	history={
+		owner = OSM
+		
+		victory_points = {
+			11747 25 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 3
+			
+		}
+		add_core_of = OSM
+		add_core_of = TUR
+	}
+
+	provinces={
+		804 909 3907 3951 6808 6908 6925 9806 9901 11747 11784 
+	}
+}

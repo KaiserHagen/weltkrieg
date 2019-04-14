@@ -1,0 +1,96 @@
+﻿capital = 105 # Montenegro
+
+oob = "MNT_1936"
+
+set_research_slots = 2
+
+# Starting tech
+# clone of Yugoslavia
+set_technology = {
+	tech_support = 1
+	
+	tech_engineers = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+}
+add_ideas = {
+	censored_press
+}
+
+set_convoys = 5
+set_stability = 0.65
+set_war_support = 0.20
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 7
+		}
+
+		fascism = {
+			popularity = 3
+		}
+		
+		communism = {
+			popularity = 2
+			#banned = no #default is no
+		}
+		
+		monarchism = { 
+			popularity = 88
+		}
+	}
+	
+	ruling_party = monarchism
+	last_election = "1935.5.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_conscription
+	civilian_economy
+}
+
+create_country_leader = {
+	name = "Sekula Drljević"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Danilo I."
+	desc = ""
+	picture = "Portrait_Montenegro_Danilo_I.dds"
+	expire = "1953.3.1"
+	ideology = absolutism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Blažo Jovanović"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	expire = "1953.3.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+

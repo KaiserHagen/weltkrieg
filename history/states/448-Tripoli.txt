@@ -1,0 +1,35 @@
+
+state={
+	id=448
+	name="STATE_448"
+	manpower = 469736
+	
+	state_category = town
+	
+	resources={
+		oil=8
+		
+	}
+
+	history={
+		owner = OSM
+		
+		victory_points = {
+			1149 10 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 6
+			arms_factory = 1 
+			1149 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = LBA
+		add_core_of = OSM
+	}
+
+	provinces={
+		1118 1149 1189 4194 7066 7209 9980 11957 12039 
+	}
+}

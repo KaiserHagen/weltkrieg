@@ -1,0 +1,51 @@
+#################
+#### GERMANY ####
+#################
+
+german_african_colonies = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = GER
+  }
+  
+	visible = {
+		has_completed_focus = reorganisation_of_african_colonies_ger
+	}
+}
+
+war_plans_ger = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = GER
+  }
+  
+	visible = {
+		has_completed_focus = war_plans_ger
+	}
+}
+
+aggressive_policy_actions = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = GER
+  }
+  
+	visible = {
+		has_country_flag = aggressive_policy_actions
+	}
+}
+
+annexations_ger = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = GER
+  }
+  
+	visible = {
+		has_completed_focus = weltmachtstreben_ger
+	}
+}

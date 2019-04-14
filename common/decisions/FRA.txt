@@ -1,0 +1,677 @@
+political_actions = {
+
+	# 
+	purge_communists = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			has_completed_focus = support_the_fascists_fra
+      communism > 0.10
+      has_government = fascism
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			has_completed_focus = support_the_fascists_fra
+		}
+    modifier = {
+			communism_drift = -0.05
+      stability_weekly = 0.003
+		}
+	
+		days_remove = 200
+		
+	}
+  
+  purge_fascists = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			has_completed_focus = support_the_communists_fra
+      fascism > 0.10
+      has_government = communism
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			has_completed_focus = support_the_communists_fra
+		}
+
+		modifier = {
+			fascism_drift = -0.05
+      stability_weekly = 0.003
+		}
+	
+		days_remove = 200
+	}
+}
+
+french_west_africa = {
+
+	# 
+	establish_fwa = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			FRA = {
+				controls_state = 459
+				owns_state = 459
+				controls_state = 460
+				owns_state = 460
+				controls_state = 458
+				owns_state = 458
+				controls_state = 513
+				owns_state = 513
+				controls_state = 665
+				owns_state = 665
+				controls_state = 514
+				owns_state = 514
+				controls_state = 557
+				owns_state = 557
+				controls_state = 515
+				owns_state = 515
+				controls_state = 767
+				owns_state = 767
+				controls_state = 766
+				owns_state = 766
+				controls_state = 556
+				owns_state = 556
+				controls_state = 756
+				owns_state = 756
+				controls_state = 757
+				owns_state = 757
+				controls_state = 272
+				owns_state = 272
+				controls_state = 783
+				owns_state = 783
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+      modifier = {
+        factor = 1 
+        has_war = yes
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			country_event = { id = aw_fra.28 hours = 12 }
+		}
+		
+	}
+  
+  industrialize_algeria = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			FRA = {
+				controls_state = 460
+				owns_state = 460
+				controls_state = 459
+				owns_state = 459
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+      modifier = {
+        factor = 5 
+        has_war = yes
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      459 = {
+        add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+        add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+      }
+			460 = {
+        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+      }
+		}
+		
+	}
+}
+
+FRA_war_plans = {
+
+	# 
+	war_with_britain_fra = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			ENG = {
+				exists = yes
+				NOT = { is_in_faction_with = FRA }
+				NOT = { is_puppet_of = FRA }
+			}
+			
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no 
+        OR = {
+          AND = {
+            FRA = { has_government = fascism }
+            ENG = { NOT = { has_government = fascism } }
+            
+          }
+          FRA = { has_government = communism }
+        }
+        NOT = { GER = { has_idea = german_supremacy }}
+        has_army_manpower = { size > 999999 }
+        has_navy_size = { size > 150 }
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = ENG
+ 				generator = { 123 127 558 700 446 118 116 549 752 551 552 456 457 446 447 687 }
+ 			}
+		}
+		
+	}
+  
+  war_with_germany_fra = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			GER = {
+				exists = yes 
+				NOT = {
+					is_in_faction_with = FRA
+					is_puppet_of = FRA
+				}
+				
+			}
+			
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        is_historical_focus_on = no
+        has_war = no
+        has_army_manpower = { size > 999999 }
+      }
+      modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+				date > 1940.1.1
+        has_war = no
+        has_army_manpower = { size > 999999 }
+			}
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = take_state_focus
+ 				target = GER
+ 				generator = {  }
+ 			}
+		}
+		
+	}
+  
+  war_with_comintern_fra = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			NOT = { GER = { has_idea = german_supremacy } }
+			SOV = {
+				exists = yes 
+				NOT = { is_in_faction_with = FRA }
+        NOT = { is_puppet_of = FRA }
+			}
+			OR = {
+				any_country = {
+					is_in_faction_with = FRA
+					is_neighbor_of = SOV
+				}
+				FRA = {
+					is_neighbor_of = SOV
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 3 
+        is_historical_focus_on = no
+        has_war = no
+        has_army_manpower = { size > 999999 }
+      }
+      modifier = {
+				factor = 3
+				is_historical_focus_on = yes
+				date < 1942.1.1
+        has_war = no
+        has_army_manpower = { size > 999999 }
+			}
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = SOV
+ 			}
+		}
+		
+	}
+}
+
+maginot_line = {
+
+	# 
+	northern_extension_maginot = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			FRA = {
+				has_full_control_of_state = 29
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+      modifier = {
+        factor = 6 
+        BEL = {
+          OR = {
+            is_in_faction_with = GER
+            is_puppet_of = GER
+          }
+        }
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			29 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3447
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11606
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11483
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 575
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+  
+  southern_extension_maginot = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			FRA = {
+				has_full_control_of_state = 17
+        has_full_control_of_state = 20
+        has_full_control_of_state = 735
+        has_full_control_of_state = 785
+        has_full_control_of_state = 786
+			}
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+      modifier = {
+        factor = 6 
+        OR = {
+          AND = {
+            FRA = { has_government = communism }
+            ITA = { has_government = fascism }
+          }
+          AND = {
+            FRA = { has_government = fascism }
+            ITA = { has_government = communism }
+          }
+          AND = {
+            FRA = {
+              OR = {
+                has_government = fascism
+                has_government = communism
+              }
+            }
+            ITA = { has_government = democratic }
+          }
+          AND = {
+            FRA = {
+              has_government = democratic
+            }
+            ITA = {
+              OR = {
+                has_government = fascism
+                has_government = communism
+              }
+            }
+          }
+        }
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      17 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3646
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3666
+					instant_build = yes
+				}
+			}
+			20 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6668
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6639
+					instant_build = yes
+				}
+			}
+			785 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 778
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9745
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9603
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11573
+					instant_build = yes
+				}
+			}
+			786 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6975
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3959
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9909
+					instant_build = yes
+				}
+			}
+			735 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3764
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 764
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+  strengthen_main_line = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = FRA
+		}
+
+		available = {
+			FRA = {
+				has_full_control_of_state = 762
+        has_full_control_of_state = 18
+        has_full_control_of_state = 17
+			}
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+      
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      762 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 698
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 521
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11516
+					instant_build = yes
+				}
+			}
+			17 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11488
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9505
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6545
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3546
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9472
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+}

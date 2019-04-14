@@ -1,0 +1,11 @@
+bunker_ukr = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = UKR
+  }
+  
+	visible = {
+		has_completed_focus = new_economic_programm_ukr
+	}
+}

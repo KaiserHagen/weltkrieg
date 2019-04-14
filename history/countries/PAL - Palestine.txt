@@ -1,0 +1,82 @@
+﻿capital = 554
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+	gwtank = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 14
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		neutrality = {
+			popularity = 30
+		}
+		
+		monarchism = {
+			popularity = 56
+		}
+	}
+	
+	ruling_party = monarchism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Ahmed Hilmi Pasha"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_navy_1.dds"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Amin al-Husseini"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_fascism1.dds"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Prince Henry"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Britain_George_VI.dds"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bulus Farah"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_2.dds"
+	ideology = leninism
+	traits = {
+		#
+	}
+}

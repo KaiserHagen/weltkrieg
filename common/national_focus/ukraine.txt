@@ -1,0 +1,2365 @@
+focus_tree = {
+	id = ukraine_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	
+	default = no
+
+
+	focus = {
+		id = loyal_to_the_monarchy_ukr
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+			
+		}
+		
+		mutually_exclusive = { focus = side_with_radical_parties_ukr }
+		
+		completion_reward = {
+			add_ideas = loyal_to_the_monarchy_UKR
+		}
+	}
+	
+	focus = {
+		id = stabilize_the_country_ukr
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = loyal_to_the_monarchy_ukr }
+		
+		completion_reward = {
+			add_ideas = stabilize_the_country_UKR
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = domestic_reforms_ukr
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 5
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = stabilize_the_country_ukr }
+		
+		completion_reward = {
+			add_ideas = domestic_reforms_UKR
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = absolute_power_ukr
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = domestic_reforms_ukr }
+		mutually_exclusive = { focus = constitutional_power_ukr }
+		
+		completion_reward = {
+			custom_effect_tooltip = kaiserreich_ukraine
+			remove_country_leader_trait = red_prince
+			add_country_leader_trait = absolut_monarchist
+			set_cosmetic_tag = UKR_KAI
+			hidden_effect = {
+				news_event = { id = aw_news.31 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = constitutional_power_ukr
+		icon = GFX_goal_generic_support_monarchism
+		x = 2
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = domestic_reforms_ukr }
+		mutually_exclusive = { focus = absolute_power_ukr }
+		
+		completion_reward = {
+			add_ideas = constitutional_power_UKR
+		}
+	}
+	
+	focus = {
+		id = deradicalization_ukr
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 7
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		bypass = {
+			
+		}
+		
+		prerequisite = { focus = absolute_power_ukr focus = constitutional_power_ukr }
+		
+		completion_reward = {
+			remove_ideas = political_extremists_UKR
+		}
+	}
+	
+	focus = {
+		id = side_with_radical_parties_ukr
+		icon = GFX_focus_generic_support_the_left_right
+		x = 5
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		mutually_exclusive = { focus = loyal_to_the_monarchy_ukr }
+		
+		completion_reward = {
+			country_event = { id = aw_ukr.1 hours = 12 }
+		}
+	}
+	
+	focus = {
+		id = consolidate_power_ukr
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = side_with_radical_parties_ukr }
+		
+		available = {
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = reorganize_country_ukr
+		icon = GFX_goal_support_fascism
+		x = 4
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0
+				NOT = { has_government = fascism }
+			}
+		}
+		
+		prerequisite = { focus = consolidate_power_ukr }
+		
+		available = {
+			has_government = fascism
+		}
+		
+		completion_reward = {
+			add_ideas = reorganize_country_UKR
+		}
+	}
+	
+	focus = {
+		id = militarism_ukr
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = reorganize_country_ukr }
+		
+		available = {
+			has_government = fascism
+		}
+		
+		completion_reward = {
+			add_ideas = militarism_UKR
+		}
+	}
+	
+	focus = {
+		id = socialist_society_ukr
+		icon = GFX_goal_support_communism
+		x = 6
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0
+				NOT = { has_government = communism }
+			}
+		}
+		
+		prerequisite = { focus = consolidate_power_ukr }
+		
+		available = {
+			has_government = communism
+		}
+		
+		completion_reward = {
+			add_ideas = socialist_society_UKR
+		}
+	}
+	
+	focus = {
+		id = communist_militia_ukr
+		icon = GFX_goal_generic_military_sphere
+		x = 6
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		prerequisite = { focus = socialist_society_ukr }
+		
+		available = {
+			has_government = communism
+		}
+		
+		completion_reward = {
+			army_experience = 30
+			add_ideas = communist_militia_UKR
+		}
+	}
+	
+	focus = {
+		id = pursue_opponents_ukr
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 7
+		cost = 10
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = { focus = militarism_ukr focus = communist_militia_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = political_extremists_UKR }
+				remove_ideas = political_extremists_UKR
+				add_political_power = 75
+			}
+			if = {
+				limit = { NOT = { has_idea = political_extremists_UKR } }
+				add_political_power = 150
+			}
+		}
+	}
+	
+	focus = {
+		id = relation_to_major_neighbors_ukr
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 8
+		cost = 5
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 6
+				threat > 0.30
+			}
+		}
+		
+		prerequisite = { focus = deradicalization_ukr focus = pursue_opponents_ukr}
+		
+		available = {
+#			date > 1936.7.1
+#			OR = {
+#				has_completed_focus = absolute_power_ukr
+#				has_completed_focus = constitutional_power_ukr
+#				has_completed_focus = consolidate_power_ukr
+#			}
+		}
+		
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	
+	focus = {
+		id = relationship_with_germany_ukr
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 9
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = relation_to_major_neighbors_ukr }
+		
+		available = {
+			GER = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = UKR }
+			}
+		}
+		
+		completion_reward = {
+			country_event = { id = aw_ukr.4 }
+		}
+	}
+	
+	focus = {
+		id = relationship_with_uga_ukr
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 9
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = relation_to_major_neighbors_ukr }
+		
+		available = {
+			USG = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = UKR }
+			}
+		}
+		
+		completion_reward = {
+			country_event = { id = aw_ukr.12 }
+		}
+	}
+	
+	focus = {
+		id = relationship_with_soviet_ukr
+		icon = GFX_goal_generic_dangerous_deal
+		x = 4
+		y = 9
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = relation_to_major_neighbors_ukr }
+		
+		available = {
+			SOV = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = UKR }
+			}
+		}
+		
+		completion_reward = {
+			country_event = { id = aw_ukr.16 }
+		}
+	}
+	
+	focus = {
+		id = relationship_with_fra_ukr
+		icon = GFX_goal_generic_dangerous_deal
+		x = 6
+		y = 9
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = relation_to_major_neighbors_ukr }
+		
+		available = {
+#			UKR = {
+#				OR = {
+#					has_government = communism
+#					has_government = fascism
+#					is_neighbor_of = FRA
+#				}
+#			}
+			FRA = {
+				exists = yes
+				is_puppet = no
+				NOT = { has_war_with = UKR }
+			}
+		}
+		
+		completion_reward = {
+			country_event = { id = aw_ukr.29 }
+		}
+	}
+	
+	focus = {
+		id = new_economic_programm_ukr
+		icon = GFX_goal_generic_demand_territory
+		x = 18
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 8
+				has_war = yes
+			}
+		}
+		
+#		mutually_exclusive = { focus = new_military_programm_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+      unlock_decision_category_tooltip = bunker_ukr
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.33
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = industry_tech_bonus
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_effort_ukr
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 17
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		bypass = {
+			
+		}
+		
+		prerequisite = { focus = new_economic_programm_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr
+			}
+		}
+	}
+	
+	focus = {
+		id = infrastructure_effort_2_ukr
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 17
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		bypass = {
+			
+		}
+		
+		prerequisite = { focus = infrastructure_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr_2 }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr_2
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr_2 }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr_2
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr_2 }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr_2
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					infrastructure < 7
+					NOT = { has_state_flag = IF_ukr_2 }
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IF_ukr_2
+			}
+		}
+	}
+	
+	focus = {
+		id = support_industry_ukr
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = new_economic_programm_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = support_industry_2_ukr
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = support_industry_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = naval_build_up_ukr
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 21
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = new_economic_programm_ukr }
+		
+		available = {
+			owns_state = 192
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					UKR = { owns_state = 192 }
+				}
+				192 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = odessa_dockyards
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = extra_tech_slot_ukr
+		icon = GFX_focus_research
+		x = 18
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = infrastructure_effort_2_ukr }
+		prerequisite = { focus = support_industry_2_ukr }
+		prerequisite = { focus = armament_deal_2_ukr }
+		
+		available = {
+			num_of_factories > 50
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = armament_deal_ukr
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 7
+				OR = {
+					threat > 0.3
+					has_war = yes
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+		
+		prerequisite = { focus = new_economic_programm_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = armament_deal_2_ukr
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 16
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 7
+				OR = {
+					threat > 0.3
+					has_war = yes
+				}
+			}
+		}
+		
+		prerequisite = { focus = armament_deal_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = armament_deal_3_ukr
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 16
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 7
+				OR = {
+					threat > 0.3
+					has_war = yes
+				}
+			}
+		}
+		
+		prerequisite = { focus = armament_deal_2_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = weapons_deal_ukr
+		icon = GFX_goal_generic_military_sphere
+		x = 13
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 4
+				OR = {
+					has_government = fascism 
+					has_government = communism
+				}
+			}
+		}
+		
+		prerequisite = { focus = armament_deal_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = major_army_exercise_ukr
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 15
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				num_of_military_factories > 15
+			}
+		}
+		
+		prerequisite = { focus = armament_deal_ukr }
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+		}
+	}
+	
+	focus = {
+		id = claim_bessarabia_ukr
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 12
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_government = fascism
+			}
+		}
+		
+		prerequisite = { focus = weapons_deal_ukr }
+		
+		bypass = {
+			OR = {
+				owns_state = 78
+				78 = { is_claimed_by = UKR }
+			}
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = ROM }
+			OR = {
+				NOT = { owns_state = 78 }
+				NOT = { 78 = { is_claimed_by = UKR } }
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 78
+		}
+	}
+	
+	focus = {
+		id = claim_crimea_ukr
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 14
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 20
+			}
+		}
+		
+		prerequisite = { focus = weapons_deal_ukr }
+		
+		bypass = {
+			OR = {
+				owns_state = 137
+				137 = { is_claimed_by = UKR }
+			}
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = KRI }
+			OR = {
+				NOT = { owns_state = 137 }
+				NOT = { 137 = { is_claimed_by = UKR } }
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 137
+			add_state_claim = 782
+			if = {
+				limit = {
+					has_country_flag = antagonize_GER
+					GER = {
+						owns_state = 771
+					}
+				}
+				add_state_claim = 771
+			}
+			if = {
+				limit = {
+					KRI = { owns_state = 771 }
+				}
+				add_state_claim = 771
+			}
+		}
+	}
+	
+	focus = {
+		id = claims_on_poland_ukr
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 13
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 20
+			}
+		}
+		
+		prerequisite = { focus = weapons_deal_ukr }
+		
+		bypass = {
+			OR = {
+				AND = {
+					owns_state = 768
+					owns_state = 94
+				}
+				AND = {
+					768 = { is_claimed_by = UKR }
+					94 = { is_claimed_by = UKR }
+				}
+			}
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = POL }
+			OR = {
+				AND = {
+					NOT = { owns_state = 768 }
+					NOT = { owns_state = 94 }
+				}
+				AND = {
+					NOT = { 768 = { is_claimed_by = UKR } }
+					NOT = { 94 = { is_claimed_by = UKR } }
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 768
+			add_state_claim = 94
+		}
+	}
+	
+	focus = {
+		id = bessarabia_or_war_ukr
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 12
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				num_of_military_factories > 15
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 15
+			}
+		}
+		
+		prerequisite = { focus = claim_bessarabia_ukr }
+		prerequisite = { focus = major_army_exercise_ukr }
+		
+		bypass = {
+			OR = {
+				owns_state = 78
+				has_war_with = ROM
+			}
+		}
+		
+		available = {
+			ROM = { owns_state = 78 }
+			country_exists = ROM
+		}
+		
+		completion_reward = {
+			ROM = { country_event = { id = aw_ukr.26 hours = 6 } }
+		}
+	}
+	
+	focus = {
+		id = demand_crimea_ukr
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 14
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					GER = { owns_state = 137 }
+					KRI = { is_puppet_of = GER }
+				}
+				OR = {
+					NOT = {
+						any_country = {
+							is_major = yes
+							is_in_faction_with = UKR
+						}
+					}
+					UKR = { num_of_military_factories < 30 }
+				}
+			}
+		}
+		
+		prerequisite = { focus = claim_crimea_ukr }
+		prerequisite = { focus = major_army_exercise_ukr }
+		
+		bypass = {
+			owns_state = 137
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					KRI = { owns_state = 137 }
+					country_exists = KRI
+					NOT = { is_in_faction_with = KRI }
+				}
+				AND = {
+					GER = { owns_state = 137 }
+					country_exists = GER
+					NOT = { is_in_faction_with = GER }
+				}
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					KRI = {
+						owns_state = 137
+						is_puppet = no
+					}
+				}
+				KRI = { country_event = { id = aw_ukr.42 hours = 6 } }
+			}
+			if = {
+				limit = {
+					OR = {
+						GER = { owns_state = 137 }
+						KRI = {
+							is_puppet_of = GER
+							owns_state = 137
+						}
+					}
+				}
+				GER = { country_event = { id = aw_ukr.45 hours = 6 } }
+			}
+		}
+	}
+	
+	focus = {
+		id = demand_galizia_ukr
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 16
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 3
+				UKR = {
+					has_army_manpower = { size > 799999 }
+					OR = {
+						num_of_military_factories > 25
+						is_in_faction = yes
+					}
+				}
+				USG = { is_in_faction = no }
+			}
+			modifier = {
+				factor = 3
+				UKR = {
+					has_army_manpower = { size > 849999 }
+					OR = {
+						num_of_military_factories > 35
+						is_in_faction = yes
+					}
+				}
+				USG = { is_in_faction = yes }
+			}
+		}
+		
+		prerequisite = { focus = major_army_exercise_ukr }
+		
+		bypass = {
+			UKR = {
+				owns_state = 91
+				owns_state = 89
+			}
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = USG }
+			USG = {
+				owns_state = 91
+				owns_state = 89
+			}
+		}
+		
+		completion_reward = {
+			USG = { country_event = { id = aw_ukr.39 hours = 6 } }
+		}
+	}
+	
+	focus = {
+		id = get_rid_of_soviet_threat_ukr
+		icon = GFX_goal_generic_war_with_comintern
+		x = 18
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 3
+				has_army_manpower = { size > 899999 }
+				num_of_military_factories > 35
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 3
+				has_army_manpower = { size > 999999 }
+				num_of_military_factories > 45
+				is_in_faction = no
+			}
+		}
+		
+		prerequisite = { focus = major_army_exercise_ukr }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			has_army_manpower = { size > 799999 }
+			SOV = {
+				exists = yes
+				NOT = { is_in_faction_with = UKR }
+				is_puppet = no
+#				is_major = yes
+			}
+		}
+		
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				generator = { 220 224 194 241 222 243 218 245 265 260 }
+			}
+		}
+	}
+	
+	focus = {
+		id = black_sea_coalition_ukr
+		icon = GFX_goal_generic_alliance
+		x = 9
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 10
+				has_government = monarchism
+				OR = {
+					has_country_flag = antagonize_USG
+					has_country_flag = antagonize_GER
+				}
+			}
+		}
+		
+#		mutually_exclusive = { focus = aggressive_foreign_policy_ukr }
+		
+		available = {
+			NOT = { is_in_faction = yes }
+			OR = {
+				has_completed_focus = domestic_reforms_ukr
+				has_completed_focus = consolidate_power_ukr
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			set_rule = { can_create_factions = yes }
+			create_faction = black_sea_coalition
+		}
+	}
+	
+	focus = {
+		id = invite_kuban_ukr
+		icon = GFX_goal_generic_major_alliance
+		x = 8
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = black_sea_coalition_ukr }
+		
+		available = {
+			KBN = {
+				exists = yes
+				NOT = { has_war_with = UKR }
+				is_in_faction = no
+			}
+		}
+		
+		completion_reward = {
+			KBN = { country_event = { id = aw_ukr.33 } }
+		}
+	}
+	
+	focus = {
+		id = invite_bulgaria_ukr
+		icon = GFX_goal_generic_major_alliance
+		x = 9
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = black_sea_coalition_ukr }
+		
+		available = {
+			BUL = {
+				exists = yes
+				NOT = { has_war_with = UKR }
+				is_in_faction = no
+			}
+		}
+		
+		completion_reward = {
+			BUL = { country_event = { id = aw_ukr.36 } }
+		}
+	}
+	
+	focus = {
+		id = invite_romania_ukr
+		icon = GFX_goal_generic_major_alliance
+		x = 10
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = black_sea_coalition_ukr }
+		mutually_exclusive = { focus = claim_bessarabia_ukr }
+		
+		available = {
+			ROM = {
+				exists = yes
+				NOT = { has_war_with = UKR }
+				is_in_faction = no
+			}
+		}
+		
+		completion_reward = {
+			ROM = { country_event = { id = aw_ukr.23 } }
+		}
+	}
+	
+	focus = {
+		id = reform_military_command_ukr
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 25
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			OR = {
+				has_completed_focus = militarism_ukr
+				has_completed_focus = communist_militia_ukr
+				has_completed_focus = constitutional_power_ukr
+				has_completed_focus = absolute_power_ukr
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 20
+			army_experience = 10
+      add_command_power = 10
+		}
+	}
+	
+	focus = {
+		id = weapons_research_ukr
+		icon = GFX_goal_generic_military_sphere
+		x = 24
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = reform_military_command_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = tank_research_ukr
+		icon = GFX_goal_generic_army_tanks
+		x = 24
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = weapons_research_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = army_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = land_doctrine_effort_ukr
+		icon = GFX_goal_generic_army_doctrines
+		x = 26
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = reform_military_command_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.30
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = land_doctrine_effort_2_ukr
+		icon = GFX_goal_generic_army_doctrines
+		x = 26
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = land_doctrine_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.30
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = science_effort_ukr
+		icon = GFX_goal_continuous_research
+		x = 25
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = tank_research_ukr }
+		prerequisite = { focus = land_doctrine_effort_2_ukr }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = secret_research_ukr
+		icon = GFX_focus_wonderweapons
+		x = 25
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = { focus = science_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 2
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+		id = naval_effort_ukr
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = reform_military_command_ukr }
+		prerequisite = { focus = naval_build_up_ukr }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = battleships_ukr
+		icon = GFX_goal_generic_navy_battleship
+		x = 21
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = naval_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = chi_battleship_focus
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = chi_battleship_focus
+				ahead_reduction = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = screenships_ukr
+		icon = GFX_goal_generic_navy_cruiser
+		x = 23
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = naval_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_improved_screen_ships
+				ahead_reduction = 0.5
+				uses = 1
+				technology = improved_destroyer
+				technology = advanced_destroyer
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+			add_tech_bonus = {
+				name = FRA_improved_screen_ships
+				bonus = 0.5
+				uses = 1
+				technology = improved_destroyer
+				technology = advanced_destroyer
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+	
+	focus = {
+		id = naval_effort_2_ukr
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = battleships_ukr }
+		prerequisite = { focus = screenships_ukr }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = aviation_effort_ukr
+		icon = GFX_goal_generic_air_doctrine
+		x = 29
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = reform_military_command_ukr }
+		
+		available = {
+			owns_state = 227
+			owns_state = 192
+		}
+		
+		completion_reward = {
+			227 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = fighter_effort_ukr
+		icon = GFX_goal_generic_air_fighter
+		x = 28
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = aviation_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+	}
+	
+	focus = {
+		id = CAS_effort_ukr
+		icon = GFX_goal_generic_CAS
+		x = 30
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1.5
+		}
+		
+		prerequisite = { focus = aviation_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				technology = CAS1
+				technology = CAS2
+				technology = CAS3
+			}
+			add_tech_bonus = {
+				name = CAS_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				technology = CAS1
+				technology = CAS2
+				technology = CAS3
+			}
+		}
+	}
+	
+	focus = {
+		id = strategic_bomber_effort_ukr
+		icon = GFX_goal_generic_air_bomber
+		x = 28
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+		
+		prerequisite = { focus = fighter_effort_ukr focus = CAS_effort_ukr }
+		mutually_exclusive = { focus = heavy_planes_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = strat_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+			add_tech_bonus = {
+				name = strat_bomber_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+		}
+	}
+	
+	focus = {
+		id = heavy_planes_effort_ukr
+		icon = GFX_focus_generic_air_defense
+		x = 30
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = CAS_effort_ukr focus = fighter_effort_ukr }
+		mutually_exclusive = { focus = strategic_bomber_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = tac_bomber_bonus
+				bonus = 0.4
+				uses = 1
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+			add_tech_bonus = {
+				name = heavy_fighter_bonus
+				bonus = 0.4
+				uses = 1
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	
+	focus = {
+		id = air_doctrine_ukr
+		icon = GFX_goal_generic_air_doctrine
+		x = 29
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = strategic_bomber_effort_ukr focus = heavy_planes_effort_ukr }
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+
+	
+}

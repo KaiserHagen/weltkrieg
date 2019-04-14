@@ -1,0 +1,412 @@
+invite_eng = {
+
+	# 
+	invite_italy_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			ITA = {
+				exists = yes
+				has_government = fascism 
+				is_puppet = no
+				is_in_faction = no
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		visible = {
+			ITA = { is_in_faction = no }
+		}
+    complete_effect = {
+			ITA = {
+				country_event = { id = aw_eng.22 hours = 12 }
+			}
+		}
+		
+	}
+  
+}
+
+war_plans_eng = {
+
+	#
+  demand_norway_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			NOR = {
+				exists = yes
+				is_puppet = no
+        has_war = no
+        NOT = { is_in_faction_with = ENG }
+			}
+			is_puppet = no
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+        threat > 0.30
+        GER = { has_idea = german_supremacy }
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = NOR }
+      has_completed_focus = intervention_nor_benelux_eng
+		}
+    complete_effect = {
+			NOR = { country_event = { id = aw_eng.36 hours = 6 } }
+		}
+		
+	}
+  
+  secure_norway_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			NOR = {
+				exists = yes
+				is_puppet = no
+        has_war = no
+        NOT = { is_in_faction_with = ENG }
+			}
+			is_puppet = no
+      GER = {
+        OR = {
+          has_war = yes
+          focus_progress = { focus = subjugate_holland_ger progress > 0.01 }
+          focus_progress = { focus = subjugate_belgium_ger progress > 0.01 }
+          focus_progress = { focus = subjugate_denmark_ger progress > 0.01 }
+        }
+      }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+        GER = { has_idea = german_supremacy }
+      }
+		}
+
+		visible = {
+      NOT = { has_war_with = NOR }
+			has_country_flag = norway_rejects
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = NOR
+ 			}
+		}
+		
+	}
+  
+  demand_netherlands_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			HOL = {
+				exists = yes
+				is_puppet = no
+        has_war = no
+			}
+			is_puppet = no
+      NOT = { is_in_faction_with = ENG }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+        threat > 0.30
+        GER = { has_idea = german_supremacy }
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = HOL }
+      has_completed_focus = intervention_nor_benelux_eng
+		}
+    complete_effect = {
+			HOL = { country_event = { id = aw_eng.39 hours = 6 } }
+		}
+		
+	}
+  
+  secure_netherlands_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			HOL = {
+				exists = yes
+				is_puppet = no
+        has_war = no
+        NOT = { is_in_faction_with = ENG }
+			}
+			is_puppet = no
+      GER = {
+        OR = {
+          has_war = yes
+          focus_progress = { focus = subjugate_holland_ger progress > 0.01 }
+          focus_progress = { focus = subjugate_belgium_ger progress > 0.01 }
+          focus_progress = { focus = subjugate_denmark_ger progress > 0.01 }
+        }
+      }
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+        GER = { has_idea = german_supremacy }
+      }
+		}
+
+		visible = {
+      NOT = { has_war_with = HOL }
+			has_country_flag = netherlands_reject
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = HOL
+ 			}
+		}
+		
+	}
+  
+  war_with_germany_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = ENG
+				}
+				OR = {
+					has_completed_focus = aggressive_policy_ger
+          has_added_tension_amount > 20
+				}
+			}
+			is_puppet = no
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+        has_army_manpower = { size > 749999 }
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+      has_completed_focus = containment_of_germanys_sphere_eng
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = puppet_wargoal_focus
+ 				target = GER
+ 			}
+		}
+		
+	}
+  
+	war_with_germany_2_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = {
+					is_in_faction_with ENG
+				}
+			}
+			is_puppet = no
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+      has_completed_focus = radicalization_eng
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = GER
+ 				generator = { 58 59 56 61 775 }
+ 			}
+		}
+		
+	}
+  war_with_france_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			FRA = {
+				exists = yes
+				NOT = {
+					is_in_faction_with ENG
+				}
+			}
+			is_puppet = no
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = FRA }
+      has_completed_focus = radicalization_eng
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = FRA
+ 				generator = { 15 29 14 458 756 310 1 30 16 }
+ 			}
+		}
+		
+	}
+  
+  ultimatum_on_india_eng = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+			RAJ = {
+				exists = yes
+				NOT = {
+					is_in_faction_with ENG
+          is_puppet = yes
+				}
+			}
+			is_puppet = no
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = RAJ }
+      has_completed_focus = radicalization_eng
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = RAJ
+ 			}
+		}
+		
+	}
+  
+}

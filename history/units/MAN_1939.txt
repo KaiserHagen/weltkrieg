@@ -1,0 +1,201 @@
+﻿division_template = {
+	name = "Infantry Division"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND OOB ########
+	##### Manchurian Army #####
+	division = {
+		name = "1. Division"
+		location = 11764
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "2. Division"
+		location = 11771
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "3. Division"
+		location = 10433
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "4. Division"
+		location = 10433
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "5. Division"
+		location = 10675
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "6. Division"
+		location = 7832
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "7. Division"
+		location = 10521
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "8. Division"
+		location = 12043
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "9. Division"
+		location = 11822
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "10. Division"
+		location = 6969
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "11. Division"
+		location = 9776
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "12. Division"
+		location = 1137
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "13. Division"
+		location = 4612
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "14. Division"
+		location = 4222
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "15. Division"
+		location = 1811
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "16. Division"
+		location = 7743
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "17. Division"
+		location = 10541
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "18. Division"
+		location = 7697
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "19. Division"
+		location = 10368
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "20. Division"
+		location = 783
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	######## NAVAL OOB ########
+	navy = {				
+		name = "Manchurian Navy"			
+		base = 11764
+		location = 11764 # Dalian
+		ship = { name = "HTMS Phra Ruang" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SIA } } }
+	}				
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MAN"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+}

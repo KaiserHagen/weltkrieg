@@ -1,0 +1,1031 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+add_namespace = aw_fra
+
+
+
+#############################################################################
+# France invites Italy
+country_event = {
+	id = aw_fra.1
+	title = aw_fra.1.t
+	desc = aw_fra.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.1.a
+		ai_chance = { factor = 100 }
+		FRA = {
+			add_to_faction = ITA
+			country_event = { id = aw_fra.2 }
+			
+		}
+		hidden_effect = {
+			news_event = { hours = 12 id = aw_news.7 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.1.b
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.3 }
+		}
+	}
+}
+#Italy accepts
+country_event = {
+	id = aw_fra.2
+	title = aw_fra.2.t
+	desc = aw_fra.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.2.a
+	}
+}
+
+# Italy refuses
+country_event = {
+	id = aw_fra.3
+	title = aw_fra.3.t
+	desc = aw_fra.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.3.a
+		add_opinion_modifier = {
+			target = ITA 
+			modifier = italy_refuses
+		}
+	}
+}
+
+#France subjugates Belgium (ultimatum)
+country_event = {
+	id = aw_fra.4
+	title = aw_fra.4.t
+	desc = aw_fra.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.4.a
+		ai_chance = {
+			factor = 60 
+			modifier = {
+				factor = 100
+				BEL = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				BEL = {
+					OR = {
+						has_government = monarchism
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+		FRA = {
+			puppet = BEL
+			country_event = { id = aw_fra.5 }
+			
+		}
+		hidden_effect = {
+			news_event = { hours = 12 id = aw_news.6 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.4.b
+		ai_chance = {
+			factor = 40 
+			modifier = {
+				factor = 0
+				BEL = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 100
+				BEL = {
+					OR = {
+						has_government = monarchism
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.6 }
+		}
+	}
+}
+#Belgium accepts
+country_event = {
+	id = aw_fra.5
+	title = aw_fra.5.t
+	desc = aw_fra.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.5.a
+		add_named_threat = { threat = 2 name = fra_imperialism }
+	}
+}
+
+#Belgium refuses
+country_event = {
+	id = aw_fra.6
+	title = aw_fra.6.t
+	desc = aw_fra.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.6.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BEL
+		}
+	}
+}
+
+#France invites Ukraine
+country_event = {
+	id = aw_fra.7
+	title = aw_fra.7.t
+	desc = aw_fra.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.7.a
+		ai_chance = { factor = 90 }
+		FRA = {
+			add_to_faction = UKR
+			country_event = { id = aw_fra.8 }
+			
+		}
+		hidden_effect = {
+			news_event = { hours = 12 id = aw_news.8 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.7.b
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.9 }
+		}
+	}
+}
+#Ukraine accepts
+country_event = {
+	id = aw_fra.8
+	title = aw_fra.8.t
+	desc = aw_fra.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.8.a
+	}
+}
+
+#Ukraine refuses
+country_event = {
+	id = aw_fra.9
+	title = aw_fra.9.t
+	desc = aw_fra.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.9.a
+		add_opinion_modifier = {
+			target = UKR
+			modifier = italy_refuses
+		}
+	}
+}
+
+# France wants to join Comintern
+country_event = {
+	id = aw_fra.10
+	title = aw_fra.10.t
+	desc = aw_fra.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.10.a
+		add_to_faction = FRA
+		ai_chance = { factor = 100 }
+		
+		FRA = { 
+			country_event = { id = aw_fra.11 } 
+		}
+		
+		hidden_effect = {
+			news_event = { hours = 12 id = aw_news.5 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.10.b
+		ai_chance = { factor = 0 }
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.12 }
+		}
+	}
+}
+#SOV accepts
+country_event = {
+	id = aw_fra.11
+	title = aw_fra.11.t
+	desc = aw_fra.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.11.a
+	}
+}
+
+#SOV refuses
+country_event = {
+	id = aw_fra.12
+	title = aw_fra.12.t
+	desc = aw_fra.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.12.a
+		add_opinion_modifier = {
+			target = SOV 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+#France demands military access and non-aggression pact from Switzerland
+country_event = {
+	id = aw_fra.13
+	title = aw_fra.13.t
+	desc = aw_fra.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.13.a
+		ai_chance = { factor = 50 }
+		FRA = {
+			give_military_access = SWI
+		}
+		diplomatic_relation = { country = FRA relation = non_aggression_pact }
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.14 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.13.b
+		ai_chance = { factor = 50 }
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.15 }
+		}
+	}
+}
+#Switzerland accepts
+country_event = {
+	id = aw_fra.14
+	title = aw_fra.14.t
+	desc = aw_fra.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.14.a
+	}
+}
+
+#Switzerland refuses
+country_event = {
+	id = aw_fra.15
+	title = aw_fra.15.t
+	desc = aw_fra.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.15.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SWI
+		}
+	}
+	
+}
+
+#France invites Ukraine to communist faction
+country_event = {
+	id = aw_fra.16
+	title = aw_fra.16.t
+	desc = aw_fra.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.16.a
+		ai_chance = { factor = 90 }
+		FRA = {
+			add_to_faction = UKR
+			country_event = { id = aw_fra.17 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.16.b
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.18 }
+		}
+	}
+}
+#Ukraine accepts
+country_event = {
+	id = aw_fra.17
+	title = aw_fra.17.t
+	desc = aw_fra.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.17.a
+	}
+}
+
+#Ukraine refuses
+country_event = {
+	id = aw_fra.18
+	title = aw_fra.18.t
+	desc = aw_fra.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.18.a
+		add_opinion_modifier = {
+			target = UKR
+			modifier = italy_refuses
+		}
+	}
+}
+
+#France invites Austria to L'Union Internationale faction
+country_event = {
+	id = aw_fra.19
+	title = aw_fra.19.t
+	desc = aw_fra.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.19.a
+		ai_chance = { factor = 99 }
+		FRA = {
+			add_to_faction = USG
+			country_event = { id = aw_fra.20 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.19.b
+		ai_chance = { factor = 1 }
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.21 }
+		}
+	}
+}
+#Austria accepts
+country_event = {
+	id = aw_fra.20
+	title = aw_fra.20.t
+	desc = aw_fra.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.20.a
+	}
+}
+
+#Austria refuses
+country_event = {
+	id = aw_fra.21
+	title = aw_fra.21.t
+	desc = aw_fra.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.21.a
+		add_opinion_modifier = {
+			target = USG
+			modifier = italy_refuses
+		}
+	}
+}
+
+#France invites Japan to LdF
+country_event = {
+	id = aw_fra.22
+	title = aw_fra.22.t
+	desc = aw_fra.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.22.a
+		ai_chance = { factor = 90 }
+		FRA = {
+			add_to_faction = JAP
+			country_event = { id = aw_fra.23 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.22.b
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.24 }
+		}
+	}
+}
+#Japan accepts
+country_event = {
+	id = aw_fra.23
+	title = aw_fra.23.t
+	desc = aw_fra.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.23.a
+	}
+}
+
+#Japan refuses
+country_event = {
+	id = aw_fra.24
+	title = aw_fra.24.t
+	desc = aw_fra.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.24.a
+		add_opinion_modifier = {
+			target = JAP
+			modifier = italy_refuses
+		}
+	}
+}
+
+#France invites fascist Spain to LdF
+country_event = {
+	id = aw_fra.25
+	title = aw_fra.25.t
+	desc = aw_fra.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.25.a
+		ai_chance = { factor = 100 }
+		FRA = {
+			add_to_faction = ROOT
+			country_event = { id = aw_fra.23 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.25.b
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.24 }
+		}
+	}
+}
+#Spain accepts
+country_event = {
+	id = aw_fra.26
+	title = aw_fra.26.t
+	desc = aw_fra.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.26.a
+	}
+}
+
+#Spain refuses
+country_event = {
+	id = aw_fra.27
+	title = aw_fra.27.t
+	desc = aw_fra.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.27.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = italy_refuses
+		}
+	}
+}
+
+#French West Africa
+country_event = {
+	id = aw_fra.28
+	title = aw_fra.28.t
+	desc = aw_fra.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # play as France
+		name = aw_fra.28.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			FWA = {
+				transfer_state = 459
+				add_state_core = 459
+				transfer_state = 460
+				add_state_core = 460
+				transfer_state = 458
+				add_state_core = 458
+				transfer_state = 513
+				add_state_core = 513
+				transfer_state = 665
+				add_state_core = 665
+				transfer_state = 514
+				add_state_core = 514
+				transfer_state = 557
+				add_state_core = 557
+				transfer_state = 515
+				add_state_core = 515
+				transfer_state = 767
+				add_state_core = 767
+				transfer_state = 766
+				add_state_core = 766
+				transfer_state = 556
+				add_state_core = 556
+				transfer_state = 756
+				add_state_core = 756
+				transfer_state = 757
+				add_state_core = 757
+				transfer_state = 272
+				add_state_core = 272
+				transfer_state = 783
+				add_state_core = 783
+				load_oob = "FWA_1936"
+			}
+			FRA = {
+				puppet = FWA
+			}
+		}
+	}
+	option = { # play as French West Africa
+		name = aw_fra.28.b
+		hidden_effect = {
+			FWA = {
+				transfer_state = 459
+				add_state_core = 459
+				transfer_state = 460
+				add_state_core = 460
+				transfer_state = 458
+				add_state_core = 458
+				transfer_state = 513
+				add_state_core = 513
+				transfer_state = 665
+				add_state_core = 665
+				transfer_state = 514
+				add_state_core = 514
+				transfer_state = 557
+				add_state_core = 557
+				transfer_state = 515
+				add_state_core = 515
+				transfer_state = 767
+				add_state_core = 767
+				transfer_state = 766
+				add_state_core = 766
+				transfer_state = 556
+				add_state_core = 556
+				transfer_state = 756
+				add_state_core = 756
+				transfer_state = 757
+				add_state_core = 757
+				transfer_state = 272
+				add_state_core = 272
+				transfer_state = 783
+				add_state_core = 783
+				load_oob = "FWA_1936"
+			}
+			FRA = {
+				puppet = FWA
+			}
+		}
+		FWA = { change_tag_from = FRA }
+	}
+}
+
+#France annexes Belgium
+country_event = {
+	id = aw_fra.29
+	title = aw_fra.29.t
+	desc = aw_fra.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.29.a
+		ai_chance = {
+			factor = 90 
+		}
+		FRA = {
+			annex_country = { target = BEL transfer_troops = yes }
+			country_event = { hours = 6 id = aw_fra.30 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.29.b
+		ai_chance = {
+			factor = 10 
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.31 }
+		}
+	}
+}
+#Belgium accepts
+country_event = {
+	id = aw_fra.30
+	title = aw_fra.30.t
+	desc = aw_fra.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.30.a
+		add_named_threat = { threat = 2 name = fra_imperialism }
+	}
+}
+
+#Belgium refuses
+country_event = {
+	id = aw_fra.31
+	title = aw_fra.31.t
+	desc = aw_fra.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.31.a
+		create_wargoal = {
+			type = annex_everything
+			target = BEL
+		}
+	}
+}
+#############
+#France annexes Western Switzerland (asks Italy first)
+country_event = {
+	id = aw_fra.32
+	title = aw_fra.32.t
+	desc = aw_fra.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.32.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 50
+				ITA = { has_war = yes }
+			}
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.33 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.32.b
+		ai_chance = {
+			factor = 0 
+			modifier = {
+				factor = 50
+				ITA = { has_war = yes }
+			}
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.34 }
+		}
+	}
+}
+#Italy in /accepts
+country_event = {
+	id = aw_fra.33
+	title = aw_fra.33.t
+	desc = aw_fra.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.33.a
+		SWI = {
+			country_event = { hours = 6 id = aw_fra.35 }
+		}
+	}
+}
+
+#Italy not in /refuses
+country_event = {
+	id = aw_fra.34
+	title = aw_fra.34.t
+	desc = aw_fra.34.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.34.a
+		SWI = {
+			country_event = { hours = 6 id = aw_fra.38 }
+		}
+	}
+}
+
+#France annexes Western Switzerland (Switzerland) with Italy
+country_event = {
+	id = aw_fra.35
+	title = aw_fra.35.t
+	desc = aw_fra.35.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.35.a
+		ai_chance = {
+			factor = 30
+		}
+		FRA = {
+			annex_country = { target = SWI transfer_troops = yes }
+			country_event = { hours = 6 id = aw_fra.36 }
+		}
+		ITA = {
+			transfer_state = 151
+			if = {
+				limit = { ITA = { NOT = { owns_state = 773 }}}
+				transfer_state = 773
+			}
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.35.b
+		ai_chance = {
+			factor = 70 
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.37 }
+		}
+	}
+}
+#Switzerland accepts
+country_event = {
+	id = aw_fra.36
+	title = aw_fra.36.t
+	desc = aw_fra.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.36.a
+	}
+}
+
+#Switzerland refuses
+country_event = {
+	id = aw_fra.37
+	title = aw_fra.37.t
+	desc = aw_fra.37.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.37.a
+		declare_war_on = {
+			target = SWI
+			type = take_state_focus
+			generator = { 3 } 
+		}
+		ITA = {
+			declare_war_on = {
+				target = SWI
+				type = take_state_focus
+				generator = { 151 773 } 
+			}
+		}
+	}
+}
+
+#France annexes Western Switzerland (Switzerland) without Italy
+country_event = {
+	id = aw_fra.38
+	title = aw_fra.38.t
+	desc = aw_fra.38.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_fra.38.a
+		ai_chance = {
+			factor = 30
+		}
+		FRA = {
+			transfer_state = 3
+			puppet = SWI
+			country_event = { hours = 6 id = aw_fra.39 }
+		}
+	}
+	option = { # Refuse
+		name = aw_fra.38.b
+		ai_chance = {
+			factor = 70 
+		}
+		FRA = {
+			country_event = { hours = 6 id = aw_fra.40 }
+		}
+	}
+}
+#Switzerland accepts
+country_event = {
+	id = aw_fra.39
+	title = aw_fra.39.t
+	desc = aw_fra.39.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.39.a
+	}
+}
+
+#Switzerland refuses
+country_event = {
+	id = aw_fra.40
+	title = aw_fra.40.t
+	desc = aw_fra.40.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_fra.40.a
+		create_wargoal = {
+			type = take_state_focus
+			target = BEL
+			generator = { 3 }
+		}
+	}
+}
+
+#Germany demands retreat from Belgium
+country_event = {
+	id = aw_fra.41
+	title = aw_fra.41.t
+	desc = aw_fra.41.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Retreat
+		name = aw_fra.41.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 40
+				FRA = { has_war = yes }
+			}
+		}
+		release = BEL
+		GER = {
+			country_event = { hours = 6 id = aw_ger.46 }
+		}
+	}
+	option = { # Stay
+		name = aw_fra.41.b
+		ai_chance = {
+			factor = 80 
+			modifier = {
+				factor = 60
+				FRA = { has_war = yes }
+			}
+		}
+		GER = {
+			country_event = { hours = 6 id = aw_ger.45 }
+		}
+	}
+}
+
+#Spanish Civil War - Support or not?
+#country_event = {
+#	id = aw_fra.41
+#	title = aw_fra.41.t
+#	desc = aw_fra.41.d
+#	picture = GFX_
+#	
+#	trigger = {
+#		tag = FRA
+#		SPR = { has_civil_war = yes }
+#		has_civil_war = no
+#		has_war = no
+#	}
+#
+#	mean_time_to_happen = { days = 7 }
+#
+#	fire_only_once = yes
+#
+#	#support nationalists
+#	option = {
+#		name = aw_fra.41.a
+#		ai_chance = {
+#			factor = 95
+#			modifier = {
+#				factor = 30
+#				fra = { has_government = fascism }
+#			}
+#		}
+#		CHI = {
+#			country_event = { id = aw_fra.33 }
+#		}
+#		effect_tooltip = {
+#			CHI = { white_peace = fra }
+#			transfer_state = 326
+#		}
+#	}
+#
+#	#stay out
+#	option = {
+#		name = aw_fra.41.b
+#		ai_chance = {
+#			factor = 5
+#			modifier = {
+#				factor = 70
+#				fra = { has_government = fascism }
+#			}
+#		}
+#	}
+#}
+

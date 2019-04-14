@@ -1,0 +1,21 @@
+state={
+	id=784
+	name="STATE_784"
+	provinces={
+		12029
+	}
+	manpower=121500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = OSM
+		add_core_of = TUR
+		add_core_of = SYR
+	}
+}

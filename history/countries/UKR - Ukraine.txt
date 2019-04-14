@@ -1,0 +1,177 @@
+﻿capital = 202 #Kiev
+
+oob = "UKR_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_armored_car = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
+}
+
+
+set_convoys = 35
+set_stability = 0.55
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0 
+		}
+
+		fascism = {
+			popularity = 35
+		}
+		
+		communism = {
+			popularity = 26
+		}
+		
+		monarchism = {
+			popularity = 39
+		}
+		
+	}
+	
+	ruling_party = monarchism
+	last_election = "1935.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_conscription
+	civilian_economy
+	censored_press
+	
+
+	political_extremists_UKR
+	buffer_state
+}
+
+create_country_leader = {
+	name = "Vasyl I."
+	desc = "POLITICS_WILHELM_UKR_DESC"
+	picture = "gfx/leaders/UKR/Portrait_Ukraine_Wilhelm_Franz_I.dds"
+	expire = "1953.3.1"
+	ideology = absolutism
+	traits = {
+		red_prince
+	}
+}
+
+create_country_leader = {
+	name = "Kost Levytsky"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	expire = "1953.3.1"
+	ideology = centrism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Pavlo Skoropadskyi"
+	desc = "POLITICS_Pavlo_Skoropadskyi_DESC"
+	picture = "gfx/leaders/UKR/Portrait_Ukraine_Pavlo_Skoropadsky.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Lazar Moiseyevich Kaganovich"
+	desc = ""
+	picture = "Portrait_UKR_Lasar_Moissejewitsch_Kaganowitsch.dds"
+	expire = "1953.3.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Stepan Andrijovyč Bandera"
+	desc = ""
+	picture = "Portrait_UKR_Stephan_Bandera.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+
+create_field_marshal = {
+	name = "Grigory Kulik"
+		picture = "Portrait_UKR_Grigory_Kulik.dds"
+	traits = { old_guard career_officer politically_connected inflexible_strategist }
+	skill = 2	
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Rodion Malinovsky"
+		picture = "Portrait_UKR_Rodion_Malinovsky.dds"
+	traits = { career_officer old_guard trait_cautious politically_connected }
+	skill = 1 
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Andrei Grechko"
+		picture = "Portrait_UKR_Andrei_Antonovich_Grechko.dds"
+	traits = { cavalry_officer }
+	skill = 3
+
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Semyon Timoshenko"
+	id = 404
+		picture = "Portrait_UKR_Semyon_Timoshenko.dds"
+	traits = { cavalry_officer politically_connected career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Sergey Gorshkov"
+		picture = "Portrait_UKR_Sergey_Gorshkov.dds"
+	traits = {  }
+	skill = 3
+}

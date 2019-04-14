@@ -1,0 +1,43 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+add_namespace = aw_bul
+
+
+################### Bulgaria ######################
+
+### Germany wants to offers help in Bulgaro-Ottoman-War
+country_event = {
+	id = aw_bul.1
+	title = aw_bul.1.t
+	desc = aw_bul.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # agree
+		name = aw_bul.1.a
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 100
+				BUL = { surrender_progress > 0.2 }
+			}
+		}
+		GER = {
+			country_event = { id = aw_ger.49 hours = 1 }
+		}
+	}
+	option = { # refuse to negotiate with OSM
+		name = aw_bul.1.b
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 0
+				BUL = { surrender_progress > 0.2 }
+			}
+		}
+		GER = {
+			country_event = { id = aw_ger. hours = 1 }
+		}
+	}
+}

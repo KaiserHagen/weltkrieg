@@ -1,0 +1,23 @@
+state = {
+	id=757
+	name="STATE_757"
+	manpower = 2020490
+	
+	state_category = rural
+	
+	resources={
+	
+	}
+	
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+			
+		}
+		add_core_of = FSW
+	}
+	provinces = {
+		1909 2012 4957 10829 10915 12802 12858
+	}
+}

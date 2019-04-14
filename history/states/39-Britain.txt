@@ -1,0 +1,44 @@
+
+state={
+	id=39
+	name="STATE_39" # South Tyrol
+	manpower = 257650
+	
+	state_category = rural
+	
+	resources={
+		aluminium=12
+		steel=4
+	}
+
+	history={
+		owner = USG
+		
+		victory_points = {
+			9598 3 
+		}
+		
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			6631 = {
+				bunker = 4
+			}
+			9598 = {
+				bunker = 4
+			}
+			11598 = {
+				bunker = 3
+			}
+			656 = {
+				bunker = 3
+			}
+		}
+		add_core_of = AUS
+		add_core_of = USG
+	}
+
+	provinces={
+		656 6631 9598 11598 
+	}
+}

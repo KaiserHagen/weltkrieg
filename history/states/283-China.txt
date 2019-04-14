@@ -1,0 +1,35 @@
+
+state={
+	id=283
+	name="STATE_283" # Gansu
+	manpower = 6705400
+	
+	
+	state_category = town
+	
+	resources={
+		
+		tungsten=6
+
+	}
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+
+		victory_points = {
+			2045 1 
+		}
+
+		buildings = {
+			infrastructure = 3
+			
+		}
+
+		
+	}
+
+	provinces={
+		531 556 1630 1647 1933 1985 2022 3745 4313 5025 6638 7397 7911 12797 12882 
+	}
+}

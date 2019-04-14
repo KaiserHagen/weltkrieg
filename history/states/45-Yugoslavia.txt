@@ -1,0 +1,25 @@
+
+state={
+	id=45
+	name="STATE_45"
+
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+
+		}
+		add_core_of = HUN
+		add_core_of = USG
+		add_core_of = SER
+
+	}
+
+	provinces={
+		614 619 3614 3617 3623 9606 11580 11787 
+	}
+	manpower=1232200
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

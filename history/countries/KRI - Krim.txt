@@ -1,0 +1,62 @@
+﻿capital = 137
+
+oob = "KRI_1936"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	
+	infantry_weapons1 = 1
+	early_fighter = 1
+}
+
+set_convoys = 10
+set_stability = 0.60
+set_war_support = 0.30
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 21
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		monarchism = { 
+			popularity = 79
+		}
+	}
+	
+	ruling_party = monarchism
+	last_election = "1926.5.8"
+	election_frequency = 120
+	elections_allowed = no
+}
+
+set_stability = 0.60
+
+add_ideas = {
+	civilian_economy
+	limited_exports
+	limited_conscription
+}
+
+create_country_leader = {
+	name = "Wilhelm von Hohenzollern"
+	desc = "POLITICS_WILHELM_VON_HOHENZOLLERN_DESC"
+	picture = "Portrait_Crimea_Wilhelm_von_Hohenzollern.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchy
+	traits = {
+		german_puppet
+	}
+}

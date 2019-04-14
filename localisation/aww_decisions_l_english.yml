@@ -1,0 +1,67 @@
+﻿l_english:
+
+ ####Decisions
+ #general
+ random_decisions:0 "Decisions"
+ aw_random_1:0 "Dismantle Faction"
+ aw_random_1_desc:0 "Dismantle your faction."
+ aw_random_2:0 "Leave Faction"
+ aw_random_2_desc:0 "Leave your faction."
+ aw_random_3:0 "Change Press Law"
+ aw_random_3_desc:0 "Change press law to "Censored Press" or "Propaganda"."
+ aw_random_4:0 "Censor Press"
+ aw_random_4_desc:0 "Change press law to "Censored Press"."
+ aw_random_5:0 "Free Press"
+ aw_random_5_desc:0 "Change press law to "Free Press"."
+ 
+ #France
+ french_west_africa:0 "French West Africa"
+ maginot_line:0 "Maginot Line"
+ FRA_war_plans:0 "War Operations"
+ 
+ purge_communists:0 "Purge Communists"
+ purge_fascists:0 "Purge Fascists"
+ establish_fwa:0 "Establish French West African Colony"
+ industrialize_algeria:0 "Industrialize Northern Algeria"
+ 
+ #Germany
+ german_african_colonies:0 "German Africa Decisions"
+ aggressive_policy_actions:0 "War Operations"
+ annexations_ger:0 "Territorial Expansion"
+ war_with_fra_ger:0 "War with France"
+ 
+ #Austria
+ intervene_against_ldf_uga:0 "Intervene against the Ligue des Fasciste"
+ 
+ #Soviet Union
+ war_operations_sov:0 "War Operations"
+ war_with_austria_sov:0 "War with [UGA.GetNameDef]"
+ spread_communist_propaganda_sov:0 "Spread the revolution"
+ puppet_tcr_sov:0 "Stage Coup in [TCR.GetName]"
+ puppet_kuban_sov:0 "Stage Coup in [KBN.GetName]"
+ puppet_turkestan_sov:0 "Stage Coup in [TUK.GetName]"
+ puppet_china_sov:0 "Stage Coup in [CHI.GetName]"
+ 
+ #Italy
+ abbessinia:0 "Ethiopia"
+ 
+ #Ottoman Empire
+ war_plans_osm:0 "War Operations"
+ 
+ #Great Britain
+ invite_eng:0 "Invite into Faction"
+ demand_norway_eng:0 "Demand special rights from Norway"
+ secure_norway_eng:0 "Secure Norway"
+ demand_netherlands_eng:0 "Demand special rights from the Netherlands"
+ secure_netherlands_eng:0 "Secure the Netherlands"
+ 
+ #Ukraine 
+ bunker_ukr:0 "Bunker Construction"
+ 
+ #Japan
+ fight_germany_jap:0 "Fight Germany Supremacy"
+ 
+ #USA
+ war_operations_usa:0 "War Operations"
+ 
+ 

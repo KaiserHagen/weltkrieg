@@ -1,0 +1,34 @@
+
+state={
+	id=347
+	name="STATE_347"
+	manpower = 807660
+	resources={
+		steel=16
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = OSM
+		victory_points = {
+			890 1 
+		}
+		buildings = {
+			infrastructure = 4
+			904 = {
+				naval_base = 2
+			}
+			arms_factory = 1
+			industrial_complex = 1
+			
+		}
+		add_core_of = TUR
+		add_core_of = OSM
+	}
+
+	provinces={
+		890 904 3905 3919 6871 11811 11866 11883 
+	}
+}

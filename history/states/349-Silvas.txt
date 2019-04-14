@@ -1,0 +1,27 @@
+
+state={
+	id=349
+	name="STATE_349"
+	resources={
+		steel=16.000
+	}
+
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = TUR
+		add_core_of = OSM
+
+	}
+
+	provinces={
+		3903 3950 6919 6950 9761 9777 
+	}
+	manpower=302821
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

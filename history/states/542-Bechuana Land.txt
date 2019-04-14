@@ -1,0 +1,26 @@
+
+state={
+	id=542
+	name="STATE_542"
+	manpower = 234000
+	
+	state_category = rural
+	
+	resources={
+		chromium=38
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 1
+		}
+		
+		add_core_of = BEC
+		add_core_of = SWA
+	}
+
+	provinces={
+		1580 8214 10525 12940 12963 
+	}
+}

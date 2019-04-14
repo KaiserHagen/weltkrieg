@@ -1,0 +1,270 @@
+﻿division_template = {
+	name = "Infantry Division"			# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+division_template = {
+	name = "Cavalry Division" 	# Kavaleriyskaya Diviziya
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+#division_template = {
+#	name = "Tank Division" 				# Represents regular mechanized corps (4 existed in 1935-38); 
+#													# Also represents groups of independent tank, mech brigades of the time, though groups are best represented by tank bge 
+#													# (2x M/L tank + 1x mot), and 2x mech bge (2x L tank + 1x mot)
+#	regiments = {
+#		light_armor = { x = 0 y = 0 }
+#		light_armor = { x = 0 y = 1 }
+#		light_armor = { x = 1 y = 0 }		
+#		light_armor = { x = 1 y = 1 }		
+#		light_armor = { x = 1 y = 2 }			
+#	}
+#}
+
+units = {
+	
+	division= {	
+		name = "1. Infantry Division"
+		location = 11670
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Infantry Division"
+		location = 11670
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Infantry Division"
+		location = 9576
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4. Infantry Division"
+		location = 6435
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5. Infantry Division"
+		location = 6435
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6. Infantry Division"
+		location = 3457
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7. Infantry Division"
+		location = 9506
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "8. Infantry Division"
+		location = 3542
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "9. Infantry Division"
+		location = 11462
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "10. Infantry Division"
+		location = 11500
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "11. Infantry Division"
+		location = 11500
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "12. Infantry Division"
+		location = 9461
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "13. Infantry Division"
+		location = 9461
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "14. Infantry Division"
+		location = 568
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "15. Infantry Division"
+		location = 9576
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "16. Infantry Division"
+		location = 525
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "17. Infantry Division"
+		location = 568
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "18. Infantry Division"
+		location = 6474
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "19. Infantry Division"
+		location = 6474
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "20. Infantry Division"
+		location = 570
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "21. Infantry Division"
+		location = 3457
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1. Cavalry Division"
+		location = 418
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2. Cavalry Division"
+		location = 418
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3. Cavalry Division"
+		location = 418
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4. Cavalry Division"
+		location = 11561
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5. Cavalry Division"
+		location = 525
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6. Cavalry Division"
+		location = 525
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7. Cavalry Division"
+		location = 9491
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	
+	navy = {				
+		name = "1.Fleet"			
+		base = 11670 
+		location = 11670 # Odessa
+		ship = { name = "Odessa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+		ship = { name = "Kiev" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+		ship = { name = "Kharkov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+	}
+}
+air_wings = {
+	# LVO Aviatsya Komandovaniya -- Leningrad
+	202 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 80
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "UKR" 
+			amount = 40
+		}
+	}
+}
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "UKR"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+	### Ships
+	add_equipment_production = {
+		equipment = {
+			type = convoy_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.4
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.16
+		amount = 1
+	}
+}

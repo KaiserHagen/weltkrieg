@@ -1,0 +1,458 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+add_namespace = aw_info
+
+# Marco Polo Bridge I
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = news.1.c
+		trigger = { TAG = CHI }
+	}
+}
+
+# Marco Polo Bridge II
+news_event = {
+	id = news.2
+	title = news.1.t
+	desc = news.2.d
+	picture = GFX_news_event_018
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = news.2.c
+		trigger = { TAG = CHI }
+	}
+}
+
+
+# Italian Ultimatum - Zog Yields
+news_event = {
+	id = news.22
+	title = news.22.t
+	desc = news.22.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.22.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ALB
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = news.22.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = news.22.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ALB
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+# Italian Ultimatum - Zog Resists
+news_event = {
+	id = news.23
+	title = news.23.t
+	desc = news.23.d
+	picture = GFX_news_event_016
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.23.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ALB
+			}
+		}
+	}
+	option = {
+		name = news.23.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = news.23.c
+		trigger = { TAG = ALB }
+	}
+}
+
+# The Spanish Civil War
+news_event = {
+	id = news.63
+	title = news.63.t
+	desc = news.63.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.63.a
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+	option = {
+		name = news.63.b
+		trigger = { 
+			original_tag = SPR
+		}
+	}
+}
+
+# End of the Spanish Civil War (Nationalist victory)
+news_event = {
+	id = news.64
+	title = news.64.t
+	desc = news.64.d
+	picture = GFX_news_event_033
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = spanish_civil_war
+		NOT = { has_global_flag = scw_over }
+		SPR = { has_civil_war = no }
+		any_country = {
+			original_tag = SPR
+			has_government = fascism
+		}
+		all_country = {
+			OR = {
+				NOT = { original_tag = SPR }
+				has_government = fascism
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = nationalist_victory
+		set_global_flag = scw_over
+	}
+	
+	option = {
+		name = news.64.a
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+	option = {
+		name = news.64.b
+		trigger = { original_tag = SPR }
+	}
+}
+
+# End of the Spanish Civil War (Republican victory)
+news_event = {
+	id = news.65
+	title = news.64.t
+	desc = news.65.d
+	picture = GFX_news_event_034
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = spanish_civil_war
+		NOT = { has_global_flag = scw_over }
+		SPR = { has_civil_war = no }
+		any_country = {
+			original_tag = SPR
+			NOT = { has_government = fascism }
+		}
+		all_country = {
+			OR = {
+				NOT = { original_tag = SPR }
+				NOT = { has_government = fascism }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = republican_victory
+		set_global_flag = scw_over
+	}
+	
+	option = {
+		name = news.65.a
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+	option = {
+		name = news.64.b
+		trigger = { original_tag = SPR }
+	}
+}
+
+# Faction Founded!
+news_event = {
+	id = news.159
+	title = news.159.t
+	desc = {
+		text = news.159.d_01
+		trigger = { FROM = { has_government = neutrality } }
+	}
+	desc = {
+		text = news.159.d_02
+		trigger = { FROM = { has_government = democratic } }
+	}
+	desc = {
+		text = news.159.d_03
+		trigger = { FROM = { has_government = fascism } }
+	}
+	desc = {
+		text = news.159.d_04
+		trigger = { FROM = { has_government = communism } }
+	}
+
+	picture = GFX_news_event_009
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			NOT = { is_in_faction_with = FROM }
+		}
+		name = news.159.a
+		every_country = {
+			limit = { is_in_faction_with = FROM }
+			custom_effect_tooltip = news.159.tt
+		}
+	}
+	option = {
+		trigger = { tag = FROM }
+		name = news.159.b
+	}
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			is_in_faction_with = FROM
+		}
+		name = news.159.c
+	}
+}
+
+# End of Spanish Civil War (Inconclusive)
+news_event = {
+	id = news.162
+	title = news.64.t
+	desc = news.162.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = spanish_civil_war
+		SPR = { has_civil_war = no }
+		NOT = { has_global_flag = scw_over }
+		any_country = {
+			original_tag = SPR
+			has_government = fascism
+		}
+		any_country = {
+			original_tag = SPR
+			NOT = { has_government = fascism }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = scw_over
+	}
+	
+	option = {
+		name = news.162.a
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+	option = {
+		name = news.162.b
+		trigger = { original_tag = SPR }
+	}
+}
+
+#FROM pursues nuclear technology
+news_event = {
+	id = news.174
+	title = news.174.t
+	picture = GFX_news_event_069
+	desc = news.174.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	#We should follow this development.
+	option = {
+		name = news.174.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = FROM
+				has_war_with = FROM
+				tag = FROM
+			}
+		}
+	}
+
+	#Let us hope their research bears fruit.
+	option = {
+		name = news.174.b
+		trigger = {
+			is_in_faction_with = FROM
+			NOT = {
+				tag = FROM
+			}
+		}
+	}
+
+	#It will never amount to anything.
+	option = {
+		name = news.174.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+
+	#We will conduct our research in secret.
+	option = {
+		name = news.174.e
+		trigger = {
+			tag = FROM
+		}
+	}
+}
+
+#Spain Cedes the Balearic Islands
+news_event = {
+	id = news.190
+	title = news.190.t
+	desc = news.190.d
+	picture = GFX_news_event_generic_sign_treaty2
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		ITA = {
+			save_event_target_as = Italy
+		}
+	}
+
+	#This is an important step towards complete Mediterranean dominance.
+	option = {
+		name = news.190.a
+		trigger = {
+			tag = ITA
+		}
+	}
+
+	#
+	option = {
+		name = news.190.b
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { tag = ITA }
+		}
+	}
+
+	#Italy is strengthening its grip on the Mediterrenean.
+	option = {
+		name = news.190.b
+		trigger = {
+			NOT = {	is_in_faction_with = ITA }
+			NOT = {
+				OR = {
+					tag = FROM
+					tag = ITA
+				}
+			}
+		}
+	}
+
+	#A symbol of the \"dear friendship\" between our nations.
+	option = {
+		name = news.190.c
+		trigger = {
+			tag = FROM
+		}
+	}
+}
+
+
+
+
+

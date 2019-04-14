@@ -1,0 +1,22 @@
+abbessinia = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = ITA
+  }
+  
+	visible = {
+		has_completed_focus = ethiopian_war_logistics_ita
+	}
+}
+war_plans_ita = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = ITA
+  }
+  
+	visible = {
+		has_completed_focus = war_plans_ita
+	}
+}

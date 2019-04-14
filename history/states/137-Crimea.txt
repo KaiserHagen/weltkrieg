@@ -1,0 +1,39 @@
+
+state={
+	id=137
+	name="STATE_137"
+
+	history={
+		owner = KRI
+		victory_points = {
+			3686 20 
+		}
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 3
+			3686 = {
+				naval_base = 9
+				coastal_bunker = 3
+
+			}
+			9680 = {
+				naval_base = 1
+				coastal_bunker = 1
+
+			}
+
+		}
+		add_core_of = KRI
+
+	}
+
+	provinces={
+		705 3686 3722 6724 9677 9680 9718 11649
+	}
+	manpower=1041607
+	buildings_max_level_factor=1.000
+	state_category=city
+}

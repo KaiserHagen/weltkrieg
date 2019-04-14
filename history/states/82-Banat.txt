@@ -1,0 +1,29 @@
+
+state={
+	id=82
+	name="STATE_82"
+	resources={
+		aluminium=18.000
+	}
+
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		add_core_of = HUN
+		add_core_of = USG
+		add_core_of = ROM
+
+	}
+
+	provinces={
+		662 3649 11592 11608 
+	}
+	manpower=687300
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
+ 

@@ -1,0 +1,203 @@
+﻿division_template = {
+	name = "Piyade Tümeni"  			# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Dag Tugayi" 				# Mountain Brigade
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Bogazi Tugay" 				# Fortress Brigade - garrison brigade, lower experience and equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Süvari Tümeni" 				# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	
+	division = {
+		name = "4. Dag Tugayi"
+		location = 9806
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "3. Dag Tugayi"
+		location = 6808
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "2. Dag Tugayi"
+		location = 6920
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "1. Dag Tugayi"
+		location = 11831
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "5. Dag Tugayi"
+		location = 856
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "6. Dag Tugayi"
+		location = 940
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "7. Dag Tugayi"
+		location = 940
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "8. Dag Tugayi"
+		location = 1005
+		division_template = "Bogazi Tugay" 
+		start_experience_factor = 0.2
+
+	}
+	
+	division = {
+		name = "2. Piyade Tümeni"
+		location = 11747
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "3. Piyade Tümeni"
+		location = 1005
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "1. Piyade Tümeni"
+		location = 11746
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+	division = {
+		name = "4. Piyade Tümeni"
+		location = 11747
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+	
+	division = {
+		name = "1. Süvari Tümeni"
+		location = 3807
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		name = "2. Süvari Tümeni"
+		location = 11747
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	
+	division = {
+		name = "2. Süvari Tümeni"
+		location = 11747
+		division_template = "Süvari Tümeni" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+					
+}
+
+
+### Air Wings ###
+air_wings = {
+	##### Türk Hava Kuvvetleri #####
+	341 = { 
+		# 1. Havacilik Alay -- Curtiss F11C Hawk II fighters (technically CAG fighters)
+		fighter_equipment_0 = {
+			owner = "OSM" 
+			amount = 48
+		}
+		# 2. Havacilik Alay -- Letov S.16T light bombers
+		CAS_equipment_1 = {
+			owner = "OSM" 
+			amount = 32
+		}
+	}
+	49 = {
+		fighter_equipment_0 = {
+			owner = "OSM" 
+			amount = 42
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "OSM" 
+			amount = 40
+		}
+	}
+}

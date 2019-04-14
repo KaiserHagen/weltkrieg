@@ -1,0 +1,26 @@
+state={
+	id=732
+	name="STATE_732"
+	
+	state_category = wasteland
+	
+	resources={
+		steel=12
+		chromium=4
+	}
+
+	history={
+		owner = TUK
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = TUK
+
+	}
+
+	provinces={
+		1483 1675 4316 4391 4467 4768 4923 5062 10408 10530 12370 12511
+	}
+	manpower=450000
+}

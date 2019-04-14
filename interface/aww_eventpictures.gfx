@@ -1,0 +1,31 @@
+spriteTypes = {
+
+####### Weltkrieg Pictures #########
+	
+	
+	spriteType = {
+		name = "GFX_report_event_alt_style_weltkrieg"
+		texturefile = "gfx/event_pictures/report_event_alt_style_weltkrieg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_start_info"
+		texturefile = "gfx/event_pictures/report_event_start_info.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_news_event_abduelmecid_ii_retires"
+		texturefile = "gfx/event_pictures/news_event_abduelmecid_ii_retires.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_memorial_day"
+		texturefile = "gfx/event_pictures/news_event_memorial_day.dds"
+	}
+	
+	
+}
+
+
+

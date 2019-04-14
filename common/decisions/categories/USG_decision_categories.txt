@@ -1,0 +1,23 @@
+expansion_plans_uga = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = UGA
+  }
+  
+	visible = {
+		has_completed_focus = expansion_plans_uga
+	}
+}
+
+intervention_plans_uga = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = UGA
+  }
+  
+	visible = {
+		has_completed_focus = intervention_plans_uga
+	}
+}

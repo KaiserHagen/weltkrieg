@@ -1,0 +1,27 @@
+state={
+	id=93
+	name="STATE_93"
+	manpower = 1752600
+	
+	state_category = town
+	
+	resources={
+
+	}
+	
+	history={
+		owner = UKR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			
+
+		}
+		add_core_of = UKR
+		add_claim_by = POL
+	}
+
+	provinces={
+		422 474 513 572 3412 6435 6557 11543 6520 11441 
+	}
+}

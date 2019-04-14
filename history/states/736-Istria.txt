@@ -1,0 +1,38 @@
+state={
+	id=736
+	name="STATE_736"
+	
+	state_category = city
+
+	history={
+		owner = USG
+		
+		victory_points = {
+			6626 10 
+		}
+		
+		add_core_of = USG
+		add_core_of = AUS
+		add_core_of = CRO
+		
+		buildings = {
+			infrastructure = 5
+			11735 = {
+				naval_base = 7
+
+			}
+			11595 = {
+				bunker = 3
+			}
+			dockyard = 2
+
+		}
+
+	}
+
+	provinces={
+		599 11595 11735 13206
+	}
+	manpower=813159
+	buildings_max_level_factor=1.000
+}

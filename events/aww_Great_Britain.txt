@@ -1,0 +1,1134 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_eng
+add_namespace = aw_com
+
+##########################################
+############ British Events ##############
+##########################################
+
+#puppet Australia
+country_event = {
+	id = aw_eng.1
+	title = aw_eng.1.t
+	desc = aw_eng.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.1.a
+		ai_chance = { factor = 90 }
+		AST = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		ENG = {
+			puppet = AST
+			country_event = { hours = 6 id = aw_eng.2 }
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.1.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.3 }
+		}
+	}
+}
+#Australia accepts
+country_event = {
+	id = aw_eng.2
+	title = aw_eng.2.t
+	desc = aw_eng.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.2.a
+	}
+}
+
+#Australia refuses
+country_event = {
+	id = aw_eng.3
+	title = aw_eng.3.t
+	desc = aw_eng.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.3.a
+		if = {
+			limit = { AST = { is_in_faction_with = ENG }}
+			remove_from_faction = AST
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = AST
+		}
+	}
+}
+
+#Ultimatum on Canada
+country_event = {
+	id = aw_eng.4
+	title = aw_eng.4.t
+	desc = aw_eng.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.4.a
+		ai_chance = {
+			factor = 50
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.5 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = aw_eng.4.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.6 }
+		}
+	}
+}
+#Canada accepts
+country_event = {
+	id = aw_eng.5
+	title = aw_eng.5.t
+	desc = aw_eng.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.5.a
+		annex_country = { target = CAN transfer_troops = yes }
+	}
+}
+
+#Canada refuses
+country_event = {
+	id = aw_eng.6
+	title = aw_eng.6.t
+	desc = aw_eng.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.6.a
+		if = {
+			limit = { CAN = { is_in_faction_with = ENG }}
+			remove_from_faction = CAN
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CAN
+		}
+		every_state = {
+			limit = { is_owned_by = CAN }
+			add_claim_by = ENG
+		}
+	}
+}
+
+#Ultimatum on Ireland
+country_event = {
+	id = aw_eng.7
+	title = aw_eng.7.t
+	desc = aw_eng.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.7.a
+		ai_chance = { factor = 50 }
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.8 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = aw_eng.7.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.9 }
+		}
+	}
+}
+#Ireland accepts
+country_event = {
+	id = aw_eng.8
+	title = aw_eng.8.t
+	desc = aw_eng.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.8.a
+		annex_country = { target = IRE transfer_troops = yes }
+	}
+}
+
+#Ireland refuses
+country_event = {
+	id = aw_eng.9
+	title = aw_eng.9.t
+	desc = aw_eng.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.9.a
+		if = {
+			limit = { IRE = { is_in_faction_with = ENG }}
+			remove_from_faction = IRE
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = IRE
+		}
+		every_state = {
+			limit = { is_owned_by = IRE }
+			add_claim_by = ENG
+		}
+	}
+}
+
+#puppet South Africa
+country_event = {
+	id = aw_eng.13
+	title = aw_eng.13.t
+	desc = aw_eng.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.13.a
+		ai_chance = { factor = 80 }
+		SAF = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		ENG = {
+			puppet = SAF
+			country_event = { hours = 6 id = aw_eng.14 }
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.13.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.15 }
+		}
+	}
+}
+#SAF accepts
+country_event = {
+	id = aw_eng.14
+	title = aw_eng.14.t
+	desc = aw_eng.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.14.a
+	}
+}
+
+#SAF refuses
+country_event = {
+	id = aw_eng.15
+	title = aw_eng.15.t
+	desc = aw_eng.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.15.a
+		if = {
+			limit = { SAF = { is_in_faction_with = ENG }}
+			remove_from_faction = SAF
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAF
+		}
+	}
+}
+#puppet New Zealand
+country_event = {
+	id = aw_eng.16
+	title = aw_eng.16.t
+	desc = aw_eng.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.16.a
+		ai_chance = { factor = 80 }
+		NZL = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		ENG = {
+			puppet = NZL
+			country_event = { hours = 6 id = aw_eng.17 }
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.16.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.18 }
+		}
+	}
+}
+#NZL accepts
+country_event = {
+	id = aw_eng.17
+	title = aw_eng.17.t
+	desc = aw_eng.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.17.a
+	}
+}
+
+#NZL refuses
+country_event = {
+	id = aw_eng.18
+	title = aw_eng.18.t
+	desc = aw_eng.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.18.a
+		if = {
+			limit = { NZL = { is_in_faction_with = ENG }}
+			remove_from_faction = NZL
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = NZL
+		}
+	}
+}
+
+#Britain wants to join France
+country_event = {
+	id = aw_eng.19
+	title = aw_eng.19.t
+	desc = aw_eng.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.19.a
+		every_country = {
+			limit = { is_in_faction_with = ENG }
+			country_event = { id = aw_com.1 }
+		}
+		ai_chance = { factor = 100 }
+		
+		ENG = { 
+			dismantle_faction = yes
+			country_event = { id = aw_eng.20 } 
+		}
+		FRA = { add_to_faction = ENG }
+	}
+	option = { # Refuse
+		name = aw_eng.19.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.21 }
+		}
+	}
+}
+#FRA accepts
+country_event = {
+	id = aw_eng.20
+	title = aw_eng.20.t
+	desc = aw_eng.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.20.a
+	}
+}
+
+#FRA refuses
+country_event = {
+	id = aw_eng.21
+	title = aw_eng.21.t
+	desc = aw_eng.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.21.a
+		add_opinion_modifier = {
+			target = FRA 
+			modifier = fra_refuses
+		}
+	}
+}
+
+#Britain invites Italy
+country_event = {
+	id = aw_eng.22
+	title = aw_eng.22.t
+	desc = aw_eng.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.22.a
+		ai_chance = { factor = 100 }
+		ENG= {
+			add_to_faction = ITA
+			country_event = { id = aw_eng.23 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.22.b
+		ai_chance = { factor = 0 }
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.24 }
+		}
+	}
+}
+#Italy accepts
+country_event = {
+	id = aw_eng.23
+	title = aw_eng.23.t
+	desc = aw_eng.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.23.a
+	}
+}
+
+#Italy refuses
+country_event = {
+	id = aw_eng.24
+	title = aw_eng.24.t
+	desc = aw_eng.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.24.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = italy_refuses
+		}
+	}
+}
+
+
+#Commonwealth members join france
+country_event = {
+	id = aw_com.1
+	title = aw_com.1.t
+	desc = aw_com.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Join
+		name = aw_com.1.a
+		ai_chance = { factor = 100 }
+		FRA = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+#British faction gets renewed (fascist tree)
+country_event = {
+	id = aw_com.2
+	title = aw_com.2.t
+	desc = aw_com.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Join
+		name = aw_com.2.a
+		ai_chance = { factor = 100 }
+		ENG = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+#Commonwealth members join league of nations
+country_event = {
+	id = aw_com.3
+	title = aw_com.3.t
+	desc = aw_com.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Join
+		name = aw_com.3.a
+		ai_chance = { factor = 100 }
+		USG = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+# Fascist Coup
+country_event = {
+	id = aw_eng.25
+	title = aw_eng.25.t
+	desc = aw_eng.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		days=2
+	}
+	trigger = {
+		tag = ENG 
+		ENG = {
+			fascism > 0.33
+			NOT = { has_government = fascism }
+			has_completed_focus = immediate_action_force_eng
+		}
+	}
+	
+	option = { # Go to exile (current government)
+		name = aw_eng.25.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				ENG = { has_completed_focus = radicalization_eng }
+			}
+		}
+		ENG = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+		}
+	}
+	option = { # start civilwar
+		name = aw_eng.25.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				ENG = { has_completed_focus = radicalization_eng }
+			}
+		}
+		if = {
+			limit = { has_government = democratic }
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = democratic
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = communism
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = monarchism
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = monarchism
+				size = 0.6
+			}
+		}
+	}
+}
+
+#Britain befriends Austria
+country_event = {
+	id = aw_eng.26
+	title = aw_eng.26.t
+	desc = aw_eng.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.26.a
+		ai_chance = {
+			factor = 70
+		}
+		USG = {
+			add_opinion_modifier = { target = ENG modifier = befriend }
+		}
+		diplomatic_relation = {
+      country = ENG
+      relation = non_aggression_pact
+      active = yes
+    }
+		ENG= {
+			country_event = { id = aw_eng.27 hours = 12 }
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.26.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.28 hours = 12 }
+		}
+	}
+}
+#Austria accepts
+country_event = {
+	id = aw_eng.27
+	title = aw_eng.27.t
+	desc = aw_eng.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.27.a
+	}
+}
+
+#Austria refuses
+country_event = {
+	id = aw_eng.28
+	title = aw_eng.28.t
+	desc = aw_eng.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.28.a
+		add_opinion_modifier = {
+			target = USG
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Britain wants to join league of nations
+country_event = {
+	id = aw_eng.29
+	title = aw_eng.29.t
+	desc = aw_eng.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_eng.29.a
+		ai_chance = {
+			factor = 100
+		}
+		every_country = {
+			limit = { is_in_faction_with = ENG NOT = { original_tag = ENG } }
+			country_event = { id = aw_com.3 }
+			set_country_flag = commonwealth_member
+		}
+		ENG = {
+			dismantle_faction = yes
+			country_event = { id = aw_eng.30 hours = 6 }
+		}
+		USG = {
+			add_to_faction = ENG
+		}
+	}
+	option = { # Refuse
+		name = aw_eng.29.b
+		ai_chance = { factor = 0 }
+		ENG = {
+			country_event = { hours = 6 id = aw_eng.31 }
+		}
+	}
+}
+#Austria accepts
+country_event = {
+	id = aw_eng.30
+	title = aw_eng.30.t
+	desc = aw_eng.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.30.a
+	}
+}
+
+#Austria refuses
+country_event = {
+	id = aw_eng.31
+	title = aw_eng.31.t
+	desc = aw_eng.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_eng.31.a
+		add_opinion_modifier = {
+			target = USG
+			modifier = refuses
+		}
+	}
+}
+
+#Surrender when China conquers Hongkong
+country_event = {
+	id = aw_eng.32
+	title = aw_eng.32.t
+	desc = aw_eng.32.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = ENG
+		has_war_with = CHI
+		CHI = { controls_state = 326 }
+		ENG = { owns_state = 326 }
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+	#Accept Hongkong as chinese territory
+	option = {
+		name = aw_eng.32.a
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 30
+				ENG = { has_government = fascism }
+			}
+		}
+		CHI = {
+			country_event = { id = aw_eng.33 }
+		}
+		effect_tooltip = {
+			CHI = { white_peace = ENG }
+			transfer_state = 326
+		}
+	}
+
+	#Never give up!
+	option = {
+		name = aw_eng.32.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 70
+				ENG = { has_government = fascism }
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Chinas response
+country_event = {
+	id = aw_eng.33
+	title = aw_eng.33.t
+	desc = aw_eng.33.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = aw_eng.33.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				CHI = {
+					is_in_faction = yes
+				}
+				ENG = { is_in_faction = yes }
+			}
+		}
+		white_peace = ENG
+		CHI = { transfer_state = 326 }
+	}
+
+	#keep the fight going
+	option = {
+		name = aw_eng.33.b
+		ai_chance = {
+			base = 0	
+			modifier = {
+				factor = 100
+				CHI = {
+					is_in_faction = yes
+				}
+				ENG = { is_in_faction = yes }
+			}
+		}
+		ENG = { country_event = { id = aw_eng.34 } }
+	}
+}
+
+#### China rejects offer
+country_event = {
+	id = aw_eng.34
+	title = aw_eng.34.t
+	desc = aw_eng.34.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eng.34.a
+		
+	}
+}
+
+#### France questions Treaty of Nuernberg
+country_event = {
+	id = aw_eng.35
+	title = aw_eng.35.t
+	desc = aw_eng.35.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { # approve
+		name = aw_eng.35.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 100
+				ENG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 50
+				ENG = { has_government = democratic }
+			}
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = question_treaty_of_nuernberg_approval
+		}
+		FRA = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = question_treaty_of_nuernberg_approval
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = qton_negative_reaction
+					NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_eng }
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = question_treaty_of_nuernberg_reaction_eng
+				}
+			}
+		}
+		set_country_flag = qton_approval_eng
+	}
+	
+	option = { # ignore
+		name = aw_eng.35.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ENG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 50
+				ENG = { has_government = democratic }
+			}
+		}
+	}
+}
+
+#Intervention Norway
+country_event = {
+	id = aw_eng.36
+	title = aw_eng.36.t
+	desc = aw_eng.36.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#accept
+	option = {
+		name = aw_eng.36.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+        factor = 1 
+        threat < 0.15
+      }
+      modifier = {
+        factor = 50 
+        OR = {
+          GER = { has_added_tension_amount > 25 }
+          GER = { focus_progress = { focus = subjugate_denmark_ger progress > 0.01 } }
+          GER = { focus_progress = { focus = subjugate_holland_ger progress > 0.01 } }
+          GER = { has_offensive_war = yes }
+        }
+      }
+		}
+		ENG = {
+      country_event = { id = aw_eng.37 hours = 6 }
+    }
+	}
+
+	#reject
+	option = {
+		name = aw_eng.36.b
+		ai_chance = {
+			factor = 60	
+			modifier = {
+        factor = 99 
+        threat < 0.15
+      }
+      modifier = {
+        factor = 50 
+        OR = {
+          GER = { has_added_tension_amount > 25 }
+          GER = { focus_progress = { focus = subjugate_denmark_ger progress > 0.01 } }
+          GER = { focus_progress = { focus = subjugate_holland_ger progress > 0.01 } }
+          GER = { has_offensive_war = yes }
+        }
+      }
+		}
+		ENG = { country_event = { id = aw_eng.38 hours = 6 } }
+	}
+}
+
+#### Norway accepts
+country_event = {
+	id = aw_eng.37
+	title = aw_eng.37.t
+	desc = aw_eng.37.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eng.37.a
+		puppet = NOR
+	}
+}
+
+#### Norway rejects
+country_event = {
+	id = aw_eng.38
+	title = aw_eng.38.t
+	desc = aw_eng.38.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eng.38.a
+		set_country_flag = norway_rejects
+	}
+}
+
+#Intervention Netherlands
+country_event = {
+	id = aw_eng.39
+	title = aw_eng.39.t
+	desc = aw_eng.39.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#accept
+	option = {
+		name = aw_eng.39.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+        factor = 1 
+        threat < 0.15
+      }
+      modifier = {
+        factor = 50 
+        OR = {
+          GER = { has_added_tension_amount > 25 }
+          GER = { focus_progress = { focus = subjugate_holland_ger progress > 0.01 } }
+          GER = { has_offensive_war = yes }
+        }
+      }
+		}
+		ENG = {
+      country_event = { id = aw_eng.40 hours = 6 }
+    }
+	}
+
+	#reject
+	option = {
+		name = aw_eng.39.b
+		ai_chance = {
+			factor = 60	
+			modifier = {
+        factor = 99 
+        threat < 0.15
+      }
+      modifier = {
+        factor = 50 
+        OR = {
+          GER = { has_added_tension_amount > 25 }
+          GER = { focus_progress = { focus = subjugate_holland_ger progress > 0.01 } }
+          GER = { has_offensive_war = yes }
+        }
+      }
+		}
+		ENG = { country_event = { id = aw_eng.41 hours = 6 } }
+	}
+}
+
+#### Netherlands accepts
+country_event = {
+	id = aw_eng.40
+	title = aw_eng.40.t
+	desc = aw_eng.40.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eng.40.a
+		puppet = HOL
+	}
+}
+
+#### Netherlands rejects
+country_event = {
+	id = aw_eng.41
+	title = aw_eng.41.t
+	desc = aw_eng.41.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eng.41.a
+		set_country_flag = netherlands_reject
+	}
+}

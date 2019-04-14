@@ -1,0 +1,55 @@
+﻿l_english:
+
+ #Inf EQ
+ infantry_reliability_upgrade:0 "Reliability"
+ infantry_reliability_upgrade_desc:0 "Improves Reliability"
+ infantry_soft_attack_upgrade:0 "Soft Attack"
+ infantry_soft_attack_upgrade_desc:0 "Improves Soft Attack"
+ infantry_hard_attack_upgrade:0 "Anti Tank Capabilities"
+ infantry_hard_attack_upgrade_desc:0 "Improves Hard Attack and Piercing"
+ infantry_defence_upgrade:0 "Support Weapons"
+ infantry_defence_upgrade_desc:0 "Improves Defence and Breakthrough"
+ 
+ 
+ artillery_reliability_upgrade:0 "Reliability"
+ artillery_reliability_upgrade_desc:0 "Improves Reliability"
+ artillery_soft_attack_upgrade:0 "Better HE Shells"
+ artillery_soft_attack_upgrade_desc:0 "Improves Soft Attack"
+ artillery_hard_attack_upgrade:0 "Better AP Shells"
+ artillery_hard_attack_upgrade_desc:0 "Improves Hard Attack"
+ artillery_defence_upgrade:0 "Flexibility"
+ artillery_defence_upgrade_desc:0 "Improves Defence and Breakthrough"
+ 
+ 
+ AT_reliability_upgrade:0 "Reliability"
+ AT_reliability_upgrade_desc:0 "Improves Reliability"
+ AT_pierce_upgrade:0 "Improved AP Shells"
+ AT_pierce_upgrade_desc:0 "Improves Piercing"
+ AT_defence_upgrade:0 "Defence Upgrade"
+ AT_defence_upgrade_desc:0 "Improves Defence and Breakthrough"
+ 
+ 
+ AA_reliability_upgrade:0 "Reliability"
+ AA_reliability_upgrade_desc:0 "Improves Reliability"
+ AA_anti_air_upgrade:0 "Reconnaissance"	
+ AA_anti_air_upgrade_desc:0 "Improves Air Attack"
+ AA_defence_upgrade:0 "Defence Upgrade"
+ AA_defence_upgrade_desc:0 "Improves Defence and Breakthrough"
+ 
+ 
+ motorized_reliability_upgrade:0 "Reliability"
+ motorized_reliability_upgrade_desc:0 "Improves Reliability"
+ motorized_speed_upgrade:0 "Engine"
+ motorized_speed_upgrade_desc:0 "Improves Max. Speed"
+ motorized_hardness_upgrade:0 "Better Armor"
+ motorized_hardness_upgrade_desc:0 "Improves Hardness"
+ 
+ 
+ mechanized_reliability_upgrade:0 "Reliability"
+ mechanized_reliability_upgrade_desc:0 "Improves Reliability"
+ mechanized_speed_upgrade:0 "Engine"
+ mechanized_speed_upgrade_desc:0 "Improves Max. Speed"
+ mechanized_armor_upgrade:0 "Better Armor"
+ mechanized_armor_upgrade_desc:0 "Improves Hardness"
+ 
+ 

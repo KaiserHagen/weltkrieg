@@ -1,0 +1,27 @@
+################
+#### SOVIET ####
+################
+
+war_operations_sov = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = SOV
+  }
+  
+	visible = {
+		has_completed_focus = seek_power_sov
+	}
+}
+
+spread_communist_propaganda_sov = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = SOV
+  }
+  
+	visible = {
+		has_completed_focus = spread_communist_propaganda_sov
+	}
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=4
+	name="STATE_4"
+	resources={
+		steel=38.000
+	}
+
+	history={
+		owner = USG
+		victory_points = {
+			11666 50 
+		}
+		victory_points = {
+			6739 10 
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 3
+			air_base = 3
+
+		}
+		add_core_of = AUS
+		add_core_of = USG
+
+	}
+
+	provinces={
+		704 3700 3718 6552 6690 6723 6739 9527 9661 11651 11666 
+	}
+	manpower=3195983
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

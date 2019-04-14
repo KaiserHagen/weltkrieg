@@ -1,0 +1,25 @@
+state={
+	id=72
+	name="STATE_72"
+	manpower = 248307
+	
+	state_category = city_state
+	
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 6
+			dockyard = 1
+			6626 = {
+				naval_base = 2
+				bunker = 3
+			}
+		}
+		add_core_of = USG
+		add_core_of = AUS
+	}
+
+	provinces={
+		6626 
+	}
+}

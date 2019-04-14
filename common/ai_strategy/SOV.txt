@@ -1,0 +1,178 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+SOV_unit_production = {
+	enable = {
+		original_tag = SOV
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = motorized
+		value = 2
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 20 # double original
+	}
+}
+
+SOV_template_design = {
+	enable = {
+		original_tag = SOV
+		date < 1940.1.1				
+	}
+	abort = { 
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 50
+	}
+}
+
+SOV_template_design = {
+	enable = {
+		original_tag = SOV
+		date > 1940.1.1				
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 10
+	}
+}
+
+###
+
+
+ignore_tcr = {			#if tcr is not neighboring
+	enable = {
+		tag = SOV
+		SOV = { 
+			has_completed_focus = ultimatum_tcr_sov
+		}
+		TCR = { NOT = { is_neighbor_of = SOV } }
+		country_exists = TCR
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = TCR }
+			TCR = { is_neighbor_of = SOV }
+			SOV = { has_war_with = TCR }
+			SOV = {
+				owns_state = 229 
+				owns_state = 230
+			}
+		}
+	}
+	ai_strategy = {
+		type = ignore 
+		id = "TCR"
+		value = 300
+	}
+}
+
+
+
+
+
+
+

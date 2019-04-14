@@ -1,0 +1,71 @@
+﻿capital = 229
+
+oob = "TCR_1936"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	
+	infantry_weapons1 = 1
+	early_fighter = 1
+}
+
+set_convoys = 0
+
+
+set_politics = {
+
+	parties = {
+		neutrality = { 
+			popularity = 56
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 15
+		}
+		
+		democratic = { 
+			popularity = 29
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1932.5.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_stability = 0.45 
+set_war_support = 0.40
+
+add_ideas = {
+	volunteer_only
+	civilian_economy
+	free_trade
+}
+
+create_country_leader = {
+	name = "Mammad Amin Rasulzade"
+	desc = ""
+	picture = "Portrait_TCR_Mammad_Amin_Rasulzade.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		staunch_constitutionalist
+	}
+}
+
+create_country_leader = {
+	name = "Mir Jafar Baghirov"
+	desc = ""
+	picture = "Portrait_TCR_Mir_Jafar_Baghirov.dds"
+	expire = "1953.3.1"
+	ideology = trotskyism
+	traits = {
+		soviet_puppet
+	}
+}

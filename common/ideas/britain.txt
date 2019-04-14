@@ -1,0 +1,1286 @@
+ideas = {
+
+	country = {
+	
+		restoration_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				army_org_factor = 0.05
+				max_planning = 0.1
+			}
+		}
+
+		consolidate_power_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				political_power_factor = 0.10
+			}
+		}
+		
+		red_alert_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.005
+				guarantee_tension = -0.25 
+				generate_wargoal_tension = -0.75
+				join_faction_tension = -0.65
+				send_volunteers_tension = -0.35 
+				lend_lease_tension = -0.4
+			}
+		}
+		
+		on_the_alert_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.005
+				guarantee_tension = -0.1 
+				generate_wargoal_tension = -0.5
+				join_faction_tension = -0.45
+				send_volunteers_tension = -0.25 
+				lend_lease_tension = -0.25
+			}
+		}
+		
+		military_reform_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		
+		immediate_action_force_focus_eng = {
+			allowed = {
+				original_TAG = ENG
+				has_government = fascism
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.02
+				foreign_subversive_activites = -0.4
+				enemy_partisan_effect = -0.2
+			}
+		}
+		
+		reform_building_sites_focus_eng = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_wall_line
+			
+			modifier = {
+				global_building_slots_factor = 0.25
+			}
+		}
+		
+		talk_to_the_people_focus = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.2 
+				stability_weekly = 0.003
+				democratic_drift = 0.03
+			}
+		}
+	
+		rearmament_focus = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+#				production_speed_infrastructure_factor = 0.1
+			}
+		}
+	
+		radicalization_focus = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+	
+		political_effort_focus = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+	
+		fortify_the_empire_focus = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_wall_line
+			
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.2
+			}
+		}
+		
+		british_pride = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_british_stoicism
+			
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		lost_pride = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_british_stoicism
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				justify_war_goal_time = -0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		
+		george_v = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+				}
+				NOT = {
+					any_country = {
+						original_tag = ENG
+						has_government = democratic 
+						NOT = {
+							tag = ROOT
+						}
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			traits = { popular_figurehead }
+			
+
+		}
+
+		ENG_king_edward = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+				}
+				NOT = {
+					any_country = {
+						original_tag = ENG
+						has_government = democratic 
+						NOT = {
+							tag = ROOT
+						}
+					}
+				}
+			}
+
+			picture = king_edward
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.001
+			}
+			
+
+		}
+
+		ENG_king_edward_fascism = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = king_edward
+			
+			removal_cost = -1
+			
+			cancel = {
+				NOT = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+
+			modifier = {
+				democratic_acceptance = -10
+				fascism_acceptance = 20
+				fascism_drift = 0.03
+			}
+			
+
+		}
+
+		ENG_george_vi = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+				}
+				NOT = {
+					any_country = {
+						original_tag = ENG
+						has_government = democratic 
+						NOT = {
+							tag = ROOT
+						}
+					}
+				}
+			}
+
+			picture = george_vi
+			
+			removal_cost = -1
+			
+			traits = { popular_figurehead }
+			
+
+		}
+
+		ENG_the_war_to_end_all_wars = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				conscription_factor = -0.25
+				#conscription = -0.006
+			}
+		}
+		
+		stiff_upper_lip = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			
+			rule = {
+				can_create_factions = yes
+			}			
+		}
+
+		
+		
+		british_austerity_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		ENG_colonial_elite = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		british_fighter_discount = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_bonus
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		british_arms_discount = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		british_convoy_discount = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		indian_independence_promised_idea  = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_morale_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		ENG_continuation_of_politics = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			rule = {
+				can_boost_other_ideologies = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			removal_cost = -1			
+			
+		}
+	}
+	
+		
+	# MILITARY
+	army_chief = {
+		john_vereker = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		edmund_ironside = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		alan_brooke = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_chief_maneuver_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+	}
+	navy_chief = {
+
+		ernle_chatfield = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		dudley_pound = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_1 }
+			# REVISIT Secondary trait for anti-sub efforts?
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		andrew_cunningham = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+
+		cyril_newall = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		charles_portal = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_chief_night_operations_2 }
+			# REVISIT Stratetic bombing as secondary trait?
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		edward_ellington = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+
+		archibald_wavell = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		claude_auchinleck = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kenneth_anderson = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		sholto_douglas = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		trafford_leigh_mallory = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		frederick_bowhill = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_naval_strike_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		louis_mountbatten = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_amphibious_assault_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		henry_harwood = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		max_horton = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { navy_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+	}		}
+	
+	
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		yarrow_shipbuilders = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+
+		}
+		
+		harland_wolff = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+		
+		cammell_laird = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		john_brown_company = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}	
+	}
+	
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		supermarine = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		hawker = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { CAS_manufacturer } 
+			
+			modifier = {
+			}
+		}	
+		de_havilland = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		avro = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		fairey_aviation = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}			
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		rsaf_enfield = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		vauxhall = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		royal_arsenal = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	industrial_concern = {
+				
+		aioc = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+		
+		english_electric = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+		
+	}	
+
+	
+	tank_manufacturer = {
+		vickers_armstrong_eng = {
+			
+			allowed = {
+				original_TAG = ENG
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	theorist = {	
+	
+		bernard_montgomery = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.10
+			}
+			
+			traits = { grand_battle_plan_expert }
+		}
+		
+		harold_alexander = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		james_somerville = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_fleet_in_being = 0.10
+			}
+			
+			traits = { grand_fleet_proponent }
+		}
+		
+		tom_phillips = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		hugh_dowding = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		arthur_harris = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_strategic_destruction = 0.10
+			}
+			
+			traits = { victory_through_airpower }
+		}
+		
+		james_chadwick = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			research_bonus = {
+				nuclear = 0.10
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		frank_whittle = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			research_bonus = {
+				rocketry = 0.10
+			}
+			
+			traits = { rocket_scientist }
+		}
+	}
+
+
+}
+

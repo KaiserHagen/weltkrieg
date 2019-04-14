@@ -1,0 +1,482 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_sov
+
+
+
+############# Soviet Events #################
+
+#Ultimatum Turkestan
+country_event = {
+	id = aw_sov.1
+	title = aw_sov.1.t
+	desc = aw_sov.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_sov.1.a
+		ai_chance = { factor = 95 }
+		SOV = {
+			annex_country = { target = TUK transfer_troops = yes }
+			country_event = { hours = 6 id = aw_sov.2 }
+		}
+	}
+	option = { # Refuse
+		name = aw_sov.1.b
+		ai_chance = { factor = 5 }
+		SOV = {
+			country_event = { hours = 6 id = aw_sov.3 }
+		}
+	}
+}
+#Turkestan accepts
+country_event = {
+	id = aw_sov.2
+	title = aw_sov.2.t
+	desc = aw_sov.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.2.a
+	}
+}
+
+#Turkestan refuses
+country_event = {
+	id = aw_sov.3
+	title = aw_sov.3.t
+	desc = aw_sov.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.3.a
+		create_wargoal = {
+			type = take_state_focus
+			target = TUK
+			generator = { 405 }
+		}
+	}
+}
+#Ultimatum Finland
+country_event = {
+	id = aw_sov.4
+	title = aw_sov.4.t
+	desc = aw_sov.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_sov.4.a
+		ai_chance = { factor = 30 }
+		SOV = {
+			annex_country = { target = FIN transfer_troops = yes }
+			country_event = { hours = 6 id = aw_sov.5 }
+		}
+	}
+	option = { # Refuse
+		name = aw_sov.4.b
+		ai_chance = { factor = 70 }
+		SOV = {
+			country_event = { hours = 6 id = aw_sov.6 }
+		}
+	}
+}
+#Finland accepts
+country_event = {
+	id = aw_sov.5
+	title = aw_sov.5.t
+	desc = aw_sov.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.5.a
+	}
+}
+
+#Finland refuses
+country_event = {
+	id = aw_sov.6
+	title = aw_sov.6.t
+	desc = aw_sov.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.6.a
+		create_wargoal = {
+			type = take_state_focus
+			target = FIN
+			generator = { 111 }
+		}
+	}
+}
+
+#Ultimatum Kuban
+country_event = {
+	id = aw_sov.7
+	title = aw_sov.7.t
+	desc = aw_sov.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_sov.7.a
+		ai_chance = { factor = 30 }
+		SOV = {
+			annex_country = { target = KBN transfer_troops = yes }
+			country_event = { hours = 6 id = aw_sov.8 }
+		}
+	}
+	option = { # Refuse
+		name = aw_sov.7.b
+		ai_chance = { factor = 70 }
+		SOV = {
+			country_event = { hours = 6 id = aw_sov.9 }
+		}
+	}
+}
+#Kuban accepts
+country_event = {
+	id = aw_sov.8
+	title = aw_sov.8.t
+	desc = aw_sov.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.8.a
+	}
+}
+
+#Kuban refuses
+country_event = {
+	id = aw_sov.9
+	title = aw_sov.9.t
+	desc = aw_sov.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = KBN
+			generator = { 234 }
+		}
+	}
+}
+
+#Sovietunion invites Ukraine
+country_event = {
+	id = aw_sov.10
+	title = aw_sov.10.t
+	desc = aw_sov.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_sov.10.a
+		ai_chance = { factor = 30 }
+		SOV = {
+			add_to_faction = UKR
+			country_event = { id = aw_sov.11 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_sov.10.b
+		ai_chance = { factor = 70 }
+		SOV = {
+			country_event = { hours = 6 id = aw_sov.12 }
+		}
+	}
+}
+#Ukraine accepts
+country_event = {
+	id = aw_sov.11
+	title = aw_sov.11.t
+	desc = aw_sov.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.11.a
+	}
+}
+
+#Ukraine refuses
+country_event = {
+	id = aw_sov.12
+	title = aw_sov.12.t
+	desc = aw_sov.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.12.a
+		add_opinion_modifier = {
+			target = UKR
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Ultimatum Transcaucasian Republic
+country_event = {
+	id = aw_sov.13
+	title = aw_sov.13.t
+	desc = aw_sov.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_sov.13.a
+		ai_chance = { factor = 10 }
+		SOV = {
+			annex_country = { target = TCR transfer_troops = yes }
+			country_event = { hours = 6 id = aw_sov.14 }
+		}
+	}
+	option = { # Refuse
+		name = aw_sov.13.b
+		ai_chance = { factor = 90 }
+		SOV = {
+			country_event = { hours = 6 id = aw_sov.15 }
+		}
+	}
+}
+#Transcaucasian Republic accepts
+country_event = {
+	id = aw_sov.14
+	title = aw_sov.14.t
+	desc = aw_sov.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.14.a
+	}
+}
+
+#Transcaucasian Republic refuses
+country_event = {
+	id = aw_sov.15
+	title = aw_sov.15.t
+	desc = aw_sov.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.15.a
+		create_wargoal = {
+			type = take_state_focus
+			target = TCR
+			generator = { 229 230 }
+		}
+	}
+}
+
+### Austria wants to join Comintern
+country_event = {
+	id = soviet.55
+	title = soviet.55.t
+	desc = soviet.55.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soviet.55.a
+		add_to_faction = USG
+		ai_chance = { factor = 80 }
+		
+		USG = { 
+			country_event = { id = usg.9} 
+		}
+		
+		hidden_effect = {
+			news_event = { hours = 6 id = aw_news.4 }
+		}
+	}
+	
+	option = {
+		name = soviet.55.b
+		ai_chance = { factor = 20 }
+		
+		USG = {
+			country_event = { id = usg.10 }
+		}
+	}
+}
+
+#France questions Treaty of Nuernberg
+country_event = {
+	id = aw_sov.16
+	title = aw_sov.16.t
+	desc = aw_sov.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # approve
+		name = aw_sov.16.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				SOV = {
+					has_opinion = {
+						target = FRA 
+						value < -50
+					}
+				}
+			}
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = question_treaty_of_nuernberg_approval
+		}
+		FRA = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = question_treaty_of_nuernberg_approval
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = qton_negative_reaction
+					NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_sov }
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = question_treaty_of_nuernberg_reaction_sov
+				}
+			}
+		}
+		set_country_flag = qton_approval_ita
+	}
+	
+	option = { # ignore
+		name = aw_sov.16.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				SOV = {
+					has_opinion = {
+						target = FRA 
+						value < -50
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+### Germany threatens Soviet because of reclamation of baltic states
+country_event = {
+	id = aw_sov.17
+	title = aw_sov.17.t
+	desc = aw_sov.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_sov.17.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = {
+			target = GER
+			modifier = ger_threatens_sov
+		}
+	}
+}
+
+### Germany wants soviet to back away // reclamation of Poland
+country_event = {
+	id = aw_sov.18
+	title = aw_sov.18.t
+	desc = aw_sov.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	#Keep claims
+	option = {
+		name = aw_sov.18.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 10
+				SOV = { has_war = yes }
+			}
+		}
+		GER = {
+			country_event = { id = aw_ger.54 hours = 12 }
+		}
+	}
+	# Back away
+	option = {
+		name = aw_sov.18.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 90
+				SOV = { has_war = yes }
+			}
+		}
+		remove_state_claim = 96
+		remove_state_claim = 95
+		remove_state_claim = 97
+		remove_state_claim = 768
+		remove_state_claim = 94
+		remove_state_claim = 92
+		remove_state_claim = 10
+		remove_state_claim = 90
+		add_political_power = -25
+		GER = {
+			country_event = { id = aw_ger.55 hours = 12 }
+		}
+	}
+	#Declare War on Germany
+	option = {
+		name = aw_sov.18.c
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				SOV = { has_war = yes }
+			}
+		}
+		declare_war_on = {
+			target = GER
+			type = take_state_focus
+			generator = { 5 98 87 67 85 86 } 
+		}
+	}
+}

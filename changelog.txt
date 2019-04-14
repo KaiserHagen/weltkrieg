@@ -1,0 +1,9 @@
+
+
+
+1.5.4
+########
+- added links to the Weltkrieg Wiki & the Weltkrieg discord server in the main menu
+- made Germany's country color a bit lighter
+- bugfixes
+- some small changes

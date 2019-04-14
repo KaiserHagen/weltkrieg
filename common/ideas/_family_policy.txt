@@ -1,0 +1,243 @@
+ideas = {
+
+	family_policy = { 
+		law = yes
+
+		neglected_family_policy = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+			}
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+
+			modifier = {
+				consumer_goods_factor = -0.04
+				MONTHLY_POPULATION = -0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		one_child_policy = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+			}
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+
+			modifier = {
+				consumer_goods_factor = -0.08
+				MONTHLY_POPULATION = -1.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		unreformed_family_policy = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				
+			}
+			
+			ai_will_do = {
+   				factor = 1
+   			}
+
+			modifier = {
+
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+		}
+		
+		support_families = {
+						
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				has_war = no
+				NOT = {
+					has_idea = partial_economic_mobilisation
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			
+			cancel = {
+				surrender_progress > 0.33
+			}
+			
+			ai_will_do = {
+   				factor = 0
+
+   				
+				
+   			}
+
+			modifier = {
+				stability_weekly = 0.001
+				consumer_goods_factor = 0.05
+				MONTHLY_POPULATION = 0.40
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		multiple_childs_policy = {
+						
+			cost = 200
+			removal_cost = -1
+			
+			available = {
+				has_war = no
+				NOT = {
+					has_idea = partial_economic_mobilisation
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			
+			cancel = {
+				surrender_progress > 0.33
+			}
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				MONTHLY_POPULATION = 1.0
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		organized_families = {
+						
+			cost = 200
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					AND = {
+						has_war = yes
+						surrender_progress > 0.33
+					}
+				}
+			}
+			
+			cancel = {
+				NOT = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+   				factor = 0
+
+   				modifier = {
+					factor = 5
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					has_war = no
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						has_government = democratic
+						has_government = monarchism
+						has_government = neutrality
+					}
+					has_war = yes
+					surrender_progress > 0.33
+				}
+   			}
+
+			modifier = {
+				political_power_factor = -0.05
+				conscription = 0.01
+				consumer_goods_factor = -0.02
+				MONTHLY_POPULATION = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		total_control = {
+						
+			cost = 250
+			removal_cost = -1
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					AND = {
+						has_war = yes
+						surrender_progress > 0.50
+					}
+				}
+			}
+			
+			cancel = {
+				NOT = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+   				factor = 0
+
+   				modifier = {
+					factor = 25
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					has_war = yes
+				}
+				modifier = {
+					factor = 25
+					OR = {
+						has_government = democratic
+						has_government = monarchism
+						has_government = neutrality
+					}
+					has_war = yes
+					surrender_progress > 0.50
+				}
+   			}
+
+			modifier = {
+				political_power_factor = -0.10
+				conscription = 0.02
+				consumer_goods_factor = -0.04
+        MONTHLY_POPULATION = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

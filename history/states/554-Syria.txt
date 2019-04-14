@@ -1,0 +1,27 @@
+
+state={
+	id=554
+	name="STATE_554"
+
+	history={
+		owner = OSM
+		victory_points = {
+			4111 5 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			arms_factory = 1
+		}
+		add_core_of = SYR
+		add_core_of = OSM
+
+	}
+
+	provinces={
+		1074 4111 4440 4486 4550 7184 10383 12442 13214 
+	}
+	manpower=852797
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

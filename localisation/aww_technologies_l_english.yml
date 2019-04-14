@@ -1,0 +1,27 @@
+﻿l_english:
+ 
+ INDUSTRY_TITLE_AGRICULTURE:0 "AGRICULTURE"
+ basic_agriculture:0 "Basic Agriculture"
+ basic_agriculture_desc:0 "Basic knowlegde of agriculture."
+ improved_basic_agriculture:0 "More Efficient Agriculture"
+ improved_basic_agriculture_desc:0 "A more efficient utilization of agricultural fields improves the harvest."
+ improved_agriculture:0 "Agricultural Company"
+ improved_agriculture_desc:0 "An Agricultural Company is able to significantly increase its harvest while not increasing the size of the field."
+ advanced_agriculture:0 "Improved Agricultural Company"
+ advanced_agriculture_desc:0 ""
+ 
+ #armoured car
+ armored_car_equipment_1:0 "Armored Car I"
+ armored_car_equipment_1_short:0 "Armored Car I"
+ armored_car_equipment_1_desc:0 "Armored Cars serve as a scouting unit or support infantry in combat."
+ armored_car_equipment_2:0 "Armored Car II"
+ armored_car_equipment_2_short:0 "Armored Car II"
+ armored_car_equipment_2_desc:0 "Armored Cars serve as a scouting unit or support infantry in combat."
+ armored_car_equipment_3:0 "Armored Car III"
+ armored_car_equipment_3_short:0 "Armored Car III"
+ armored_car_equipment_3_desc:0 "Armored Cars serve as a scouting unit or support infantry in combat."
+ armored_car_equipment_desc:0 "An armored car used for quick scouting and infantry support."
+ armored_car:0 "Armored Car"
+ armored_car_equipment:0 "Armored Car"
+ ARMOUR_TITLE_CAR:0 "ARMORED CAR"
+ 

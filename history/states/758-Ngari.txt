@@ -1,0 +1,28 @@
+state = {
+	id=758
+	name="STATE_758"
+	manpower = 245900
+	
+	state_category = city_state
+	
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 6
+			air_base = 5
+			anti_air_building = 1
+			1150 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = MAN
+		add_core_of = CHI
+		victory_points = {
+			1150 3 
+		}
+
+	}
+	provinces = {
+		1150 6851
+	}
+}

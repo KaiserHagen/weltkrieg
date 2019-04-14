@@ -1,0 +1,437 @@
+war_plan_black_usa = {
+
+	# 
+	USA_embargo_germany = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = GER
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      set_country_flag = embargo_germany_usa
+			GER = { 
+				add_opinion_modifier = { target = USA modifier = embargo } 
+			}
+		}
+		
+	}
+  
+  war_with_germany_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = GER
+			NOT = { is_in_faction_with = GER }
+      hidden_trigger = { has_country_flag = embargo_germany_usa }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = puppet_wargoal_focus
+				target = GER
+ 			}
+		}
+		
+	}
+  
+}
+
+war_plan_red_usa = {
+
+	# 
+	embargo_comintern_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = SOV
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      set_country_flag = embargo_comintern_usa
+			every_country = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_opinion_modifier = { target = USA modifier = embargo }
+			}
+		}
+		
+	}
+  
+  war_with_soviet_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = SOV
+			NOT = { is_in_faction_with = SOV }
+      hidden_trigger = { has_country_flag = embargo_comintern_usa }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = puppet_wargoal_focus
+				target = SOV
+ 			}
+		}
+		
+	}
+  
+}
+
+war_plan_blue_usa = {
+
+	# 
+	embargo_france_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = FRA
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      set_country_flag = embargo_france_usa
+			FRA = {
+				add_opinion_modifier = { target = USA modifier = embargo }
+			}
+		}
+		
+	}
+  
+  war_with_france_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			country_exists = FRA
+			NOT = { is_in_faction_with = FRA }
+      hidden_trigger = { has_country_flag = embargo_france_usa }
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5
+        has_war = no
+      }
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = puppet_wargoal_focus
+				target = FRA
+ 			}
+		}
+		
+	}
+  
+}
+
+war_operations_usa = {
+
+	# 
+	war_with_germany_2_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			GER = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = USA
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = GER }
+      has_completed_focus = for_the_workers_usa
+		}
+    complete_effect = {
+      if = {
+        limit = { has_completed_focus = for_the_workers_usa }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = GER
+        }
+      }
+      if = {
+        limit = { has_completed_focus = for_our_nation_usa }
+        create_wargoal = {
+          type = annex_everything
+          target = GER
+        }
+      }
+		}
+		
+	}
+  
+  war_with_france_2_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			FRA = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = USA
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = FRA }
+		}
+    complete_effect = {
+      if = {
+        limit = { has_completed_focus = for_the_workers_usa }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = FRA
+        }
+      }
+      if = {
+        limit = { has_completed_focus = for_our_nation_usa }
+        create_wargoal = {
+          type = take_state_focus
+          target = FRA
+        }
+      }
+		}
+		
+	}
+  
+  war_with_britain_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			ENG = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = USA
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = ENG }
+		}
+    complete_effect = {
+      if = {
+        limit = { has_completed_focus = for_the_workers_usa }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = ENG
+        }
+      }
+      if = {
+        limit = { has_completed_focus = for_our_nation_usa }
+        create_wargoal = {
+          type = take_state_focus
+          target = ENG
+          generator = { 687 308 692 691 689 690 693 311 696 }
+        }
+      }
+		}
+		
+	}
+  
+  war_with_soviet_2_usa = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			SOV = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = USA
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+		}
+
+		visible = {
+			NOT = { has_war_with = SOV }
+      OR = {
+        has_completed_focus = for_our_nation_usa
+        has_completed_focus = american_union_usa
+        has_completed_focus = join_union_internationale_usa
+      }
+		}
+    complete_effect = {
+      create_wargoal = {
+ 				type = take_state_focus
+ 				target = SOV
+ 				generator = { 644 637 562 574 }
+ 			}
+		}
+		
+	}
+  
+  
+}
+
+

@@ -1,0 +1,29 @@
+﻿l_german:
+
+ 
+ INDUSTRY_TITLE_AGRICULTURE:0 "LANDWIRTSCHAFT"
+ basic_agriculture:0 "Grundlegender Ackerbau"
+ basic_agriculture_desc:0 "Grundlegendes Wissen über den Ackerbau."
+ improved_basic_agriculture:0 "Effizienterer Ackerbau"
+ improved_basic_agriculture_desc:0 "Durch eine effizientere Nutzung wird der Ertrag der Felder erhöht."
+ improved_agriculture:0 "Landwirtschaftlicher Betrieb"
+ improved_agriculture_desc:0 "Ein Landwirtschaftlicher Betrieb arbeitet derartig effektiv, sodass auf der selben Ackerfläche eine viel höhere Ernte erzielt werden kann."
+ advanced_agriculture:0 "Verbesserter Landwirtschaftlicher Betrieb"
+ advanced_agriculture_desc:0 "Ein verbesserter Landwirtschaftlicher Betrieb benötigt weniger Platz, wodurch die Anzahl der Betriebe erhöht werden kann."
+ 
+ #armoured car
+ armored_car_equipment_1:0 "Panzerwagen I"
+ armored_car_equipment_1_short:0 "Panzerwagen I"
+ armored_car_equipment_1_desc:0 "Panzerwagen eignen sich für Späheinsätze oder zur Unterstützung von Infanterie."
+ armored_car_equipment_2:0 "Panzerwagen II"
+ armored_car_equipment_2_short:0 "Panzerwagen II"
+ armored_car_equipment_2_desc:0 "Panzerwagen eignen sich für Späheinsätze oder zur Unterstützung von Infanterie."
+ armored_car_equipment_3:0 "Panzerwagen III"
+ armored_car_equipment_3_short:0 "Panzerwagen III"
+ armored_car_equipment_3_desc:0 "Panzerwagen eignen sich für Späheinsätze oder zur Unterstützung von Infanterie."
+ armored_car_equipment_desc:0 "Panzerwagen eignen sich für Späheinsätze oder zur Unterstützung von Infanterie."
+ armored_car:0 "Panzerwagen"
+ armored_car_equipment:0 "Panzerwagen"
+ ARMOUR_TITLE_CAR:0 "PANZERWAGEN"
+ 
+ 

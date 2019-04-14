@@ -1,0 +1,23 @@
+intervention_plans_jap = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = JAP
+  }
+  
+	visible = {
+		has_completed_focus = intervention_plans_jap
+	}
+}
+
+japanese_imperialism_jap = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = JAP
+  }
+  
+	visible = {
+		has_completed_focus = japanese_imperialism_jap
+	}
+}

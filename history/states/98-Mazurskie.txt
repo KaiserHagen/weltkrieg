@@ -1,0 +1,22 @@
+
+state={
+	id=98
+	name="STATE_98"
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 6
+
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		6321 6347 9290 9316 
+	}
+	manpower=966000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

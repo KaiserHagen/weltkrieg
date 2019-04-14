@@ -1,0 +1,120 @@
+﻿division_template = {
+	name = "Intantry Division"	# represents first part of enlarged divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	
+}
+
+division_template = {
+	name = "Cavalry Division" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade" 
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division= {	
+		name = "1. Intantry Division"
+		location = 12473
+		division_template = "Intantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Intantry Division"
+		location = 12029
+		division_template = "Intantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "3. Intantry Division"
+		location = 7671
+		division_template = "Intantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "4. Intantry Division"
+		location = 4111
+		division_template = "Intantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "5. Intantry Division"
+		location = 4088
+		division_template = "Intantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Infantry Brigade"
+		location = 4111
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Cavalry Division"
+		location = 1015
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Cavalry Division"
+		location = 11970
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	
+	#### Captured Navy ###
+	
+		
+
+}
+
+air_wings = {
+	#####  #####
+	553 = { 
+		# 1. Havacilik Alay -- Curtiss F11C Hawk II fighters (technically CAG fighters)
+		fighter_equipment_0 = {
+			owner = "OSM" 
+			amount = 14
+		}
+		# 2. Havacilik Alay -- Letov S.16T light bombers
+		CAS_equipment_1 = {
+			owner = "OSM" 
+			amount = 10
+		}
+	}
+}

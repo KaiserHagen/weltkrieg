@@ -1,0 +1,22 @@
+state={
+	id=780
+	name="STATE_780"
+	provinces={
+		13210 13211 13212 13213 
+	}
+	manpower=179100
+	buildings_max_level_factor=1.000
+	
+	state_category = pastoral
+
+	history = {
+		owner = USG
+		buildings = {
+			infrastructure = 4
+		}
+
+		add_core_of = ROM
+		add_core_of = USG
+
+	}
+}

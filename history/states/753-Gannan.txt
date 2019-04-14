@@ -1,0 +1,29 @@
+state=
+{
+	id=753
+	name="STATE_753"
+	manpower = 1096490
+	
+	state_category = rural
+	
+	resources={
+		
+	}
+	
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 6
+			anti_air_building = 1
+			
+
+		}
+		add_core_of = AUS
+		add_core_of = USG
+		add_claim_by = CZE
+
+	}
+	provinces = {
+		543 557 5283 11525
+	}
+}

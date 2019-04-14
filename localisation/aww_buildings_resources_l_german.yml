@@ -1,0 +1,25 @@
+﻿l_german:
+
+ #Resources
+ food_supply_1:0 "Nahrungsmittel"
+ food_supply:0 "Nahrungsmittel"
+ food_supply_desc:0 "Nahrungsmittel werden für die Armee benötigt"
+ grain:0 "Nahrung"
+ grain_desc:0 "Nahrung erhält man entweder durch die natürlichen Vorkommnisse in einem Staat, oder durch einen Landwirtschaftlichen Betrieb."
+ PRODUCTION_MATERIALS_GRAIN:0 "Nahrung"
+ PRODUCTION_MATERIALS_WOOD:0 ""
+ 
+ 
+ #Buildings
+ agricultural_company_amount:0 "$VALUE|Y0=$"
+ agricultural_company_resource:0 "£resources_strip|$FRAME$"
+ agricultural_company_plural:0 "Landwirtschaftliche Betriebe"
+ agricultural_company:0 "Landwirtschaftlicher Betrieb"
+ agricultural_company_desc:0 "Dieses Gebäude erhöht die Nahrungsmittelproduktion "
+ 
+ agricultural_field:0 "Einfaches Ackerfeld"
+ agricultural_field_resource:0 "£resources_strip|$FRAME$"
+ agricultural_field_plural:0 "Einfache Ackerfelder"
+ agricultural_field_desc:0 "Dieses Feld erhöht die Nahrungsmittelproduktion "
+ agricultural_field_amount:0 "$VALUE|Y0=$"
+ 

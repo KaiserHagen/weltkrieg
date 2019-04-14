@@ -1,0 +1,21 @@
+state={
+	id=80
+	name="STATE_80"
+	manpower = 874600
+	
+	state_category = rural
+	
+	history=
+	{
+		owner = USG
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = USG
+		add_core_of = ROM
+		add_core_of = UKR
+	}
+	provinces={
+		577 6761 9548 11689
+	}
+}

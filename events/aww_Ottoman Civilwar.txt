@@ -1,0 +1,794 @@
+﻿###########################
+# Ottoman Civilwar
+###########################
+
+add_namespace = osman
+
+
+### total war triggers
+country_event = {
+	id = osman.1
+	title = osman.1.t
+	desc = osman.1.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = civil_war_soon
+		NOT = { has_global_flag = ottoman_civil_war }
+		tag = OSM
+	}
+
+	mean_time_to_happen = {
+		days = 30	# höhö
+	}
+	
+	immediate = {
+		hidden_effect = {
+			677 = { set_border_war = no }
+			554 = { set_border_war = no }
+			291 = { set_border_war = no }
+			350 = { set_border_war = no }
+			553 = { set_border_war = no }
+			454 = { set_border_war = no }
+		
+			GER = {
+				remove_from_faction = OSM
+			}
+			
+			TUR = {
+				transfer_state = 49
+				transfer_state = 356
+				transfer_state = 355
+				transfer_state = 343
+				transfer_state = 342
+				transfer_state = 345
+				transfer_state = 346
+				transfer_state = 348
+				transfer_state = 349
+				transfer_state = 344
+				
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2500 producer = TUR }
+				set_stability = 0.70
+				declare_war_on = {
+					target = IRQ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SYR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = KUD
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = OSM
+					type = annex_everything
+				}
+				
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.7
+				}
+				add_political_power = 200
+				add_ideas = service_by_requirement
+				add_ideas = war_economy
+				add_ideas = civil_war_tur
+				load_oob="TUR_ottoman_civilwar"
+			}
+			
+			OSM = {
+				remove_ideas = ethnical_trouble
+				remove_ideas = heavy_uprisings_osm
+				add_political_power = -100
+				remove_unit_leader = 300
+#				load_oob = "OSM_civil_war"
+				add_ideas = service_by_requirement
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = -3500 producer = OSM }
+				
+				news_event = { id = aw_news.25 hours = 24 }
+				
+				declare_war_on = {
+					target = IRQ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SYR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = KUD
+					type = annex_everything
+				}
+				
+				country_event = { id = aw_osm.66 days = 21 random = 10 }
+			}
+			IRQ = {
+				
+				set_rule = { can_create_factions = yes }
+				create_faction = "middle_eastern_league"
+				
+				add_to_faction = KUD
+				add_to_faction = SYR
+				transfer_state = 675
+				transfer_state = 291
+				transfer_state = 769
+				transfer_state = 656
+				transfer_state = 676
+				set_stability = 0.70
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				add_ideas = service_by_requirement
+				add_ideas = war_economy
+				add_political_power = 200
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3500 producer = IRQ }
+				
+				load_oob = "IRQ_civil_war"
+			}
+			SYR = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+				set_stability = 0.70
+				transfer_state = 680
+				transfer_state = 677
+				transfer_state = 554
+				transfer_state = 553
+				transfer_state = 454
+				transfer_state = 455
+				transfer_state = 784
+				
+				add_ideas = service_by_requirement
+				add_ideas = war_economy
+				add_political_power = 200
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3750 producer = SYR }
+				
+				load_oob = "SYR_civil_war"
+				
+				
+			}
+			
+			454 = {
+				add_core_of = SYR
+			}
+			
+			455 = {
+				add_core_of = SYR
+			}
+			
+			KUD = {
+				set_stability = 0.65
+#				transfer_state = 676
+				transfer_state = 352
+				transfer_state = 350
+				transfer_state = 353
+				transfer_state = 781
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				add_ideas = service_by_requirement
+				add_ideas = war_economy
+				add_political_power = 200
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3400 producer = KUD }
+				
+				load_oob = "KUD_civil_war"
+			}
+			TCR = {
+				country_event = { id = aw_tcr.1 days = 5 }
+			}
+			SAU = {
+				country_event = { id = osman.2 hours = 24 }
+			}
+			set_global_flag = ottoman_civil_war
+		}
+	}
+	
+	option = { # play Ottoman
+		name = osman.1.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			OSM = {
+				country_event = { id = osman.3 days = 15 random = 6 }
+			}
+		}
+	}
+	option = { # play as another country
+		name = osman.1.b
+		ai_chance = { factor = 0 }
+		country_event = {
+			id = osman.11
+		}
+	}
+}
+
+### play as other country
+country_event = {
+	id = osman.11
+	title = osman.11.t
+	desc = osman.11.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # play as fascist turkey
+		name = osman.11.a
+		ai_chance = { factor = 1 }
+		TUR = { change_tag_from = OSM }
+		hidden_effect = {
+			OSM = {
+				country_event = { id = osman.3 days = 15 random = 6 }
+			}
+		}
+	}
+	
+	option = { # play as bagdad
+		name = osman.11.b
+		ai_chance = { factor = 1 }
+		IRQ = { change_tag_from = OSM }
+		hidden_effect = {
+			OSM = {
+				country_event = { id = osman.3 days = 15 random = 6 }
+			}
+		}
+	}
+	
+	option = { # play as syria
+		name = osman.11.c
+		ai_chance = { factor = 1 }
+		SYR = { change_tag_from = OSM }
+		hidden_effect = {
+			OSM = {
+				country_event = { id = osman.3 days = 15 random = 6 }
+			}
+		}
+	}
+	
+	option = { # play as kurdistan
+		name = osman.11.e
+		ai_chance = { factor = 1 }
+		KUD = { change_tag_from = OSM }
+		hidden_effect = {
+			OSM = {
+				country_event = { id = osman.3 days = 15 random = 6 }
+			}
+		}
+	}
+}
+
+### Arabia: Join Civilwar
+country_event = {
+	id = osman.2
+	title = osman.2.t
+	desc = osman.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			SAU = {
+				transfer_state = 744
+				transfer_state = 679
+			}
+		}
+	}
+	
+	option = { # Join 
+		name = osman.2.a
+		ai_chance = { factor = 100 }
+		IRQ = { add_to_faction = SAU }
+	}
+	
+	option = { # stay out of war 
+		name = osman.2.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+### Libya: declares independent
+country_event = {
+	id = osman.3
+	title = osman.3.t
+	desc = osman.3.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			LBA = {
+				transfer_state = 448
+				transfer_state = 449
+				transfer_state = 661
+				transfer_state = 662
+				transfer_state = 273
+				transfer_state = 663
+				transfer_state = 450
+				transfer_state = 451
+				transfer_state = 452
+				load_oob = "LBA_civil_war"
+				add_ideas = service_by_requirement
+			}
+			OSM = {
+				remove_state_core = 448
+				remove_state_core = 449
+				remove_state_core = 661
+				remove_state_core = 662
+				remove_state_core = 273
+				remove_state_core = 663
+				remove_state_core = 450
+				remove_state_core = 451
+				remove_state_core = 452
+			}
+		}
+	}
+	
+	option = { # ignore
+		name = osman.3.a
+		ai_chance = { factor = 100 }
+		
+	}
+	
+	option = { # delcare war
+		name = osman.3.b
+		ai_chance = { factor = 0 }
+		add_state_claim = 448
+		add_state_claim = 449
+		add_state_claim = 661
+		add_state_claim = 662
+		add_state_claim = 273
+		add_state_claim = 663
+		add_state_claim = 450
+		add_state_claim = 451
+		add_state_claim = 452
+		declare_war_on = {
+			target = LBA
+			type = annex_everything
+		}
+	}
+}
+
+### Peace Treaty: // Ottoman win ###
+country_event = {
+	id = osman.6
+	title = osman.6.t
+	desc = osman.6.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = ottoman_civil_war
+		NOT = { has_global_flag = ottoman_civil_war_over }
+		tag = OSM
+		TUR = { 
+			OR = {
+				has_capitulated = yes
+				exists = no
+				is_puppet = yes
+			}
+		}
+		OR = {
+			IRQ = {
+				OR = {
+					surrender_progress > 0.33
+					has_capitulated = yes
+					is_puppet = yes
+					exists = no
+				}
+			}
+			AND = {
+				SYR = {
+					OR = {
+						surrender_progress > 0.54
+						has_capitulated = yes
+						is_puppet = yes
+						exists = no
+					}
+				}
+				KUD = {
+					OR = {
+						surrender_progress > 0.54
+						has_capitulated = yes
+						is_puppet = yes
+						exists = no
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1	
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ottoman_civil_war_over
+			set_global_flag = ottoman_wins_civil_war
+			OSM = {
+				if = {
+					limit = {
+						SAU = {
+							exists = yes
+							is_in_faction_with = IRQ
+							has_war_with = OSM
+						}
+					}
+					white_peace = SAU
+					puppet = SAU
+				}
+				white_peace = SYR
+				white_peace = KUD
+				white_peace = IRQ
+				add_timed_idea = { idea = recover_from_civil_war_osm days = 365 }
+			}
+		}
+	}
+	
+	option = { # unite the empire
+		name = osman.6.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				OR = {
+					SYR = { is_ai = no }
+					IRQ = { is_ai = no }
+					KUD = { is_ai = no }
+				}
+			}
+		}
+		if = {
+			limit = { TUR = { exists = yes }}
+			annex_country = { target = TUR transfer_troops = yes }
+		}
+		if = {
+			limit = {
+				SAU = {
+					is_puppet_of = OSM
+				}
+			}
+			transfer_state = 772
+			transfer_state = 744
+			transfer_state = 674
+			transfer_state = 658
+		}
+		annex_country = { target = SYR transfer_troops = yes }
+		annex_country = { target = KUD transfer_troops = yes }
+		annex_country = { target = IRQ transfer_troops = yes }
+	}
+	
+	option = { # puppet
+		name = osman.6.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				OR = {
+					SYR = { is_ai = no }
+					IRQ = { is_ai = no }
+					KUD = { is_ai = no }
+				}
+			}
+		}
+		transfer_state = 784
+		transfer_state = 781
+		transfer_state = 353
+		if = {
+			limit = { TUR = { exists = yes }}
+			annex_country = { target = TUR transfer_troops = yes }
+		}
+		puppet = SYR
+		puppet = KUD
+		puppet = IRQ
+		OSM = { add_stability = 0.10 }
+	}
+	
+}
+
+##### Peace Treaty: // Arab League wins #####
+country_event = {
+	id = osman.7
+	title = osman.7.t
+	desc = osman.7.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = ottoman_civil_war
+		NOT = { has_global_flag = ottoman_civil_war_over }
+		tag = IRQ
+		
+		TUR = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				is_puppet = yes
+			}
+		}
+		OSM = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+				surrender_progress > 0.44
+				is_puppet = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1	
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ottoman_civil_war_over
+			set_global_flag = arab_league_wins_civil_war
+			IRQ = { 
+				transfer_state = 656
+			}
+			SYR = {
+				transfer_state = 344
+				transfer_state = 453
+				transfer_state = 183
+			}
+			KUD = {
+				transfer_state = 354
+				if = {
+					limit = {
+						231 = {
+							NOT = {
+								is_owned_by = GEO
+								is_owned_by = TCR
+							}
+						}
+					}
+					transfer_state = 231
+				}
+			}
+			TUR = {
+				white_peace = IRQ
+				white_peace = SYR
+				white_peace = KUD
+				if = {
+					limit = { has_war_with = SAU }
+					white_peace = SAU
+				}
+				if = {
+					limit = { has_war_with = LBA }
+					white_peace = LBA
+				}
+				transfer_state = 348
+				transfer_state = 346
+				transfer_state = 345
+				transfer_state = 342
+				transfer_state = 343
+				transfer_state = 49
+				transfer_state = 349
+				transfer_state = 355
+				transfer_state = 356
+				transfer_state = 347
+				transfer_state = 340
+				transfer_state = 339
+				transfer_state = 745
+				transfer_state = 341
+				transfer_state = 187
+				transfer_state = 164
+				transfer_state = 182
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.8
+				}
+			}
+			every_state = {
+				limit = { is_core_of = OSM }
+				remove_core_of = OSM
+			}
+		}
+	}
+	
+	option = { # 
+		name = osman.7.a
+		ai_chance = { factor = 50 }
+		
+	}
+}
+
+### Civil War over: Syria
+country_event = {
+	id = osman.8
+	title = osman.8.t
+	desc = osman.8.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SYR
+		has_global_flag = arab_league_wins_civil_war
+	}
+
+	mean_time_to_happen = {
+		days = 3	
+	}
+	
+	option = { # leave faction
+		name = osman.8.a
+		ai_chance = { factor = 40 }
+		IRQ = { remove_from_faction = SYR }
+	}
+	
+	option = { # keep faction
+		name = osman.8.b
+		ai_chance = { factor = 60 }
+		
+	}
+}
+
+### Civil War over: Kurdistan
+country_event = {
+	id = osman.9
+	title = osman.9.t
+	desc = osman.9.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KUD
+		has_global_flag = arab_league_wins_civil_war
+	}
+
+	mean_time_to_happen = {
+		days = 3	
+	}
+	
+	option = { # leave faction
+		name = osman.9.a
+		ai_chance = { factor = 100 }
+		IRQ = { remove_from_faction = KUD }
+	}
+	
+	option = { # stay in faction
+		name = osman.9.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+### Civil War over: Baghdad
+#country_event = {
+#	id = osman.10
+#	title = osman.10.t
+#	desc = osman.10.d
+#	picture = GFX_report_event_german_reichstag_gathering
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = IRQ
+#		has_global_flag = arab_league_wins_civil_war
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 3	
+#	}
+#	
+#	option = { # dismantle faction
+#		name = osman.10.a
+#		ai_chance = { factor = 20 }
+#		IRQ = { dismantle_faction = yes }
+#	}
+#	
+#	option = { # keep faction
+#		name = osman.10.b
+#		ai_chance = { factor = 80 }
+#		
+#	}
+#}
+
+##### Peace Treaty: // Turkey wins #####
+country_event = {
+	id = osman.12
+	title = osman.12.t
+	desc = osman.12.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = ottoman_civil_war
+		NOT = { has_global_flag = ottoman_civil_war_over }
+		tag = TUR
+		
+		OSM = {
+			OR = {
+				exists = no
+				is_puppet = yes
+				has_capitulated = yes
+				surrender_progress > 0.44
+			}
+		}
+		OR = {
+			IRQ = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					surrender_progress > 0.5
+					has_capitulated = yes
+				}
+			}
+			AND = {
+				SYR = {
+					OR = {
+						exists = no
+						is_puppet = yes
+						surrender_progress > 0.54
+						has_capitulated = yes
+					}
+				}
+				KUD = {
+					OR = {
+						exists = no
+						is_puppet = yes
+						surrender_progress > 0.54
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1	
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ottoman_civil_war_over
+			set_global_flag = turkey_wins_civil_war
+			
+			if = {
+				limit = {
+					SAU = {
+						exists = yes
+						is_in_faction_with = IRQ
+						has_war_with = TUR
+					}
+				}
+				annex_country = { target = SAU transfer_troops = yes }
+			}
+			annex_country = { target = OSM transfer_troops = yes }
+			annex_country = { target = SYR transfer_troops = yes }
+			annex_country = { target = KUD transfer_troops = yes }
+			annex_country = { target = IRQ transfer_troops = yes }
+			every_state = {
+				limit = { is_core_of = OSM }
+				remove_core_of = OSM
+			}
+		}
+	}
+	
+	option = { # 
+		name = osman.12.a
+		ai_chance = { factor = 50 }
+		
+	}
+}

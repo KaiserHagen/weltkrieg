@@ -1,0 +1,1841 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+
+add_namespace = aw_ger
+add_namespace = aw_cen
+
+
+#################################################################
+# Germany Claims Siauliai (actually its a puppet so why ask)
+#country_event = {
+#	id = aw_ger.1
+#	title = aw_ger.1.t
+#	desc = aw_ger.1.d
+#	picture = GFX_report_event_generic_read_write
+#	
+#	is_triggered_only = yes
+#	
+#	option = { # Accept demands
+#		name = aw_ger.1.a
+#		ai_chance = { factor = 99 }
+#		GER = {
+#			country_event = { hours = 6 id = aw_ger.2 }
+#		}
+#	}
+#	option = { # Refuse
+#		name = aw_ger.1.b		
+#		ai_chance = { 
+#			factor = 1
+#		}
+#		effect_tooltip = {
+#			GER = {
+#				create_wargoal = {
+#					type = take_state_focus
+#					target = LIT
+#					generator = { 189 }
+#				}
+#				country_event = { hours = 6 id = aw_ger.3 }
+#			}
+#		}
+#		hidden_effect = {
+#			GER = {
+#				country_event = { hours = 6 id = aw_ger.3 }
+#			}
+#		}		
+#	}
+#}
+#
+## Claim Siauliai - Lithuania Folds
+#country_event = {
+#	id = aw_ger.2
+#	title = aw_ger.2.t
+#	desc = aw_ger.2.d
+#	picture = GFX_report_event_vienna_award_hungary
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = aw_ger.2.a
+#		GER = { 
+#			transfer_state = 189
+#		}
+#		POL = {
+#			transfer_state = 11
+#		}
+#		hidden_effect = {
+#			country_event = { hours = 12 id = news.* }
+#		}
+#	}
+#}
+#
+## Claim Siauliai - Lithuania Rejects Demand
+#country_event = {
+#	id = aw_ger.3
+#	title = aw_ger.3.t
+#	desc = aw_ger.3.d
+#	picture = GFX_report_event_lithuania_army
+#
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = aw_ger.3.a
+#		create_wargoal = {
+#			type = take_state_focus
+#			target = LIT
+#			generator = { 189 }
+#		}
+#	}
+#}
+
+#Germany befriends Kuban
+country_event = {
+	id = aw_ger.4
+	title = aw_ger.4.t
+	desc = aw_ger.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.4.a
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 10 
+				KBN = {
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 95 
+				KBN = {
+					OR = {
+						has_government = monarchism
+						has_government = neutrality
+					}
+				}
+			}
+		}
+		KBN = {
+			add_opinion_modifier = { target = GER modifier = befriend }
+			diplomatic_relation = { country = GER relation = non_aggression_pact }
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.5 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.4.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 90 
+				KBN = {
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 5 
+				KBN = {
+					OR = {
+						has_government = monarchism
+						has_government = neutrality
+					}
+				}
+			}
+			
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.6 }
+		}
+	}
+}
+#Kuban accepts
+country_event = {
+	id = aw_ger.5
+	title = aw_ger.5.t
+	desc = aw_ger.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.5.a
+	}
+}
+
+#Kuban refuses
+country_event = {
+	id = aw_ger.6
+	title = aw_ger.6.t
+	desc = aw_ger.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.6.a
+		add_opinion_modifier = { target = KBN modifier = italy_refuses }
+	}
+	
+}
+
+#German ultimatum on Lithuania 
+country_event = {
+	id = aw_ger.7
+	title = aw_ger.7.t
+	desc = aw_ger.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.7.a
+		ai_chance = { factor = 95 }
+		LIT = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = LIT
+			country_event = { hours = 6 id = aw_ger.8 }
+		}
+		set_global_flag = german_plan_b1_LIT
+	}
+	option = { # Refuse
+		name = aw_ger.7.b
+		ai_chance = { factor = 5 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.9 }
+		}
+	}
+}
+#Lithuania accepts
+country_event = {
+	id = aw_ger.8
+	title = aw_ger.8.t
+	desc = aw_ger.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.8.a
+		add_named_threat = { threat = 1 name = ger_imperialism }
+	}
+}
+
+#Lithuania refuses
+country_event = {
+	id = aw_ger.9
+	title = aw_ger.9.t
+	desc = aw_ger.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.9.a
+		if = {
+			limit = {
+				LIT = { is_in_faction_with = GER }
+			}
+			remove_from_faction = LIT
+		}
+		create_wargoal = {
+				type = take_state_focus
+				target = LIT
+			}
+	}
+	
+}
+
+#German ultimatum on Kurland 
+country_event = {
+	id = aw_ger.10
+	title = aw_ger.10.t
+	desc = aw_ger.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.10.a
+		ai_chance = { factor = 95 }
+		KUR = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = KUR
+			country_event = { hours = 6 id = aw_ger.11 }
+		}
+		set_global_flag = german_plan_b1_KUR
+	}
+	option = { # Refuse
+		name = aw_ger.10.b
+		ai_chance = { factor = 5 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.12 }
+		}
+	}
+}
+#Kurland accepts
+country_event = {
+	id = aw_ger.11
+	title = aw_ger.11.t
+	desc = aw_ger.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.11.a
+		add_named_threat = { threat = 1 name = ger_imperialism }
+	}
+}
+
+#Kurland refuses
+country_event = {
+	id = aw_ger.12
+	title = aw_ger.12.t
+	desc = aw_ger.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.12.a
+		if = {
+			limit = {
+				KUR = { is_in_faction_with = GER }
+			}
+			remove_from_faction = KUR
+		}
+		create_wargoal = {
+				type = take_state_focus
+				target = KUR
+			}
+	}
+	
+}
+
+#German ultimatum on Estonia
+country_event = {
+	id = aw_ger.13
+	title = aw_ger.13.t
+	desc = aw_ger.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.13.a
+		ai_chance = { factor = 80 }
+		EST = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = EST
+			country_event = { hours = 6 id = aw_ger.14 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.13.b
+		ai_chance = { factor = 20 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.15 }
+		}
+	}
+}
+#Estonia accepts
+country_event = {
+	id = aw_ger.14
+	title = aw_ger.14.t
+	desc = aw_ger.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.14.a
+		add_named_threat = { threat = 1 name = ger_imperialism }
+	}
+}
+
+#Estonia refuses
+country_event = {
+	id = aw_ger.15
+	title = aw_ger.15.t
+	desc = aw_ger.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.15.a
+		if = {
+			limit = {
+				EST = { is_in_faction_with = GER }
+			}
+			remove_from_faction = EST
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = EST
+		}
+	}
+	
+}
+
+#German ultimatum on Latvia
+country_event = {
+	id = aw_ger.16
+	title = aw_ger.16.t
+	desc = aw_ger.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.16.a
+		ai_chance = { factor = 80 }
+		LAT = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = LAT
+			country_event = { hours = 6 id = aw_ger.17 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.16.b
+		ai_chance = { factor = 20 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.18 }
+		}
+	}
+}
+#Latvia accepts
+country_event = {
+	id = aw_ger.17
+	title = aw_ger.17.t
+	desc = aw_ger.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.17.a
+		add_named_threat = { threat = 1 name = ger_imperialism }
+	}
+}
+
+#Latvia refuses
+country_event = {
+	id = aw_ger.18
+	title = aw_ger.18.t
+	desc = aw_ger.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.18.a
+		if = {
+			limit = {
+				LAT = { is_in_faction_with = GER }
+			}
+			remove_from_faction = LAT
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = LAT
+		}
+	}
+	
+}
+#German ultimatum on Holland
+country_event = {
+	id = aw_ger.19
+	title = aw_ger.19.t
+	desc = aw_ger.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.19.a
+		ai_chance = { factor = 20 }
+		HOL = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = HOL
+			country_event = { hours = 6 id = aw_ger.20 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.19.b
+		ai_chance = { factor = 80 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.21 }
+		}
+	}
+}
+#Holland accepts
+country_event = {
+	id = aw_ger.20
+	title = aw_ger.20.t
+	desc = aw_ger.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.20.a
+		add_named_threat = { threat = 2 name = ger_imperialism }
+	}
+}
+
+#Holland refuses
+country_event = {
+	id = aw_ger.21
+	title = aw_ger.21.t
+	desc = aw_ger.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.21.a
+		if = {
+			limit = {
+				HOL = { is_in_faction_with = GER }
+			}
+			remove_from_faction = HOL
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = HOL
+		}
+	}
+	
+}
+
+#German ultimatum on Denmark
+country_event = {
+	id = aw_ger.22
+	title = aw_ger.22.t
+	desc = aw_ger.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.22.a
+		ai_chance = { factor = 25 }
+		DEN = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = DEN
+			country_event = { hours = 6 id = aw_ger.23 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.22.b
+		ai_chance = { factor = 75 }
+		GER = {
+			country_event = { hours = 6 id = aw_ger.24 }
+		}
+	}
+}
+#Denmark accepts
+country_event = {
+	id = aw_ger.23
+	title = aw_ger.23.t
+	desc = aw_ger.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.23.a
+		add_named_threat = { threat = 2 name = ger_imperialism }
+	}
+}
+
+#Denmark refuses
+country_event = {
+	id = aw_ger.24
+	title = aw_ger.24.t
+	desc = aw_ger.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.24.a
+		if = {
+			limit = {
+				DEN = { is_in_faction_with = GER }
+			}
+			remove_from_faction = DEN
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = DEN
+		}
+	}
+	
+}
+
+#German ultimatum on Belgium
+country_event = {
+	id = aw_ger.25
+	title = aw_ger.25.t
+	desc = aw_ger.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.25.a
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = 0
+				BEL = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+			modifier = {
+				factor = 95
+				BEL = {
+					has_government = monarchism
+				}
+			}
+		}
+		BEL = {
+			set_rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		GER = {
+			puppet = BEL
+			country_event = { hours = 6 id = aw_ger.26 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.25.b
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = 100
+				BEL = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				BEL = {
+					has_government = monarchism
+				}
+			}
+		}
+		GER = {
+			country_event = { hours = 6 id = aw_ger.27 }
+		}
+	}
+}
+#Belgium accepts
+country_event = {
+	id = aw_ger.26
+	title = aw_ger.26.t
+	desc = aw_ger.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.26.a
+		add_named_threat = { threat = 2 name = ger_imperialism }
+	}
+}
+
+#Belgium refuses
+country_event = {
+	id = aw_ger.27
+	title = aw_ger.27.t
+	desc = aw_ger.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.27.a
+		if = {
+			limit = {
+				BEL = { is_in_faction_with = GER }
+			}
+			remove_from_faction = BEL
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = BEL
+		}
+	}
+	
+}
+
+#Germany invites Ukraine
+country_event = {
+	id = aw_ger.28
+	title = aw_ger.28.t
+	desc = aw_ger.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.28.a
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 5
+				OR = {
+					GER = { has_war = yes }
+					UKR = { NOT = { has_government = monarchism } }
+				}
+			}
+			modifier = {
+				factor = 80
+				GER = { has_war = no }
+				
+			}
+		}
+		GER = {
+			add_to_faction = UKR
+			country_event = { id = aw_ger.29 }
+			
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.28.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 95
+				OR = {
+					GER = { has_war = yes }
+					UKR = { NOT = { has_government = monarchism } }
+				}
+			}
+			modifier = {
+				factor = 20
+				GER = { has_war = no }
+				
+			}
+		}
+		GER = {
+			country_event = { hours = 6 id = aw_ger.30 }
+		}
+	}
+}
+#Ukraine accepts
+country_event = {
+	id = aw_ger.29
+	title = aw_ger.29.t
+	desc = aw_ger.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.29.a
+	}
+}
+
+#Ukraine refuses
+country_event = {
+	id = aw_ger.30
+	title = aw_ger.30.t
+	desc = aw_ger.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.30.a
+		add_opinion_modifier = {
+			target = UKR
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Germany: Pact with Austria
+country_event = {
+	id = aw_ger.31
+	title = aw_ger.31.t
+	desc = aw_ger.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.31.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 95 
+				USG = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 90 
+				USG = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 70 
+				USG = {
+					has_government = democratic
+				}
+			}
+		}
+		USG = {
+			add_opinion_modifier = { target = GER modifier = befriend }
+			diplomatic_relation = { country = GER relation = non_aggression_pact }
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.32 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.31.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 5 
+				USG = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 10 
+				USG = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 30 
+				USG = {
+					has_government = democratic
+				}
+			}
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.33 }
+		}
+	}
+}
+#Austria accepts
+country_event = {
+	id = aw_ger.32
+	title = aw_ger.32.t
+	desc = aw_ger.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.32.a
+	}
+}
+
+#Austria refuses
+country_event = {
+	id = aw_ger.33
+	title = aw_ger.33.t
+	desc = aw_ger.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.33.a
+		add_opinion_modifier = { target = USG modifier = italy_refuses }
+	}
+	
+}
+
+#Germany: State Visit in Istanbul
+country_event = {
+	id = aw_ger.34
+	title = aw_ger.34.t
+	desc = aw_ger.34.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.34.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 100 
+				OSM = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 80 
+				OSM = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 30 
+				OSM = {
+					has_government = democratic
+				}
+			}
+		}
+		OSM = {
+			add_opinion_modifier = { target = GER modifier = befriend }
+			diplomatic_relation = { country = GER relation = non_aggression_pact }
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.35 }
+		}
+	}
+	option = { # Refuse
+		name = aw_ger.34.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0 
+				OSM = { has_government = monarchism }
+			}
+			modifier = {
+				factor = 20 
+				OSM = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 70 
+				OSM = {
+					has_government = democratic
+				}
+			}
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.36 }
+		}
+	}
+}
+#Ottoman accept
+country_event = {
+	id = aw_ger.35
+	title = aw_ger.35.t
+	desc = aw_ger.35.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.35.a
+	}
+}
+
+#Ottoman refuse
+country_event = {
+	id = aw_ger.36
+	title = aw_ger.36.t
+	desc = aw_ger.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.36.a
+		add_opinion_modifier = { target = OSM modifier = italy_refuses }
+	}
+	
+}
+
+#Germany: Offer China cooperation
+country_event = {
+	id = aw_ger.37
+	title = aw_ger.37.t
+	desc = aw_ger.37.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.37.a
+		ai_chance = {
+			factor = 70
+			
+		}
+		GER = {
+			add_to_faction = CHI
+			country_event = { hours = 12 id = aw_ger.38 }
+		}
+	}
+	option = { # Reject
+		name = aw_ger.37.b
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.39 }
+		}
+	}
+}
+#China accepts offer
+country_event = {
+	id = aw_ger.38
+	title = aw_ger.38.t
+	desc = aw_ger.38.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.38.a
+	}
+}
+
+#China rejects offer
+country_event = {
+	id = aw_ger.39
+	title = aw_ger.39.t
+	desc = aw_ger.39.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.39.a
+		add_opinion_modifier = { target = CHI modifier = italy_refuses }
+	}
+}
+
+#Germany: Pressurize China
+country_event = {
+	id = aw_ger.40
+	title = aw_ger.40.t
+	desc = aw_ger.40.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = aw_ger.40.a
+		ai_chance = {
+			factor = 70
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.41 }
+			transfer_state = 777
+		}
+	}
+	option = { # Reject
+		name = aw_ger.40.b
+		ai_chance = {
+			factor = 30
+		}
+		GER = {
+			country_event = { hours = 12 id = aw_ger.42 }
+		}
+	}
+}
+#China accepts offer
+country_event = {
+	id = aw_ger.41
+	title = aw_ger.41.t
+	desc = aw_ger.41.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.41.a
+	}
+}
+
+#China rejects offer
+country_event = {
+	id = aw_ger.42
+	title = aw_ger.42.t
+	desc = aw_ger.42.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.42.a
+		add_opinion_modifier = { target = CHI modifier = embargo }
+		add_opinion_modifier = { target = CHI modifier = china_refuses }
+	}
+	
+}
+
+#France questions Treaty of Nuernberg
+country_event = {
+	id = aw_ger.43
+	title = aw_ger.43.t
+	desc = aw_ger.43.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.43.a
+		ai_chance = {
+			factor = 99
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = question_treaty_of_nuernberg_reaction_fra
+		}
+		add_named_threat = { threat = 1 name = qton_ger_negative }
+		set_country_flag = qton_negative_reaction
+		
+		if = {
+			limit = {
+				ENG = { has_country_flag = qton_approval_eng }
+				GER = { NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_eng } }
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = question_treaty_of_nuernberg_reaction_eng
+			}
+		}
+		if = {
+			limit = {
+				ITA = { has_country_flag = qton_approval_ita }
+				GER = { NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_ita } }
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = question_treaty_of_nuernberg_reaction_ita
+			}
+		}
+		if = {
+			limit = {
+				SOV = { has_country_flag = qton_approval_sov }
+				GER = { NOT = { has_opinion_modifier = question_treaty_of_nuernberg_reaction_sov } }
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = question_treaty_of_nuernberg_reaction_sov
+			}
+		}
+	}
+	
+	option = {
+		name = aw_ger.43.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+}
+
+#Belgium incident
+country_event = {
+	id = aw_ger.44
+	title = aw_ger.44.t
+	desc = aw_ger.44.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		FRA = {
+			owns_state = 34
+			owns_state = 6
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#German Ultimatum
+	option = {
+		name = aw_ger.44.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				GER = { has_war = yes }
+			}
+		}
+		FRA = {
+			country_event = { id = aw_fra.41 }
+		}
+	}
+
+	#Embargo
+	option = {
+		name = aw_ger.44.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = embargo
+		}
+	}
+}
+
+#France stays in Belgium
+country_event = {
+	id = aw_ger.45
+	title = aw_ger.45.t
+	desc = aw_ger.45.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+
+	#Declare War
+	option = {
+		name = aw_ger.45.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				any_country = {
+					is_major = yes
+					has_war_with = GER
+				}
+			}
+		}
+		declare_war_on = {
+			target = FRA
+			type = take_state_focus
+			generator = { 762 34 6 } 
+		}
+	}
+
+	#Embargo
+	option = {
+		name = aw_ger.45.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100
+				any_country = {
+					is_major = yes
+					has_war_with = GER
+				}
+			}
+		}
+		set_global_flag = GER_embargo_FRA
+		add_opinion_modifier = {
+			target = FRA
+			modifier = embargo
+		}
+	}
+}
+
+#France retreats from Belgium
+country_event = {
+	id = aw_ger.46
+	title = aw_ger.46.t
+	desc = aw_ger.46.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.46.a
+		
+	}
+	
+}
+
+### Bulgaro-Ottoman-War
+country_event = {
+	id = aw_ger.47
+	title = aw_ger.47.t
+	desc = aw_ger.47.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OSM = {
+			has_offensive_war_with = BUL
+			is_in_faction_with = GER
+		}
+		BUL = {
+			has_government = monarchism
+		}
+		GER = {
+			is_faction_leader = yes
+			has_opinion = { target = BUL value > -49 }
+		}
+		has_global_flag = bulgaro_ottoman_war
+		has_war = no
+		has_civil_war = no
+		tag = GER
+	}
+
+	mean_time_to_happen = {
+		days = 1	
+	}
+	
+	option = { # ottoman should stop attack
+		name = aw_ger.47.a
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 60
+				GER = { has_war = yes }
+			}
+		}
+		add_political_power = -10
+		OSM = {
+			country_event = { id = aw_osm.67 hours = 6 }
+		}
+	}
+	option = { # Ignore
+		name = aw_ger.47.b
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 40
+				GER = { has_war = yes }
+			}
+		}
+		
+	}
+}
+
+### Ottomans are accepting to discuss
+country_event = {
+	id = aw_ger.48
+	title = aw_ger.48.t
+	desc = aw_ger.48.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # ask Bulgarians
+		name = aw_ger.48.a
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 60
+				GER = { has_war = yes }
+			}
+		}
+		BUL = {
+			country_event = { id = aw_bul.1 hours = 1 }
+		}
+	}
+}
+
+### Bulgaria agrees
+country_event = {
+	id = aw_ger.49
+	title = aw_ger.49.t
+	desc = aw_ger.49.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = aw_ger.49.a
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 60
+				GER = { has_war = yes }
+			}
+		}
+		BUL = {
+			country_event = { id = aw_bul.1 hours = 1 }
+		}
+	}
+}
+
+### Soviet Reclamation of Baltic States (Germany has influence over Baltikum)
+country_event = {
+	id = aw_ger.50
+	title = aw_ger.50.t
+	desc = aw_ger.50.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		SOV = { has_completed_focus = reclaim_baltic_states_sov }
+		GER = { NOT = { has_war_with = SOV }}
+		OR = {
+			GER = { has_completed_focus = complete_operation_baltikum_ger }
+			LIT = { is_guaranteed_by = GER }
+			LAT = { is_guaranteed_by = GER }
+			KUR = { is_guaranteed_by = GER }
+			EST = { is_guaranteed_by = GER }
+			LIT = { is_puppet_of = GER }
+			LAT = { is_puppet_of = GER }
+			KUR = { is_puppet_of = GER }
+			EST = { is_puppet_of = GER }
+		}
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Prepare Defenses
+	option = {
+		name = aw_ger.50.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 40
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = SOV
+			modifier = soviet_reclamation
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						GER = { has_completed_focus = reformation_of_baltic_states_ger }
+						LIV = {
+							exists = yes
+							is_puppet_of = GER
+						}
+					}
+					AND = {
+						OR = {
+							EST = { is_puppet_of = GER }
+							EST = { is_guaranteed_by = GER }
+						}
+						OR = {
+							LAT = { is_puppet_of = GER }
+							LAT = { is_guaranteed_by = GER }
+						}
+					}
+				}
+			}
+			add_political_power = -80
+			army_experience = -20
+			add_manpower = -10000
+			12 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6459
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 222
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 319
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3298
+					instant_build = yes
+				}
+			}
+			191 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 592
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9221
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4640
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				all_country = {
+					owns_state = 12
+					owns_state = 191
+					is_puppet_of = GER
+				}
+			}
+		}
+	}
+
+	#Threaten Soviets
+	option = {
+		name = aw_ger.50.b
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				GER = { has_war = yes }
+			}
+		}
+		set_global_flag = germany_threatens_soviet
+		add_opinion_modifier = {
+			target = SOV
+			modifier = embargo
+		}
+		SOV = { country_event = { id = aw_sov.17 hours = 12 }}
+	}
+	
+	#ignore
+	option = {
+		name = aw_ger.50.c
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 30
+				GER = { has_war = yes }
+			}
+		}
+		
+	}
+}
+
+### Soviet Reclamation of Baltic States (Germany did not interact with Baltic States yet)
+country_event = {
+	id = aw_ger.51
+	title = aw_ger.51.t
+	desc = aw_ger.51.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		SOV = { has_completed_focus = reclaim_baltic_states_sov }
+		GER = { NOT = { has_war_with = SOV }}
+		GER = { has_completed_focus = improve_relation_baltikum_ger }
+		GER = { has_completed_focus = improve_relation_baltikum_2_ger }
+		OR = {
+			LIT = { NOT = { is_guaranteed_by = GER } }
+			LAT = { NOT = { is_guaranteed_by = GER } }
+			KUR = { NOT = { is_guaranteed_by = GER } }
+			EST = { NOT = { is_guaranteed_by = GER } }
+		}
+		LIT = { NOT = { is_puppet_of = GER } }
+		LAT = { NOT = { is_puppet_of = GER } }
+		KUR = { NOT = { is_puppet_of = GER } }
+		EST = { NOT = { is_puppet_of = GER } }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Guarantee Baltic States
+	option = {
+		name = aw_ger.51.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 10
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = SOV
+			modifier = soviet_reclamation
+		}
+		if = {
+			limit = { LIT = { NOT = { is_guaranteed_by = GER } } }
+			give_guarantee = LIT
+			add_political_power = -25
+		}
+		if = {
+			limit = { LAT = { NOT = { is_guaranteed_by = GER } } }
+			give_guarantee = LAT
+			add_political_power = -25
+		}
+		if = {
+			limit = { EST = { NOT = { is_guaranteed_by = GER } } }
+			give_guarantee = EST
+			add_political_power = -25
+		}
+		if = {
+			limit = { KUR = { NOT = { is_guaranteed_by = GER } } }
+			give_guarantee = KUR
+			add_political_power = -25
+		}
+	}
+
+	# Ignore
+	option = {
+		name = aw_ger.51.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 90
+				GER = { has_war = yes }
+			}
+		}
+		
+	}
+}
+
+### Soviet Reclamation of Poland (Germany has threatened Soviet before)
+country_event = {
+	id = aw_ger.52
+	title = aw_ger.52.t
+	desc = aw_ger.52.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		SOV = { has_completed_focus = claim_poland_sov }
+		GER = { NOT = { has_war_with = SOV }}
+		POL = { is_puppet_of = GER }
+		has_global_flag = germany_threatens_soviet
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Gain Wargoal
+	option = {
+		name = aw_ger.52.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 10
+				GER = { has_war = yes }
+			}
+		}
+		set_global_flag = poland_crisis_wargoal
+		create_wargoal = {
+			type = take_state_focus
+			target = SOV
+			generator = { 194 204 241 206 207 210 209 208 195 }
+		}
+	}
+}
+
+### Soviet Reclamation of Poland (Direct offense to Germany)
+country_event = {
+	id = aw_ger.53
+	title = aw_ger.53.t
+	desc = aw_ger.53.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		SOV = { has_completed_focus = claim_poland_sov }
+		GER = { NOT = { has_war_with = SOV }}
+		POL = { is_puppet_of = GER }
+		NOT = { has_global_flag = germany_threatens_soviet }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Soviet should back away
+	option = {
+		name = aw_ger.53.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 10
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = SOV
+			modifier = embargo
+		}
+		SOV = {
+			country_event = { id = aw_sov.18 hours = 12 }
+		}
+	}
+	#Ignore
+	option = {
+		name = aw_ger.53.b
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 10
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = SOV
+			modifier = soviet_reclamation
+		}
+	}
+}
+
+### Soviet doesn't back away
+country_event = {
+	id = aw_ger.54
+	title = aw_ger.54.t
+	desc = aw_ger.54.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.54.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SOV
+			generator = { 194 204 241 206 207 210 209 208 195 }
+		}
+	}
+	
+}
+
+### Soviet backs away
+country_event = {
+	id = aw_ger.55
+	title = aw_ger.55.t
+	desc = aw_ger.55.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aw_ger.55.a
+		add_political_power = 25
+	}
+	
+}
+
+### Ukraine claims polish territory 
+country_event = {
+	id = aw_ger.56
+	title = aw_ger.56.t
+	desc = aw_ger.56.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = GER
+		UKR = { has_completed_focus = claims_on_poland_ukr }
+		POL = { is_puppet_of = GER }
+		GER = { 
+			NOT = { 
+				has_war_with = UKR
+				is_in_faction_with = UKR
+			} 
+		}
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#embargo
+	option = {
+		name = aw_ger.56.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 60
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = UKR
+			modifier = embargo
+		}
+		add_opinion_modifier = {
+			target = UKR
+			modifier = ukraine_claims
+		}
+		if = {
+			limit = {
+				UKR = { has_idea = german_advisors_2 }
+			}
+			UKR = { remove_ideas = german_advisors_2 }
+		}
+	}
+	#Ignore
+	option = {
+		name = aw_ger.56.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 40
+				GER = { has_war = yes }
+			}
+		}
+		add_opinion_modifier = {
+			target = UKR
+			modifier = ukraine_claims
+		}
+	}
+}
+
+############ Central Powers Events ##############
+
+#Central Powers transform into European Economic Union
+country_event = {
+	id = aw_cen.1
+	title = aw_cen.1.t
+	desc = aw_cen.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Join
+		name = aw_cen.1.a
+		ai_chance = { factor = 100 }
+		GER = {
+			add_to_faction = ROOT
+		}
+	}
+	
+	option = { # don't join
+		name = aw_cen.1.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+

@@ -1,0 +1,257 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+OSM_template_design = {
+	enable = {
+	
+		original_tag = OSM
+		date < 1940.1.1				
+	}
+	abort = { 
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+}
+
+
+OSM_template_design = {
+	enable = {
+	
+		original_tag = OSM
+		date > 1940.1.1				
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = -20
+	}
+}
+
+OSM_area_priority = {
+	enable = {
+		original_tag = OSM
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 120
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 75
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 90
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 120
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -10
+	}
+
+}
+
+befriend_released_countries_PAL = {
+	enable = {
+		tag = OSM
+		OSM = { 
+			has_completed_focus = release_palestine_osm
+		}
+		country_exists = PAL
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = PAL }
+			PAL = {
+				has_war_with = OSM
+			}
+		}
+		
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PAL"
+		value = 50
+	}
+}
+
+befriend_released_countries_IRQ = {
+	enable = {
+		tag = OSM
+		OSM = { 
+			has_completed_focus = release_bagdad_osm
+		}
+		country_exists = IRQ
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = IRQ }
+			IRQ = {
+				has_war_with = OSM
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "IRQ"
+		value = 50
+	}
+}
+
+befriend_released_countries_SYR = {
+	enable = {
+		tag = OSM
+		OSM = { 
+			has_completed_focus = release_syria_osm
+		}
+		country_exists = SYR
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SYR }
+			SYR = {
+				has_war_with = OSM
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SYR"
+		value = 50
+	}
+}
+
+befriend_released_countries_KUD = {
+	enable = {
+		tag = OSM
+		OSM = { 
+			has_completed_focus = release_kurdistan_osm
+		}
+		country_exists = KUD
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = KUD }
+			KUD = {
+				has_war_with = OSM
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "KUD"
+		value = 50
+	}
+}

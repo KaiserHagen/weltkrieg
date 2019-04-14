@@ -1,0 +1,2450 @@
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = power_struggle_sov
+		icon = GFX_focus_generic_soviet_politics
+		x = 10
+		y = 0
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		available = {
+			has_government = communism
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = lenins_call_sov
+		icon = GFX_goal_generic_build_tank
+		x = 8
+		y = 1 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = power_struggle_sov }
+		mutually_exclusive = { focus = power_to_one_person_sov }
+		mutually_exclusive = { focus = support_business_sov }
+		
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 25
+			custom_effect_tooltip = trotsky_wins
+			set_country_flag = trotsky_wins_flag
+		}
+	}
+	
+	focus = {
+		id = revolutionary_propaganda_sov
+		icon = GFX_goal_generic_propaganda
+		x = 8
+		y = 2
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = lenins_call_sov }
+		
+		completion_reward = {
+			add_ideas = revolutionary_propaganda_focus
+		}
+	}
+	
+	focus = {
+		id = fifth_international_sov
+		icon = GFX_goal_support_fourth_int
+		x = 8
+		y = 3 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = revolutionary_propaganda_sov }
+		
+		completion_reward = {
+			add_ideas = fifth_international_focus
+		}
+	}
+	
+	focus = {
+		id = power_to_one_person_sov 
+		icon = GFX_goal_support_communism
+		x = 10
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 14
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = power_struggle_sov }
+		mutually_exclusive = { focus = lenins_call_sov }
+		mutually_exclusive = { focus = support_business_sov }
+		
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				retire_country_leader = yes
+			}
+			custom_effect_tooltip = stalin_wins
+			set_country_flag = stalin_wins_flag
+		}
+	}
+	
+	focus = {
+		id = personality_cult_sov
+		icon = GFX_goal_generic_cavalry
+		x = 10 
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = power_to_one_person_sov }
+		
+		completion_reward = {
+			add_country_leader_trait = personality_cult
+		}
+	}
+	
+	focus = {
+		id = crush_the_opposition_sov
+		icon = GFX_goal_demand_sudetenland
+		x = 10 
+		y = 3 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = personality_cult_sov }
+		
+		completion_reward = {
+			remove_ideas = under_pressure_focus
+			hidden_effect = {
+				set_political_party = {
+					ideology = democratic 
+					banned = yes
+				}
+				set_political_party = {
+					ideology = fascism
+					banned = yes
+				}
+				set_political_party = {
+					ideology = monarchism
+					banned = yes
+				}
+				set_political_party = {
+					ideology = neutrality
+					banned = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = support_business_sov
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 12 
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 13
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = power_struggle_sov }
+		mutually_exclusive = { focus = lenins_call_sov }
+		mutually_exclusive = { focus = power_to_one_person_sov }
+		
+		completion_reward = {
+			add_ideas = bukharin_wins_focus
+			hidden_effect = {
+				retire_country_leader = yes
+				retire_country_leader = yes
+			}
+			custom_effect_tooltip = bukharin_wins
+			set_country_flag = bukharin_wins_flag
+		}
+	}
+	
+	focus = {
+		id = expand_syndicates_rights_sov
+		icon = GFX_goal_generic_trade
+		x = 12
+		y = 2
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = support_business_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = scientists_sov
+		icon = GFX_focus_generic_socialist_science
+		x = 12
+		y = 3
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = expand_syndicates_rights_sov }
+		
+		completion_reward = {
+			add_ideas = scientists_focus
+		}
+	}
+	
+	focus = {
+		id = consolidate_power_sov
+		icon = GFX_goal_generic_demand_territory
+		x = 10 
+		y = 4 
+		cost = 14.286 
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = { focus = fifth_international_sov focus = crush_the_opposition_sov focus = scientists_sov }
+		
+		completion_reward = {
+			remove_ideas = power_struggle_focus
+			add_political_power = 100
+			set_country_flag = consolidate_power_flag
+			hidden_effect = {
+				news_event = { id = aw_news.22 hours = 12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = economical_reform_sov
+		icon = GFX_goal_generic_soviet_construction
+		x = 17
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					all_owned_state = {
+						NOT = { infrastructure < 5 }
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes						
+					}
+					set_state_flag = SOV_infrastructure_effort_3Inf
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = SOV_infrastructure_effort_3Inf
+				}				
+			}
+			random_owned_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+		}
+	}
+	
+	focus = {
+		id = nationalize_private_sector_sov
+		icon = GFX_goal_generic_demand_territory
+		x = 14
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = economical_reform_sov }
+		mutually_exclusive = { focus = expand_nep_sov }
+		
+		available = {
+			NOT = { has_country_flag = bukharin_wins_flag }
+			has_country_flag = consolidate_power_flag
+		}
+		
+		completion_reward = {
+			add_ideas = nationalize_private_sector_focus
+		}
+	}
+	
+	focus = {
+		id = government_design_bureaus_sov
+		icon = GFX_goal_support_communism
+		x = 14
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = nationalize_private_sector_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = secret_research_sov
+		icon = GFX_goal_generic_secret_weapon
+		x = 14
+		y = 3 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = government_design_bureaus_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+		id = expand_nep_sov
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 16 
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3.2
+		}
+		
+		prerequisite = { focus = economical_reform_sov }
+		mutually_exclusive = { focus = nationalize_private_sector_sov }
+		
+		available = {
+			NOT = { has_country_flag = trotsky_wins_flag }
+			has_country_flag = consolidate_power_flag
+		}
+		
+		completion_reward = {
+			add_ideas = expand_nep_focus
+		}
+	}
+	
+	focus = {
+		id = fund_chemical_industry_sov
+		icon = GFX_goal_generic_oil_refinery
+		x = 16
+		y = 2 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = expand_nep_sov }
+		
+		completion_reward = { 
+			add_resource = {
+				type = rubber
+				amount = 6
+				state = 219
+			}
+			add_resource = {
+				type = rubber
+				amount = 4
+				state = 217
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = { 
+		id = civilian_industry_sov
+		icon = GFX_goal_generic_construct_civilian
+		x = 16 
+		y = 3 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = fund_chemical_industry_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.4
+				uses = 2
+				category = construction_tech
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = slow_industrialization_sov
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 18 
+		y = 1 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = economical_reform_sov }
+		mutually_exclusive = { focus = rapid_industrialisation_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		available = {
+			has_country_flag = consolidate_power_flag
+			NOT = { has_country_flag = stalin_wins_flag }
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = slow_industrialization_2_sov
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 18 
+		y = 2 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = slow_industrialization_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = slow_industrialization_3_sov
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 18 
+		y = 3 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = slow_industrialization_2_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = rapid_industrialisation_sov
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 20 
+		y = 1 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = economical_reform_sov }
+		mutually_exclusive = { focus = slow_industrialization_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		available = {
+			has_country_flag = consolidate_power_flag
+			NOT = { has_country_flag = bukharin_wins_flag }
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = { idea = rapid_industrialisation_focus days = 1000 }
+			add_manpower = -500000
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = rapid_industrialisation_2_sov
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 20 
+		y = 2 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = rapid_industrialisation_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			add_manpower = -500000
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = rapid_industrialisation_3_sov
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 20 
+		y = 3 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = rapid_industrialisation_2_sov }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			add_manpower = -500000
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = private_design_bureaus_sov
+		icon = GFX_goal_generic_soviet_construction
+		x = 17
+		y = 4
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = civilian_industry_sov }
+		prerequisite = { focus = slow_industrialization_3_sov focus = rapid_industrialisation_3_sov }
+		
+		bypass = {
+			has_completed_focus = rapid_industrialisation_3_sov
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.4
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_extra_tech_slot
+		icon = GFX_focus_research
+		text = extra_tech_slot
+		prerequisite = { focus = secret_research_sov focus = private_design_bureaus_sov }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = resolve_army_conflict_sov
+		icon = GFX_goal_generic_build_tank
+		x = 27
+		y = 0
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+		
+		available = {
+			has_completed_focus = consolidate_power_sov
+		}
+		
+		completion_reward = {
+      add_command_power = 15
+			custom_effect_tooltip = resolve_army_conflict
+		}
+	}
+	
+	focus = {
+		id = tukhachevsky_sov
+		icon = GFX_goal_generic_demand_territory
+		x = 23
+		y = 1 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = resolve_army_conflict_sov }
+		mutually_exclusive = { focus = voroshilov_sov }
+		
+		completion_reward = {
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = mikhail_tukhachevsky
+		}
+	}
+	
+	focus = {
+		id = tukhachevsky_reforms_sov
+		icon = GFX_goal_generic_forceful_treaty
+		x = 23
+		y = 2 
+		cost = 20 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = tukhachevsky_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.4
+				uses = 2
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				category = naval_air
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.75
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = rocketry_bonus
+				ahead_reduction = 0.5
+				category = rocketry
+			}
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = voroshilov_sov 
+		icon = GFX_goal_generic_demand_territory
+		x = 25
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = resolve_army_conflict_sov }
+		mutually_exclusive = { focus = tukhachevsky_sov }
+		
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = kliment_voroshilov
+		}
+		
+	}
+	
+	focus = {
+		id = voroshilov_reforms_sov
+		icon = GFX_goal_generic_forceful_treaty
+		x = 25
+		y = 2 
+		cost = 20 
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = { focus = voroshilov_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				ahead_reduction = 0.6
+				uses = 1
+				category = armor
+			}
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = reform_command_sov
+		icon = GFX_goal_generic_army_doctrines
+		x = 24
+		y = 3 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = voroshilov_reforms_sov focus = tukhachevsky_reforms_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = reform_aviation_sov
+		icon = GFX_goal_generic_air_doctrine
+		x = 27
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = resolve_army_conflict_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			air_experience = 20
+		}
+	}
+	
+	focus = {
+		id = reform_navy_sov
+		icon = GFX_goal_generic_build_navy
+		x = 29 
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = resolve_army_conflict_sov }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 20
+		}
+	}
+	
+	focus = {
+		id = military_schools_sov
+		icon = GFX_goal_generic_small_arms
+		x = 31
+		y = 1 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = resolve_army_conflict_sov }
+		
+		completion_reward = {
+			add_ideas = military_schools_focus
+		}
+	}
+	
+	focus = {
+		id = found_secret_research_facilities_sov
+		icon = GFX_focus_research
+		x = 31
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = { focus = military_schools_sov }
+			
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = massive_army_training_sov
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 27 
+		y = 4
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		prerequisite = { focus = reform_command_sov }
+		prerequisite = { focus = reform_aviation_sov }
+		prerequisite = { focus = reform_navy_sov }
+		
+		available = {
+			has_war = no
+		}
+		
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+			add_named_threat = { threat = 2 name = sov_training }
+		}
+	}
+	
+	focus = {
+		id = seek_power_sov
+		icon = GFX_goal_generic_demand_territory
+		x = 7 
+		y = 5 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 6
+		}
+		
+		prerequisite = { focus = consolidate_power_sov }
+		
+		available = {
+#			has_country_flag = consolidate_power_flag
+		}
+		
+		completion_reward = {
+      unlock_decision_category_tooltip = war_operations_sov
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = expand_influence_sov
+		icon = GFX_goal_support_communism
+		x = 3 
+		y = 6
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				OR = {
+          is_historical_focus_on = yes
+          has_completed_focus = lenins_call_sov
+        }
+			}
+		}
+		
+		prerequisite = { focus = seek_power_sov }
+		mutually_exclusive = { focus = expansionism_sov }
+		
+		completion_reward = {
+			add_political_power = 150
+      add_ideas = expand_influence_SOV
+		}
+	}
+  
+  focus = {
+		id = spread_communist_propaganda_sov
+		icon = GFX_goal_support_communism
+		x = 5 
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+			
+		}
+		
+		prerequisite = { focus = expand_influence_sov }
+		
+		completion_reward = {
+			unlock_decision_category_tooltip = spread_communist_propaganda_sov
+		}
+	}
+	
+	
+	focus = {
+		id = prepare_ukrainian_coup_sov
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1 
+		y = 7
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = expand_influence_sov }
+		
+		bypass = {
+			NOT = { country_exists = UKR }
+			UKR = {
+				has_government = communism
+			}
+		}
+		
+		available = {
+			UKR = {
+				exists = yes
+				NOT = { has_government = communism }
+			}
+		}
+		
+		completion_reward = {
+			UKR = {
+				add_timed_idea = { idea = coup_preparation days = 100 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ukrainian_coup_sov
+		icon = GFX_goal_demand_sudetenland
+		x = 1 
+		y = 8 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = prepare_ukrainian_coup_sov }
+		
+		bypass = {
+			NOT = { country_exists = UKR }
+			UKR = {
+				has_government = communism
+			}
+		}
+		
+		available = {
+			UKR = {
+				exists = yes
+				NOT = { has_government = communism }
+				communism > 0.1 
+			}
+		}
+		
+		completion_reward = {
+			set_global_flag = soviet_threat
+			UKR = {
+				start_civil_war = { ideology = communism size = 0.35 }
+			}
+		}
+	}
+	
+	focus = {
+		id = prepare_finland_coup_sov
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 3 
+		y = 7 
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = expand_influence_sov }
+		
+		bypass = {
+			NOT = { country_exists = FIN }
+			FIN = {
+				has_government = communism
+			}
+		}
+		
+		available = {
+			FIN = {
+				exists = yes
+				NOT = { has_government = communism }
+			}
+		}
+		
+		completion_reward = {
+			FIN = {
+				add_timed_idea = { idea = coup_preparation days = 100 }
+			}
+		}
+	}
+	
+	focus = {
+		id = finland_coup_sov
+		icon = GFX_goal_demand_sudetenland
+		x = 3 
+		y = 8 
+		cost = 14.286
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		prerequisite = { focus = prepare_finland_coup_sov }
+		
+		bypass = {
+			NOT = { country_exists = FIN }
+			FIN = {
+				has_government = communism
+			}
+		}
+		
+		available = {
+			FIN = {
+				exists = yes
+				NOT = { has_government = communism }
+				communism > 0.1 
+			}
+		}
+		
+		completion_reward = {
+			set_global_flag = soviet_threat2
+			FIN = {
+				start_civil_war = { ideology = communism size = 0.35 }
+			}
+		}
+	}
+	
+	focus = {
+		id = expansionism_sov
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 11
+		y = 6 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_completed_focus = lenins_call_sov
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 1
+				has_completed_focus = lenins_call_sov
+				is_historical_focus_on = no
+			}
+		}
+		
+		prerequisite = { focus = seek_power_sov }
+		mutually_exclusive = { focus = expand_influence_sov }
+		
+		available = {
+			has_completed_focus = resolve_army_conflict_sov
+		}
+		
+		completion_reward = {
+			set_global_flag = soviet_threat
+			add_political_power = 50
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = reclamation_turkestan_sov
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 8 
+		y = 7 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 8
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = expansionism_sov }
+		
+		bypass = {
+			SOV = {
+				owns_state = 732
+				owns_state = 586
+				owns_state = 405
+				owns_state = 585
+				owns_state = 584
+				owns_state = 587
+				owns_state = 742
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 732
+			add_state_claim = 586
+			add_state_claim = 405
+			add_state_claim = 585
+			add_state_claim = 584
+			add_state_claim = 587
+			add_state_claim = 742
+			
+			add_named_threat = { threat = 1 name = sov_reclamation_turkestan }
+			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 732
+						owns_state = 586
+						owns_state = 405
+						owns_state = 585
+						owns_state = 584
+						owns_state = 587
+						owns_state = 742
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = soviet_reclamation }
+			}
+		}
+	}
+	
+	focus = {
+		id = ultimatum_turkestan_sov
+		icon = GFX_goal_generic_major_war
+		x = 8 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 2
+				SOV = { has_war = yes }
+			}
+			modifier = {
+				factor = 8
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = reclamation_turkestan_sov }
+		
+		bypass = {
+			OR = {
+				has_war_with = TUK
+				NOT = { country_exists = TUK }
+				SOV = {
+					owns_state = 732
+					owns_state = 586
+					owns_state = 405
+					owns_state = 585
+					owns_state = 584
+					owns_state = 587
+					owns_state = 742
+				}
+			}	
+		}
+		
+		available = {
+			TUK = {
+				exists = yes
+				OR = {
+					is_puppet = no
+					is_puppet_of = SOV
+				}
+			}
+			732 = { is_claimed_by = SOV }
+			586 = { is_claimed_by = SOV }
+			405 = { is_claimed_by = SOV }
+			585 = { is_claimed_by = SOV }
+			584 = { is_claimed_by = SOV }
+			587 = { is_claimed_by = SOV }
+			742 = { is_claimed_by = SOV }
+		}
+		
+		completion_reward = {
+			TUK = {
+				country_event = { id = aw_sov.1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = reclamation_kuban_sov
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 10 
+		y = 7 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		prerequisite = { focus = expansionism_sov }
+		
+		bypass = {
+			SOV = {
+				owns_state = 232
+				owns_state = 235
+				owns_state = 233
+				owns_state = 234
+				owns_state = 776
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 232
+			add_state_claim = 235
+			add_state_claim = 233
+			add_state_claim = 234
+			add_state_claim = 776
+			
+			add_named_threat = { threat = 1 name = sov_reclamation_kuban }
+			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 232
+						owns_state = 235
+						owns_state = 233
+						owns_state = 234
+						owns_state = 776
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = soviet_reclamation }
+			}
+		}
+	}
+	
+	focus = {
+		id = ultimatum_kuban_sov
+		icon = GFX_goal_generic_major_war
+		x = 10 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				SOV = { has_war = yes }
+			}
+		}
+		
+		prerequisite = { focus = reclamation_kuban_sov }
+		
+		bypass = {
+			OR = {
+				has_war_with = KBN
+				NOT = { country_exists = KBN }
+				SOV = {
+					owns_state = 232
+					owns_state = 235
+					owns_state = 233
+					owns_state = 234
+					owns_state = 776
+				}
+			}
+		}
+		
+		available = {
+			KBN = {
+				exists = yes
+				OR = {
+					is_puppet = no
+					is_puppet_of = SOV
+				}
+			}
+			232 = { is_claimed_by = SOV }
+			235 = { is_claimed_by = SOV }
+			233 = { is_claimed_by = SOV }
+			234 = { is_claimed_by = SOV }
+			776 = { is_claimed_by = SOV }
+		}
+		
+		completion_reward = {
+			KBN = {
+				country_event = { id = aw_sov.7 }
+			}
+		}
+	}
+	
+	focus = {
+		id = reclamation_tcr_sov
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 12 
+		y = 7 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				is_historical_focus_on = yes
+			}
+		}
+		
+		prerequisite = { focus = expansionism_sov }
+		
+		bypass = {
+			SOV = {
+				owns_state = 229
+				owns_state = 230
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 229
+			add_state_claim = 230
+			add_state_claim = 231
+			
+			add_named_threat = { threat = 1 name = sov_reclamation_tcr }
+			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 229
+						owns_state = 230
+						owns_state = 231
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = soviet_reclamation }
+			}
+		}
+	}
+	
+	focus = {
+		id = ultimatum_tcr_sov
+		icon = GFX_goal_generic_major_war
+		x = 12 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				TCR = { NOT = { is_neighbor_of = SOV } }
+			}
+			modifier = {
+				factor = 4
+				is_historical_focus_on = yes
+				TCR = { is_neighbor_of = SOV }
+			}
+		}
+		
+		prerequisite = { focus = reclamation_tcr_sov }
+		
+		bypass = {
+			OR = {
+				has_war_with = TCR
+				NOT = { country_exists = TCR }
+				SOV = {
+					owns_state = 229
+					owns_state = 230
+				}	
+			}
+		}
+		
+		available = {
+			TCR = {
+				exists = yes
+				OR = {
+					any_country = {
+						is_in_faction_with = SOV
+						is_neighbor_of = TCR
+					}
+					TCR = { is_neighbor_of = SOV }
+				}
+				OR = {
+					is_puppet = no
+					is_puppet_of = SOV
+				}
+			}
+			230 = { is_claimed_by = SOV }
+			229 = { is_claimed_by = SOV }
+		}
+		
+		completion_reward = {
+			TCR = {
+				country_event = { id = aw_sov.13 }
+			}
+		}
+	}
+	
+	focus = {
+		id = reclaim_baltic_states_sov
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 14 
+		y = 7 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		
+		prerequisite = { focus = expansionism_sov }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			date > 1938.1.1
+		}
+		
+		completion_reward = {
+			add_state_claim = 191
+			add_state_claim = 13
+			add_state_claim = 12
+			add_state_claim = 747
+			add_state_claim = 190
+			add_state_claim = 11
+			add_state_claim = 189
+			
+			add_named_threat = { threat = 2 name = sov_reclamation_baltic }
+			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 191
+						owns_state = 13
+						owns_state = 12
+						owns_state = 747
+						owns_state = 190
+						owns_state = 11
+						owns_state = 189
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = soviet_reclamation }
+			}
+			
+			custom_effect_tooltip = tensions_with_ger_tip
+		}
+	}
+	
+	focus = {
+		id = claim_poland_sov
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 14 
+		y = 8 
+		cost = 10 
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		
+		prerequisite = { focus = reclaim_baltic_states_sov }
+		
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_state_claim = 96
+			add_state_claim = 95
+			add_state_claim = 97
+			add_state_claim = 768
+			add_state_claim = 94
+			add_state_claim = 92
+			add_state_claim = 10
+			add_state_claim = 90
+			
+			add_named_threat = { threat = 2 name = sov_reclamation_poland }
+			
+			POL = {
+				add_opinion_modifier = { target = SOV modifier = soviet_reclamation }
+			}
+			custom_effect_tooltip = tensions_with_ger_tip
+		}
+	}
+	
+	
+}	

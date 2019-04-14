@@ -1,0 +1,169 @@
+﻿###########################
+# Indian-Pakistani Civilwar
+###########################
+
+add_namespace = indian_cw
+
+
+### Pakistan declares war
+country_event = {
+	id = indian_cw.1
+	title = indian_cw.1.t
+	desc = indian_cw.1.d
+	picture = GFX_report_event_indian_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			date > 1937.4.28
+			has_country_flag = keep_one_india_policy
+		}
+		OR = {
+			date > 1937.5.28
+			has_country_flag = protests_suppressed
+		}
+		NOT = { has_global_flag = indian_civil_war }
+		has_defensive_war = no
+		has_civil_war = no
+		tag = RAJ
+		NOT = {
+			country_exists = PAK
+			has_country_flag = democratic_reformation_finished
+			has_country_flag = pakistan_is_free
+		}
+		RAJ = {
+			OR = {
+				owns_state = 440
+				owns_state = 442
+				owns_state = 443
+				owns_state = 444
+				owns_state = 445
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 133
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PAK = {
+				transfer_state = 440
+				transfer_state = 445
+				transfer_state = 441
+				transfer_state = 442
+				transfer_state = 443
+				transfer_state = 444
+				
+				set_capital = 440
+				set_stability = 0.65
+				add_ideas = {
+					limited_conscription
+					censored_press
+					war_economy
+					PAK_acd2
+				}
+				load_oob = "PAK_civil_war"
+				add_political_power = 75
+			}
+			RAJ = {
+				set_stability = 0.60
+				declare_war_on = {
+					target = PAK
+					type = annex_everything
+				}
+				add_manpower = -100000
+			}
+			set_global_flag = indian_civil_war
+			news_event = { id = aw_news.30 hours = 24 }
+		}
+	}
+	
+	option = { # play India
+		name = indian_cw.1.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			if = {
+				limit = {
+					RAJ = {
+						owns_state = 430
+						NOT = { has_country_flag = protests_suppressed }
+					}
+				}
+				RAJ = {
+					country_event = { id = indian_cw.2 days = 14 random = 10 }
+				}
+			}
+		}
+	}
+	option = { # play Pakistan
+		name = indian_cw.1.b
+		trigger = {
+			is_ai = no
+		}
+		ai_chance = { factor = 0 }
+		PAK = { change_tag_from = RAJ }
+		hidden_effect = {
+			if = {
+				limit = {
+					RAJ = {
+						owns_state = 430
+						NOT = { has_country_flag = protests_suppressed }
+					}
+				}
+				RAJ = {
+					country_event = { id = indian_cw.2 days = 14 random = 10 }
+				}
+			}
+		}
+	}
+}
+
+### Bengal joins Pakistan (India)
+country_event = {
+	id = indian_cw.2
+	title = indian_cw.2.t
+	desc = indian_cw.2.d
+	picture = GFX_report_event_indian_soldiers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = bengal_joins_pakistan
+		}
+	}
+	
+	option = { # 
+		name = indian_cw.2.a
+		ai_chance = { factor = 100 }
+		PAK = {
+			transfer_state = 430	
+			load_oob = "PAK_bengal"
+			country_event = { id = indian_cw.3 }
+		}
+	}
+}
+
+### Bengal joins Pakistan (Pakistan)
+country_event = {
+	id = indian_cw.3
+	title = indian_cw.3.t
+	desc = indian_cw.3.d
+	picture = GFX_report_event_indian_soldiers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	option = { # 
+		name = indian_cw.3.a
+		ai_chance = { factor = 100 }
+		add_manpower = 100000
+	}
+}
+

@@ -1,0 +1,138 @@
+spriteTypes = {	
+
+	### Weltkrieg Mod LAWS
+	
+	
+	
+#Decisions
+	spriteType = {
+		name = "GFX_idea_no_decision"
+		texturefile = "gfx/interface/ideas/idea_no_decision.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dismantle_faction"
+		texturefile = "gfx/interface/ideas/idea_dismantle_faction.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_leave_faction"
+		texturefile = "gfx/interface/ideas/idea_leave_faction.dds"
+	}
+
+#Press law
+	spriteType = {
+		name = "GFX_idea_war_propaganda"
+		texturefile = "gfx/interface/ideas/idea_press_law.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_propaganda"
+		texturefile = "gfx/interface/ideas/idea_press_law.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_censored_press"
+		texturefile = "gfx/interface/ideas/idea_press_law.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_free_press"
+		texturefile = "gfx/interface/ideas/idea_press_law.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_resistance_press"
+		texturefile = "gfx/interface/ideas/idea_press_law.dds"
+	}
+#family policy
+	spriteType = {
+		name = "GFX_idea_neglected_family_policy"
+		texturefile = "gfx/interface/ideas/idea_neglected_family_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_one_child_policy"
+		texturefile = "gfx/interface/ideas/idea_one_child_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_unreformed_family_policy"
+		texturefile = "gfx/interface/ideas/idea_unreformed_family_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_support_families"
+		texturefile = "gfx/interface/ideas/idea_support_families.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_multiple_childs_policy"
+		texturefile = "gfx/interface/ideas/idea_multiple_childs_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_organized_families"
+		texturefile = "gfx/interface/ideas/idea_organized_families.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_total_control"
+		texturefile = "gfx/interface/ideas/idea_total_control.dds"
+	}
+#army training
+	spriteType = {
+		name = "GFX_idea_specialized_training"
+		texturefile = "gfx/interface/ideas/idea_specialized_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_improved_training"
+		texturefile = "gfx/interface/ideas/idea_improved_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_regular_training"
+		texturefile = "gfx/interface/ideas/idea_regular_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fast_training"
+		texturefile = "gfx/interface/ideas/idea_fast_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_quick_briefing"
+		texturefile = "gfx/interface/ideas/idea_quick_briefing.dds"
+	}
+#Education focus
+	
+	spriteType = {
+		name = "GFX_idea_focus_education"
+		texturefile = "gfx/interface/ideas/idea_focus_education.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_work"
+		texturefile = "gfx/interface/ideas/idea_focus_work.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_both"
+		texturefile = "gfx/interface/ideas/idea_focus_both.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_default_focus"
+		texturefile = "gfx/interface/ideas/idea_default_focus.dds"
+	}
+	
+	
+	############# Generic Idea Pictures // Weltkrieg #############
+	
+	spriteType = {
+		name = "GFX_idea_generic_british_stoicism"
+		texturefile = "gfx/interface/ideas/generic_british_stoicism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fourth_international"
+		texturefile = "gfx/interface/ideas/generic_fourth_international.dds"
+	}
+	
+	############# Specific Idea Pictures // Weltkrieg #############
+	
+	spriteType = {
+		name = "GFX_idea_emperor_puyi_chi"
+		texturefile = "gfx/interface/ideas/idea_emperor_puyi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_international_pressure_chi"
+		texturefile = "gfx/interface/ideas/idea_international_pressure.dds"
+	}
+	
+}

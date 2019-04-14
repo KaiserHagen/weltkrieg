@@ -1,0 +1,1743 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+add_namespace = aw_ukr
+
+
+################### Ukraine ######################
+
+# side with radical parties - focus
+country_event = {
+	id = aw_ukr.1
+	title = aw_ukr.1.t
+	desc = aw_ukr.1.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# go with fascists
+	option = {
+		name = aw_ukr.1.a # 
+		ai_chance = {
+			factor = 65
+			
+		}
+		add_ideas = side_with_fascists_UKR
+		set_country_flag = fascists_chosen
+	}
+	# go with communists
+	option = {
+		name = aw_ukr.1.b 
+		ai_chance = {
+			factor = 35
+			
+		}
+		add_ideas = side_with_communists_UKR
+		set_country_flag = communists_chosen
+	}
+}
+
+# coup - fascists
+country_event = {
+	id = aw_ukr.2
+	title = aw_ukr.2.t
+	desc = aw_ukr.2.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UKR
+		has_country_flag = fascists_chosen
+		fascism > 0.33
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 50	
+	}
+	
+	# go with fascists
+	option = {
+		name = aw_ukr.2.a # 
+		ai_chance = {
+			factor = 60
+			
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+}
+
+# coup - communists
+country_event = {
+	id = aw_ukr.3
+	title = aw_ukr.3.t
+	desc = aw_ukr.3.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UKR
+		has_country_flag = communists_chosen
+		communism > 0.33
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 50	
+	}
+	
+	# go with communists
+	option = {
+		name = aw_ukr.3.a # 
+		ai_chance = {
+			factor = 60
+			
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+}
+
+### Relationship with GER
+country_event = {
+	id = aw_ukr.4
+	title = aw_ukr.4.t
+	desc = aw_ukr.4.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# antagonize
+	option = {
+		name = aw_ukr.4.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 70
+				has_government = communism
+			}
+			modifier = {
+				factor = 80
+				has_government = fascism
+			}
+		}
+		add_state_claim = 771
+		add_opinion_modifier = { target = GER modifier = antagonize }
+		add_political_power = 25
+		set_country_flag = antagonize_GER
+	}
+	# NAP
+	option = {
+		name = aw_ukr.4.b 
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 30
+				has_government = communism
+			}
+			modifier = {
+				factor = 20
+				has_government = fascism
+			}
+		}
+		GER = {
+			country_event = { id = aw_ukr.5 hours = 6 }
+		}
+	}
+	
+	# Cooperation
+	option = {
+		name = aw_ukr.4.c 
+		trigger = {
+			has_government = monarchism
+			GER = { has_government = monarchism }
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+		GER = {
+			country_event = { id = aw_ukr.6 hours = 6 }
+		}
+	}
+}
+
+### Relationship with GER -- NAP
+country_event = {
+	id = aw_ukr.5
+	title = aw_ukr.5.t
+	desc = aw_ukr.5.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.5.a # 
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 50
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 80
+				UKR = { has_government = fascism }
+			}
+		}
+		diplomatic_relation = { country = UKR relation = non_aggression_pact }
+		UKR = {
+			country_event = { id = aw_ukr.7 hours = 6 }
+		}
+	}
+	# deny
+	option = {
+		name = aw_ukr.5.b 
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 50
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 20
+				UKR = { has_government = fascism }
+			}
+		}
+#		add_opinion_modifier = { target = UKR modifier = refuses }
+		UKR = {
+			country_event = { id = aw_ukr.8 hours = 6 }
+		}
+	}
+	
+}
+
+### Relationship with GER -- NAP accepted
+country_event = {
+	id = aw_ukr.7
+	title = aw_ukr.7.t
+	desc = aw_ukr.7.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.7.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+#		add_opinion_modifier = { target = GER modifier = befriend }
+	}
+	
+}
+
+### Relationship with GER -- NAP denied
+country_event = {
+	id = aw_ukr.8
+	title = aw_ukr.8.t
+	desc = aw_ukr.8.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.8.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = GER modifier = refuses }
+	}
+	
+}
+
+### Relationship with GER -- Cooperation
+country_event = {
+	id = aw_ukr.6
+	title = aw_ukr.6.t
+	desc = aw_ukr.6.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.6.a # 
+		trigger = {
+#			NOT = { GER = { has_completed_focus = restructure_alliance_ger } }
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 0
+				UKR = { has_government = fascism }
+			}
+		}
+		diplomatic_relation = { country = UKR relation = non_aggression_pact }
+		UKR = { add_ideas = german_advisors_2 }
+		UKR = {
+			country_event = { id = aw_ukr.9 hours = 6 }
+		}
+	}
+	# accept - EU
+	option = {
+		name = aw_ukr.6.b # 
+		trigger = {
+			GER = { has_completed_focus = restructure_alliance_ger is_faction_leader = yes }
+			UKR = { is_in_faction = no }
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 0
+				UKR = { has_government = fascism }
+			}
+		}
+		GER = { add_to_faction = UKR }
+		UKR = { add_ideas = german_advisors_2 }
+		UKR = {
+			country_event = { id = aw_ukr.10 hours = 6 }
+		}
+	}
+	# refuse
+	option = {
+		name = aw_ukr.6.c 
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 90
+				UKR = { has_government = fascism }
+			}
+		}
+#		add_opinion_modifier = { target = UKR modifier = refuses }
+		UKR = {
+			country_event = { id = aw_ukr.11 hours = 6 }
+		}
+	}
+	
+}
+
+### Relationship with GER -- Cooperation accepted
+country_event = {
+	id = aw_ukr.9
+	title = aw_ukr.9.t
+	desc = aw_ukr.9.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.9.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = GER modifier = befriend }
+	}
+	
+}
+
+### Relationship with GER -- Cooperation accepted - EU
+country_event = {
+	id = aw_ukr.10
+	title = aw_ukr.10.t
+	desc = aw_ukr.10.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.10.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+#		add_opinion_modifier = { target = GER modifier = refuses }
+	}
+	
+}
+
+### Relationship with GER -- Cooperation denied
+country_event = {
+	id = aw_ukr.11
+	title = aw_ukr.11.t
+	desc = aw_ukr.11.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.11.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = GER modifier = refuses }
+	}
+	
+}
+
+### Relationship with USG 
+country_event = {
+	id = aw_ukr.12
+	title = aw_ukr.12.t
+	desc = aw_ukr.12.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# antagonize
+	option = {
+		name = aw_ukr.12.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 90
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+				USG = { has_government = democratic }
+			}
+			modifier = {
+				factor = 90
+				has_government = fascism
+				USG = { has_government = communism }
+			}
+			modifier = {
+				factor = 90
+				has_government = communism
+				USG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 50
+				has_government = fascism
+				USG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 10
+				has_government = communism
+				USG = { has_government = communism }
+			}
+		}
+		add_opinion_modifier = { target = USG modifier = antagonize }
+		add_state_claim = 73
+		add_political_power = 25
+		set_country_flag = antagonize_USG
+	}
+	# NAP
+	option = {
+		name = aw_ukr.12.b 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 10
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+				USG = { has_government = democratic }
+			}
+			modifier = {
+				factor = 10
+				has_government = fascism
+				USG = { has_government = communism }
+			}
+			modifier = {
+				factor = 10
+				has_government = communism
+				USG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 50
+				has_government = fascism
+				USG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 90
+				has_government = communism
+				USG = { has_government = communism }
+			}
+		}
+		USG = {
+			country_event = { id = aw_ukr.13 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Relationship with USG -- NAP
+country_event = {
+	id = aw_ukr.13
+	title = aw_ukr.13.t
+	desc = aw_ukr.13.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.13.a # 
+		ai_chance = {
+			factor = 90
+			
+		}
+		diplomatic_relation = { country = UKR relation = non_aggression_pact }
+		add_opinion_modifier = { target = UKR modifier = befriend }
+		UKR = {
+			country_event = { id = aw_ukr.14 hours = 6 }
+		}
+	}
+	# deny
+	option = {
+		name = aw_ukr.13.b 
+		ai_chance = {
+			factor = 10
+			
+		}
+		UKR = {
+			country_event = { id = aw_ukr.15 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Relationship with USG -- NAP accepted
+country_event = {
+	id = aw_ukr.14
+	title = aw_ukr.14.t
+	desc = aw_ukr.14.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.14.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = USG modifier = befriend }
+	}
+	
+}
+
+### Relationship with USG -- NAP denied
+country_event = {
+	id = aw_ukr.15
+	title = aw_ukr.15.t
+	desc = aw_ukr.15.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.15.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = USG modifier = refuses }
+	}
+	
+}
+
+### Relationship with SOV 
+country_event = {
+	id = aw_ukr.16
+	title = aw_ukr.16.t
+	desc = aw_ukr.16.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# antagonize
+	option = {
+		name = aw_ukr.16.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 20
+				UKR = { NOT = { has_government = communism has_government = fascism } }
+			}
+			modifier = {
+				factor = 80
+				UKR = { has_government = fascism }
+			}
+		}
+		add_opinion_modifier = { target = SOV modifier = antagonize }
+		add_state_claim = 220
+		add_state_claim = 224
+		add_state_claim = 218
+		add_political_power = 25
+	}
+	# NAP
+	option = {
+		name = aw_ukr.16.b 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 80
+				UKR = { NOT = { has_government = communism has_government = fascism } }
+			}
+			modifier = {
+				factor = 20
+				UKR = { has_government = fascism }
+			}
+		}
+		SOV = {
+			country_event = { id = aw_ukr.17 hours = 6 }
+		}
+	}
+	# Join Comintern
+	option = {
+		name = aw_ukr.16.c 
+		trigger = {
+			SOV = { is_faction_leader = yes }
+		}
+		ai_chance = {
+			factor = 100
+			
+		}
+		SOV = {
+			country_event = { id = aw_ukr.20 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Relationship with SOV -- NAP
+country_event = {
+	id = aw_ukr.17
+	title = aw_ukr.17.t
+	desc = aw_ukr.17.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.17.a # 
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				UKR = { has_government = fascism }
+			}
+		}
+		diplomatic_relation = { country = UKR relation = non_aggression_pact }
+		if = {
+			limit = {
+				SOV = { has_government = communism }
+				UKR = { has_government = communism }
+			}
+			add_opinion_modifier = { target = UKR modifier = befriend }
+		}
+		UKR = {
+			country_event = { id = aw_ukr.18 hours = 6 }
+		}
+	}
+	# deny
+	option = {
+		name = aw_ukr.17.b 
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				UKR = { has_government = fascism }
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.19 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Relationship with SOV -- NAP accepted
+country_event = {
+	id = aw_ukr.18
+	title = aw_ukr.18.t
+	desc = aw_ukr.18.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.18.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		if = {
+			limit = {
+				SOV = { has_government = communism }
+				UKR = { has_government = communism }
+			}
+			add_opinion_modifier = { target = SOV modifier = befriend }
+		}
+	}
+	
+}
+
+### Relationship with SOV -- NAP denied
+country_event = {
+	id = aw_ukr.19
+	title = aw_ukr.19.t
+	desc = aw_ukr.19.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.19.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = SOV modifier = refuses }
+	}
+	
+}
+
+### Relationship with SOV -- Join Comintern
+country_event = {
+	id = aw_ukr.20
+	title = aw_ukr.20.t
+	desc = aw_ukr.20.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.20.a # 
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				UKR = { NOT = { has_government = communism }}
+			}
+		}
+		SOV = {
+			add_to_faction = UKR
+		}
+		UKR = {
+			country_event = { id = aw_ukr.21 hours = 6 }
+		}
+	}
+	# deny
+	option = {
+		name = aw_ukr.20.b 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				UKR = { NOT = { has_government = communism }}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.22 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Relationship with SOV -- Join Comintern accepted
+country_event = {
+	id = aw_ukr.21
+	title = aw_ukr.21.t
+	desc = aw_ukr.21.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.21.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+	}
+	
+}
+
+### Relationship with SOV -- Join Comintern denied
+country_event = {
+	id = aw_ukr.22
+	title = aw_ukr.22.t
+	desc = aw_ukr.22.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.22.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = SOV modifier = refuses }
+	}
+	
+}
+
+### Invite Romania
+country_event = {
+	id = aw_ukr.23
+	title = aw_ukr.23.t
+	desc = aw_ukr.23.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.23.a # 
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0
+				UKR = { NOT = { has_government = monarchism } }
+			}
+		}
+		UKR = {
+			add_to_faction = ROM
+			country_event = { id = aw_ukr.24 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.23.b 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				UKR = { NOT = { has_government = monarchism } }
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.25 hours = 6 }
+		}
+	}
+}
+
+### Invite Romania -- accepted
+country_event = {
+	id = aw_ukr.24
+	title = aw_ukr.24.t
+	desc = aw_ukr.24.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.24.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+	}
+	
+}
+
+### Invite Romania -- Rejected
+country_event = {
+	id = aw_ukr.25
+	title = aw_ukr.25.t
+	desc = aw_ukr.25.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.25.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = ROM modifier = refuses }
+	}
+	
+}
+
+### Bessarabia or War
+country_event = {
+	id = aw_ukr.26
+	title = aw_ukr.26.t
+	desc = aw_ukr.26.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# cede Bessarabia
+	option = {
+		name = aw_ukr.26.a # 
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 10
+				any_country = { is_in_faction_with = ROM is_major = yes }
+			}
+		}
+		add_opinion_modifier = { target = UKR modifier = hostile_status }
+		UKR = {
+			country_event = { id = aw_ukr.27 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.26.b 
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 90
+				any_country = { is_in_faction_with = ROM is_major = yes }
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.28 hours = 6 }
+		}
+	}
+}
+
+### Romania cedes Bessarabia
+country_event = {
+	id = aw_ukr.27
+	title = aw_ukr.27.t
+	desc = aw_ukr.27.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.27.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		transfer_state = 78
+	}
+	
+}
+
+### Romania rejects
+country_event = {
+	id = aw_ukr.28
+	title = aw_ukr.28.t
+	desc = aw_ukr.28.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.28.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		create_wargoal = {
+			type = take_claimed_state
+			target = ROM
+			generator = { 78 774 79 }
+		}
+	}
+	
+}
+
+### Relationship with FRA 
+country_event = {
+	id = aw_ukr.29
+	title = aw_ukr.29.t
+	desc = aw_ukr.29.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# antagonize
+	option = {
+		name = aw_ukr.29.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						FRA = { has_government = communism }
+						UKR = { has_government = fascism }
+					}
+					AND = {
+						UKR = { has_government = communism }
+						FRA = { has_government = fascism }
+					}
+				}
+			}
+			
+		}
+		add_opinion_modifier = { target = FRA modifier = antagonize }
+		add_political_power = 25
+	}
+	# Befriend
+	option = {
+		name = aw_ukr.29.b 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						FRA = { has_government = communism }
+						UKR = { has_government = communism }
+					}
+					AND = {
+						UKR = { has_government = fascism }
+						FRA = { has_government = fascism }
+					}
+				}
+			}
+		}
+		FRA = {
+			country_event = { id = aw_ukr.30 hours = 6 }
+		}
+	}
+	
+	
+}
+
+### Befriend France
+country_event = {
+	id = aw_ukr.30
+	title = aw_ukr.30.t
+	desc = aw_ukr.30.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.30.a # 
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						FRA = { has_government = communism }
+						UKR = { has_government = fascism }
+					}
+					AND = {
+						UKR = { has_government = communism }
+						FRA = { has_government = fascism }
+					}
+				}
+			}
+		}
+		add_opinion_modifier = { target = UKR modifier = befriend }
+		diplomatic_relation = { country = UKR relation = non_aggression_pact }
+		UKR = {
+			country_event = { id = aw_ukr.31 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.30.b 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						FRA = { has_government = communism }
+						UKR = { has_government = fascism }
+					}
+					AND = {
+						UKR = { has_government = communism }
+						FRA = { has_government = fascism }
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.32 hours = 6 }
+		}
+	}
+}
+
+
+### France accepts
+country_event = {
+	id = aw_ukr.31
+	title = aw_ukr.31.t
+	desc = aw_ukr.31.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.31.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = FRA modifier = befriend }
+	}
+	
+}
+
+### France rejects
+country_event = {
+	id = aw_ukr.32
+	title = aw_ukr.32.t
+	desc = aw_ukr.32.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.32.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = FRA modifier = refuses }
+	}
+	
+}
+
+### Invite Kuban
+country_event = {
+	id = aw_ukr.33
+	title = aw_ukr.33.t
+	desc = aw_ukr.33.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.33.a # 
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0
+				UKR = { has_government = communism }
+				KBN = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 0
+				UKR = {
+					has_government = communism
+				}
+				KBN = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				UKR = {
+					has_government = fascism
+				}
+				KBN = {
+					has_government = communism
+				}
+			}
+		}
+		UKR = {
+			add_to_faction = KBN
+			country_event = { id = aw_ukr.34 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.33.b 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				UKR = { has_government = communism }
+			}
+			modifier = {
+				factor = 100
+				UKR = {
+					has_government = communism
+				}
+				KBN = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 100
+				UKR = {
+					has_government = fascism
+				}
+				KBN = {
+					has_government = communism
+				}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.35 hours = 6 }
+		}
+	}
+}
+
+### Invite Kuban -- accepted
+country_event = {
+	id = aw_ukr.34
+	title = aw_ukr.34.t
+	desc = aw_ukr.34.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.34.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+	}
+	
+}
+
+### Invite Kuban -- Rejected
+country_event = {
+	id = aw_ukr.35
+	title = aw_ukr.35.t
+	desc = aw_ukr.35.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.35.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = KBN modifier = refuses }
+	}
+	
+}
+
+### Invite Bulgaria
+country_event = {
+	id = aw_ukr.36
+	title = aw_ukr.36.t
+	desc = aw_ukr.36.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.36.a # 
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				UKR = {
+					NOT = {
+						has_government = monarchism
+						has_government = fascism
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				UKR = {
+					has_government = communism
+				}
+				BUL = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				UKR = {
+					has_government = fascism
+				}
+				BUL = {
+					has_government = communism
+				}
+			}
+		}
+		UKR = {
+			add_to_faction = BUL
+			country_event = { id = aw_ukr.37 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.36.b 
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				UKR = {
+					NOT = {
+						has_government = monarchism
+						has_government = fascism
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				UKR = {
+					has_government = communism
+				}
+				BUL = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 100
+				UKR = {
+					has_government = fascism
+				}
+				BUL = {
+					has_government = communism
+				}
+			}
+			
+		}
+		UKR = {
+			country_event = { id = aw_ukr.38 hours = 6 }
+		}
+	}
+}
+
+### Invite Bulgaria -- accepted
+country_event = {
+	id = aw_ukr.37
+	title = aw_ukr.37.t
+	desc = aw_ukr.37.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.37.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+	}
+	
+}
+
+### Invite Bulgaria -- Rejected
+country_event = {
+	id = aw_ukr.38
+	title = aw_ukr.38.t
+	desc = aw_ukr.38.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.38.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		add_opinion_modifier = { target = BUL modifier = refuses }
+	}
+	
+}
+
+### Demand Galizia
+country_event = {
+	id = aw_ukr.39
+	title = aw_ukr.39.t
+	desc = aw_ukr.39.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.39.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 20
+				USG = {
+					has_stability < 0.50
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 40
+				USG = {
+					has_stability < 0.35
+					has_government = democratic
+				}
+			}
+		}
+		effect_tooltip = {
+			UKR = {
+				transfer_state = 91
+				transfer_state = 89
+				if = {
+					limit = {
+						73 = {
+							OR = {
+								is_core_of = UKR
+								is_claimed_by = UKR
+							}
+						}
+					}
+					transfer_state = 73
+				}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.40 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.39.b 
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 80
+				USG = {
+					has_stability < 0.50
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 60
+				USG = {
+					has_stability < 0.35
+					has_government = democratic
+				}
+			}
+			
+		}
+		UKR = {
+			country_event = { id = aw_ukr.41 hours = 6 }
+		}
+	}
+}
+
+### Demand Galizia -- accepted
+country_event = {
+	id = aw_ukr.40
+	title = aw_ukr.40.t
+	desc = aw_ukr.40.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.40.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		transfer_state = 91
+		transfer_state = 89
+		if = {
+			limit = {
+				73 = {
+					OR = {
+						is_core_of = UKR
+						is_claimed_by = UKR
+					}
+					is_owned_by = USG
+				}
+			}
+			transfer_state = 73
+		}
+	}
+	
+}
+
+### Demand Galizia -- Rejected
+country_event = {
+	id = aw_ukr.41
+	title = aw_ukr.41.t
+	desc = aw_ukr.41.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.41.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		create_wargoal = {
+			type = take_core_state
+			target = USG
+			generator = { 91 89 73 80 }
+		}
+	}
+	
+}
+
+### Demand Crimea (Crimea)
+country_event = {
+	id = aw_ukr.42
+	title = aw_ukr.42.t
+	desc = aw_ukr.42.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.42.a # 
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 30
+				KRI = { is_in_faction = yes }
+			}
+		}
+		effect_tooltip = {
+			UKR = { annex_country = { target = KRI transfer_troops = yes } }
+		}
+		UKR = {
+			country_event = { id = aw_ukr.43 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.42.b 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 70
+				KRI = { is_in_faction = yes }
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.44 hours = 6 }
+		}
+	}
+}
+
+### Demand Crimea -- accepted
+country_event = {
+	id = aw_ukr.43
+	title = aw_ukr.43.t
+	desc = aw_ukr.43.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.43.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		annex_country = { target = KRI transfer_troops = yes }
+	}
+	
+}
+
+### Demand Crimea -- Rejected
+country_event = {
+	id = aw_ukr.44
+	title = aw_ukr.44.t
+	desc = aw_ukr.44.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.44.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KRI
+		}
+	}
+	
+}
+
+### Demand Crimea (Germany)
+country_event = {
+	id = aw_ukr.45
+	title = aw_ukr.45.t
+	desc = aw_ukr.45.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept
+	option = {
+		name = aw_ukr.45.a # 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 50
+				GER = {
+					OR = {
+						is_major = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+		effect_tooltip = {
+			UKR = {
+				transfer_state = 137
+				transfer_state = 771
+				if = {
+					limit = {
+						OR = {
+							GER = { owns_state = 782 }
+							KRI = { owns_state = 782 }
+						}
+					}
+					transfer_state = 782
+				}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.46 hours = 6 }
+		}
+	}
+	# reject
+	option = {
+		name = aw_ukr.45.b 
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 50
+				GER = {
+					OR = {
+						is_major = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { id = aw_ukr.47 hours = 6 }
+		}
+	}
+}
+
+### Demand Crimea -- accepted
+country_event = {
+	id = aw_ukr.46
+	title = aw_ukr.46.t
+	desc = aw_ukr.46.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.46.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		transfer_state = 137
+		transfer_state = 771
+		if = {
+			limit = {
+				OR = {
+					GER = { owns_state = 782 }
+					KRI = { owns_state = 782 }
+				}
+			}
+			transfer_state = 782
+		}
+	}
+	
+}
+
+### Demand Crimea -- Rejected
+country_event = {
+	id = aw_ukr.47
+	title = aw_ukr.47.t
+	desc = aw_ukr.47.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aw_ukr.47.a # 
+		ai_chance = {
+			factor = 95
+			
+		}
+		create_wargoal = {
+			type = take_core_state
+			target = GER
+			generator = { 137 771 782 }
+		}
+	}
+	
+}
+

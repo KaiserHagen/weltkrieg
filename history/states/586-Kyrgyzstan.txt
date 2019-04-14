@@ -1,0 +1,33 @@
+
+state={
+	id=586
+	name="STATE_586" #Alma Alta
+	resources={
+		steel=25
+		tungsten=14
+		
+	}
+
+
+	state_category = city
+
+	history={
+		owner = TUK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		victory_points = {
+			1591 3 
+		}
+		add_core_of = TUK
+
+	}
+
+	provinces={
+		1591 1825 4224 4686 7706 10148 10660 12583 12640 13147 
+	}
+	manpower=2563404
+}

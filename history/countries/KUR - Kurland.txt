@@ -1,0 +1,60 @@
+﻿capital = 190
+
+oob = "KUR_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+	civilian_economy
+	censored_press
+}
+
+set_technology = {
+	infantry_weapons = 1
+	
+	infantry_weapons1 = 1
+	early_fighter = 1
+}
+
+set_convoys = 5
+
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 17
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 12
+		}
+		
+		monarchism = { 
+			popularity = 71
+		}
+	}
+	
+	ruling_party = monarchism
+	last_election = "1926.5.8"
+	election_frequency = 120
+	elections_allowed = no
+}
+
+
+create_country_leader = {
+	name = "Gustav Biron von Curland"
+	desc = "POLITICS_GUSTAV_BIRON_DESC"
+	picture = "Portrait_KUR_Gustav_Biron_von_Curland.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchy
+	traits = {
+		german_puppet
+	}
+}

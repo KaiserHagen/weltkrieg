@@ -1,0 +1,23 @@
+
+state={
+	id=776
+	name="STATE_776"
+	manpower = 209920
+	state_category = pastoral
+	resources={
+		chromium=8
+	}
+
+	history={
+		owner = KBN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KBN
+		add_core_of = GEO
+	}
+
+	provinces={
+		654 672 1530 4534 9626 11617 
+	}
+}

@@ -1,0 +1,11 @@
+war_plans_osm = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = OSM
+  }
+  
+	visible = {
+		has_completed_focus = ottoman_imperialism_osm
+	}
+}

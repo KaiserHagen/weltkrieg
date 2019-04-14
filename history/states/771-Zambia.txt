@@ -1,0 +1,33 @@
+state={
+	id=771
+	name="STATE_771"
+	manpower = 43000
+	
+	state_category = enclave
+
+	history={
+		owner = GER
+		
+		victory_points = {
+			6704 1 
+		}
+		
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+			6704 = {
+				naval_base = 6
+				coastal_bunker = 5
+				bunker = 3
+				
+			}
+
+		}
+		add_core_of = KRI
+	}
+
+	provinces={
+		6704
+	}
+}
+

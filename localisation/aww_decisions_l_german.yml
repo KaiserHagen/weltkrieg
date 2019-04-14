@@ -1,0 +1,67 @@
+﻿l_german:
+
+ ####Decisions
+ #general
+ random_decisions:0 "Entscheidungen"
+ aw_random_1:0 "Bündnis auflösen"
+ aw_random_1_desc:0 "Ihr Bündnis wird aufgelöst."
+ aw_random_2:0 "Bündnis verlassen"
+ aw_random_2_desc:0 "Sie verlassen ihr Bündnis."
+ aw_random_3:0 "Änderung des Pressegesetzes"
+ aw_random_3_desc:0 "Ändern Sie das Pressegesetz zu "Zensierte Presse" oder "Propaganda"."
+ aw_random_4:0 "Presse zensieren"
+ aw_random_4_desc:0 "Ändern Sie das Pressegesetz zu "Zensierte Presse"."
+ aw_random_5:0 "Freie Presse"
+ aw_random_5_desc:0 "Ändern Sie das Pressegesetz zu "Freie Presse"."
+ 
+ #France
+ french_west_africa:0 "Französisch-Westafrika"
+ maginot_line:0 "Maginot Linie"
+ FRA_war_plans:0 "Kriegsoperationen"
+ 
+ purge_communists:0 "Verfolgung der Kommunisten"
+ purge_fascists:0 "Verfolgung der Faschisten"
+ establish_fwa:0 "Errichtung von Französisch-Westafrika"
+ industrialize_algeria:0 "Industrialisiere Nordalgerien"
+ 
+ #Germany
+ german_african_colonies:0 "Deutsch-Afrika Entscheidungen"
+ aggressive_policy_actions:0 "Kriegsoperationen"
+ annexations_ger:0 "Territoriale Expansionen"
+ war_with_fra_ger:0 "Krieg gegen Frankreich"
+ 
+ #Austria
+ intervene_against_ldf_uga:0 "Interveniere gegen die Ligue des Fasciste"
+ 
+ #Soviet Union
+ war_operations_sov:0 "Kriegsoperationen"
+ war_with_austria_sov:0 "Krieg gegen [UGA.GetNameDef]"
+ spread_communist_propaganda_sov:0 "Verbreite die Revolution"
+ puppet_tcr_sov:0 "Staatsstreich in [TCR.GetName]"
+ puppet_kuban_sov:0 "Staatsstreich in [KBN.GetName]"
+ puppet_turkestan_sov:0 "Staatsstreich in [TUK.GetName]"
+ puppet_china_sov:0 "Staatsstreich in [CHI.GetName]"
+ 
+ #Italy
+ abbessinia:0 "Abessinien"
+ 
+ #Ottoman Empire
+ war_plans_osm:0 "Kriegsoperationen"
+ 
+ #Great Britain
+ invite_eng:0 "Zum Bündnis einladen"
+ demand_norway_eng:0 "Fordere Sonderrechte von Norwegen"
+ secure_norway_eng:0 "Sichere Norwegen"
+ demand_netherlands_eng:0 "Fordere Sonderrechte von den Niederlanden"
+ secure_netherlands_eng:0 "Sichere die Niederlande"
+ 
+ #Ukraine 
+ bunker_ukr:0 "Bunkerbau"
+ 
+ #Japan
+ fight_germany_jap:0 "Bekämpfe die Deutsche Vormachtstellung"
+ 
+ #USA
+ war_operations_usa:0 "Kriegsoperationen"
+ 
+ 

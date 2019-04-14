@@ -1,0 +1,32 @@
+state={
+	id=764
+	
+	state_category = rural
+	
+	name="STATE_764"
+	resources={
+		chromium=22
+		
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 2
+			
+
+		}
+		victory_points = {
+			10929 1 
+		}
+		
+		add_core_of = RHO
+		add_core_of = ZIM
+	}
+
+	provinces={
+		1874 2151 2216 4851 7842 10929 
+	}
+	manpower=593600
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		strong_population_growth = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1 
+			
+			picture = generic_manpower_bonus
+			
+			modifier = { 
+				MONTHLY_POPULATION = 0.8
+			}
+			
+		}
+		
+		increased_population_growth = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.35
+			}
+		}
+	}
+}

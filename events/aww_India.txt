@@ -1,0 +1,455 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+add_namespace = aw_india
+
+
+################### India ######################
+
+# Pakistan or just India?
+country_event = {
+	id = aw_india.1
+	title = aw_india.1.t
+	desc = aw_india.1.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.7.22
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 10	
+	}
+	
+	
+	# Promise solution
+	option = {
+		name = aw_india.1.a
+		ai_chance = {
+			factor = 40
+			
+		}
+		add_political_power = -25
+		set_country_flag = solution_promised
+	}
+	# one India
+	option = {
+		name = aw_india.1.b 
+		ai_chance = {
+			factor = 60
+			
+		}
+		add_stability = -0.05
+		set_country_flag = one_india
+	}
+}
+
+# Pakistan Independence Movement formed
+country_event = {
+	id = aw_india.2
+	title = aw_india.2.t
+	desc = aw_india.2.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.8.1
+		OR = {
+			has_war = yes
+			has_country_flag = reformation_denied
+			has_country_flag = pakistani_independence_denied
+			has_country_flag = one_india
+		}
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 30	
+	}
+	
+	# 
+	option = {
+		name = aw_india.2.a
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = pakistani_independence_movement_RAJ
+		set_country_flag = pakistani_independence_movement
+	}
+	
+}
+
+# Democratic reformation or independence?
+country_event = {
+	id = aw_india.3
+	title = aw_india.3.t
+	desc = aw_india.3.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.9.12
+		has_country_flag = solution_promised
+	}
+
+	mean_time_to_happen = {
+		days = 10	
+	}
+	
+	# ask people
+	option = {
+		name = aw_india.3.a
+		ai_chance = {
+			factor = 40
+			
+		}
+		RAJ = {
+			random_list = { 
+				30 = { country_event = { days = 7 id = aw_india.4 } }
+				70 = { country_event = { days = 7 id = aw_india.5 } }
+			}
+			
+		}
+	}
+	
+}
+
+# democratic reformation
+country_event = {
+	id = aw_india.4
+	title = aw_india.4.t
+	desc = aw_india.4.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept vote
+	option = {
+		name = aw_india.4.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+		set_country_flag = democratic_reformation
+		add_ideas = democratic_reformation_RAJ
+		add_political_power = -25
+	}
+	
+	# refuse reformation
+	option = {
+		name = aw_india.4.b
+		trigger = {
+			NOT = { has_country_flag = last_chance }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		set_country_flag = reformation_denied
+		add_stability = -0.10
+	}
+	
+}
+
+# free pakistan
+country_event = {
+	id = aw_india.5
+	title = aw_india.5.t
+	desc = aw_india.5.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	# accept vote
+	option = {
+		name = aw_india.5.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+		set_country_flag = pakistani_independence
+		add_ideas = freeing_pakistan_RAJ
+		add_political_power = -25
+	}
+	
+	# refuse freeing pakistan
+	option = {
+		name = aw_india.5.b
+		trigger = {
+			NOT = { has_country_flag = last_chance }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		set_country_flag = pakistani_independence_denied
+		add_stability = -0.10
+	}
+	
+}
+
+# Pakistan Independence Movement protests
+country_event = {
+	id = aw_india.6
+	title = aw_india.6.t
+	desc = aw_india.6.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.10.1
+		has_country_flag = pakistani_independence_movement
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 20	
+	}
+	
+	# let them protest
+	option = {
+		name = aw_india.6.a
+		ai_chance = {
+			factor = 100
+		}
+		add_timed_idea = { idea = pakistani_protests_RAJ days = 230 }
+		set_country_flag = pakistani_protests
+	}
+	# oppress them
+	option = {
+		name = aw_india.6.b
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -200
+		add_manpower = -100000
+		set_country_flag = protests_suppressed
+	}
+	
+}
+
+# Independence of Pakistan
+country_event = {
+	id = aw_india.7
+	title = aw_india.7.t
+	desc = aw_india.7.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1937.1.7
+		has_country_flag = pakistani_independence
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 2	
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PAK = {
+				transfer_state = 440
+				transfer_state = 445
+				transfer_state = 442
+				transfer_state = 443
+				transfer_state = 444
+				transfer_state = 430
+				transfer_state = 441
+				
+				set_capital = 440
+				set_stability = 0.65
+				add_ideas = {
+					limited_conscription
+					civilian_economy
+				}
+				add_political_power = 50
+				remove_ideas = freeing_pakistan_RAJ
+			}
+			set_country_flag = pakistan_is_free
+		}
+	}
+	
+	# free Pakistan
+	option = {
+		name = aw_india.7.a
+		ai_chance = {
+			factor = 100
+		}
+		give_guarantee = PAK
+	}
+	# play as Pakistan
+	option = {
+		name = aw_india.7.b
+		ai_chance = {
+			factor = 0
+		}
+		give_guarantee = PAK
+		PAK = { change_tag_from = RAJ }
+	}
+}
+
+# Democratic Reformation
+country_event = {
+	id = aw_india.8
+	title = aw_india.8.t
+	desc = aw_india.8.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.11.18
+		has_country_flag = democratic_reformation
+		democratic < 0.35
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 2	
+	}
+	
+	# faster
+	option = {
+		name = aw_india.8.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_political_power = -50
+	}
+	# take your time
+	option = {
+		name = aw_india.8.b
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+	
+}
+
+# Democratic Reformation finished
+country_event = {
+	id = aw_india.9
+	title = aw_india.9.t
+	desc = aw_india.9.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1937.1.12
+		has_country_flag = democratic_reformation
+		democratic > 0.39
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 2	
+	}
+	
+	# 
+	option = {
+		name = aw_india.9.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_government = democratic }
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+		set_country_flag = democratic_reformation_finished
+		add_stability = 0.05
+	}
+	
+}
+
+# last chance
+country_event = {
+	id = aw_india.10
+	title = aw_india.10.t
+	desc = aw_india.10.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RAJ
+		date > 1937.2.25
+		has_country_flag = pakistani_protests
+		NOT = { country_exists = PAK }
+	}
+
+	mean_time_to_happen = {
+		days = 1	
+	}
+	
+	# hold referendum
+	option = {
+		name = aw_india.10.a
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = last_chance
+		RAJ = {
+			country_event = { id = aw_india.3 hours = 6 }
+		}
+	}
+	# keep one india policy
+	option = {
+		name = aw_india.10.b
+		ai_chance = {
+			factor = 80
+		}
+		remove_ideas = pakistani_protests_RAJ
+		add_political_power = -50
+		add_manpower = -20000
+		set_country_flag = keep_one_india_policy
+	}
+	
+}
+
+
+
+
+

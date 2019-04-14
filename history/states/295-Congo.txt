@@ -1,0 +1,28 @@
+
+state={
+	id=295
+	name="STATE_295" # Leopoldville
+	manpower = 1851048
+	
+	state_category = rural
+	
+	resources={
+		tungsten=24
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			
+		}
+		
+		add_core_of = CAU
+		add_core_of = COG
+	}
+
+	provinces={
+		1516 1731 1929 1968 2024 7716 7548 9986 10858 12795  
+	}
+}

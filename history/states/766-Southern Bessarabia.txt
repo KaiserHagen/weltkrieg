@@ -1,0 +1,30 @@
+state={
+	id=766
+	name="STATE_766"
+	
+	state_category = rural
+	
+	resources={
+		
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+			
+
+		}
+		add_core_of = BOR
+		
+		victory_points = {
+			10758 1 
+		}
+	}
+
+	provinces={
+		8028 10758 10780 10805 
+	}
+	manpower = 1109100
+	buildings_max_level_factor=1.000
+}

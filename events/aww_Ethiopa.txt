@@ -1,0 +1,115 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+add_namespace = aw_eth
+
+
+################### Ethiopia ######################
+
+### Ethiopia pushes Italy out of Africa ###
+country_event = {
+	id = aw_eth.1
+	title = aw_eth.1.t
+	desc = aw_eth.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = ITA
+		has_war_with = ETH
+		ETH = {
+			controls_state = 550
+			controls_state = 559
+			is_in_faction = no
+		}
+		ITA = {
+			owns_state = 550
+			owns_state = 559
+		}
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+	#End this war
+	option = {
+		name = aw_eth.1.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				any_country = {
+					is_in_faction_with = ITA
+					is_neighbor_of = ETH
+				}
+			}
+		}
+		ETH = {
+			country_event = { id = aw_eth.2 hours = 6 }
+		}
+		effect_tooltip = {
+			ETH = { white_peace = ITA }
+			transfer_state = 550
+		}
+	}
+
+	#Keep fighting
+	option = {
+		name = aw_eth.1.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				any_country = {
+					is_in_faction_with = ITA
+					is_neighbor_of = ETH
+				}
+			}
+		}
+	}
+}
+
+#Ethiopias response
+country_event = {
+	id = aw_eth.2
+	title = aw_eth.2.t
+	desc = aw_eth.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = aw_eth.2.a
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = ITA
+		ETH = {
+			transfer_state = 550
+		}
+	}
+
+	#keep the fight going
+	option = {
+		name = aw_eth.2.b
+		ai_chance = {
+			factor = 0
+		}
+		ITA = { country_event = { id = aw_eth.3 hours = 6 } }
+	}
+}
+
+#### Ethiopia rejects offer
+country_event = {
+	id = aw_eth.3
+	title = aw_eth.3.t
+	desc = aw_eth.3.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = aw_eth.3.a
+		
+	}
+}

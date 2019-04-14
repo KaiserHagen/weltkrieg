@@ -1,0 +1,268 @@
+abbessinia = {
+
+	# 
+	colonize_ethiopia_ita = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			country_exists = ETH
+			ETH = { is_puppet = no }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = ETH }
+		}
+    complete_effect = {
+			create_wargoal = {
+ 				type = annex_everything
+ 				target = ETH
+ 			}
+		}
+		
+	}
+  
+}
+
+war_plans_ita = {
+
+	# 
+	war_with_austria_ita = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			UGA = {
+				exists = yes
+				NOT = { is_in_faction_with = ITA }
+				any_owned_state = {
+          is_claimed_by = ITA
+        }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+        num_of_military_factories > 40
+        ITA = { has_army_manpower = { size > 749999 } }
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = UGA }
+		}
+    complete_effect = {
+			create_wargoal = {
+				type = take_claimed_state
+ 				target = UGA
+ 				generator = { 39 736 103 163 72 }
+			}
+		}
+		
+	}
+  
+  war_with_france_ita = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			FRA = {
+				exists = yes
+				NOT = { is_in_faction_with = ITA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+        num_of_military_factories > 40
+        ITA = { has_army_manpower = { size > 749999 } }
+      }
+      
+		}
+
+		visible = {
+			NOT = { has_war_with = FRA }
+		}
+    complete_effect = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FRA
+				generator = { 1 786 785 }
+			}
+		}
+		
+	}
+  
+  conquer_libya_ita = {
+    
+    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = claim_libya_ita
+			NOT = {
+				448 = { is_owned_by = ITA }
+				449 = { is_owned_by = ITA }
+				661 = { is_owned_by = ITA }
+				273 = { is_owned_by = ITA }
+				662 = { is_owned_by = ITA }
+				450 = { is_owned_by = ITA }
+				663 = { is_owned_by = ITA }
+				451 = { is_owned_by = ITA }
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+      modifier = {
+        factor = 5 
+        has_war = no
+        num_of_military_factories > 40
+        ITA = { has_army_manpower = { size > 749999 } }
+      }
+      
+		}
+
+		visible = {
+			NOT = {
+				448 = { is_owned_by = ITA }
+				449 = { is_owned_by = ITA }
+				661 = { is_owned_by = ITA }
+				273 = { is_owned_by = ITA }
+				662 = { is_owned_by = ITA }
+				450 = { is_owned_by = ITA }
+				663 = { is_owned_by = ITA }
+				451 = { is_owned_by = ITA }
+			}
+		}
+    complete_effect = {
+			if = {
+				limit = {
+					country_exists = OSM
+					OR = {
+						448 = { is_owned_by = OSM }
+						449 = { is_owned_by = OSM }
+						661 = { is_owned_by = OSM }
+						273 = { is_owned_by = OSM }
+						662 = { is_owned_by = OSM }
+						450 = { is_owned_by = OSM }
+						663 = { is_owned_by = OSM }
+						451 = { is_owned_by = OSM }
+					}
+				}
+				create_wargoal = {
+					type = take_claimed_state
+					target = OSM
+					generator = { 273 448 449 450 451 661 662 663 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LBA
+					OR = {
+						448 = { is_owned_by = LBA }
+						449 = { is_owned_by = LBA }
+						661 = { is_owned_by = LBA }
+						273 = { is_owned_by = LBA }
+						662 = { is_owned_by = LBA }
+						450 = { is_owned_by = LBA }
+						663 = { is_owned_by = LBA }
+						451 = { is_owned_by = LBA }
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LBA
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						448 = { is_owned_by = LBA }
+						449 = { is_owned_by = LBA }
+						661 = { is_owned_by = LBA }
+						273 = { is_owned_by = LBA }
+						662 = { is_owned_by = LBA }
+						450 = { is_owned_by = LBA }
+						663 = { is_owned_by = LBA }
+						451 = { is_owned_by = LBA }
+						
+						448 = { is_owned_by = OSM }
+						449 = { is_owned_by = OSM }
+						661 = { is_owned_by = OSM }
+						273 = { is_owned_by = OSM }
+						662 = { is_owned_by = OSM }
+						450 = { is_owned_by = OSM }
+						663 = { is_owned_by = OSM }
+						451 = { is_owned_by = OSM }
+					}
+				}
+				custom_effect_tooltip = wargoal_against_occupant_of_libya
+				hidden_effect = {
+					random_country = {
+						limit = {
+							owns_state = 448
+							owns_state = 449
+							owns_state = 661
+							owns_state = 273
+							owns_state = 662
+							owns_state = 450
+							owns_state = 663
+							owns_state = 451
+						}
+						country_event = { id = aw_ita.25 }
+					}
+				}
+			}
+		}
+		
+	}
+  
+}

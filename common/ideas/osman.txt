@@ -1,0 +1,945 @@
+ideas = {
+	
+	country = {
+	
+		
+		recover_from_civil_war_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				ai_get_ally_desire_factor = -80
+				join_faction_tension = 0.5
+			}
+		}
+		
+		pan_turkism_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.08
+			}
+		}
+		
+		protests_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		
+		heavy_uprisings_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				has_civil_war = yes
+			}
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = -0.40
+				industrial_capacity_factory = -0.50
+			}
+		}
+		
+		uprisings_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.25
+			}
+		}
+		
+		naval_effort_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		oil_extraction_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
+		
+		german_investments_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				political_power_factor = -0.07
+			}
+		}
+		
+		extensive_reforms_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.03
+				MONTHLY_POPULATION = 0.25
+			}
+		}
+		
+		atatuerk_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+		
+		military_education_osm_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.005
+				fascism_drift = 0.02
+				partisan_effect = 0.2
+			}
+		}
+		
+		military_school_osm_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.005
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		emergency_conscription_OSM = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		production_capacity_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		rapid_industrialization_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		expand_industry_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				global_building_slots_factor = 0.35
+			}
+		}
+		
+		economical_reform_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		persecution_of_rebels_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+				
+			}
+		}
+		
+		resolve_ethnical_conflict_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				political_power_gain = -0.30
+			}
+		}
+		
+		companies_universities_purged_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		reorganize_army_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				army_org_factor = 0.075
+				training_time_army_factor = -0.05
+			}
+		}
+		
+		suppress_ethnical_conflict_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				stability_factor = -0.10
+				drift_defence_factor = 0.10
+			}
+		}
+		
+		unite_country_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				stability_factor = 0.25
+				conscription = 0.005
+				drift_defence_factor = 0.15
+			}
+		}
+		
+		side_with_monarchy_focus = {
+			
+			allowed = {
+				has_government = monarchism
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				monarchism_drift = 0.1
+			}
+		}
+		
+		iron_fist_focus = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.20
+				political_power_factor = 0.05
+			}
+			
+		}
+		
+		defend_against_enemies_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.1 
+				production_speed_bunker_factor = 0.1 
+				production_speed_coastal_bunker_factor = 0.1 
+				production_speed_anti_air_building_factor = 0.1
+			}
+		}
+		
+		social_reform_focus_osm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.25
+			}
+		}
+		
+		federalization_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		state_reform_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1 
+				democratic_acceptance = 20
+			}
+		}
+		
+		weak_government = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_factor = -0.15
+				monarchism_drift = -0.03
+				justify_war_goal_time = 0.15
+			}
+		}
+		
+		ethnical_trouble = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1 
+			
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				stability_factor = -0.10
+				monarchism_drift = -0.02
+			}
+		}
+	
+	}
+	
+
+	theorist = {
+
+	OSM_mehmet_gunaltay = {
+				
+		picture = generic_army_europe_2
+
+		allowed = {
+			original_tag = OSM
+		}
+		
+		research_bonus = {
+			land_doctrine = 0.07
+		}
+		
+		traits = { military_theorist }
+	}
+
+	OSM_refik_saydam = {
+				
+		picture = generic_political_advisor_europe_1
+
+		allowed = {
+			original_tag = OSM
+		}
+		
+		research_bonus = {
+			air_doctrine = 0.07
+		}
+		
+		traits = { air_warfare_theorist }
+	}
+}
+
+	army_chief = {
+
+		OSM_kazim_orbay = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OSM_fevzi_cakmak = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		OSM_memduh_tagmac = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_ali_orlungat = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+
+		OSM_mehmet_ali_ungen = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_rauf_orbay = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { navy_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+
+		OSM_sabiha_gokcen = {
+			
+			picture = sabiha_gocen
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			
+			traits = { air_strategic_bombing_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_abdurrahman_gurman = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_ali_fuat_cebesoy = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = OSM
+			}
+
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_erkan_gataly = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = OSM
+			}
+
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		OSM_thk = {
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# trainers, and air ambulances?
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OSM_ktf = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# assembled license aircrafts from across the world 
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+			
+		designer = yes
+		
+		OSM_golcuk_nsy = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		OSM_istanbul_military_industries = {
+			
+			picture = generic_infantry_equipment_manufacturer_3
+
+			
+			allowed = {
+				original_tag = OSM
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}

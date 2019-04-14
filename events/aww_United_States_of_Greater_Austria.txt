@@ -1,0 +1,903 @@
+﻿############# Weltkrieg (aww) Events ##############
+
+### aw stood for Alternative WWI Outcome but is outdated now. But i keep it, so all aw_ events are from this mod
+add_namespace = usg
+
+
+# USG demands Serbia 
+
+country_event = {
+	id = usg.1
+	title = usg.1.t
+	desc = usg.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.1.a
+		ai_chance = { factor = 90 }
+		USG = {
+			country_event = { hours = 6 id = usg.3 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = usg.1.b
+		USG = {
+			country_event = { hours = 6 id = usg.2 }
+		}
+	}
+}
+
+# Serbia declines the offer
+country_event = {
+	id = usg.2
+	title = usg.2.t
+	desc = usg.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.2.a
+		create_wargoal = {
+			type = annex_everything
+			target = SER 
+		}
+	}
+}
+
+# Serbia accepts the offer
+country_event = {
+	id = usg.3
+	title = usg.3.t
+	desc = usg.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.3.a
+		annex_country = { target = SER transfer_troops = yes }
+		add_named_threat = { threat = 2 name = usg_threat }
+		hidden_effect = {
+			USG = {
+				news_event = { hours = 12 id = aw_news.1 }
+			}
+		}
+	}
+}
+# USG demands Montenegro 
+country_event = {
+	id = usg.4
+	title = usg.4.t
+	desc = usg.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.4.a
+		ai_chance = { factor = 85 }
+		USG = {
+			country_event = { hours = 6 id = usg.6 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = usg.4.b
+		USG = {
+			country_event = { hours = 6 id = usg.5 }
+		}
+	}
+}
+
+# Montenegro declines the offer
+country_event = {
+	id = usg.5
+	title = usg.5.t
+	desc = usg.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.5.a
+		create_wargoal = {
+			type = annex_everything
+			target = MNT
+		}
+	}
+}
+
+# Montenegro accepts the offer
+country_event = {
+	id = usg.6
+	title = usg.6.t
+	desc = usg.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.6.a
+		annex_country = { target = MNT transfer_troops = yes }
+		add_named_threat = { threat = 2 name = usg_threat }
+		hidden_effect = {
+			USG = {
+				news_event = { hours = 12 id = aw_news.2 }
+			}
+		}
+	}
+}
+# Germany accepts request
+country_event = {
+	id = usg.7
+	title = usg.7.t
+	desc = usg.7.d
+	picture = GFX_report_event_sign_treaty2
+
+	is_triggered_only	= yes
+
+	option = {
+		name = usg.7.a
+	}
+}
+# Germany denies request
+country_event = {
+	id = usg.8
+	title = usg.8.t
+	desc = usg.8.d
+	picture = GFX_report_event_sign_treaty2
+
+	is_triggered_only	= yes
+
+	option = {
+		name = usg.8.a
+		add_opinion_modifier = {
+			target = GER 
+			modifier = germany_refuses_austrian_request
+		}
+	}
+}
+# Soviets accept request
+country_event = {
+	id = usg.9
+	title = usg.9.t
+	desc = usg.9.d
+	picture = GFX_report_event_sign_treaty2
+
+	is_triggered_only	= yes
+
+	option = {
+		name = usg.9.a
+	}
+}
+# Soviets decline request
+country_event = {
+	id = usg.10
+	title = usg.10.t
+	desc = usg.10.d
+	picture = GFX_report_event_sign_treaty2
+
+	is_triggered_only	= yes
+
+	option = {
+		name = usg.10.a
+		add_opinion_modifier = {
+			target = SOV 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+
+#Austrian ultimatum on SER 
+country_event = {
+	id = usg.11
+	title = usg.11.t
+	desc = usg.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.11.a
+		ai_chance = { factor = 100 }
+		USG = {
+			puppet = SER
+			country_event = { hours = 6 id = usg.12 }
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = aw_news.11 }
+		}
+	}
+	
+	option = { # Refuse
+		name = usg.11.b
+		USG = {
+			country_event = { hours = 6 id = usg.13 }
+		}
+	}
+}
+#Serbia accepts
+country_event = {
+	id = usg.12
+	title = usg.12.t
+	desc = usg.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.12.a
+		add_named_threat = { threat = 1 name = usg_threat }
+	}
+}
+
+#Serbia refuses
+country_event = {
+	id = usg.13
+	title = usg.13.t
+	desc = usg.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.13.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SER
+		}
+	}
+	
+}
+
+#Austrian ultimatum on Montenegro 
+country_event = {
+	id = usg.14
+	title = usg.14.t
+	desc = usg.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.14.a
+		ai_chance = { factor = 100 }
+		USG = {
+			puppet = MNT
+			country_event = { hours = 6 id = usg.15 }
+		}
+		hidden_effect = {
+			news_event = { hours = 36 id = aw_news.12 }
+		}
+	}
+	option = { # Refuse
+		name = usg.14.b
+		USG = {
+			country_event = { hours = 6 id = usg.16 }
+		}
+	}
+}
+#Montenegro accepts
+country_event = {
+	id = usg.15
+	title = usg.15.t
+	desc = usg.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.15.a
+		add_named_threat = { threat = 1 name = usg_threat }
+	}
+}
+
+#Montenegro refuses
+country_event = {
+	id = usg.16
+	title = usg.16.t
+	desc = usg.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.16.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MNT
+		}
+	}
+	
+}
+#Austria invites Romania
+country_event = {
+	id = usg.17
+	title = usg.17.t
+	desc = usg.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.17.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = ROM
+			country_event = { id = usg.18 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.17.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.19 }
+		}
+	}
+}
+#Romania accepts
+country_event = {
+	id = usg.18
+	title = usg.18.t
+	desc = usg.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.18.a
+	}
+}
+
+#Romania refuses
+country_event = {
+	id = usg.19
+	title = usg.19.t
+	desc = usg.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.19.a
+		add_opinion_modifier = {
+			target = ROM
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Greece
+country_event = {
+	id = usg.20
+	title = usg.20.t
+	desc = usg.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.20.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = GRE
+			country_event = { id = usg.21 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.20.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.22 }
+		}
+	}
+}
+#Greece accepts
+country_event = {
+	id = usg.21
+	title = usg.21.t
+	desc = usg.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.21.a
+	}
+}
+
+#Greece refuses
+country_event = {
+	id = usg.22
+	title = usg.22.t
+	desc = usg.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.22.a
+		add_opinion_modifier = {
+			target = GRE
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Ukraine
+country_event = {
+	id = usg.23
+	title = usg.23.t
+	desc = usg.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.23.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = UKR
+			country_event = { id = usg.24 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.23.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.25 }
+		}
+	}
+}
+#Ukraine accepts
+country_event = {
+	id = usg.24
+	title = usg.24.t
+	desc = usg.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.24.a
+	}
+}
+
+#Ukraine refuses
+country_event = {
+	id = usg.25
+	title = usg.25.t
+	desc = usg.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.25.a
+		add_opinion_modifier = {
+			target = UKR
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Turkey
+country_event = {
+	id = usg.26
+	title = usg.26.t
+	desc = usg.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.26.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = ROOT
+			country_event = { id = usg.27 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.26.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.28 }
+		}
+	}
+}
+#Turkey accepts
+country_event = {
+	id = usg.27
+	title = usg.27.t
+	desc = usg.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.27.a
+	}
+}
+
+#Turkey refuses
+country_event = {
+	id = usg.28
+	title = usg.28.t
+	desc = usg.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.28.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Norway
+country_event = {
+	id = usg.29
+	title = usg.29.t
+	desc = usg.29.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.29.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = NOR
+			country_event = { id = usg.30 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.26.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.31 }
+		}
+	}
+}
+#Norway accepts
+country_event = {
+	id = usg.30
+	title = usg.30.t
+	desc = usg.30.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.30.a
+	}
+}
+
+#Norway refuses
+country_event = {
+	id = usg.31
+	title = usg.31.t
+	desc = usg.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.31.a
+		add_opinion_modifier = {
+			target = NOR
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Sweden
+country_event = {
+	id = usg.32
+	title = usg.32.t
+	desc = usg.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.32.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = SWE
+			country_event = { id = usg.33 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.26.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.34 }
+		}
+	}
+}
+#Sweden accepts
+country_event = {
+	id = usg.33
+	title = usg.33.t
+	desc = usg.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.33.a
+	}
+}
+
+#Sweden refuses
+country_event = {
+	id = usg.34
+	title = usg.34.t
+	desc = usg.34.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.34.a
+		add_opinion_modifier = {
+			target = SWE
+			modifier = italy_refuses
+		}
+	}
+}
+
+#Austria invites Britain
+country_event = {
+	id = usg.35
+	title = usg.35.t
+	desc = usg.35.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.35.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = ENG
+			country_event = { id = usg.36 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.25.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.37 }
+		}
+	}
+}
+#Britain accepts
+country_event = {
+	id = usg.36
+	title = usg.36.t
+	desc = usg.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.36.a
+	}
+}
+
+#Britain refuses
+country_event = {
+	id = usg.37
+	title = usg.37.t
+	desc = usg.37.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.37.a
+		add_opinion_modifier = {
+			target = ENG
+			modifier = italy_refuses
+		}
+	}
+}
+
+# Austria wants to join L'Union Internationale
+country_event = {
+	id = usg.38
+	title = usg.38.t
+	desc = usg.38.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.38.a
+		add_to_faction = USG
+		ai_chance = { factor = 100 }
+		FRA = { 
+			country_event = { id = usg.39 } 
+		}
+	}
+	option = { # Refuse
+		name = usg.38.b
+		FRA = {
+			country_event = { hours = 6 id = usg.40 }
+		}
+	}
+}
+#FRA accepts
+country_event = {
+	id = usg.39
+	title = usg.39.t
+	desc = usg.39.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.39.a
+	}
+}
+
+#FRA refuses
+country_event = {
+	id = usg.40
+	title = usg.40.t
+	desc = usg.40.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.40.a
+		add_opinion_modifier = {
+			target = FRA 
+			modifier = soviets_refuse_austrian_request
+		}
+	}
+}
+################## Random Events ##################
+
+# Serbia wants to join USG
+country_event = {
+	id = usg.41
+	title = usg.41.t
+	desc = usg.41.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.41.a
+		ai_chance = { factor = 99 }
+		USG = {
+			annex_country = { target = SER transfer_troops = yes }
+			add_state_core = 108
+			add_political_power = -200
+			news_event = { id = aw_news.24 days = 1 }
+		}
+	}
+	option = { # Refuse
+		name = usg.41.b
+		ai_chance = { factor = 1 }
+		SER = {
+			country_event = { hours = 12 id = aw_ser.2 }
+		}
+	}
+}
+
+### Austria invites Bulgaria
+country_event = {
+	id = usg.42
+	title = usg.42.t
+	desc = usg.42.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = usg.42.a
+		ai_chance = { factor = 99 }
+		USG = {
+			add_to_faction = BUL
+			country_event = { id = usg.43 }
+			
+		}
+	}
+	option = { # Refuse
+		name = usg.42.b
+		ai_chance = { factor = 1 }
+		USG = {
+			country_event = { hours = 6 id = usg.44 }
+		}
+	}
+}
+#Bulgaria accepts
+country_event = {
+	id = usg.43
+	title = usg.43.t
+	desc = usg.43.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.43.a
+	}
+}
+
+#Bulgaria rejects
+country_event = {
+	id = usg.44
+	title = usg.44.t
+	desc = usg.44.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usg.44.a
+		add_opinion_modifier = {
+			target = BUL
+			modifier = refuses
+		}
+	}
+}
+
+### Austria gets german cores
+country_event = {
+	id = usg.45
+	title = usg.45.t
+	desc = usg.45.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+  fire_only_once = yes
+  
+  hidden = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		days=1
+	}
+  
+	trigger = {
+		tag = USG
+    has_country_flag = grossdeutsche_loesung
+    NOT = { country_exists = GER }
+    USG = { has_war = no }
+	}
+	
+	option = { # Accept
+		name = usg.45.a
+		ai_chance = { factor = 99 }
+		every_state = {
+      limit = {
+        is_core_of = GER
+        is_owned_by = USG
+      }
+      add_core_of = USG
+    }
+	 }
+}
+
+

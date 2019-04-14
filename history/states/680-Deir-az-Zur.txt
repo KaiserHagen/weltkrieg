@@ -1,0 +1,26 @@
+
+state={
+	id=680
+	name="STATE_680"
+	resources={
+		oil=4.000
+	}
+
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SYR
+		add_core_of = OSM
+
+	}
+
+	provinces={
+		1606 1634 3942 6883 7513 12316 
+	}
+	manpower=305110
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

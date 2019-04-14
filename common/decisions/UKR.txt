@@ -1,0 +1,249 @@
+bunker_ukr = {
+
+	# 
+	kievan_line_ukr = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UKR
+		}
+
+		available = {
+			threat > 0.10
+			has_full_control_of_state = 93
+			has_full_control_of_state = 201
+			has_full_control_of_state = 202
+			has_full_control_of_state = 193
+			has_full_control_of_state = 225
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 10
+				OR = {
+					SOV = { focus_progress = { focus = war_with_ukraine_sov progress > 0.01 } }
+					SOV = { has_annex_war_goal = UKR }
+          threat > 0.30
+				}
+        NOT = { is_in_faction_with = SOV }
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = SOV
+			}
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			93 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6520
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6435
+					instant_build = yes
+				}
+			}
+			201 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9493
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11477
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9466
+					instant_build = yes
+				}
+				
+			}
+			202 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9568
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 489
+					instant_build = yes
+				}
+			}
+			193 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6532
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3480
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6508
+					instant_build = yes
+				}
+			}
+			225 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9477
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 522
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+  
+  eastern_line_ukr = {
+    
+#    icon = generic_civil_support
+    
+		allowed = {
+			original_tag = UKR
+		}
+
+		available = {
+			threat > 0.10
+			has_full_control_of_state = 227
+			has_full_control_of_state = 228
+			has_full_control_of_state = 240
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 10
+				OR = {
+					SOV = { focus_progress = { focus = war_with_ukraine_sov progress > 0.01 } }
+					SOV = { has_annex_war_goal = UKR }
+          threat > 0.30
+				}
+        NOT = { is_in_faction_with = SOV }
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = SOV
+			}
+		}
+
+		visible = {
+			
+		}
+    complete_effect = {
+			227 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3421
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6493
+					instant_build = yes
+				}
+			}
+			228 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9446
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 9461
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9476
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 547
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11513
+					instant_build = yes
+				}
+			}
+			240 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9424
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 473
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9489
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 534
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+  
+}

@@ -1,0 +1,50 @@
+spriteTypes = {	
+
+	### Weltkrieg Icons
+	
+	SpriteType = {
+	name = "GFX_focus_SAF_german_coup_2"
+	texturefile = "gfx/interface/goals/focus_SAF_german_coup_2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_french_west_africa"
+	texturefile = "gfx/interface/goals/goal_french_west_africa.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_free_state_of_east_africa"
+	texturefile = "gfx/interface/goals/goal_free_state_of_east_africa.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_central_african_union"
+	texturefile = "gfx/interface/goals/goal_central_african_union.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_south_west_africa"
+	texturefile = "gfx/interface/goals/goal_south_west_africa.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_generic_steel_production"
+	texturefile = "gfx/interface/goals/goal_generic_steel_production.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_generic_chromium_production"
+	texturefile = "gfx/interface/goals/goal_generic_chromium_production.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_generic_rubber_production"
+	texturefile = "gfx/interface/goals/goal_generic_rubber_production.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_generic_support_monarchism"
+	texturefile = "gfx/interface/goals/goal_generic_support_monarchism.dds"			
+	}
+
+}

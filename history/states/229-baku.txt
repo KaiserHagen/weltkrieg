@@ -1,0 +1,34 @@
+
+state={
+	id=229
+	name="STATE_229"
+	manpower = 2911049
+	
+	state_category = large_town
+	
+	resources={
+		oil=100
+		
+	}
+
+	history={
+		owner = TCR
+		victory_points = {
+			7661 10 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+			
+		}
+		add_core_of = TCR
+		add_core_of = AZR
+		add_claim_by = PER
+	}
+
+	provinces={
+		1467 1536 1539 1610 4458 4473 4477 4545 4605 4614 6763 7495 7661 9715 11645 11674 11704 12309 12434 
+	}
+}

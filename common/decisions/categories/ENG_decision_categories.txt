@@ -1,0 +1,26 @@
+invite_eng = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = ENG
+  }
+  
+	visible = {
+		has_completed_focus = stay_with_own_faction_eng
+	}
+}
+
+war_plans_eng = {
+#	icon = generic_propaganda
+  
+  allowed = {
+    original_tag = ENG
+  }
+  
+	visible = {
+		OR = {
+      has_completed_focus = containment_of_germanys_sphere_eng
+      has_completed_focus = war_plans_eng
+    }
+	}
+}

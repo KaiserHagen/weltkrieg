@@ -1,0 +1,20 @@
+state={
+	id=747
+	name="STATE_747"
+	manpower = 38951
+	
+	state_category = rural
+	
+	history={
+		owner = KUR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		add_core_of = KUR
+	}
+
+	provinces={
+		3255 11358
+	}
+}

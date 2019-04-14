@@ -1,0 +1,29 @@
+
+state={
+	id=83
+	name="STATE_83"
+	manpower = 632900
+	
+	state_category = rural
+	
+	resources={
+		steel=23
+	}
+
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 5
+		}
+		victory_points = {
+			6682 1 
+		}
+		add_core_of = HUN
+		add_core_of = USG
+		add_core_of = ROM
+	}
+
+	provinces={
+		696 6682 6697 9640 
+	}
+}

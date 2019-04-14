@@ -1,0 +1,26 @@
+state={
+	id=89
+	name="STATE_89" # Stanislawow
+	manpower = 2180300
+	
+	state_category = town
+	
+	resources={
+		steel=16
+	}
+	
+	history={
+		owner = USG
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+
+		}
+		add_core_of = USG
+		add_core_of = UKR
+	}
+
+	provinces={
+		3434 3743 6431 6460 6483 9425 11411 11550 
+	}
+}

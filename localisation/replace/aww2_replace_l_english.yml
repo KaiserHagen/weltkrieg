@@ -1,0 +1,331 @@
+﻿l_english:
+ 
+ 
+ #Government
+ government:0 "Government"
+ 
+ GATHERING_STORM_NAME:0 "Period of Tension"
+ GATHERING_STORM_DESC:0 "The Weltkrieg has changed the world and people forever. The German Empire now has the leading position in europe and the world. On the other hand, radical political parties have reached high popularity in the former countries of the Entente. Even though they have different political ideologies, there is one thing they have in common: They are seeking for revenge."
+ ENG_GATHERING_STORM_DESC:0 "Britain's pride lies on the ground, the once world-wide empire, was not only humiliated by Germany, it also lost a large portion of its colonies overseas. The states of the Commenwealth are united only by the crown. India had to be granted independence. Our political system is about to collapse, the British citizens demand justice. We are facing a crossroads. We can go with the radical political current and look for a new confrontation, or follow the path of diplomacy and reconstruction, and rebuild the Commonwealth again in order to bring Germany's aggression into line..."
+ FRA_GATHERING_STORM_DESC:0 "France lost the Great War on the side of the allies. The Treaty of Nürnberg forced France to cede parts of their colonial territory and imposed a lot of debts on the country. The economic situation was terrible and people were frustrated about government and the lost war. The overall situation encouraged growth of radical movements like the communists and the fascists. The ruling democratic party lost a lot of their popularity year after year..."
+ GER_GATHERING_STORM_DESC:0 "After the war was over, Germany was able to increase its power significantly. Russia got heavily punished by losing a lot of its territory and the communists gained the power of the country. On the area of the lost territory, several countries got established which were dependent on Germany. The Crimea and Poland are still puppets, the other states are mainly independent now. Germany is now owning a exclave on the Crimea (Alutscha Exklave). The Central Powers still exist but Austria-Hungary (now the United States of Greater Austria) is not a member anymore and the Ottoman Empire decays. " 
+ ITA_GATHERING_STORM_DESC:0 "Italy lost the Great War on the side of the allies. The country had to pay a lot of reparations and lost the island Rhodos to the Ottoman Empire. In postwar years, the fascist party under the rule of Benito Mussolini gained big popularity..."
+ JAP_GATHERING_STORM_DESC:0 "The Japanese people and our emperor were again humiliated and deceived by the European powers in the World War, with dare promises we were drawn into a war that had already been lost. At the moment the dominant German influence in Asia keeps us from gaining the dream of our nation, a predominance position in Asia. But the divine winds are in our favor. The grip of the German emporer in Asia gets weaker as Europe is seething under its surface... Be it through negotiation or the sword, the Germans will not prevent the rise of our empire for long."
+ SOV_GATHERING_STORM_DESC:0 "The peace of Brest-Litovsk lies as a heavy legacy on the still unconsolidated elite of the Soviet Union. Large areas in the Baltic States, Ukraine and the Caucasus had to be granted independence on German pressure. Trotsky still finds himself firmly in the saddle, but some comrades have been able to gain enough support in the communist party and the population to become a serious danger. The Soviet Union is still held back, not only by their foreign policy setbacks, but also by the internal power struggle and poor economic development. Nevertheless, the communists are strong in Russia, strong enough to persist in the long run and ultimately carry the revolution into neighboring countries."
+ USA_GATHERING_STORM_DESC:0 "The United States were deeply concerned about the slaughter in Europe, but decided to not take any part in the Great War. The political elite did not show much enthusiasm for the new pre-eminence of Germany in Europe, but has not been able to reposition itself due to the political unwillingness of the population. The Great Depression in the wake of the global economic crisis of 1929, and a subsequent food crisis due to the ceasing foreign trade, kept our nation in a state of flux. Nearly daily, our economy is shrinking and many people are suffering from hunger. If we want to solve these great domestic problems, we must find a new direction for our foreign policy."
+ OTHER_GATHERING_STORM_DESC:0 ""
+ 
+ BLITZKRIEG_NAME:0 "!Non-optimized Scenario!"
+ BLITZKRIEG_DESC:0 "!Important! The Blitzkrieg scenario is not optimized for this mod. You should be able to play it but this could lead to unwanted starting conditions for some countries!"
+ 
+ #others
+ great_depression_desc:0 ""
+ vittoria_mutilata:0 "Bitter Loser"
+ vittoria_mutilata_desc:0 "We were lured with promises of our allies and government into a war that could not be won. The Italian people will never let this happen again. We are now taking what is lawfully ours by ourselfs."
+ victor_emmanuel_desc:0 "The "Soldier King" reminds the Italians of their past victories at the beginning of the century. His presence and the loyalty to him is an important uniting factor for the People."
+ german_advisors:0 ""
+ FE_HISTORICAL:0 "AI-Focus on Alternative History"
+ FE_HISTORICAL_TOOLTIP:0 "The AI will follow the alternative history path."
+ home_of_revolution_desc:0 ""
+ ENG_king_edward_fascism_desc:0 "After his father George V voluntarily abdicated after the devastating defeat in the great war, Edward took over not only the throne, but also the expectations and hopes of many right-wing conservatives to change something about the disturbing results of the Treaty of Nürnberg."
+ german_advisors:0 "German Military Adviser"
+ german_advisors_desc:0 "The German military is the best in the world. Considering the glorious victory, our army can learn a lot from the Germans."
+ 
+ #music
+ maintheme:0 "Man of Steel/Batman v Superman (by Hans Zimmer)"
+ 
+ #Victory Points
+ VICTORY_POINTS_690:0 "Brasov"
+ VICTORY_POINTS_10000:0 "Tsingtao"
+ VICTORY_POINTS_191:0 "Elisaburg"
+ VICTORY_POINTS_5117:0 "Wilhelmstadt"
+ VICTORY_POINTS_8193:0 "Braßstadt"
+ VICTORY_POINTS_10929:0 "Salisburg"
+ VICTORY_POINTS_4329:0 "Mosbihafen"
+ VICTORY_POINTS_12237:0 "Preußenbucht"
+ VICTORY_POINTS_12068:0 "Takau"
+ VICTORY_POINTS_6558:0 "Posen"
+ VICTORY_POINTS_3529:0 "Volgograd"
+ VICTORY_POINTS_10966:0 "Neulissabon"
+ VICTORY_POINTS_6474:0 "Yuzovka"
+ VICTORY_POINTS_9461:0 "Luhansk"
+ VICTORY_POINTS_4879:0 "Windhuk"
+ VICTORY_POINTS_9833:0 "Constantinople"
+ VICTORY_POINTS_11544:0 "Nürnberg"
+ VICTORY_POINTS_3734:0 "Yekaterinodar"
+ 
+ 
+ #laws
+ volunteer_only:0 "Volunteer Army"
+ 
+ #States
+ STATE_341:0 "Eastern Thrace"
+ STATE_523:0 "Kaiser-Wilhelms-Land"
+ STATE_737:0 "Bismarck-Archipel"
+ STATE_39:0 "Trentino"
+ STATE_163:0 "Southern Dalmatia"
+ STATE_295:0 "Southern Congo"
+ STATE_718:0 "Eastern Congo"
+ STATE_17:0 "Franche-Comté"
+ STATE_72:0 "Trieste"
+ STATE_74:0 "German-Moravia"
+ STATE_69:0 "German-Bohemia"
+ STATE_91:0 "Eastern Galizia"
+ STATE_89:0 "Central Galizia"
+ STATE_88:0 "Western Galizia"
+ STATE_102:0 "Carniola"
+ STATE_268:0 "German Somaliland"
+ STATE_613:0 "Nanjing"
+ STATE_85:0 "Westpreußen"
+ STATE_5:0 "Ostpreußen"
+ STATE_50:0 "Baden-Württemberg"
+ STATE_227:0 "Donetsk"
+ STATE_217:0 "Tsaritsyn"
+ STATE_742:0 "Dushanbe"
+ STATE_268:0 "Djibouti"
+ STATE_269:0 "Northern Somaliland"
+ STATE_311:0 "Belize"
+ STATE_687:0 "Guyana"
+ STATE_310:0 "Inini"
+ STATE_694:0 "Antilles"
+ STATE_296:0 "Guinea-Bissau"
+ STATE_556:0 "North-West Africa"
+ STATE_86:0 "Posen"
+ STATE_687:0 "Guyana"
+ STATE_735:0 "Hautes Alpes"
+ STATE_108:0 "Central Serbia"
+ STATE_664:0 "Northern Hungary"
+ STATE_320:0 "Puducherry"
+ STATE_228:0 "Luhansk"
+ STATE_743:0 "Longwy-Briey"
+ STATE_744:0 "Al-Rashid"
+ STATE_745:0 "Tsingtao"
+ STATE_746:0 "South-West Morocco"
+ STATE_747:0 "Eastern Courland"
+ STATE_748:0 "West Aegean Islands"
+ STATE_749:0 "North-West Bulgaria"
+ STATE_750:0 "Eastern Ethiopia"
+ STATE_751:0 "Northern Ethiopia"
+ STATE_752:0 "Western Sudan"
+ STATE_753:0 "Lower Bohemia"
+ STATE_754:0 "Cameroon"
+ STATE_755:0 "Benin-Togo"
+ STATE_756:0 "West Africa"
+ STATE_757:0 "Guinea"
+ STATE_758:0 "Dalian"
+ STATE_759:0 "Western Australia"
+ STATE_760:0 "Western Congo"
+ STATE_761:0 "Constantinople"
+ 
+ #Ukraine
+ UKR_fascism_party:0 "FPU"
+ UKR_fascism_party_long:0 "Fascist Party Ukraine"
+ UKR_communism_party:0 "CP"
+ UKR_communism_party_long:0 "Communist Party"
+ UKR_democratic_party:0 "SDO"
+ UKR_democratic_party_long:0 "Socialdemocratic Organisation"
+ UKR_neutrality_party:0 "Conservative Party"
+ 
+ UKR_fascism:0 "National Ukrainian Republic"
+ UKR_democratic:0 "Republic of Ukraine"
+ UKR_neutrality:0 "Ukraine"
+ UKR_communism:0 "People's Republic of Ukraine"
+ UKR_fascism_DEF:0 "The National Ukrainian Republic"
+ UKR_democratic_DEF:0 "The Republic of Ukraine"
+ UKR_neutrality_DEF:0 "The Ukraine"
+ UKR_communism_DEF:0 "The People's Republic of Ukraine"
+ 
+ #Portugal
+ POR_communism:0 "Socialist Republic of Portugal"
+ POR_communism_DEF:0 "The Socialist Republic of Portugal"
+ 
+ #Bulgaria
+ BUL_fascism:0 "Greater Bulgarian Empire"
+ BUL_fascism_DEF:0 "The Greater Bulgarian Empire"
+ 
+ #Japan
+ JAP_fascism:0 "Greater Japanese Empire"
+ JAP_fascism_DEF:0 "The Greater Japanese Empire"
+ 
+ #Mandschurei
+ MAN_fascism_party:0 "FOM"
+ MAN_communism_party:0 "CLM"
+ MAN_democratic_party:0 "FPM"
+ MAN_neutrality_party:0 "Neutral Party"
+ MAN_monarchism_party:0 "Monarchy"
+ 
+ MAN_fascism:0 "National Union of Manchuria"
+ MAN_fascism_DEF:0 "The National Union of Manchuria"
+ MAN_democratic:0 "Democratic Republic of Manchuria"
+ MAN_democratic_DEF:0 "The Democratic Republic of Manchuria"
+ MAN_neutrality:0 "Manchuria"
+ MAN_neutrality_DEF:0 "Manchuria"
+ MAN_communism:0 "Socialist Republic of Manchuria"
+ MAN_communism_DEF:0 "The Socialist Republic of Manchuria"
+ MAN_monarchism:0 "Manchurian Empire"
+ MAN_monarchism_DEF:0 "The Empire of Manchuria"
+ MAN_communism_ADJ:0 "Manchurian"
+ MAN_neutrality_ADJ:0 "Manchurian"
+ MAN_fascism_ADJ:0 "Manchurian"
+ MAN_democratic_ADJ:0 "Manchurian"
+ MAN_monarchism_ADJ:0 "Manchurian"
+ 
+ #Angola
+ ANG_fascism:0 "Nationalist Angola"
+ ANG_fascism_DEF:0 "Nationalist Angola"
+ ANG_democratic:0 "Republic of Angola"
+ ANG_democratic_DEF:0 "The Republic of Angola"
+ ANG_neutrality:0 "Angola"
+ ANG_neutrality_DEF:0 "Angola"
+ ANG_communism:0 "Socialist Union of Angola"
+ ANG_communism_DEF:0 "The Socialist Union of Angola"
+ ANG_monarchism:0 "Kingdom of Angola"
+ ANG_monarchism_DEF:0 "The Kingdom of Angola"
+ ANG_communism_ADJ:0 "Angolian"
+ ANG_neutrality_ADJ:0 "Angolian"
+ ANG_fascism_ADJ:0 "Angolian"
+ ANG_democratic_ADJ:0 "Angolian"
+ ANG_monarchism_ADJ:0 "Angolian"
+ 
+ #India
+ RAJ_neutrality:0 "India"
+ RAJ_neutrality_DEF:0 "India"
+ RAJ_fascism_ADJ:0 "Indian"
+ RAJ_democratic_ADJ:0 "Indian"
+ RAJ_neutrality_ADJ:0 "Indian"
+ RAJ_communism_ADJ:0 "Indian"
+ 
+ #USA
+ USA_fascism:0 "Greater American Empire"
+ USA_fascism_DEF:0 "The Greater American Empire"
+ 
+ #Australia
+ AST_fascism:0 "Australian Empire"
+ AST_fascism_ADJ:0 "Australian"
+ AST_fascism_DEF:0 "The Australian Empire"
+ 
+ #New Zealand
+ NZL_fascism:0 "Zealandish Empire"
+ NZL_fascism_ADJ:0 "Zealandish"
+ NZL_fascism_DEF:0 "The Zealandish Empire"
+ 
+ #China
+ CHI_fascism:0 "Chinese Empire"
+ CHI_fascism_DEF:0 "The Chinese Empire"
+ CHI_fascism_ADJ:0 "Chinese"
+ CHI_communism:0 "People's Republic of China"
+ CHI_communism_DEF:0 "The People's Republic of China"
+ CHI_communism_ADJ:0 "Chinese"
+ 
+ #France
+ FRA_fascism:0 "French Empire"
+ FRA_fascism_DEF:0 "The French Empire"
+ FRA_communism:0 "People's Republic of France"
+ FRA_communism_DEF:0 "The People's Republic of France"
+ FRA_neutrality:0 "France"
+ FRA_neutrality_DEF:0 "France"
+ FRA_democratic:0 "French Republic"
+ FRA_democratic_DEF:0 "The French Republic"
+ 
+ #Great Britain
+ ENG_democratic:0 "Great Britain"
+ ENG_democratic_DEF:0 "Great Britain"
+ 
+ #Czechia
+ CZE_fascism:0 "Bohemian Empire"
+ CZE_fascism_DEF:0 "The Bohemian Empire"
+ CZE_democratic:0 "Czech Republic"
+ CZE_democratic_DEF:0 "The Czech Republic"
+ CZE_neutrality:0 "Bohemia"
+ CZE_neutrality_DEF:0 "Bohemia"
+ CZE_communism:0 "Czech Union"
+ CZE_communism_DEF:0 "The Czech Union"
+ CZE_fascism_ADJ:0 "Czech"
+ CZE_democratic_ADJ:0 "Czech"
+ CZE_neutrality_ADJ:0 "Czech"
+ CZE_communism_ADJ:0 "Czech"
+ 
+ #Iraq
+ IRQ_fascism:0 "National Union of Baghdad"
+ IRQ_democratic:0 "Republic of Baghdad"
+ IRQ_neutrality:0 "Baghdadian Republic"
+ IRQ_communism:0 "Peoples Republic of Baghdad"
+ IRQ_fascism_ADJ:0 "Baghdadian"
+ IRQ_democratic_ADJ:0 "Baghdadian"
+ IRQ_neutrality_ADJ:0 "Baghdadian"
+ IRQ_communism_ADJ:0 "Baghdadian"
+ IRQ_fascism_DEF:0 "The National Union of Baghdad"
+ IRQ_democratic_DEF:0 "The Republic of Baghdad"
+ IRQ_neutrality_DEF:0 "The Republic of Baghdad"
+ IRQ_communism_DEF:0 "The Peoples Republic of Baghdad"
+ 
+ #Turkey
+ TUR_fascism:0 "Greater Turkish Empire"
+ TUR_fascism_DEF:0 "The Greater Turkish Empire"
+ 
+ #Syria
+ SYR_neutrality:0 "Syrian Arab Republic"
+ SYR_neutrality_DEF:0 "The Syrian Arab Republic"
+ 
+ #Belgium
+ BEL_neutrality:0 "Belgium"
+ BEL_neutrality_DEF:0 "Belgium"
+ BEL_neutrality_party:0 "Neutrality"
+ 
+ #Finland
+ FIN_neutrality:0 "Finland"
+ FIN_neutrality_DEF:0 "Finland"
+ 
+ # German Empire
+ GER_fascism_party:0 "NSDAP"
+ GER_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ GER_communism_party:0 "KPD"
+ GER_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ GER_democratic_party:0 "SPD"
+ GER_democratic_party_long:0 "Soziale Partei Deutschlands"
+ GER_neutrality_party:0 "FDP"
+ GER_neutrality_party_long:0 "Freie Deutsche Partei"
+
+ GER_fascism:0 "Greater German Empire"
+ GER_democratic:0 "German Republic"
+ GER_neutrality:0 "German Empire"
+ GER_communism:0 "Socialist Republic of Germany"
+ GER_fascism_ADJ:0 "German"
+ GER_democratic_ADJ:0 "German"
+ GER_neutrality_ADJ:0 "German"
+ GER_communism_ADJ:0 "German"
+ GER_fascism_DEF:0 "The Greater German Empire"
+ GER_democratic_DEF:0 "The German Republic"
+ GER_neutrality_DEF:0 "The German Empire"
+ GER_communism_DEF:0 "The Socialist Republic of Germany"
+ 
+ #Arabia
+ SAU_fascism:0 "Arabic Empire"
+ SAU_fascism_DEF:0 "The Arabic Empire"
+ SAU_democratic:0 "Arabian Republic"
+ SAU_democratic_DEF:0 "The Arabian Republic"
+ SAU_neutrality:0 "Arabia"
+ SAU_neutrality_DEF:0 "Arabia"
+ SAU_communism:0 "Republic of the Arabian Assembly"
+ SAU_communism_DEF:0 "The Republic of the Arabian Assembly"
+ SAU_fascism_ADJ:0 "Arabian"
+ SAU_democratic_ADJ:0 "Arabian"
+ SAU_neutrality_ADJ:0 "Arabian"
+ SAU_communism_ADJ:0 "Arabian"
+ 
+ #equipment
+ GER_heavy_tank_equipment_1:0 "K-Wagen II (Grosskampfwagen II)"
+ GER_heavy_tank_equipment_1_short:0 "K-Wagen II"
+ GER_gw_tank_equipment:0 "Leichter Kampfwagen III"
+ GER_gw_tank_equipment_short:0 "LK III"
+ GER_gw_tank_equipment_desc:0 "The LK III was the successor of the LK II (Leichter Kampfwagen II). The first prototype was finished after the Great War."
+ ENG_gw_tank_equipment:0 "Medium Mark E"
+ ENG_gw_tank_equipment_short:0 "MM-E"
+ 
+ #events
+ news.190.t:0 "Balearic Islands ceded to [Italy.GetName]"
+ news.190.d:0 "[Italy.GetName] has requested the Balearic Islands from [From.GetName]. [From.GetLeader] has acquiesced, highlighting the diplomatic move as a strengthening of the bonds between the two nations.\n\nAs for [Italy.GetName], naval bases in the Balearic Islands will allow them to exert greater influence over the Strait of Gibraltar, and give them better access to the Atlantic."
+ news.190.a:0 "This is an important step towards complete Mediterranean dominance."
+ news.190.b:0 "Italy is strengthening its grip on the Mediterranean."
+ news.190.c:0 "Italy is strengthening its grip on the Mediterranean."
+ 

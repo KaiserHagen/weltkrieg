@@ -1,0 +1,30 @@
+
+state={
+	id=676
+	name="STATE_676"
+	resources={
+		oil=7.000
+	}
+
+	history={
+		owner = OSM
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10106 5 
+		}
+		add_core_of = KUD
+		add_core_of = OSM
+		add_core_of = IRQ
+
+	}
+
+	provinces={
+		3916 5014 6826 8123 10106 10793 10804 10811 
+	}
+	manpower=1272941
+	buildings_max_level_factor=1.000
+	state_category=town
+}

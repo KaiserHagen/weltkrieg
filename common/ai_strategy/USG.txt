@@ -1,0 +1,197 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+USG_template_design = {
+	enable = {
+		original_tag = USG
+		date < 1940.1.1				
+	}
+	abort = { 
+		date > 1940.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 60
+	}
+}
+
+USG_template_design = {
+	enable = {
+		original_tag = USG
+		date > 1940.1.1				
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 40
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 5
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = marines
+		value = 100
+	}
+}
+
+USG_area_priority = {
+	enable = {
+		original_tag = USG
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 75
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 65
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -40
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -10
+	}
+
+}
+
+vienna_alliance = {
+	enable = {
+		tag = USG
+		USG = { has_completed_focus = establish_vienna_alliance_uga }
+		USG = { NOT = { is_in_faction_with = GER } }
+		country_exists = GER
+	}
+	abort = {
+		NOT = { country_exists = GER }
+		is_in_faction_with = GER
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "GER"
+		value = 25
+	}
+}
