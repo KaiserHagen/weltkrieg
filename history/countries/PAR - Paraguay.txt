@@ -16,25 +16,17 @@ add_ideas = {
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 25
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 75
-			#banned = no #default is no
-		}
-	}
 	
 	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 25
+	fascism = 0
+	communism = 75
 }
 
 #create_country_leader = {
@@ -63,30 +55,22 @@ create_country_leader = {
 1939.1.1 = {
 	set_politics = {
 
-		parties = {
-			democratic = { 
-				popularity = 20
-			}
-
-			fascism = {
-				popularity = 0
-			}
-			
-			communism = {
-				popularity = 30
-				#banned = no #default is no
-			}
-
-			neutrality = {
-				popularity = 50
-			}
-		}
 
 		ruling_party = neutrality
 		last_election = "1938.1.1"
 		election_frequency = 48
 		elections_allowed = no
-	}
+}
+
+set_popularities = {
+	democratic = 25
+	fascism = 0
+	communism = 75
+	democratic = 20
+	fascism = 0
+	communism = 30
+	neutrality = 50
+}
 
 
 	create_country_leader = {

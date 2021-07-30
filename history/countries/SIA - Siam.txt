@@ -23,29 +23,18 @@ add_ideas = {
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 20
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
-		}
-		
-		monarchism = {
-			popularity = 80
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 20
+	communism = 0
+	monarchism = 80
 }
 
 create_country_leader = {

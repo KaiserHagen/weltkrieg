@@ -21,7 +21,7 @@ idea_categories = {
 		slot = home_secretary
 		slot = economic_advisor
 		slot = minister_of_education
-		slot = decisions
+		slot = minister_of_defense
 		
 		cost = 150
 		removal_cost = 0

@@ -30,32 +30,19 @@ set_war_support = 0.40
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		neutrality = {
-			popularity = 26
-		}
-		
-		communism = {
-			popularity = 17
-		}
-		
-		fascism = {
-			popularity = 7
-		}
-		
-		monarchism = { 
-			popularity = 50
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	neutrality = 26
+	communism = 17
+	fascism = 7
+	monarchism = 50
 }
 
 create_country_leader = {

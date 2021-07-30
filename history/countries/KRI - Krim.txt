@@ -18,28 +18,18 @@ set_war_support = 0.30
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 21
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 0
-		}
-		
-		monarchism = { 
-			popularity = 79
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1926.5.8"
 	election_frequency = 120
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 21
+	fascism = 0
+	communism = 0
+	monarchism = 79
 }
 
 set_stability = 0.60

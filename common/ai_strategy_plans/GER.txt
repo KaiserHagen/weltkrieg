@@ -4,11 +4,12 @@ German_alternate_aggressive = {
 
 	enable = {
 		original_tag = GER
+    always = no
 		OR = {
-			has_game_rule = {
-				rule = GER_ai_behavior
-				option = AGGRESSIVE
-			}
+		#	has_game_rule = {
+		#		rule = GER_AI_BEHAVIOR
+		#		option = AGGRESSIVE
+		#	}
 		}
 	}
 	abort = {

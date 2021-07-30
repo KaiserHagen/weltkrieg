@@ -18,7 +18,6 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	gwtank = 1
-	basic_armored_car = 1
 	early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
@@ -40,28 +39,18 @@ set_convoys = 0
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 18
-		}
-
-		fascism = {
-			popularity = 12
-		}
-		
-		communism = {
-			popularity = 0
-		}
-		
-		monarchism = { 
-			popularity = 70
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1935.9.8"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 18
+	fascism = 12
+	communism = 0
+	monarchism = 70
 }
 
 create_country_leader = {

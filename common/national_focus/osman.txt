@@ -760,6 +760,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = finish_reformation_osm }
+    mutually_exclusive = { focus = join_league_of_nations_osm }
 		
 		bypass = {
 			
@@ -1008,22 +1009,7 @@ focus_tree = {
 			custom_effect_tooltip = ban_political_parties_OSM
 			add_political_power = 100
 			hidden_effect = {
-				set_political_party = {
-					ideology = democratic 
-					banned = yes
-				}
-				set_political_party = {
-					ideology = fascism
-					banned = yes
-				}
-				set_political_party = {
-					ideology = communism
-					banned = yes
-				}
-				set_political_party = {
-					ideology = neutrality
-					banned = yes
-				}
+				# ban parties
 			}
 		}
 	}

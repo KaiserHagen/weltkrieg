@@ -217,8 +217,9 @@ ideas = {
 			}
 
 			modifier = {
-				partisan_effect = 0.4
-				subversive_activites_upkeep = -0.1
+				resistance_target_on_our_occupied_states = 0.25
+        resistance_growth_on_our_occupied_states = 0.25
+				compliance_growth_on_our_occupied_states = -0.15
 			}
 			
 			cancel_if_invalid = no

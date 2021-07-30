@@ -88,7 +88,14 @@
  #Traits
  headteacher:0 "Oberlehrer"
  proletarian:0 "Proletarier"
- resource_farmer:0 "Rohstofffarmer"
- 
+ resource_farmer:0 "Rohstoffwirt"
+ supreme_commander:0 "Oberster Befehlshaber"
+ flexible_reformer:0 "Flexibler Reformer"
+ military_trainer:0 "Militärischer Ausbilder"
+ recruiter:0 "Rekrutierer"
+ specialist:0 "Spezialist"
+ stout_defender_minister:0 "Verteidiger"
+ warrior_code_minister:0 "Stolzer Krieger"
+ conqueror:0 "Eroberer"
  
  

@@ -31,38 +31,24 @@ set_technology = {
 	early_battleship = 1
 	early_battlecruiser = 1
 	transport = 1
-	basic_armored_car = 1 
 }
 
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 5
-		}
-
-		fascism = {
-			popularity = 75
-		}
-		
-		communism = {
-			popularity = 5
-		}
-		
-		monarchism = { 
-			popularity = 10
-		}
-		
-		neutrality = {
-			popularity = 5
-		}
-	}
 	
 	ruling_party = fascism
 	last_election = "1936.2.8"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 5
+	fascism = 75
+	communism = 5
+	monarchism = 10
+	neutrality = 5
 }
 
 set_convoys = 56

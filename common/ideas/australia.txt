@@ -590,8 +590,8 @@ high_command = {
 		}
 		cost = 100
 		available = {
-				has_completed_focus = AST_australian_army_catering_corps
-			}
+				
+		}
 
 		traits = { army_logistics_2 }
 		
@@ -891,7 +891,6 @@ high_command = {
 			}
 
 			available = {
-				has_completed_focus = AST_commonwealth_aircraft_corporation
 				is_subject_of = ENG
 			}
 			

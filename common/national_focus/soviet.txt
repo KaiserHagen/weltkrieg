@@ -154,22 +154,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = under_pressure_focus
 			hidden_effect = {
-				set_political_party = {
-					ideology = democratic 
-					banned = yes
-				}
-				set_political_party = {
-					ideology = fascism
-					banned = yes
-				}
-				set_political_party = {
-					ideology = monarchism
-					banned = yes
-				}
-				set_political_party = {
-					ideology = neutrality
-					banned = yes
-				}
+				# ban parties
 			}
 		}
 	}

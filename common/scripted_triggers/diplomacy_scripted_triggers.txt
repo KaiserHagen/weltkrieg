@@ -111,131 +111,14 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 				NOT = { has_dlc = "Man the Guns" }
 				NOT = { original_tag = ENG }
 			}
+			OR = {
+				NOT = { has_dlc = "La Resistance" }
+				NOT = { original_tag = SPR }
+		}
 		}
 		always = yes
 	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = FREE
-			}
-			has_dlc = "Man the Guns"
-			original_tag = ENG
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_BRITAIN_TOOLTIP
-			NOT = { FROM = { tag = MLT } }
-			NOT = { FROM = { tag = CYP } }
-			NOT = { FROM = { tag = PAL } }
-			NOT = { FROM = { tag = ISR } }
-			NOT = { FROM = { tag = JOR } }
-			NOT = { FROM = { tag = EGY } }
-			NOT = { FROM = { tag = KUW } }
-			NOT = { FROM = { tag = QAT } }
-			NOT = { FROM = { tag = UAE } }
-			NOT = { FROM = { tag = BLZ } }
-			NOT = { FROM = { tag = BAH } }
-			NOT = { FROM = { tag = JAM } }
-			NOT = { FROM = { tag = TRI } }
-			NOT = { FROM = { tag = BAS } }
-			NOT = { FROM = { tag = GYA } }
-			NOT = { FROM = { tag = SRL } }
-			NOT = { FROM = { tag = MLD } }
-			NOT = { FROM = { tag = FIJ } }
-			NOT = { FROM = { tag = BRM } }
-			NOT = { FROM = { tag = SUD } }
-			NOT = { FROM = { tag = SOM } }
-			NOT = { FROM = { tag = UGA } }
-			NOT = { FROM = { tag = KEN } }
-			NOT = { FROM = { tag = TZN } }
-			NOT = { FROM = { tag = ZAM } }
-			NOT = { FROM = { tag = MLW } }
-			NOT = { FROM = { tag = ZIM } }
-			NOT = { FROM = { tag = BOT } }
-			NOT = { FROM = { tag = NGA } }
-			NOT = { FROM = { tag = GHA } }
-			NOT = { FROM = { tag = SIE } }
-			NOT = { FROM = { tag = GAM } }
-		}
-	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = PEACE_ONLY
-			}
-			OR = {
-				NOT = { has_dlc = "Man the Guns" }
-				NOT = { original_tag = ENG }
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
-			has_war = no
-		}
-	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = PEACE_ONLY
-			}
-			has_dlc = "Man the Guns"
-			original_tag = ENG
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
-			has_war = no
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_BRITAIN_TOOLTIP
-			NOT = { FROM = { tag = MLT } }
-			NOT = { FROM = { tag = CYP } }
-			NOT = { FROM = { tag = PAL } }
-			NOT = { FROM = { tag = ISR } }
-			NOT = { FROM = { tag = JOR } }
-			NOT = { FROM = { tag = EGY } }
-			NOT = { FROM = { tag = KUW } }
-			NOT = { FROM = { tag = QAT } }
-			NOT = { FROM = { tag = UAE } }
-			NOT = { FROM = { tag = BLZ } }
-			NOT = { FROM = { tag = BAH } }
-			NOT = { FROM = { tag = JAM } }
-			NOT = { FROM = { tag = TRI } }
-			NOT = { FROM = { tag = BAS } }
-			NOT = { FROM = { tag = GYA } }
-			NOT = { FROM = { tag = SRL } }
-			NOT = { FROM = { tag = MLD } }
-			NOT = { FROM = { tag = FIJ } }
-			NOT = { FROM = { tag = BRM } }
-			NOT = { FROM = { tag = SUD } }
-			NOT = { FROM = { tag = SOM } }
-			NOT = { FROM = { tag = UGA } }
-			NOT = { FROM = { tag = KEN } }
-			NOT = { FROM = { tag = TZN } }
-			NOT = { FROM = { tag = ZAM } }
-			NOT = { FROM = { tag = MLW } }
-			NOT = { FROM = { tag = ZIM } }
-			NOT = { FROM = { tag = BOT } }
-			NOT = { FROM = { tag = NGA } }
-			NOT = { FROM = { tag = GHA } }
-			NOT = { FROM = { tag = SIE } }
-			NOT = { FROM = { tag = GAM } }
-		}
-	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_release_nations
-				option = BLOCKED
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_RELEASE_NATIONS_BLOCKED_TOOLTIP
-			always = no
-		}
-	}
+	
 }
 DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 	if = {
@@ -733,10 +616,12 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
-				option = FREE
+				option = ALWAYS_FREE
 			}
 		}
-		always = yes
+		else = {
+			always = yes
+		}
 	}
 	if = {
 		limit = {
@@ -745,7 +630,22 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes
+		
+		else_if = { #Bulgarian volunteers in SCW (with La Resistance)
+			limit = {
+				has_dlc = "Battle for the Bosporus"
+				tag = BUL
+				FROM = { original_tag = SPR }
+				has_dlc = "La Resistance"
+				NOT = { has_global_flag = scw_over }
+				
+			}
+			
+		}
+		
+		else = {
+			always = yes
+		}
 	}
 	if = {
 		limit = {
@@ -758,7 +658,12 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			tooltip = RULE_VOLUNTEERS_SAME_IDEOLOGY_TT
 			has_government = FROM
 		}
-	}
+
+			custom_trigger_tooltip = {
+				tooltip = RULE_VOLUNTEERS_NOT_ANARCHISTS_TT
+				NOT = { FROM = { tag = SPC } }
+			}
+		}
 	if = {
 		limit = {
 			has_game_rule = {

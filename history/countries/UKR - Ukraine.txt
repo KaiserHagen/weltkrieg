@@ -12,7 +12,6 @@ set_technology = {
 	tech_engineers = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_armored_car = 1
 	early_fighter = 1
 	early_bomber = 1
 	naval_bomber1 = 1
@@ -31,29 +30,18 @@ set_stability = 0.55
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 0 
-		}
-
-		fascism = {
-			popularity = 35
-		}
-		
-		communism = {
-			popularity = 26
-		}
-		
-		monarchism = {
-			popularity = 39
-		}
-		
-	}
 	
 	ruling_party = monarchism
 	last_election = "1935.7.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 35
+	communism = 26
+	monarchism = 39
 }
 
 add_ideas = {
@@ -111,7 +99,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Stepan Andrijovyƒç Bandera"
+	name = "Stepan Andrijovyƒ? Bandera"
 	desc = ""
 	picture = "Portrait_UKR_Stephan_Bandera.dds"
 	expire = "1953.3.1"

@@ -40,7 +40,6 @@ set_technology = {
 	transport = 1
 	fleet_in_being = 1
 	electronic_mechanical_engineering = 1
-	basic_armored_car = 1
   
   fuel_silos = 1
 
@@ -61,24 +60,17 @@ set_major = yes
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 73
-		}
-
-		fascism = {
-			popularity = 23
-		}
-		
-		communism = {
-			popularity = 4
-		}
-	}
 	
 	ruling_party = democratic
 	last_election = "1935.11.14"
 	election_frequency = 48
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
+
+set_popularities = {
+	democratic = 73
+	fascism = 23
+	communism = 4
 }
 
 puppet = MAL

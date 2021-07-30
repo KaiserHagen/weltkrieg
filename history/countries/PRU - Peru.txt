@@ -25,25 +25,17 @@ add_ideas = {
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 49
-		}
-
-		fascism = {
-			popularity = 51
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
-		}
-	}
 	
 	ruling_party = fascism
 	last_election = "1931.10.11"
 	election_frequency = 96
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 49
+	fascism = 51
+	communism = 0
 }
 
 create_country_leader = {
@@ -60,26 +52,21 @@ create_country_leader = {
 1939.1.1 = {
 	set_politics = {
 
-		parties = {
-			democratic = { 
-				popularity = 49
-			}
-
-			fascism = {
-				popularity = 51
-			}
-			
-			communism = {
-				popularity = 0
-				#banned = no #default is no
-			}
-		}
 		
 		ruling_party = fascism
 		last_election = "1931.10.11"
 		election_frequency = 96
 		elections_allowed = yes
-	}
+}
+
+set_popularities = {
+	democratic = 49
+	fascism = 51
+	communism = 0
+	democratic = 49
+	fascism = 51
+	communism = 0
+}
 
 	create_country_leader = {
 		name = "Manuel Prado Ugarteche"

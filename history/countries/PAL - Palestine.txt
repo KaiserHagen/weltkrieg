@@ -12,33 +12,19 @@ set_convoys = 5
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 14
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
-		}
-		
-		neutrality = {
-			popularity = 30
-		}
-		
-		monarchism = {
-			popularity = 56
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 14
+	fascism = 0
+	communism = 0
+	neutrality = 30
+	monarchism = 56
 }
 
 create_country_leader = {

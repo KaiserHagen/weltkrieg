@@ -19,7 +19,6 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	gwtank = 1
-	basic_armored_car = 1
 	basic_light_tank = 1
 	CAS1 = 1
 	early_fighter = 1
@@ -38,29 +37,18 @@ set_technology = {
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 75
-		}
-
-		neutrality = {
-			popularity  = 14
-		}
-
-		communism = {
-			popularity = 8
-		}
-
-		fascism = {
-			popularity = 3
-		}
-		
-	}
 	
 	ruling_party = democratic
 	last_election = "1932.9.18"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 75
+	neutrality = 14
+	communism = 8
+	fascism = 3
 }
 
 

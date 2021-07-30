@@ -223,9 +223,8 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				conscription = 0.005
+				conscription_factor = 0.1
 				fascism_drift = 0.02
-				partisan_effect = 0.2
 			}
 		}
 		
@@ -402,6 +401,7 @@ ideas = {
 			modifier = {
 				research_speed_factor = -0.05
 				production_speed_buildings_factor = 0.1
+        drift_defence_factor = 0.15
 			}
 		}
 		
@@ -420,8 +420,9 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				army_org_factor = 0.075
-				training_time_army_factor = -0.05
+				army_org_factor = 0.05
+				training_time_army_factor = -0.1
+        mobilization_speed = 0.1
 			}
 		}
 		
@@ -522,9 +523,9 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.1 
-				production_speed_bunker_factor = 0.1 
-				production_speed_coastal_bunker_factor = 0.1 
-				production_speed_anti_air_building_factor = 0.1
+				production_speed_bunker_factor = 0.25 
+				production_speed_coastal_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
 			}
 		}
 		

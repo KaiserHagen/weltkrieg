@@ -1129,6 +1129,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = containment_of_germanys_sphere_eng }
+    mutually_exclusive = { focus = befriend_skandinavia_eng }
 		
 		completion_reward = {
       unlock_decision_category_tooltip = war_plans_eng

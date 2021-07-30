@@ -21,24 +21,16 @@ add_ideas = {
 
 set_politics = {
 
-	parties = {
-
-		fascism = {
-			popularity = 66
-		}
-		
-		communism = {
-			popularity = 4
-		}
-		
-		neutrality = { 
-			popularity = 30
-		}
-	}
 	
 	ruling_party = fascism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 66
+	communism = 4
+	neutrality = 30
 }
 

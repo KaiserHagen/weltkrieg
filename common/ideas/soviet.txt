@@ -17,7 +17,6 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-        take_states_cost_factor = 0.15
         annex_cost_factor = 0.25
 				puppet_cost_factor = -0.5
 			}
@@ -184,8 +183,10 @@ ideas = {
 			picture = generic_fourth_international
 			
 			modifier = {
-				subversive_activites_upkeep = -0.5
+				subversive_activites_upkeep = -0.1
 				communism_drift = 0.10
+        communism_acceptance = 20
+        intel_network_gain_factor = 0.15
 			}
 		}
 		
@@ -243,7 +244,8 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				enemy_partisan_effect = -0.15
+				required_garrison_factor = -0.15
+        resistance_growth_on_our_occupied_states = -0.15
 				subversive_activites_upkeep = -0.25
 			}
 		}
@@ -346,7 +348,8 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				enemy_partisan_effect = -0.2
+				resistance_damage_to_garrison_on_our_occupied_states = -0.2
+        resistance_growth_on_our_occupied_states = -0.2
 			}
 		}
 

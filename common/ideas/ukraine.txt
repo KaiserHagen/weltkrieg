@@ -22,8 +22,9 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				enemy_partisan_effect = -0.15
 				subversive_activites_upkeep = -0.15
+        compliance_growth_on_our_occupied_states = -0.25
+        resistance_damage_to_garrison_on_our_occupied_states = 0.15
 			}
 		}
 		
@@ -217,7 +218,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				drift_defence_factor = 0.20
+				drift_defence_factor = 0.25
+        stability_factor = 0.05
 			}
 		}
 		

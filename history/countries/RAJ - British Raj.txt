@@ -32,28 +32,18 @@ set_war_support = 0.40
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 17
-		}
-
-		fascism = {
-			popularity = 2
-		}
-		
-		communism = {
-			popularity = 1
-		}
-
-		neutrality = {
-			popularity = 80
-		}
-	}
 	
 	ruling_party = neutrality
 	last_election = "1933.4.21"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 17
+	fascism = 2
+	communism = 1
+	neutrality = 80
 }
 
 

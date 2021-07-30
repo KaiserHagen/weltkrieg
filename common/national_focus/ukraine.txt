@@ -1363,6 +1363,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = weapons_deal_ukr }
+    mutually_exclusive = { focus = invite_romania_ukr }
 		
 		bypass = {
 			OR = {

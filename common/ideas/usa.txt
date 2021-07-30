@@ -84,7 +84,9 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.003
-				enemy_partisan_effect = -0.2
+				required_garrison_factor = -0.1
+        enemy_operative_detection_chance_factor = 0.1
+        enemy_operative_capture_chance_factor = 0.1
 			}
 		}
 		
@@ -166,7 +168,8 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				enemy_partisan_effect = -0.25
+        enemy_operative_detection_chance_factor = 0.2
+        enemy_operative_capture_chance_factor = 0.2
 				foreign_subversive_activites = -0.25
 			}
 		}

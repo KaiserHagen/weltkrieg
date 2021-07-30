@@ -17,28 +17,18 @@ set_convoys = 12
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 3
-		}
-		
-		communism = {
-			popularity = 19
-		}
-		
-		neutrality = { 
-			popularity = 78
-		}
-	}
 	
 	ruling_party = neutrality
 	last_election = "1933.5.8"
 	election_frequency = 72
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 3
+	communism = 19
+	neutrality = 78
 }
 
 set_stability = 0.45
@@ -85,7 +75,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Anatolij Nikolaeviƒç Pepeljaev"
+	name = "Anatolij Nikolaeviƒ? Pepeljaev"
 	picture = "Portrait_Kuban_Analolij_Piepielajew.dds"
 	traits = {  }
 	skill = 2

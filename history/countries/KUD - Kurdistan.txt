@@ -15,28 +15,18 @@ set_convoys = 0
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 46
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 0
-		}
-		
-		neutrality = { 
-			popularity = 54
-		}
-	}
 	
 	ruling_party = neutrality
 	last_election = "1934.12.4"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 46
+	fascism = 0
+	communism = 0
+	neutrality = 54
 }
 
 

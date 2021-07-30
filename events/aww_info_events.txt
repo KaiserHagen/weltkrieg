@@ -50,10 +50,10 @@ country_event = {
 		country_event = { id = aw_info.2 }
 	}
   #about W36: LotWW
-	option = {
-		name = aw_info.1.e
-		country_event = { id = aw_info.5 }
-	}
+	#option = {
+	#	name = aw_info.1.e
+	#	country_event = { id = aw_info.5 }
+	#}
 	#about submods
 	option = {
 		name = aw_info.1.b

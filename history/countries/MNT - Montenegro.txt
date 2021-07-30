@@ -30,29 +30,18 @@ set_war_support = 0.20
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 7
-		}
-
-		fascism = {
-			popularity = 3
-		}
-		
-		communism = {
-			popularity = 2
-			#banned = no #default is no
-		}
-		
-		monarchism = { 
-			popularity = 88
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1935.5.3"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 7
+	fascism = 3
+	communism = 2
+	monarchism = 88
 }
 
 add_ideas = {

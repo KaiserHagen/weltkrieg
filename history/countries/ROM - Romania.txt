@@ -14,7 +14,6 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gwtank = 1
-	basic_armored_car = 1
 	basic_light_tank = 1
 	infantry_weapons = 1
 	
@@ -37,28 +36,18 @@ set_convoys = 10
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 3
-		}
-
-		fascism = {
-			popularity = 17
-		}
-		
-		communism = {
-			popularity = 0
-		}
-		
-		monarchism = { 
-			popularity = 80
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1933.6.20"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 3
+	fascism = 17
+	communism = 0
+	monarchism = 80
 }
 
 

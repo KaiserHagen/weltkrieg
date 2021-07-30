@@ -296,7 +296,8 @@ ideas = {
 			
 			modifier = {
 				foreign_subversive_activites = -0.2
-				enemy_partisan_effect = -0.1
+				enemy_operative_capture_chance_factor = 0.10
+        enemy_operative_detection_chance_factor = 0.10
 			}
 		}
 		
@@ -444,7 +445,8 @@ ideas = {
 	
 			modifier = {
 				political_power_factor = 0.05
-				enemy_partisan_effect = -0.10
+				occupation_cost = -0.10
+        compliance_growth_on_our_occupied_states = 0.1
 			}
 		}
 		
@@ -808,7 +810,8 @@ ideas = {
 	
 			modifier = {
 				conscription = 0.05
-				enemy_partisan_effect = -0.1
+				required_garrison_factor = -0.1
+        compliance_growth_on_our_occupied_states = 0.1
 			}
 		}
 	
@@ -993,6 +996,7 @@ ideas = {
 
 			modifier = {
 				send_volunteer_divisions_required = -0.25
+        send_volunteer_size = 2
 			}
 		}
 
@@ -1011,6 +1015,7 @@ ideas = {
 			
 			modifier = {
 				send_volunteer_divisions_required = -0.5
+        send_volunteer_size = 3
 			}
 		}
 
@@ -1378,25 +1383,7 @@ ideas = {
 			}
 		}
     
-		idea_weapons_for_the_resistance = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = chi_war_of_resistance3
-			
-			modifier = {
-				resistance_tick_in_states_controlled_by_enemy = 0.01
-				partisan_effect = 0.25
-			}
-		}	
+		
 	}
 	
 	political_advisor = {
@@ -1955,6 +1942,163 @@ ideas = {
 			picture = generic_political_advisor_europe_3
 			
 			traits = { disciplined_teacher }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+  
+  minister_of_defense = {		#Verteidigungsminister
+		
+		generic_old_guard = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = supreme_commander limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_1
+			
+			traits = { supreme_commander }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_flexible_reformer = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = flexible_reformer limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			traits = { flexible_reformer }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		generic_military_trainer = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = military_trainer limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { military_trainer }
+	
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+    
+    generic_recruiter = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = recruiter limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_1
+			
+			traits = { recruiter }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_specialist = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = specialist limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			traits = { specialist }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_stout_defender = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = stout_defender_minister limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { stout_defender_minister }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_ex_intelligence_agent = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = ex_intelligence_agent limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			traits = { ex_intelligence_agent }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_warrior = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = warrior_code_minister limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_1
+			
+			traits = { warrior_code_minister }
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    
+    generic_conqueror = {
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = conqueror limit = 1 }
+				}
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			traits = { conqueror }
 	
 			ai_will_do = {
 				factor = 1

@@ -23,28 +23,18 @@ set_convoys = 0
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 8
-		}
-
-		fascism = {
-			popularity = 23
-		}
-		
-		communism = {
-			popularity = 18
-		}
-		
-		monarchism = { 
-			popularity = 51
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1936.1.1"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 8
+	fascism = 23
+	communism = 18
+	monarchism = 51
 }
 
 set_stability = 0.50

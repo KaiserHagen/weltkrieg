@@ -107,7 +107,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				partisan_effect = 0.20
+				enemy_operative_capture_chance_factor = 0.10
+        enemy_operative_detection_chance_factor = 0.10
+        compliance_growth_on_our_occupied_states = -0.15
 				communism_drift = 0.10
 			}
 
@@ -176,7 +178,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				enemy_partisan_effect = -0.25
+				enemy_operative_capture_chance_factor = 0.15
+        enemy_operative_detection_chance_factor = 0.15
 				subversive_activites_upkeep = -0.25
 			}
 

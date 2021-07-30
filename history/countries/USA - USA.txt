@@ -34,7 +34,6 @@ set_technology = {
 	transport = 1
 	superior_firepower = 1
 	base_strike = 1
-	basic_armored_car = 1
   fuel_silos = 1
   synth_oil_experiments = 1
 }
@@ -49,24 +48,17 @@ set_major = yes
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 58
-		}
-
-		fascism = {
-			popularity = 19
-		}
-		
-		communism = {
-			popularity = 23
-		}
-	}
 	
 	ruling_party = democratic
 	last_election = "1934.11.8"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 58
+	fascism = 19
+	communism = 23
 }
 
 add_ideas = {

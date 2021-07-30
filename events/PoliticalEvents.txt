@@ -928,7 +928,6 @@ country_event = {
 		#has_idea = fascist_revolutionaries
 		NOT = { has_government = fascism }
 		has_civil_war = no
-		check_has_focus_tree_to_switch_to_fascism = yes
 	}
 
 	mean_time_to_happen = {
@@ -1004,7 +1003,6 @@ country_event = {
 			}			
 		}
 		has_civil_war = no
-		check_has_focus_tree_to_switch_to_communism = yes
 	}
 
 	mean_time_to_happen = {
@@ -1080,7 +1078,6 @@ country_event = {
 			}			
 		}
 		has_civil_war = no
-		check_has_focus_tree_to_switch_to_democratic = yes
 	}
 
 	mean_time_to_happen = {

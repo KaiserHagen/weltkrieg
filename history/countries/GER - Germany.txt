@@ -43,7 +43,6 @@ set_technology = {
 	fleet_in_being = 1
 	electronic_mechanical_engineering = 1
 	radio = 1
-	basic_armored_car = 1
   
   fuel_silos = 1
 	fuel_refining = 1
@@ -60,33 +59,20 @@ set_major = yes
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 23
-		}
-
-		fascism = {
-			popularity = 4
-		}
-		
-		communism = {
-			popularity = 15
-		}
-		
-		neutrality = { 
-			popularity = 0
-		}
-		
-		monarchism = {
-			popularity = 58
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 
+}
+
+set_popularities = {
+	democratic = 23
+	fascism = 4
+	communism = 15
+	neutrality = 0
+	monarchism = 58
 }
 
 create_faction = Central_Powers

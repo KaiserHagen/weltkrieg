@@ -544,7 +544,7 @@ ideas = {
 		RAJ_homi_j_bhabha = {
 					
 			available = {
-				has_completed_focus = RAJ_institute_of_fundamental_research
+				
 			}
 
 			allowed = {

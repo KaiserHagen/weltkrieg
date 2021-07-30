@@ -89,5 +89,13 @@
  headteacher:0 "Headteacher"
  proletarian:0 "Proletarian"
  resource_farmer:0 "Resource Farmer"
+ supreme_commander:0 "Supreme Commander"
+ flexible_reformer:0 "Flexible Reformer"
+ military_trainer:0 "Military Trainer"
+ recruiter:0 "Recruiter"
+ specialist:0 "Specialist"
+ stout_defender_minister:0 "Stout Defender"
+ warrior_code_minister:0 "Warrior Code"
+ conqueror:0 "Conqueror"
  
  

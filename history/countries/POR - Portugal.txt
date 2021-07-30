@@ -25,28 +25,18 @@ set_technology = {
 set_convoys = 50
 set_politics = {
 
-	parties = {
-		democratic = {
-			popularity = 16
-		}
-
-		fascism = {
-			popularity = 8
-		}
-		
-		communism = {
-			popularity = 32
-		}
-		
-		monarchism = {
-			popularity = 44
-		}
-	}
 	
 	ruling_party = monarchism
 	last_election = "2033.3.5"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 16
+	fascism = 8
+	communism = 32
+	monarchism = 44
 }
 
 set_convoys = 100

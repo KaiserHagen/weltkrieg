@@ -1,5 +1,134 @@
 leader_traits = {
+  
+  specialist = {
+		random = no
+    sprite = 5
+    
+    special_forces_min = 6
+    special_forces_attack_factor = 0.10
+    special_forces_defence_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  military_trainer = {
+		random = no
+    sprite = 13
+    
+    experience_gain_army = 0.01
+    experience_gain_air = 0.01
+    experience_gain_navy = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  ex_intelligence_agent = {
+		random = no
+    sprite = 5
+		
+    decryption = 1
+    encryption = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  flexible_reformer = {
+		random = no
+    sprite = 13
+    
+    political_power_factor = 0.02
+    mobilization_laws_cost_factor = -0.25
+    army_training_cost_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  supreme_commander = {
+		random = no
+    sprite = 13
+    
+    max_command_power = 10
+		army_chief_cost_factor = -0.10
+		navy_chief_cost_factor = -0.10
+    air_chief_cost_factor = -0.10
+    high_command_cost_factor = -0.10
+    
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  recruiter = {
+		random = no
+    sprite = 13
+    
+    mobilization_speed = 0.05
+		non_core_manpower = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
+	influencer = {
+		random = no
+    sprite = 13
+    
+		opinion_gain_monthly_factor = 0.25
+    trade_opinion_factor = 0.10
+		political_power_factor = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  warrior_code_minister = {
+		random = no
+    sprite = 7
+    
+    army_morale_factor = 0.05
+    army_core_attack_factor = 0.05
+    army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  conqueror = {
+		random = no
+    sprite = 7
+    
+    army_attack_factor = 0.1
+    land_reinforce_rate = 0.03
+    army_defence_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  stout_defender_minister = { # 
+		random = no
+    sprite = 9
+		
+    army_defence_factor = 0.1
+    max_dig_in = 1
+    army_attack_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	political_lightweight = {
 		random = no
@@ -566,7 +695,7 @@ leader_traits = {
 	prince_of_terror = {
 		random = no
 		sprite = 13
-		enemy_partisan_effect = -0.25
+		compliance_growth_on_our_occupied_states = 0.2
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.02
 		
@@ -598,6 +727,7 @@ leader_traits = {
 	disciplined_teacher = {
 		random = no
 		sprite = 13
+    research_speed_factor = 0.02
 		army_org_factor = 0.05
 		
 		ai_will_do = {

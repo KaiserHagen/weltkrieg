@@ -1,9 +1,0 @@
-ideas = {
-
-	decisions = { 
-		law = yes
-		
-		
-		
-	}
-}

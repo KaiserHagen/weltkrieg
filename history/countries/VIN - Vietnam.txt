@@ -43,27 +43,18 @@ set_technology = {
 
 set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 25
-		}
-
-		fascism = {
-			popularity = 25
-		}
-		
-		communism = {
-			popularity = 25
-		}
-		neutrality = {
-			popularity = 25
-		}
-	}
 
 	ruling_party = democratic
 	last_election = "1933.2.16"
 	election_frequency = 36
 	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
 }
 
 #NOTICE# please watch out for spelling, im using Vietnamese names as they spell them, game might not support these characters!
@@ -91,7 +82,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ngô Đình Diệm"
+	name = "Ngô �?ình Diệm"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
 	expire = "1953.3.1"
@@ -102,7 +93,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Nguyễn Tường Tam"
+	name = "Nguyễn Tư�?ng Tam"
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
 	expire = "1953.3.1"

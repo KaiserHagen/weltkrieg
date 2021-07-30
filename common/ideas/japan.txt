@@ -169,7 +169,8 @@ ideas = {
 			picture = generic_intel_bonus
 	
 			modifier = {
-				enemy_partisan_effect = -0.2
+				occupation_cost = -0.1
+        enemy_operative_capture_chance_factor = 0.1
 				foreign_subversive_activites = -0.2
 			}
 		}
@@ -503,22 +504,6 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.025
-			}
-		}
-
-		the_long_lance = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				naval_torpedo_range_factor = 1 # double the range
 			}
 		}
 		
